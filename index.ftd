@@ -4,6 +4,11 @@
 -- import: fastn-community.github.io/dark-mode-switcher as dms
 -- import: fastn-community.github.io/set-1-ds/header as h
 
+-- import: fifthtry.github.io/typography as tf
+export: h0, h1, h2, h3, markdown
+
+-- import: fifthtry.github.io/code-block as cb
+export: code, rendered
 
 
 
@@ -20,6 +25,22 @@ consequat duis enim velit mollit.
 Exercitation veniam consequat sunt nostrud amet.
 
 
+-- tf.h1: Featured Components
+
+Amet minim mollit non deserunt ullamco est sit 
+aliqua dolor do amet sint. Velit officia 
+consequat duis enim velit mollit.
+Exercitation veniam consequat sunt nostrud amet.
+
+
+-- image: This is the image with caption
+src: $assets.files.static.image-placeholder.png
+width.fixed.px: 500
+
+-- image: This is the image with caption
+src: $assets.files.static.image-placeholder.png
+
+-- end: page
 
 
 
@@ -51,10 +72,9 @@ ftd.type-data types: $typo.types
 ftd.color-scheme colors: $cs.main
 pr.toc-item list footer-links: $common.footer-links
 common.social-media list social-links: $common.social-links
-boolean show-footer: $common.show-footer
-ftd.ui list footer:
 string info: Stay in touch with everything you need
 string copyright: Copyright ©2022. Fastn Inc.
+
 -- ftd.document:
 title if { page.document-title != NULL }: $page.document-title
 title: $page.title
@@ -123,7 +143,6 @@ ftd.image-src site-logo:
 string site-url:
 pr.toc-item list sections:
 pr.toc-item list sub-sections:
-pr.toc-item list footer-toc:
 optional pr.toc-item current-section:
 optional pr.toc-item current-page:
 optional pr.toc-item current-subsection:
@@ -153,16 +172,14 @@ width: fill-container
 align-content if { ftd.is_empty(doc-page-desktop.toc) }: center
 border-top-width.px: 1
 border-color: $inherited.colors.text-strong
-margin-bottom.px: 50
+margin-bottom.rem: 3.15
 
 -- render-toc:
 if: { !ftd.is_empty(doc-page-desktop.toc) }
 toc-obj: $doc-page-desktop.toc
 
 -- ftd.column:
-align-self: center
-align-content: center
-spacing.fixed.px: 16
+spacing.fixed.rem: 1
 padding-horizontal.px: 50
 padding-top.px: 50
 
@@ -184,7 +201,6 @@ min-height.fixed.calc if { !ftd.is_empty(doc-page-desktop.toc) }: 100vh
 min-height.fixed.calc: 100vh - 135px
 children: $doc-page-desktop.wrapper
 spacing.fixed.em: 0.8
-
 
 -- end: ftd.column
 
@@ -209,13 +225,10 @@ spacing.fixed.em: 0.8
 pr.toc-item list toc-obj:
 
 -- ftd.column:
-sticky: true
 min-width.fixed.percent: 20
 min-height.fixed.calc: 100vh - 0px
 height: fill-container
-overflow-y: auto
 width.fixed.percent: 28.5
-align-content: top-left
 border-right-width.px: 1
 border-color: $inherited.colors.text-strong
 padding-horizontal.px: 26
@@ -266,15 +279,9 @@ color if { toc-instance.toc.is-active }: $inherited.colors.cta-primary.base
 width: fill-container
 
 -- ftd.image:
-if: { !ftd.is_empty(toc-instance.toc.children) && toc-instance.toc-clone.is-open}
+if: { !ftd.is_empty(toc-instance.toc.children) }
 src: $assets.files.static.arrow-up.svg
-height.fixed.px: 24
-width: auto
-align-self: center
-
--- ftd.image:
-if: { !ftd.is_empty(toc-instance.toc.children) && !toc-instance.toc-clone.is-open}
-src: $assets.files.static.arrow-down.svg
+src if { !toc-instance.toc-clone.is-open }: $assets.files.static.arrow-down.svg
 height.fixed.px: 24
 width: auto
 align-self: center
@@ -418,7 +425,6 @@ width: fill-container
 
 -- end: ftd.column
 
-
 -- ftd.row:
 width.fixed.percent: 70
 spacing: space-between
@@ -433,8 +439,14 @@ $loop$: $footer.footer-links as $obj
 
 -- end: ftd.row
 
-
 -- end: footer
+
+
+
+
+
+
+
 
 
 
@@ -447,17 +459,14 @@ pr.toc-item list children:
 
 -- ftd.column:
 
-
 -- ftd.text: $footer-list.title
 role: $inherited.types.copy-regular
 color: $inherited.colors.text
 link: $footer-list.url
 width: fill-container
 
--- ftd.column:
-if: { !ftd.is_empty(footer-list.children) }
-
 -- footer-list: $obj.title
+if: { !ftd.is_empty(footer-list.children) }
 url: $obj.url
 is-active: $obj.is-active
 children: $obj.children
@@ -465,6 +474,179 @@ $loop$: $footer-list.children as $obj
 
 -- end: ftd.column
 
+-- end: footer-list
+
+
+
+
+
+
+
+
+
+
+-- component image:
+optional caption caption:
+optional body body:
+optional string link:
+ftd.image-src src:
+optional ftd.align alignment: center
+optional ftd.resizing width:
+optional ftd.resizing height:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+height: $image.height
+
+-- ftd.image:
+src: $image.src
+width: auto
+width if { image.width != NULL }: $image.width
+max-width: fill-container
+height: auto
+align-self: center
+
+-- ftd.text:
+if: { image.caption != NULL }
+text: $image.caption
+color: $inherited.colors.text
+role: $inherited.types.label-large
+border-bottom-left-radius.px: 5
+border-bottom-right-radius.px: 5
+background.solid: $inherited.colors.background.step-1
+padding-vertical.rem: 0.5
+padding-horizontal.rem: 1.25
+text-align: center
+
+-- ftd.column:
+if: { image.body != NULL }
+margin-top.px: 20
+align-self: start
+
+-- tf.markdown:
+body: $image.body
+
 -- end: ftd.column
 
--- end: footer-list
+-- end: ftd.column
+
+-- end: image
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- component iframe:
+string src:
+
+-- ftd.iframe:
+src: $iframe.src
+height.fixed.px: 400
+width: fill-container
+margin-bottom.rem: 2.15
+
+-- end: iframe
+
+
+
+
+
+
+
+
+-- component youtube:
+caption v:
+
+-- ftd.iframe:
+youtube: $youtube.v
+height.fixed.px: 400
+width: fill-container
+margin-bottom.rem: 2.15
+
+-- end: youtube
+
+
+
+
+
+
+
+
+
+
+-- component output:
+caption title: Output
+children output-container:
+
+-- ftd.column:
+padding-top.px: 12
+width: fill-container
+
+-- ftd.text: $output.title
+color: $inherited.colors.text
+background.solid: $inherited.colors.background.base
+border-top-left-radius.px: 2
+border-top-right-radius.px: 2
+padding-vertical.px: 3
+padding-horizontal.px: 10
+role: $inherited.types.label-large
+
+-- ftd.column:
+border-width.px: 1
+border-color: $inherited.colors.text
+width: fill-container
+children: $output.output-container
+padding-vertical.px: 30
+padding-horizontal.px: 20
+border-radius.px: 2
+background.solid: $inherited.colors.background.base
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: output
+
+
+
+
+
+
+
+
+
+
+
+-- component highlight:
+caption title:
+
+-- ftd.text: $highlight.title
+background.solid: $inherited.colors.custom.two
+color: $inherited.colors.background.base
+padding.rem: 0.75
+border-radius.px: 3
+
+-- end: highlight
+
+
+
+
+
+
+
+
+

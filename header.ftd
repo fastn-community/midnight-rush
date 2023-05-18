@@ -106,11 +106,8 @@ padding-horizontal.px: 40
 
 -- ftd.row:
 width: fill-container
-padding-vertical.px: 40
-
--- ftd.row:
-width: fill-container
 spacing.fixed.px: 48
+padding-vertical.px: 40
 
 -- ftd.row:
 link: $header-desktop.site-url
@@ -150,7 +147,6 @@ is-active: $obj.is-active
 
 -- end: ftd.row
 
--- end: ftd.row
 
 -- ftd.row:
 width: fill-container
@@ -168,29 +164,6 @@ url: $obj.url
 
 -- end: header-desktop
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
--- component site-url:
-caption title:
-
--- ftd.text: $site-url.title
-role: $inherited.types.copy-regular
-align-self: center
-white-space: nowrap
-
--- end: site-url
 
 
 
@@ -235,63 +208,28 @@ boolean $open: false
 align-self: center
 
 -- ftd.text: $header-item.title
-if: { header-item.title != NULL && !header-item.is-active }
+if: { !header-item.is-active }
 role: $inherited.types.copy-regular
-link: $header-item.link
+link if { header-item.title != NULL }: $header-item.link
 white-space: nowrap
-color: $inherited.colors.text-strong
-color if { header-item.is-active }: $inherited.colors.cta-primary.base
+color if { header-item.is-active }: $fonts.FFDA00
 padding-top.rem: 0.4
-
+color: $inherited.colors.text-strong
 
 -- ftd.text: $header-item.title
-if: { header-item.link == NULL && !header-item.is-active  }
-role: $inherited.types.copy-regular
-white-space: nowrap
-color: $inherited.colors.text-strong
-color if { header-item.is-active }: $inherited.colors.cta-primary.base
-padding-top.rem: 0.4
-
--- ftd.text: $header-item.title
-if: { header-item.link == NULL && header-item.is-active  }
+if: { header-item.is-active }
 role: $fonts.copy-regular
 white-space: nowrap
-color: $inherited.colors.text-strong
-color if { header-item.is-active }: $inherited.colors.cta-primary.base
+color if { header-item.is-active }: $fonts.FFDA00
+link if { header-item.link != NULL }: $header-item.link
 padding-top.rem: 0.4
-
-
--- ftd.text: $header-item.title
-if: { header-item.link != NULL && header-item.is-active  }
-role: $fonts.copy-regular
-white-space: nowrap
 color: $inherited.colors.text-strong
-color if { header-item.is-active }: $inherited.colors.cta-primary.base
-link: $header-item.link
-padding-top.rem: 0.4
-
 
 -- end: ftd.row
 
 -- end: header-item
 
 
-
-
-
-
-
-
-
--- component site-link:
-caption title: 
-
--- ftd.text: $site-link.title
-role: $inherited.types.copy-regular
-color: $inherited.colors.text
-align-self: center
-
--- end: site-link
 
 
 
@@ -307,11 +245,11 @@ pr.toc-item list item:
 -- ftd.row:
 
 -- ftd.text: $subsections-links.title
-color: $inherited.colors.text
-color if { subsections-links.is-active }: $inherited.colors.cta-primary.base
+color if { subsections-links.is-active }: $fonts.FFDA00
 role: $inherited.types.button-small
 white-space: nowrap
-link: $subsections-links.url
+link if { subsections-links.url != NULL }:: $subsections-links.url
+color: $inherited.colors.text
 
 -- ftd.image:
 src: $assets.files.static.right.svg

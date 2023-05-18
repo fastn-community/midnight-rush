@@ -3,13 +3,17 @@
 -- fastn.package: fastn-community.github.io/set-1-ds
 
 -- fastn.dependency: fastn-community.github.io/set-1-typography as typo
-
 -- fastn.dependency: fastn-community.github.io/set-1-cs as cs
-
 -- fastn.dependency: fastn-community.github.io/opensans-font
-
 -- fastn.dependency: fastn-community.github.io/dark-mode-switcher
+-- fastn.dependency: fifthtry.github.io/code-block
+-- fastn.dependency: fifthtry.github.io/typography
 
+-- fastn.auto-import: fifthtry.github.io/code-block as cb
+exposing: code, rendered
+
+-- fastn.auto-import: fifthtry.github.io/typography as tf
+exposing: h0, h1, h2, h3, markdown
 
 -- fastn.auto-import: typo
 -- fastn.auto-import: cs
