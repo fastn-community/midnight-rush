@@ -1,51 +1,470 @@
 -- import: fastn-community.github.io/set-1-ds/assets
+-- import: fastn/processors as pr
+-- import: fastn-community.github.io/set-1-ds/common
+-- import: fastn-community.github.io/dark-mode-switcher as dms
+-- import: fastn-community.github.io/set-1-ds/header as h
 
 
 
--- ds.page: Welcome to your [FASTN site](https://fastn.io/)
+
+-- integer $width: 1320
+
+
+
+
+-- page: Featured Components
+
+Amet minim mollit non deserunt ullamco est sit 
+aliqua dolor do amet sint. Velit officia 
+consequat duis enim velit mollit.
+Exercitation veniam consequat sunt nostrud amet.
+
+
+
+
+
+
+
+
+
+
+
+-- component page:
+optional caption title:
+optional string document-title:
+optional string document-description:
+optional ftd.raw-image-src document-image: 
+optional body body:
+optional ftd.image-src site-logo: 
+integer logo-width: $common.logo-width
+integer logo-height: $common.logo-height
+optional string $site-url: $common.site-url
+optional string site-name: $common.site-name
+pr.toc-item list toc: $common.sitemap.toc
+pr.toc-item list sections: $common.sitemap.sections
+pr.toc-item list sub-sections: $common.sitemap.subsections
+optional pr.toc-item current-section: $common.sitemap.current-section
+optional pr.toc-item current-subsection: $common.sitemap.current-subsection
+optional pr.toc-item current-page: $common.sitemap.current-page
+children wrapper:
+ftd.type-data types: $typo.types
+ftd.color-scheme colors: $cs.main
+pr.toc-item list footer-links: $common.footer-links
+common.social-media list social-links: $common.social-links
+boolean show-footer: $common.show-footer
+ftd.ui list footer:
+string info: Stay in touch with everything you need
+string copyright: Copyright ©2022. Fastn Inc.
+-- ftd.document:
+title if { page.document-title != NULL }: $page.document-title
+title: $page.title
+og-title if { page.document-title != NULL }: $page.document-title
+og-title: $page.title
+description: $page.document-description
+og-image: $page.document-image
 
 -- ftd.column:
-align-self: center
+width: fill-container
+background.solid: $inherited.colors.background.base
 
--- chat.message-left: Yo! I am Amit Upadhyay, CEO of FifthTry, welcome to the new world of FTD.
+-- ftd.desktop:
 
--- ds.markdown: 
+-- doc-page-desktop: $page.title
+toc: $page.toc
+wrapper: $page.wrapper
+sections: $page.sections
+current-section: $page.current-section
+current-subsection: $page.current-subsection
+current-page: $page.current-page
+sub-sections: $page.sub-sections
+body: $page.body
+logo-height: $page.logo-height
+logo-width: $page.logo-width
+site-name: $page.site-name
+site-logo: $page.site-logo
+site-url: $page.site-url 
 
-You reached the right place, and from here let me assure you, your FTD journey is going superfast. 🙂
+-- end: ftd.desktop
 
--- end: chat.message-left
+-- dms.dark-mode-switcher-float:
 
--- chat.message-right:  😊 Liking this chat component?
-
--- ds.markdown:
-
-[Click here to learn more](https://fifthtry.github.io/bling/chat/)
-👍
-
--- end: chat.message-right
+-- footer:
+site-name: $page.site-name
+site-logo: $page.site-logo
+site-url: $page.site-url 
+info: $page.info
+copyright: $page.copyright
+logo-width: $common.logo-width
+logo-height: $common.logo-height
+footer-links: $page.footer-links
+social-links: $page.social-links
 
 -- end: ftd.column
 
--- ds.h1: How to use?
+-- end: ftd.document
 
-It's very simple like making a sandwich. Create new `.ftd` file and just say:
-
--- ds.code: `-- ds.page` 
-lang: ftd
-
-\-- ds.page: Your page title goes here
-
-Your page content goes here.
+-- end: page
 
 
--- ds.h1: Need sidebar at right side of page?
-
-Here it is, [use this document](https://fifthtry.github.io/doc-site/docs/right-sidebar/).
 
 
--- ds.h1: 👀 Learn FTD and become a pro?
 
-You are one click away, just check [our documentation](https://fastn.dev/) and 
-dont forget to jump into our [FifthTry Discord server](https://discord.gg/bucrdvptYd).
 
--- end: ds.page
+
+
+
+
+-- component doc-page-desktop:
+optional caption title:
+optional body body:
+pr.toc-item list toc:
+optional string site-name:
+ftd.image-src site-logo:
+string site-url:
+pr.toc-item list sections:
+pr.toc-item list sub-sections:
+pr.toc-item list footer-toc:
+optional pr.toc-item current-section:
+optional pr.toc-item current-page:
+optional pr.toc-item current-subsection:
+children wrapper:
+optional integer logo-width: 
+optional integer logo-height: 
+
+-- ftd.column:
+width: fill-container
+
+-- h.header:
+sections: $doc-page-desktop.sections
+sub-sections: $doc-page-desktop.sub-sections
+current-section: $doc-page-desktop.current-section
+current-subsection: $doc-page-desktop.current-subsection
+current-page: $doc-page-desktop.current-page
+toc: $doc-page-desktop.toc
+site-logo: $doc-page-desktop.site-logo
+site-url: $doc-page-desktop.site-url
+site-name: $doc-page-desktop.site-name
+logo-height: $doc-page-desktop.logo-height
+logo-width: $doc-page-desktop.logo-width
+menu-icon: $assets.files.static.header.hamburger-dark.svg
+
+-- ftd.row:
+width: fill-container
+align-content if { ftd.is_empty(doc-page-desktop.toc) }: center
+border-top-width.px: 1
+border-color: $inherited.colors.text-strong
+margin-bottom.px: 50
+
+-- render-toc:
+if: { !ftd.is_empty(doc-page-desktop.toc) }
+toc-obj: $doc-page-desktop.toc
+
+-- ftd.column:
+align-self: center
+align-content: center
+spacing.fixed.px: 16
+padding-horizontal.px: 50
+padding-top.px: 50
+
+-- ftd.text: $doc-page-desktop.title
+if: { doc-page-desktop.title != NULL }
+role: $inherited.types.heading-hero
+color: $inherited.colors.text-strong
+
+-- ftd.text: 
+if: { doc-page-desktop.body != NULL }
+text: $doc-page-desktop.body
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+-- ftd.column:
+width: fill-container
+align-content: top-left
+min-height.fixed.calc if { !ftd.is_empty(doc-page-desktop.toc) }: 100vh
+min-height.fixed.calc: 100vh - 135px
+children: $doc-page-desktop.wrapper
+spacing.fixed.em: 0.8
+
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: doc-page-desktop
+
+
+
+
+
+
+
+
+
+
+-- component render-toc:
+pr.toc-item list toc-obj:
+
+-- ftd.column:
+sticky: true
+min-width.fixed.percent: 20
+min-height.fixed.calc: 100vh - 0px
+height: fill-container
+overflow-y: auto
+width.fixed.percent: 28.5
+align-content: top-left
+border-right-width.px: 1
+border-color: $inherited.colors.text-strong
+padding-horizontal.px: 26
+padding-top.px: 50
+spacing.fixed.rem: 2.5
+
+-- toc-instance:
+$loop$: $render-toc.toc-obj as $obj
+toc: $obj
+
+-- end: ftd.column
+
+-- end: render-toc
+
+
+
+
+
+
+
+
+
+
+-- component toc-instance:
+pr.toc-item toc:
+pr.toc-item $toc-clone: *$toc-instance.toc
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 15
+$on-click$: $ftd.toggle($a = $toc-instance.toc-clone.is-open)
+
+-- ftd.image:
+if: { toc-instance.toc.font-icon != NULL }
+src: $toc-instance.toc.font-icon
+height.fixed.px: 24
+width: auto
+
+-- ftd.text:
+link if { toc-instance.toc.url != NULL }: $toc-instance.toc.url
+text: $toc-instance.toc.title
+role: $inherited.types.button-medium
+color: $inherited.colors.text-strong
+color if { toc-instance.toc.is-active }: $inherited.colors.cta-primary.base
+width: fill-container
+
+-- ftd.image:
+if: { !ftd.is_empty(toc-instance.toc.children) && toc-instance.toc-clone.is-open}
+src: $assets.files.static.arrow-up.svg
+height.fixed.px: 24
+width: auto
+align-self: center
+
+-- ftd.image:
+if: { !ftd.is_empty(toc-instance.toc.children) && !toc-instance.toc-clone.is-open}
+src: $assets.files.static.arrow-down.svg
+height.fixed.px: 24
+width: auto
+align-self: center
+
+-- end: ftd.row
+
+-- ftd.column:
+margin-left.px: 44
+padding-left.px: 10
+margin-top.rem: 2.25
+padding-top.rem: 0
+spacing.fixed.rem: 1.75
+if: { !ftd.is_empty(toc-instance.toc.children) && toc-instance.toc-clone.is-open }
+
+-- childrens:
+$loop$: $toc-instance.toc.children as $obj
+toc: $obj
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: toc-instance
+
+
+
+
+
+
+
+
+
+
+-- component childrens:
+pr.toc-item toc:
+
+-- ftd.column:
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 8
+
+-- ftd.text:
+link if { childrens.toc.url != NULL } : $childrens.toc.url
+text: $childrens.toc.title
+role: $inherited.types.copy-small
+color: $inherited.colors.text-strong
+color if { childrens.toc.is-active }: $inherited.colors.cta-primary.base
+
+-- end: ftd.row
+
+-- childrens:
+if: {!ftd.is_empty(childrens.toc.children) }
+$loop$: $childrens.toc.children as $obj
+toc: $obj
+
+-- end: ftd.column
+
+-- end: childrens
+
+
+
+
+
+
+
+
+
+
+
+-- component footer:
+string copyright:
+string info:
+optional ftd.image-src site-logo: 
+integer logo-width: $common.logo-width
+integer logo-height: $common.logo-height
+optional string site-url: $common.site-url
+optional string site-name: $common.site-name
+pr.toc-item list footer-links: $common.footer-links
+common.social-media list social-links: $common.social-links
+children footer-wrap:
+integer $width: $width
+
+-- ftd.row:
+max-width.fixed.px: $footer.width
+width: fill-container
+align-self: center
+padding-top.rem: 7.06
+padding-bottom.rem: 3.95
+color: $inherited.colors.text-strong
+background.solid: $inherited.colors.background.base
+spacing: space-between
+
+-- ftd.column:
+
+-- ftd.row:
+link: $footer.site-url
+align-content: center
+margin-bottom.rem: 1.5
+
+-- ftd.image:
+if: { footer.site-logo != NULL }
+src: $footer.site-logo
+width.fixed.px: $footer.logo-width
+height.fixed.px: $footer.logo-height
+align-self: center
+
+-- ftd.text: $footer.site-name
+if: { footer.site-name != NULL }
+role: $inherited.types.heading-medium
+color: $inherited.colors.text-strong
+margin-left.px if { footer.site-logo != NULL }: 16
+white-space: nowrap
+align-self: center
+
+-- h.fallback-title:
+if: { footer.site-logo == NULL }
+site-name: $footer.site-name
+
+-- end: ftd.row
+
+-- ftd.text: $footer.info
+role: $inherited.types.copy-small
+width: fill-container
+
+-- ftd.row:
+margin-vertical.px: 40
+spacing.fixed.px: 24
+
+-- ftd.image:
+$loop$: $footer.social-links as $obj
+src: $obj.src
+cursor: pointer
+link: $obj.link
+
+-- end: ftd.row
+
+-- ftd.text: $footer.copyright
+role: $inherited.types.fine-print
+width: fill-container
+
+-- end: ftd.column
+
+
+-- ftd.row:
+width.fixed.percent: 70
+spacing: space-between
+
+-- footer-list: $obj.title
+url: $obj.url
+is-active: $obj.is-active
+children: $obj.children
+$loop$: $footer.footer-links as $obj
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+
+-- end: footer
+
+
+
+
+-- component footer-list:
+caption title:
+optional string url:
+boolean is-active:
+pr.toc-item list children:
+
+-- ftd.column:
+
+
+-- ftd.text: $footer-list.title
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+link: $footer-list.url
+width: fill-container
+
+-- ftd.column:
+if: { !ftd.is_empty(footer-list.children) }
+
+-- footer-list: $obj.title
+url: $obj.url
+is-active: $obj.is-active
+children: $obj.children
+$loop$: $footer-list.children as $obj
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: footer-list

@@ -1,0 +1,322 @@
+-- import: fastn
+-- import: fastn/processors as pr
+-- import: fastn-community.github.io/set-1-ds/assets
+-- import: fastn-community.github.io/set-1-ds/common/fonts as fonts
+
+
+-- ftd.image-src site-logo: 
+light: https://fastn.com/-/fastn.com/images/fastn.svg
+dark: https://fastn.com/-/fastn.com/images/fastn-dark.svg
+
+-- $ps.current-product: 2
+
+-- boolean login-button: false
+
+-- boolean pricing-cta: false
+
+-- string site-url: index.html
+
+-- string site-name: Doc Site
+
+-- pr.sitemap-data sitemap:
+$processor$: pr.sitemap
+
+-- pr.toc-item list sections:
+
+-- pr.toc-item list sub-sections:
+
+-- pr.toc-item list extra:
+
+-- pr.toc-item list toc:
+
+-- pr.toc-item list footer-toc:
+
+-- pr.toc-item list footer-list:
+$processor$: pr.toc
+
+
+
+
+
+
+
+
+-- component header:
+optional ftd.image-src site-logo:
+string site-url: /
+optional string site-name:
+ftd.image-src menu-icon: $assets.files.static.header.hamburger-dark.svg
+pr.toc-item list sections: 
+pr.toc-item list sub-sections: 
+pr.toc-item list toc: 
+optional pr.toc-item current-section: 
+optional pr.toc-item current-subsection: 
+optional pr.toc-item current-page: 
+integer logo-width: 120
+integer logo-height: 44
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.desktop:
+
+-- header-desktop:
+site-logo: $header.site-logo
+site-url: $header.site-url 
+site-name: $header.site-name
+sections: $header.sections
+current-section: $header.current-section
+current-page: $header.current-page
+current-subsection: $header.current-subsection
+sub-sections: $header.sub-sections 
+logo-width: $header.logo-width 
+logo-height: $header.logo-height 
+
+
+-- end: ftd.desktop
+
+-- end: ftd.column
+
+-- end: header
+
+
+
+
+
+
+
+
+-- component header-desktop:
+optional ftd.image-src site-logo:
+string site-url: 
+optional string site-name:
+pr.toc-item list sections:
+optional pr.toc-item current-subsection: 
+pr.toc-item list sub-sections:
+optional pr.toc-item current-section: 
+optional pr.toc-item current-page:
+integer logo-width: 120
+integer logo-height: 44
+
+
+-- ftd.column:
+width: fill-container
+background.solid: $inherited.colors.background.base
+padding-horizontal.px: 40
+
+-- ftd.row:
+width: fill-container
+padding-vertical.px: 40
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 48
+
+-- ftd.row:
+link: $header-desktop.site-url
+align-content: center
+
+-- ftd.image:
+if: { header-desktop.site-logo != NULL }
+src: $header-desktop.site-logo
+width.fixed.px: $header-desktop.logo-width
+height.fixed.px: $header-desktop.logo-height
+align-self: center
+
+-- ftd.text: $header-desktop.site-name
+if: { header-desktop.site-name != NULL }
+role: $inherited.types.heading-medium
+color: $inherited.colors.text-strong
+margin-left.px if { header-desktop.site-logo != NULL }: 16
+white-space: nowrap
+align-self: center
+
+-- fallback-title:
+if: { header-desktop.site-logo == NULL }
+site-name: $header-desktop.site-name
+
+-- end: ftd.row
+
+-- ftd.row: 
+align-self: center
+spacing.fixed.px: 32
+
+-- header-item: $obj.title
+$loop$: $header-desktop.sections as $obj
+link: $obj.url
+is-active: $obj.is-active
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- ftd.row:
+width: fill-container
+padding-vertical.px: 50
+
+-- subsections-links: $obj.title
+$loop$: $header-desktop.sections as $obj
+item: $obj.children
+is-active: $obj.is-active
+url: $obj.url
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: header-desktop
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- component site-url:
+caption title:
+
+-- ftd.text: $site-url.title
+role: $inherited.types.copy-regular
+align-self: center
+white-space: nowrap
+
+-- end: site-url
+
+
+
+
+
+
+
+
+
+
+-- component fallback-title:
+optional string site-name:
+
+-- ftd.row:
+
+-- ftd.text: LOGO
+if: { fallback-title.site-name == NULL }
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+
+-- end: ftd.row
+
+-- end: fallback-title
+
+
+
+
+
+
+
+
+
+
+-- component header-item:
+caption title:
+optional ftd.image-src icon:
+optional string link:
+boolean is-active: 
+boolean $open: false
+
+-- ftd.row: 
+align-self: center
+
+-- ftd.text: $header-item.title
+if: { header-item.title != NULL && !header-item.is-active }
+role: $inherited.types.copy-regular
+link: $header-item.link
+white-space: nowrap
+color: $inherited.colors.text-strong
+color if { header-item.is-active }: $inherited.colors.cta-primary.base
+padding-top.rem: 0.4
+
+
+-- ftd.text: $header-item.title
+if: { header-item.link == NULL && !header-item.is-active  }
+role: $inherited.types.copy-regular
+white-space: nowrap
+color: $inherited.colors.text-strong
+color if { header-item.is-active }: $inherited.colors.cta-primary.base
+padding-top.rem: 0.4
+
+-- ftd.text: $header-item.title
+if: { header-item.link == NULL && header-item.is-active  }
+role: $fonts.copy-regular
+white-space: nowrap
+color: $inherited.colors.text-strong
+color if { header-item.is-active }: $inherited.colors.cta-primary.base
+padding-top.rem: 0.4
+
+
+-- ftd.text: $header-item.title
+if: { header-item.link != NULL && header-item.is-active  }
+role: $fonts.copy-regular
+white-space: nowrap
+color: $inherited.colors.text-strong
+color if { header-item.is-active }: $inherited.colors.cta-primary.base
+link: $header-item.link
+padding-top.rem: 0.4
+
+
+-- end: ftd.row
+
+-- end: header-item
+
+
+
+
+
+
+
+
+
+-- component site-link:
+caption title: 
+
+-- ftd.text: $site-link.title
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+align-self: center
+
+-- end: site-link
+
+
+
+
+
+
+-- component subsections-links:
+caption title:
+optional boolean is-active:
+optional string url: 
+pr.toc-item list item:
+
+-- ftd.row:
+
+-- ftd.text: $subsections-links.title
+color: $inherited.colors.text
+color if { subsections-links.is-active }: $inherited.colors.cta-primary.base
+role: $inherited.types.button-small
+white-space: nowrap
+link: $subsections-links.url
+
+-- ftd.image:
+src: $assets.files.static.right.svg
+align-self: center
+
+-- end: ftd.row
+
+-- end: subsections-links

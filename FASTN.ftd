@@ -2,8 +2,55 @@
 
 -- fastn.package: fastn-community.github.io/set-1-ds
 
--- fastn.dependency: fifthtry.github.io/doc-site as ds
--- fastn.dependency: fifthtry.github.io/bling as bling
+-- fastn.dependency: fastn-community.github.io/set-1-typography as typo
 
--- fastn.auto-import: bling/chat as chat
--- fastn.auto-import: ds
+-- fastn.dependency: fastn-community.github.io/set-1-cs as cs
+
+-- fastn.dependency: fastn-community.github.io/opensans-font
+
+-- fastn.dependency: fastn-community.github.io/dark-mode-switcher
+
+
+-- fastn.auto-import: typo
+-- fastn.auto-import: cs
+
+-- fastn.sitemap:
+
+# Why fastn: /
+icon: /static/header/why-menu-img.svg
+
+## Why fastn Child: /learn/
+
+- Home: /
+icon: /static/houglass.svg
+  - Component Library: /use-cases/
+  - Front end infrastructure: /build/
+  - Front end infrastructure: /build/
+  - Front end infrastructure: /build/
+
+- Pocket: /build/
+icon: /static/rocket-launch.svg
+
+- History: /build/
+icon: /static/history-toggle-off.svg
+
+- Service: /build/
+icon: /static/room-service.svg
+  
+- Saved: /build/
+icon: /static/saved-search.svg
+
+## How to use fastn: /sample-1/
+
+
+## Features listing page: /sample-1/
+
+# Use Cases: /use-cases/
+
+# Learn: /learn/
+
+
+# Build: /build/
+
+
+# Authoring: /authoring/
