@@ -88,7 +88,7 @@ right-sidebar list right-sidebar-children:
 -- right-sidebar list right-subtitle:
 
 -- right-sidebar: Creating a personal account
-link: #create-edge-mioddleware
+link: #create-personal-account
 
 -- right-sidebar.right-sidebar-children:
 
