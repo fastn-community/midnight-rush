@@ -12,9 +12,6 @@ export: code, rendered
 
 
 
--- integer $width: 1320
-
-
 
 
 -- page: Featured Components
@@ -275,7 +272,7 @@ link if { toc-instance.toc.url != NULL }: $toc-instance.toc.url
 text: $toc-instance.toc.title
 role: $inherited.types.button-medium
 color: $inherited.colors.text-strong
-color if { toc-instance.toc.is-active }: $inherited.colors.cta-primary.base
+color if { toc-instance.toc.is-active }: $inherited.colors.text-strong
 width: fill-container
 
 -- ftd.image:
@@ -329,7 +326,7 @@ link if { childrens.toc.url != NULL } : $childrens.toc.url
 text: $childrens.toc.title
 role: $inherited.types.copy-small
 color: $inherited.colors.text-strong
-color if { childrens.toc.is-active }: $inherited.colors.cta-primary.base
+color if { childrens.toc.is-active }: $inherited.colors.text-strong
 
 -- end: ftd.row
 
@@ -363,7 +360,7 @@ optional string site-name: $common.site-name
 pr.toc-item list footer-links: $common.footer-links
 common.social-media list social-links: $common.social-links
 children footer-wrap:
-integer $width: $width
+integer $width: $common.width
 
 -- ftd.row:
 max-width.fixed.px: $footer.width
