@@ -14,28 +14,41 @@ export: code, rendered
 
 
 
--- page: Featured Components
+-- page: Documentation 
 
-Amet minim mollit non deserunt ullamco est sit 
-aliqua dolor do amet sint. Velit officia 
-consequat duis enim velit mollit.
-Exercitation veniam consequat sunt nostrud amet.
+-- h1: Introduction to Fastn
 
+Our suite of products are open source and 
+available on Github. You are free to 
+download install and customize them 
+to your needs.We’d love to hear your 
+feedback and suggestions, and collectively
+make Documentation easier and better for 
+everyone. We enable teams to iterate quickly 
+and develop, preview, and ship delightful 
+user experiences. Fastn has zero-configuration 
+support for 35+ frontend frameworks and 
+integrates with your headless content, 
+commerce, or database of choice.
 
--- tf.h1: Featured Components
+-- h2: Creating a personal account
 
-Amet minim mollit non deserunt ullamco est sit 
-aliqua dolor do amet sint. Velit officia 
-consequat duis enim velit mollit.
-Exercitation veniam consequat sunt nostrud amet.
+Our suite of products are open source and 
+available on Github. You are free to 
+download install and customize them 
+to your needs.We’d love to hear your 
+feedback and suggestions, and collectively
+make Documentation easier and better for 
+everyone. We enable teams to iterate quickly 
+and develop, preview, and ship delightful 
+user experiences. Fastn has zero-configuration 
+support for 35+ frontend frameworks and 
+integrates with your headless content, 
+commerce, or database of choice.
 
+-- image: 
+src: $assets.files.static.image-placeholder.svg
 
--- image: This is the image with caption
-src: $assets.files.static.image-placeholder.png
-width.fixed.px: 500
-
--- image: This is the image with caption
-src: $assets.files.static.image-placeholder.png
 
 -- end: page
 
@@ -164,6 +177,14 @@ logo-height: $doc-page-desktop.logo-height
 logo-width: $doc-page-desktop.logo-width
 menu-icon: $assets.files.static.header.hamburger-dark.svg
 
+-- ftd.text: $doc-page-desktop.title
+if: { doc-page-desktop.title != NULL }
+role: $inherited.types.heading-hero
+color: $inherited.colors.text-strong
+margin-horizontal.rem: 2.5
+margin-bottom.rem: 3.12
+margin-top.px: 10
+
 -- ftd.row:
 width: fill-container
 align-content if { ftd.is_empty(doc-page-desktop.toc) }: center
@@ -176,22 +197,10 @@ if: { !ftd.is_empty(doc-page-desktop.toc) }
 toc-obj: $doc-page-desktop.toc
 
 -- ftd.column:
-spacing.fixed.rem: 1
 padding-horizontal.px: 50
 padding-top.px: 50
-
--- ftd.text: $doc-page-desktop.title
-if: { doc-page-desktop.title != NULL }
-role: $inherited.types.heading-hero
-color: $inherited.colors.text-strong
-
--- ftd.text: 
-if: { doc-page-desktop.body != NULL }
-text: $doc-page-desktop.body
-role: $inherited.types.copy-regular
-color: $inherited.colors.text
-
--- ftd.column:
+border-right-width.px: 1
+border-color: $inherited.colors.text-strong
 width: fill-container
 align-content: top-left
 min-height.fixed.calc if { !ftd.is_empty(doc-page-desktop.toc) }: 100vh
@@ -201,7 +210,7 @@ spacing.fixed.em: 0.8
 
 -- end: ftd.column
 
--- end: ftd.column
+-- right-sidebar:
 
 -- end: ftd.row
 
@@ -645,5 +654,101 @@ border-radius.px: 3
 
 
 
+-- component right-sidebar:
+common.right-sidebar list links: $common.right-subtitle
+
+-- ftd.column:
+width: fill-container
+padding-horizontal.px: 20
+margin-top.px: 50
+padding-top.px: 30
+border-color: $inherited.colors.border
+border-top-width.px: 1 
+max-width.fixed.px: 370
+
+-- ftd.row:
+spacing.fixed.px: 15
+align-content: center
+
+-- ftd.image:
+src: $assets.files.static.hamber.svg
+
+-- ftd.text: On this page
+role: $inherited.types.button-small
+color: $inherited.colors.text
+
+-- end: ftd.row
+
+-- right-navbar-list: 
+item: $obj
+$loop$: $right-sidebar.links as $obj
+
+-- end: ftd.column
+
+-- end: right-sidebar
 
 
+
+
+
+
+
+
+
+
+
+-- component right-navbar-list:
+common.right-sidebar item:
+boolean $active: false
+
+-- ftd.column:
+width: fill-container
+margin-top.px: 13
+
+-- ftd.text: $right-navbar-list.item.title
+role: $inherited.types.blockquote
+style if { right-navbar-list.active }: bold
+color: $inherited.colors.text
+color if { right-navbar-list.active}: $inherited.colors.accent.primary
+link: $right-navbar-list.item.link
+$on-click$: $ftd.set-bool($a= $right-navbar-list.active, v = true)
+style: bold
+opacity: 0.6
+
+-- ftd.column:
+width: fill-container
+margin-left.px: 20
+
+-- right-navbar-list-children: 
+item: $obj
+$loop$: $right-navbar-list.item.right-sidebar-children as $obj
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: right-navbar-list
+
+
+
+
+
+-- component right-navbar-list-children:
+common.right-sidebar item:
+boolean $active: false
+
+-- ftd.column:
+width: fill-container
+margin-top.px: 13
+
+-- ftd.text: $right-navbar-list-children.item.title
+role: $inherited.types.blockquote
+style if { right-navbar-list-children.active }: bold
+color: $inherited.colors.text
+color if { right-navbar-list-children.active}: $inherited.colors.accent.primary
+link: $right-navbar-list-children.item.link
+$on-click$: $ftd.set-bool($a= $right-navbar-list-children.active, v = true)
+
+-- end: ftd.column
+
+-- end: right-navbar-list-children

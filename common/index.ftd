@@ -3,7 +3,7 @@
 
 -- boolean show-footer: true
 
--- string $site-name: Templates
+-- string $site-name: Fastn
 
 -- integer logo-width: 200
 
@@ -74,3 +74,40 @@ link: /
 src: $assets.files.static.ball.svg
 
 -- end: social-links
+
+
+
+
+
+
+-- record right-sidebar:
+caption title:
+string link: 
+right-sidebar list right-sidebar-children:
+
+-- right-sidebar list right-subtitle:
+
+-- right-sidebar: Creating a personal account
+link: #create-edge-mioddleware
+
+-- right-sidebar.right-sidebar-children:
+
+-- right-sidebar: Creating a personal account
+link: #create-edge-mioddleware
+
+-- end: right-sidebar.right-sidebar-children
+
+-- right-sidebar: Login methods and connections
+link: #create-edge-mioddleware
+
+-- right-sidebar.right-sidebar-children:
+
+-- right-sidebar: Creating a personal account
+link: #create-edge-mioddleware
+
+-- end: right-sidebar.right-sidebar-children
+
+-- right-sidebar: Match using regex
+link: #create-edge-mioddleware
+
+-- end: right-subtitle

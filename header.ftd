@@ -98,7 +98,6 @@ optional pr.toc-item current-page:
 integer logo-width: 120
 integer logo-height: 44
 
-
 -- ftd.column:
 width: fill-container
 background.solid: $inherited.colors.background.base
@@ -106,8 +105,11 @@ padding-horizontal.px: 40
 
 -- ftd.row:
 width: fill-container
-spacing.fixed.px: 48
 padding-vertical.px: 40
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 48
 
 -- ftd.row:
 link: $header-desktop.site-url
@@ -147,6 +149,7 @@ is-active: $obj.is-active
 
 -- end: ftd.row
 
+-- end: ftd.row
 
 -- ftd.row:
 width: fill-container
@@ -164,6 +167,29 @@ url: $obj.url
 
 -- end: header-desktop
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- component site-url:
+caption title:
+
+-- ftd.text: $site-url.title
+role: $inherited.types.copy-regular
+align-self: center
+white-space: nowrap
+
+-- end: site-url
 
 
 
@@ -210,26 +236,42 @@ align-self: center
 -- ftd.text: $header-item.title
 if: { !header-item.is-active }
 role: $inherited.types.copy-regular
-link if { header-item.title != NULL }: $header-item.link
+link if { header-item.link != NULL}: $header-item.link
 white-space: nowrap
-color if { header-item.is-active }: $fonts.FFDA00
-padding-top.rem: 0.4
 color: $inherited.colors.text-strong
+padding-top.rem: 0.4
+opacity: 0.6
 
 -- ftd.text: $header-item.title
 if: { header-item.is-active }
-role: $fonts.copy-regular
+role: $inherited.types.copy-regular
 white-space: nowrap
-color if { header-item.is-active }: $fonts.FFDA00
 link if { header-item.link != NULL }: $header-item.link
-padding-top.rem: 0.4
 color: $inherited.colors.text-strong
+padding-top.rem: 0.4
+style: bold
 
 -- end: ftd.row
 
 -- end: header-item
 
 
+
+
+
+
+
+
+
+-- component site-link:
+caption title: 
+
+-- ftd.text: $site-link.title
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+align-self: center
+
+-- end: site-link
 
 
 
@@ -245,11 +287,19 @@ pr.toc-item list item:
 -- ftd.row:
 
 -- ftd.text: $subsections-links.title
-color if { subsections-links.is-active }: $fonts.FFDA00
+if: { !subsections-links.is-active }
+color: $inherited.colors.text
 role: $inherited.types.button-small
 white-space: nowrap
-link if { subsections-links.url != NULL }:: $subsections-links.url
+link: $subsections-links.url
+opacity: 0.6
+
+-- ftd.text: $subsections-links.title
+if: { subsections-links.is-active }
 color: $inherited.colors.text
+role: $inherited.types.button-medium
+white-space: nowrap
+link: $subsections-links.url
 
 -- ftd.image:
 src: $assets.files.static.right.svg
@@ -258,3 +308,6 @@ align-self: center
 -- end: ftd.row
 
 -- end: subsections-links
+
+
+
