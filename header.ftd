@@ -289,7 +289,7 @@ pr.toc-item list item:
 -- ftd.text: $subsections-links.title
 if: { !subsections-links.is-active }
 color: $inherited.colors.text
-role: $inherited.types.button-small
+role: $inherited.types.button-medium
 white-space: nowrap
 link: $subsections-links.url
 opacity: 0.6

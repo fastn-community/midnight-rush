@@ -4,10 +4,10 @@
 -- import: fastn-community.github.io/dark-mode-switcher as dms
 -- import: fastn-community.github.io/set-1-ds/header as h
 
--- import: fifthtry.github.io/typography as tf
+-- import: fastn-community.github.io/typography as tf
 export: h0, h1, h2, h3, markdown
 
--- import: fifthtry.github.io/code-block as cb
+-- import: fastn-community.github.io/code-block as cb
 export: code, rendered
 
 
@@ -56,6 +56,12 @@ commerce, or database of choice.
 -- image: 
 src: $assets.files.static.image-placeholder.svg
 
+-- code:
+lang: ftd
+
+\-- FTD.ROW
+
+npx create-docusaurus@latest my-website classic
 
 -- end: page
 
