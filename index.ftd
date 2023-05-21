@@ -14,7 +14,14 @@ export: code, rendered
 
 
 
+
+
+
+
+
+
 -- page: Documentation 
+$sidebar: true
 
 -- h1: Introduction to Fastn
 
@@ -60,6 +67,7 @@ src: $assets.files.static.image-placeholder.svg
 
 
 
+
 -- component page:
 optional caption title:
 optional string document-title:
@@ -84,6 +92,8 @@ pr.toc-item list footer-links: $common.footer-links
 common.social-media list social-links: $common.social-links
 string info: Stay in touch with everything you need
 string copyright: Copyright ©2022. Fastn Inc.
+common.right-sidebar list sidebar-list: $common.sidebar-list
+boolean $sidebar: false
 
 -- ftd.document:
 title if { page.document-title != NULL }: $page.document-title
@@ -113,6 +123,7 @@ logo-width: $page.logo-width
 site-name: $page.site-name
 site-logo: $page.site-logo
 site-url: $page.site-url 
+$sidebar: $page.sidebar
 
 -- end: ftd.desktop
 
@@ -159,6 +170,8 @@ optional pr.toc-item current-subsection:
 children wrapper:
 optional integer logo-width: 
 optional integer logo-height: 
+common.right-sidebar list sidebar-list: $common.sidebar-list
+boolean $sidebar: false
 
 -- ftd.column:
 width: fill-container
@@ -211,6 +224,8 @@ spacing.fixed.em: 0.8
 -- end: ftd.column
 
 -- right-sidebar:
+if: { doc-page-desktop.sidebar}
+sidebar-list: $doc-page-desktop.sidebar-list
 
 -- end: ftd.row
 
@@ -325,10 +340,7 @@ toc: $obj
 pr.toc-item toc:
 
 -- ftd.column:
-
--- ftd.row:
 width: fill-container
-spacing.fixed.px: 8
 
 -- ftd.text:
 link if { childrens.toc.url != NULL } : $childrens.toc.url
@@ -336,8 +348,6 @@ text: $childrens.toc.title
 role: $inherited.types.copy-small
 color: $inherited.colors.text-strong
 color if { childrens.toc.is-active }: $inherited.colors.text-strong
-
--- end: ftd.row
 
 -- childrens:
 if: {!ftd.is_empty(childrens.toc.children) }
@@ -347,7 +357,6 @@ toc: $obj
 -- end: ftd.column
 
 -- end: childrens
-
 
 
 
@@ -456,7 +465,6 @@ $loop$: $footer.footer-links as $obj
 
 
 
-
 -- component footer-list:
 caption title:
 optional string url:
@@ -464,14 +472,16 @@ boolean is-active:
 pr.toc-item list children:
 
 -- ftd.column:
+spacing.fixed.rem: 0.43
 
 -- ftd.text: $footer-list.title
 role: $inherited.types.copy-regular
 color: $inherited.colors.text
 link: $footer-list.url
 width: fill-container
+style: bold
 
--- footer-list: $obj.title
+-- footer-list-child: $obj.title
 if: { !ftd.is_empty(footer-list.children) }
 url: $obj.url
 is-active: $obj.is-active
@@ -481,6 +491,39 @@ $loop$: $footer-list.children as $obj
 -- end: ftd.column
 
 -- end: footer-list
+
+
+
+
+
+
+
+
+
+-- component footer-list-child:
+caption title:
+optional string url:
+boolean is-active:
+pr.toc-item list children:
+
+-- ftd.column:
+
+-- ftd.text: $footer-list-child.title
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+link: $footer-list-child.url
+width: fill-container
+
+-- footer-list-child: $obj.title
+if: { !ftd.is_empty(footer-list-child.children) }
+url: $obj.url
+is-active: $obj.is-active
+children: $obj.children
+$loop$: $footer-list-child.children as $obj
+
+-- end: ftd.column
+
+-- end: footer-list-child
 
 
 
@@ -548,14 +591,6 @@ body: $image.body
 
 
 
-
-
-
-
-
-
-
-
 -- component iframe:
 string src:
 
@@ -566,6 +601,8 @@ width: fill-container
 margin-bottom.rem: 2.15
 
 -- end: iframe
+
+
 
 
 
@@ -636,7 +673,6 @@ background.solid: $inherited.colors.background.base
 
 
 
-
 -- component highlight:
 caption title:
 
@@ -654,14 +690,16 @@ border-radius.px: 3
 
 
 
+
+
+
 -- component right-sidebar:
-common.right-sidebar list links: $common.right-subtitle
+common.right-sidebar list sidebar-list: $common.sidebar-list
 
 -- ftd.column:
 width: fill-container
 padding-horizontal.px: 20
 margin-top.px: 50
-padding-top.px: 30
 border-color: $inherited.colors.border
 border-top-width.px: 1 
 max-width.fixed.px: 370
@@ -681,12 +719,11 @@ color: $inherited.colors.text
 
 -- right-navbar-list: 
 item: $obj
-$loop$: $right-sidebar.links as $obj
+$loop$: $right-sidebar.sidebar-list as $obj
 
 -- end: ftd.column
 
 -- end: right-sidebar
-
 
 
 
@@ -707,7 +744,6 @@ margin-top.px: 13
 
 -- ftd.text: $right-navbar-list.item.title
 role: $inherited.types.blockquote
-style if { right-navbar-list.active }: bold
 color: $inherited.colors.text
 color if { right-navbar-list.active}: $inherited.colors.accent.primary
 link: $right-navbar-list.item.link
@@ -733,6 +769,11 @@ $loop$: $right-navbar-list.item.right-sidebar-children as $obj
 
 
 
+
+
+
+
+
 -- component right-navbar-list-children:
 common.right-sidebar item:
 boolean $active: false
@@ -743,7 +784,6 @@ margin-top.px: 13
 
 -- ftd.text: $right-navbar-list-children.item.title
 role: $inherited.types.blockquote
-style if { right-navbar-list-children.active }: bold
 color: $inherited.colors.text
 color if { right-navbar-list-children.active}: $inherited.colors.accent.primary
 link: $right-navbar-list-children.item.link
