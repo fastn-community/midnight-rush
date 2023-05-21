@@ -26,38 +26,21 @@ exposing: h0, h1, h2, h3, markdown
 # Why fastn: /
 icon: /static/header/why-menu-img.svg
 
-## Why fastn Child: /learn/
+## Why fastn Child: /
 
 - Home: /
 icon: /static/houglass.svg
-  - Component Library: /use-cases/
-  - Front end infrastructure: /build/
-  - Front end infrastructure: /build/
-  - Front end infrastructure: /build/
+  - Component Library: /
+  - Front end infrastructure: /
+  - Front end infrastructure: /
+  - Front end infrastructure: /
 
-- Pocket: /build/
-icon: /static/rocket-launch.svg
+## Why fastn Child: /header/
 
-- History: /build/
-icon: /static/history-toggle-off.svg
-
-- Service: /build/
-icon: /static/room-service.svg
-  
-- Saved: /build/
-icon: /static/saved-search.svg
-
-## How to use fastn: /sample-1/
-
-
-## Features listing page: /sample-1/
-
-# Use Cases: /use-cases/
-
-# Learn: /learn/
-
-
-# Build: /build/
-
-
-# Authoring: /authoring/
+- Home: /
+icon: /static/houglass.svg
+  - Component Library: /
+  - Front end infrastructure: /
+  - Front end infrastructure: /
+  - Front end infrastructure: /
+# Use Cases: /
