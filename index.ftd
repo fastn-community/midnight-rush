@@ -442,7 +442,7 @@ margin-top.px: 10
 -- ftd.text: $doc-page-desktop.title
 if: { doc-page-desktop.title != NULL }
 role: $inherited.types.heading-large
-color: $inherited.colors.text
+color: $inherited.colors.text-strong
 
 -- tf.markdown:
 if: {doc-page-desktop.body != NULL}
@@ -534,21 +534,21 @@ width: fill-container
 
 -- ftd.row:
 width: fill-container
-spacing.fixed.px: 15
+align-content: center
+spacing.fixed.px: 12
 $on-click$: $ftd.toggle($a = $toc-instance.toc-clone.is-open)
 
 -- ftd.image:
 if: { toc-instance.toc.font-icon != NULL }
 src: $toc-instance.toc.font-icon
-height.fixed.px: 24
+min-height.fixed.px: 24
 width: auto
 
 -- ftd.text:
 link if { toc-instance.toc.url != NULL }: $toc-instance.toc.url
 text: $toc-instance.toc.title
 role: $inherited.types.button-medium
-color: $inherited.colors.text
-color if { toc-instance.toc.is-active }: $inherited.colors.text
+color: $inherited.colors.text-strong
 width: fill-container
 
 -- ftd.image:
@@ -557,16 +557,13 @@ src: $assets.files.static.arrow-up.svg
 src if { !toc-instance.toc-clone.is-open }: $assets.files.static.arrow-down.svg
 height.fixed.px: 24
 width: auto
-align-self: center
 
 -- end: ftd.row
 
 -- ftd.column:
-margin-left.px: 44
-padding-left.px: 10
-margin-top.rem: 2.25
-padding-top.rem: 0
-spacing.fixed.rem: 1.75
+margin-left.px: 37
+spacing.fixed.px: 24
+margin-top.px: 24
 if: { !ftd.is_empty(toc-instance.toc.children) && toc-instance.toc-clone.is-open }
 
 -- childrens:
@@ -601,14 +598,60 @@ role: $inherited.types.copy-small
 color: $inherited.colors.text
 color if { childrens.toc.is-active }: $inherited.colors.text-strong
 
--- childrens:
+-- ftd.column:
 if: {!ftd.is_empty(childrens.toc.children) }
+width: fill-container
+margin-top.px: 24
+spacing.fixed.px: 24
+
+-- child-of-childrens:
 $loop$: $childrens.toc.children as $obj
 toc: $obj
 
 -- end: ftd.column
 
+-- end: ftd.column
+
 -- end: childrens
+
+
+
+
+
+
+
+
+
+
+-- component child-of-childrens:
+pr.toc-item toc:
+
+-- ftd.column:
+width: fill-container
+padding-left.px: 10
+spacing.fixed.px: 24
+
+-- ftd.text:
+link if { child-of-childrens.toc.url != NULL } : $child-of-childrens.toc.url
+text: $child-of-childrens.toc.title
+role: $inherited.types.copy-small
+color: $inherited.colors.text
+color if { child-of-childrens.toc.is-active }: $inherited.colors.text-strong
+
+
+-- ftd.column:
+if: {!ftd.is_empty(child-of-childrens.toc.children) }
+width: fill-container
+
+-- child-of-childrens:
+$loop$: $child-of-childrens.toc.children as $obj
+toc: $obj
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: child-of-childrens
 
 
 
@@ -714,7 +757,7 @@ align-self: center
 -- ftd.text: $footer-desktop.site-name
 if: { footer-desktop.site-name != NULL }
 role: $inherited.types.heading-medium
-color: $inherited.colors.text
+color: $inherited.colors.text-strong
 white-space: nowrap
 align-self: center
 
@@ -817,7 +860,7 @@ pr.toc-item list children:
 
 -- ftd.text: $footer-list-child.title
 role: $inherited.types.copy-regular
-color: $inherited.colors.text
+color: $inherited.colors.text-strong
 link: $footer-list-child.url
 width: fill-container
 
@@ -1267,9 +1310,11 @@ color: $inherited.colors.text
 
 -- ftd.text: $tip.title
 role: $inherited.types.heading-tiny
+color: $inherited.colors.text-strong
 
 -- ftd.text: 
 role: $inherited.types.copy-regular
+color: $inherited.colors.text
 
 $tip.body
 

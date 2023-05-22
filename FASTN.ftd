@@ -24,7 +24,7 @@ exposing: h0, h1, h2, h3, markdown
 -- fastn.sitemap:
 
 # Why fastn: /
-icon: /static/header/why-menu-img.svg
+icon: /static/houglass.svg
 
 ## Why fastn Child: /
 
@@ -33,7 +33,7 @@ icon: /static/houglass.svg
   - Component Library: /
   - Front end infrastructure: /
   - Front end infrastructure: /
-  - Front end infrastructure: /
+  - Front end infrastructure: /    
 
 ## Why fastn Child: /header/
 
