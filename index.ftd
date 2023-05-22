@@ -1613,7 +1613,7 @@ spacing.fixed.rem: 1.2
 margin-bottom.rem: 1.2
 
 -- ftd.image:
-src: $assets.files.static.hamber.svg
+src: $assets.files.static.hamburger.svg
 
 -- ftd.text: $toc-title.title
 role: $inherited.types.button-medium
