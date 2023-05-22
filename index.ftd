@@ -306,10 +306,6 @@ optional pr.toc-item current-page: $common.sitemap.current-page
 children wrapper:
 ftd.type-data types: $typo.types
 ftd.color-scheme colors: $cs.main
-pr.toc-item list footer-links: $common.footer-list
-common.social-media list social-links: $common.social-links
-string info: Stay in touch with everything you need
-string copyright: Copyright ©2022. Fastn Inc.
 ftd.ui list right-sidebar:
 boolean sidebar: false
 boolean show-footer: $common.show-footer
@@ -364,7 +360,6 @@ right-sidebar: $page.right-sidebar
 -- doc-page-mobile: $page.title
 wrapper: $page.wrapper
 toc: $page.toc
-footer-toc: $page.footer-links
 sections: $page.sections
 current-section: $page.current-section
 current-subsection: $page.current-subsection
@@ -1037,7 +1032,6 @@ pr.toc-item list toc:
 pr.toc-item list sections:
 pr.toc-item list sub-sections:
 boolean $open-right-sidebar-info: false
-pr.toc-item list footer-toc: 
 optional pr.toc-item current-section:
 optional pr.toc-item current-page:
 optional pr.toc-item current-subsection:

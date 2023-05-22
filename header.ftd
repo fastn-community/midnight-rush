@@ -12,7 +12,6 @@
 
 
 
-
 -- component header:
 optional ftd.image-src site-logo:
 string site-url: /
