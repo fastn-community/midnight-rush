@@ -29,9 +29,11 @@ social-links: $common.social-links
 
 -- end: page.footer
 
--- page.extra-headers:
+-- page.right-sidebar:
 
--- links: Creating a personal account
+/-- toc-title: On this page
+
+-- link-group: Creating a personal account
 cta: #id-of-the-heading
 
 -- link: Signup with email
@@ -40,9 +42,9 @@ cta: #id-of-the-heading
 -- link: Sign up with Git provider
 cta: #id-of-the-heading
 
--- end: links
+-- end: link-group
 
--- links: Login methods and connections
+-- link-group: Login methods and connections
 cta: #id-of-the-heading
 
 -- link: Existing login connection
@@ -51,48 +53,36 @@ cta: #id-of-the-heading
 -- link: Choosing a connection when creating a projectSign up with Git provider
 cta: #id-of-the-heading
 
--- end: links
+-- end: link-group
 
--- links: Create Edge Middleware
+-- link-group: Create Edge Middleware
 cta: #id-of-the-heading
 
-
--- end: page.extra-headers
+-- end: page.right-sidebar
 
 -- page.body:
 
-Our suite of products are open source and 
-available on Github. You are free to 
+Our suite of products are open source and available on Github. You are free to 
 
 -- h1: Introduction to Fastn
 
-Our suite of products are open source and 
-available on Github. You are free to 
-download install and customize them 
-to your needs.We’d love to hear your 
-feedback and suggestions, and collectively
-make Documentation easier and better for 
-everyone. We enable teams to iterate quickly 
-and develop, preview, and ship delightful 
-user experiences. Fastn has zero-configuration 
-support for 35+ frontend frameworks and 
-integrates with your headless content, 
-commerce, or database of choice.
+Our suite of products are open source and available on Github. You are free to
+download install and customize them to your needs.We’d love to hear your
+feedback and suggestions, and collectively make Documentation easier and better
+for everyone. We enable teams to iterate quickly and develop, preview, and ship
+delightful user experiences. Fastn has zero-configuration support for 35+
+frontend frameworks and integrates with your headless content, commerce, or
+database of choice.
 
 -- h2: Creating a personal account
 
-Our suite of products are open source and 
-available on Github. You are free to 
-download install and customize them 
-to your needs.We’d love to hear your 
-feedback and suggestions, and collectively
-make Documentation easier and better for 
-everyone. We enable teams to iterate quickly 
-and develop, preview, and ship delightful 
-user experiences. Fastn has zero-configuration 
-support for 35+ frontend frameworks and 
-integrates with your headless content, 
-commerce, or database of choice.
+Our suite of products are open source and available on Github. You are free to
+download install and customize them to your needs.We’d love to hear your
+feedback and suggestions, and collectively make Documentation easier and better
+for everyone. We enable teams to iterate quickly and develop, preview, and ship
+delightful user experiences. Fastn has zero-configuration support for 35+
+frontend frameworks and integrates with your headless content, commerce, or
+database of choice.
 
 -- cards:
 
@@ -112,11 +102,13 @@ width.fixed.percent: 100
 
 -- tip: 
 
-Please note that some functionality (for example, anchor links) will not work in development. The functionality will work as expected in production.
+Please note that some functionality (for example, anchor links) will not work in
+development. The functionality will work as expected in production.
 
 -- tip: 
 
-Please note that some functionality (for example, anchor links) will not work in development. The functionality will work as expected in production.
+Please note that some functionality (for example, anchor links) will not work in
+development. The functionality will work as expected in production.
 
 -- code:
 lang: ftd
@@ -127,18 +119,13 @@ npx create-docusaurus@latest my-website classic
 
 -- h2: Signup with email
 
-Our suite of products are open source and 
-available on Github. You are free to 
-download install and customize them 
-to your needs.We’d love to hear your 
-feedback and suggestions, and collectively
-make Documentation easier and better for 
-everyone. We enable teams to iterate quickly 
-and develop, preview, and ship delightful 
-user experiences. Fastn has zero-configuration 
-support for 35+ frontend frameworks and 
-integrates with your headless content, 
-commerce, or database of choice.
+Our suite of products are open source and available on Github. You are free to
+download install and customize them to your needs.We’d love to hear your
+feedback and suggestions, and collectively make Documentation easier and better
+for everyone. We enable teams to iterate quickly and develop, preview, and ship
+delightful user experiences. Fastn has zero-configuration support for 35+
+frontend frameworks and integrates with your headless content, commerce, or
+database of choice.
 
 
 -- code:
@@ -150,18 +137,13 @@ npx create-docusaurus@latest my-website classic
 
 -- h2: Sign up with Git provider
 
-Our suite of products are open source and 
-available on Github. You are free to 
-download install and customize them 
-to your needs.We’d love to hear your 
-feedback and suggestions, and collectively
-make Documentation easier and better for 
-everyone. We enable teams to iterate quickly 
-and develop, preview, and ship delightful 
-user experiences. Fastn has zero-configuration 
-support for 35+ frontend frameworks and 
-integrates with your headless content, 
-commerce, or database of choice.
+Our suite of products are open source and available on Github. You are free to
+download install and customize them to your needs.We’d love to hear your
+feedback and suggestions, and collectively make Documentation easier and better
+for everyone. We enable teams to iterate quickly and develop, preview, and ship
+delightful user experiences. Fastn has zero-configuration support for 35+
+frontend frameworks and integrates with your headless content, commerce, or
+database of choice.
 
 -- code:
 lang: ftd
@@ -172,32 +154,42 @@ npx create-docusaurus@latest my-website classic
 
 -- h3: Login methods and connections
 
-Our suite of products are open source and 
-available on Github. You are free to 
-download install and customize them 
-to your needs.We’d love to hear your 
-feedback and suggestions, and collectively
-make Documentation easier and better for 
-everyone. We enable teams to iterate quickly 
-and develop, preview, and ship delightful 
-user experiences. Fastn has zero-configuration 
-support for 35+ frontend frameworks and 
-integrates with your headless content, 
-commerce, or database of choice.
+Our suite of products are open source and available on Github. You are free to
+download install and customize them to your needs.We’d love to hear your
+feedback and suggestions, and collectively make Documentation easier and better
+for everyone. We enable teams to iterate quickly and develop, preview, and ship
+delightful user experiences. Fastn has zero-configuration support for 35+
+frontend frameworks and integrates with your headless content, commerce, or
+database of choice.
 
 -- image: 
 src: $assets.files.static.image-placeholder.svg
 width.fixed.percent: 100
 
--- list-item-bold: Lists can be nested as deeply as needed, and they may alternate between ordered and unordered.
+-- list-item-bold: 
 
--- list-item-bold: Lists should align with the font-size, font-weight, and line-height of paragraphs, but are styled with bullets or numbers.
+Lists can be nested as deeply as needed, and they may alternate between ordered
+and unordered.
 
--- list-item-bold: Lists can have similar children elements as paragraphs to provide emphasis on a certain word or phrase.
+-- list-item-bold: 
 
--- list-item-bold: You can switch between an unordered list and ordered list by changing the component variant in the Design panel.
+Lists should align with the font-size, font-weight, and line-height of
+paragraphs, but are styled with bullets or numbers.
 
--- list-item-bold: You can remove a list item from the default component by deleting it in the Layers panel.
+-- list-item-bold: 
+
+Lists can have similar children elements as paragraphs to provide emphasis on a
+certain word or phrase.
+
+-- list-item-bold: 
+
+You can switch between an unordered list and ordered list by changing the
+component variant in the Design panel.
+
+-- list-item-bold: 
+
+You can remove a list item from the default component by deleting it in the
+Layers panel.
 
 -- code:
 lang: ftd
@@ -209,18 +201,13 @@ npx create-docusaurus@latest my-website classic
 -- h3: Existing login connection
 
 
-Our suite of products are open source and 
-available on Github. You are free to 
-download install and customize them 
-to your needs.We’d love to hear your 
-feedback and suggestions, and collectively
-make Documentation easier and better for 
-everyone. We enable teams to iterate quickly 
-and develop, preview, and ship delightful 
-user experiences. Fastn has zero-configuration 
-support for 35+ frontend frameworks and 
-integrates with your headless content, 
-commerce, or database of choice.
+Our suite of products are open source and available on Github. You are free to
+download install and customize them to your needs.We’d love to hear your
+feedback and suggestions, and collectively make Documentation easier and better
+for everyone. We enable teams to iterate quickly and develop, preview, and ship
+delightful user experiences. Fastn has zero-configuration support for 35+
+frontend frameworks and integrates with your headless content, commerce, or
+database of choice.
 
 -- code:
 lang: ftd
@@ -231,32 +218,42 @@ npx create-docusaurus@latest my-website classic
 
 -- h3: Choosing a connection when creating a project
 
-Our suite of products are open source and 
-available on Github. You are free to 
-download install and customize them 
-to your needs.We’d love to hear your 
-feedback and suggestions, and collectively
-make Documentation easier and better for 
-everyone. We enable teams to iterate quickly 
-and develop, preview, and ship delightful 
-user experiences. Fastn has zero-configuration 
-support for 35+ frontend frameworks and 
-integrates with your headless content, 
-commerce, or database of choice.
+Our suite of products are open source and available on Github. You are free to
+download install and customize them to your needs.We’d love to hear your
+feedback and suggestions, and collectively make Documentation easier and better
+for everyone. We enable teams to iterate quickly and develop, preview, and ship
+delightful user experiences. Fastn has zero-configuration support for 35+
+frontend frameworks and integrates with your headless content, commerce, or
+database of choice.
 
 -- image: 
 src: $assets.files.static.image-placeholder.svg
 width.fixed.percent: 100
 
--- list-item-bold: Lists can be nested as deeply as needed, and they may alternate between ordered and unordered.
+-- list-item-bold: 
 
--- list-item-bold: Lists should align with the font-size, font-weight, and line-height of paragraphs, but are styled with bullets or numbers.
+Lists can be nested as deeply as needed, and they may alternate between ordered
+and unordered.
 
--- list-item-bold: Lists can have similar children elements as paragraphs to provide emphasis on a certain word or phrase.
+-- list-item-bold: 
 
--- list-item-bold: You can switch between an unordered list and ordered list by changing the component variant in the Design panel.
+Lists should align with the font-size, font-weight, and line-height of
+paragraphs, but are styled with bullets or numbers.
 
--- list-item-bold: You can remove a list item from the default component by deleting it in the Layers panel.
+-- list-item-bold: 
+
+Lists can have similar children elements as paragraphs to provide emphasis on a
+certain word or phrase.
+
+-- list-item-bold: 
+
+You can switch between an unordered list and ordered list by changing the
+component variant in the Design panel.
+
+-- list-item-bold: 
+
+You can remove a list item from the default component by deleting it in the
+Layers panel.
 
 -- code:
 lang: ftd
@@ -267,18 +264,13 @@ npx create-docusaurus@latest my-website classic
 
 -- h3: Create Edge Middleware
 
-Our suite of products are open source and 
-available on Github. You are free to 
-download install and customize them 
-to your needs.We’d love to hear your 
-feedback and suggestions, and collectively
-make Documentation easier and better for 
-everyone. We enable teams to iterate quickly 
-and develop, preview, and ship delightful 
-user experiences. Fastn has zero-configuration 
-support for 35+ frontend frameworks and 
-integrates with your headless content, 
-commerce, or database of choice.
+Our suite of products are open source and available on Github. You are free to
+download install and customize them to your needs.We’d love to hear your
+feedback and suggestions, and collectively make Documentation easier and better
+for everyone. We enable teams to iterate quickly and develop, preview, and ship
+delightful user experiences. Fastn has zero-configuration support for 35+
+frontend frameworks and integrates with your headless content, commerce, or
+database of choice.
 
 -- end: page
 
@@ -315,7 +307,7 @@ pr.toc-item list footer-links: $common.footer-list
 common.social-media list social-links: $common.social-links
 string info: Stay in touch with everything you need
 string copyright: Copyright ©2022. Fastn Inc.
-ftd.ui list extra-headers:
+ftd.ui list right-sidebar:
 boolean sidebar: false
 boolean show-footer: $common.show-footer
 ftd.ui list footer:
@@ -360,7 +352,7 @@ site-name: $page.site-name
 site-logo: $page.site-logo
 site-url: $page.site-url 
 sidebar: $page.sidebar
-extra-headers: $page.extra-headers
+right-sidebar: $page.right-sidebar
 
 -- end: ftd.desktop
 
@@ -424,7 +416,7 @@ children wrapper:
 optional integer logo-width: 
 optional integer logo-height: 
 boolean sidebar: false
-ftd.ui list extra-headers:
+ftd.ui list right-sidebar:
 
 -- ftd.column:
 width: fill-container
@@ -487,7 +479,7 @@ min-height: fill-container
 
 -- right-sidebar:
 if: { doc-page-desktop.sidebar}
-extra-headers: $doc-page-desktop.extra-headers
+right-sidebar: $doc-page-desktop.right-sidebar
 
 -- end: ftd.row
 
@@ -1004,7 +996,7 @@ border-radius.px: 3
 
 
 -- component right-sidebar:
-ftd.ui list extra-headers:
+ftd.ui list right-sidebar:
 
 -- ftd.column:
 width: fill-container
@@ -1013,7 +1005,7 @@ margin-top.px: 50
 border-color: $inherited.colors.border
 border-top-width.px: 1 
 max-width.fixed.percent: 20
-children: $right-sidebar.extra-headers
+children: $right-sidebar.right-sidebar
 
 -- end: ftd.column
 
@@ -1136,7 +1128,7 @@ padding-horizontal.px: 24
 
 
 -- component list-item-bold:
-caption title:
+body body:
 
 -- ftd.row:
 width: fill-container
@@ -1148,10 +1140,12 @@ role: $inherited.types.copy-small
 style: bold
 color: $inherited.colors.text
 
--- ftd.text: $list-item-bold.title
+-- ftd.text: 
 role: $inherited.types.copy-small
 style: bold
 color: $inherited.colors.text
+
+$list-item-bold.body
 
 -- end: ftd.row
 
@@ -1304,34 +1298,34 @@ children: $link.wrapper
 
 
 
--- component links:
+-- component link-group:
 caption title:
 string cta:
 children wrapper:
 boolean $active: false
 
 -- ftd.column:
-$on-click$: $ftd.set-bool($a= $links.active, v = true)
+$on-click$: $ftd.set-bool($a= $link-group.active, v = true)
 spacing.fixed.rem: 0.81
 
--- ftd.text: $links.title
+-- ftd.text: $link-group.title
 role: $inherited.types.button-medium
 color: $inherited.colors.text
-color if { links.active}: $inherited.colors.accent.primary
-link: $links.cta
-opacity if { !links.active}: 0.6
+color if { link-group.active}: $inherited.colors.accent.primary
+link: $link-group.cta
+opacity if { !link-group.active}: 0.6
 style: bold
 
 -- ftd.column:
 width: fill-container
-children: $links.wrapper
+children: $link-group.wrapper
 margin-left.rem: 1.8
 
 -- end: ftd.column
 
 -- end: ftd.column
 
--- end: links
+-- end: link-group
 
 
 
