@@ -432,7 +432,7 @@ site-url: $doc-page-desktop.site-url
 site-name: $doc-page-desktop.site-name
 logo-height: $doc-page-desktop.logo-height
 logo-width: $doc-page-desktop.logo-width
-menu-icon: $assets.files.static.header.hamburger-dark.svg
+menu-icon: $assets.files.static.hamburger.svg
 
 -- ftd.column:
 margin-horizontal.rem: 2.5
