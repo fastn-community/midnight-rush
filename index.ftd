@@ -621,7 +621,6 @@ optional string site-url: $common.site-url
 optional string site-name: $common.site-name
 pr.toc-item list footer-links: $common.footer-toc.sections
 common.social-media list social-links: $common.social-links
-integer $width: $common.width
 
 -- ftd.column:
 width: fill-container
@@ -638,7 +637,6 @@ site-url: $footer.site-url
 site-name: $footer.site-name
 footer-links: $footer.footer-links
 social-links: $footer.social-links
-$width: $footer.width
 
 -- end: ftd.desktop
 
@@ -655,7 +653,7 @@ site-url: $footer.site-url
 site-name: $footer.site-name
 footer-links: $footer.footer-links
 social-links: $footer.social-links
-$width: $footer.width
+
 
 -- end: ftd.mobile
 
@@ -680,10 +678,9 @@ optional string site-url: $common.site-url
 optional string site-name: $common.site-name
 pr.toc-item list footer-links: $common.footer-toc.sections
 common.social-media list social-links: $common.social-links
-integer $width: $common.width
 
 -- ftd.row:
-max-width.fixed.px: $footer-desktop.width
+max-width.fixed.percent: 85
 width: fill-container
 align-self: center
 padding-top.rem: 7.06
@@ -1352,7 +1349,7 @@ optional string site-url:
 optional string site-name: 
 pr.toc-item list footer-links: 
 common.social-media list social-links:
-integer $width: $common.width
+
 
 -- ftd.column:
 width: fill-container
