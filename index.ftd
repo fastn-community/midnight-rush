@@ -1049,7 +1049,7 @@ site-logo: $doc-page-mobile.site-logo
 site-url: $doc-page-mobile.site-url
 site-name: $doc-page-mobile.site-name
 logo-height: 38
-menu-icon: $assets.files.static.header.hamburger.svg
+menu-icon: $assets.files.static.hamburger.svg
 
 -- ftd.column:
 width: fill-container

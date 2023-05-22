@@ -20,7 +20,6 @@ $processor$: pr.sitemap
 $processor$: pr.full-sitemap
 
 
-
 -- pr.toc-item list footer-list:
 $processor$: pr.toc
 
