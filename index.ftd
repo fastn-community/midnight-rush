@@ -310,7 +310,7 @@ ftd.ui list right-sidebar:
 boolean sidebar: false
 boolean show-footer: $common.show-footer
 ftd.ui list footer:
-boolean widthfill: false
+boolean full-width: false
 boolean show-banner: false
 ftd.ui list banner:
 
@@ -320,6 +320,7 @@ title: $page.title
 og-title if { page.document-title != NULL }: $page.document-title
 og-title: $page.title
 description: $page.document-description
+description if { page.document-description != NULL }: $page.title
 og-image: $page.document-image
 
 -- ftd.column:
