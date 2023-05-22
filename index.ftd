@@ -31,7 +31,7 @@ social-links: $common.social-links
 
 -- page.right-sidebar:
 
-/-- toc-title: On this page
+-- toc-title: On this page
 
 -- link-group: Creating a personal account
 cta: #id-of-the-heading
@@ -74,7 +74,7 @@ delightful user experiences. Fastn has zero-configuration support for 35+
 frontend frameworks and integrates with your headless content, commerce, or
 database of choice.
 
--- h2: Creating a personal account
+-- h3: Creating a personal account
 
 Our suite of products are open source and available on Github. You are free to
 download install and customize them to your needs.We’d love to hear your
@@ -117,7 +117,7 @@ lang: ftd
 
 npx create-docusaurus@latest my-website classic
 
--- h2: Signup with email
+-- h3: Signup with email
 
 Our suite of products are open source and available on Github. You are free to
 download install and customize them to your needs.We’d love to hear your
@@ -135,7 +135,7 @@ lang: ftd
 
 npx create-docusaurus@latest my-website classic
 
--- h2: Sign up with Git provider
+-- h3: Sign up with Git provider
 
 Our suite of products are open source and available on Github. You are free to
 download install and customize them to your needs.We’d love to hear your
@@ -1450,7 +1450,7 @@ link: $footer-mobile-list.url
 
 -- ftd.image:
 if: { footer-mobile-list.shows-data }
-src: $assets.files.static.down.svg
+src: $assets.files.static.drop-up.svg
 width.fixed.px: 16
 $on-click$: $ftd.toggle($a= $footer-mobile-list.shows-data)
 align-self: center
@@ -1522,3 +1522,25 @@ margin-bottom.px: 12
 
 
 
+
+
+
+-- component toc-title:
+caption title:
+
+-- ftd.row:
+align-content: center
+spacing.fixed.rem: 1.2
+margin-bottom.rem: 1.2
+
+-- ftd.image:
+src: $assets.files.static.hamber.svg
+
+-- ftd.text: $toc-title.title
+role: $inherited.types.button-medium
+color: $inherited.colors.text
+style: bold
+
+-- end: ftd.row
+
+-- end: toc-title
