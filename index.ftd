@@ -13,6 +13,11 @@ export: code, rendered
 
 
 
+
+
+
+
+
 -- page: Documentation 
 sidebar: true
 show-footer: true
@@ -127,7 +132,6 @@ delightful user experiences. Fastn has zero-configuration support for 35+
 frontend frameworks and integrates with your headless content, commerce, or
 database of choice.
 
-
 -- code:
 lang: ftd
 
@@ -199,7 +203,6 @@ lang: ftd
 npx create-docusaurus@latest my-website classic
 
 -- h3: Existing login connection
-
 
 Our suite of products are open source and available on Github. You are free to
 download install and customize them to your needs.We’d love to hear your
@@ -496,6 +499,7 @@ right-sidebar: $doc-page-desktop.right-sidebar
 
 
 
+
 -- component render-toc:
 pr.toc-item list toc-obj:
 
@@ -611,6 +615,14 @@ toc: $obj
 -- end: childrens
 
 
+
+
+
+
+
+
+
+
 -- component footer:
 string info: Stay in touch with everything you need
 string copyright: Copyright ©2022. Fastn Inc.
@@ -640,7 +652,6 @@ social-links: $footer.social-links
 
 -- end: ftd.desktop
 
-
 -- ftd.mobile:
 
 -- footer-mobile:
@@ -653,7 +664,6 @@ site-url: $footer.site-url
 site-name: $footer.site-name
 footer-links: $footer.footer-links
 social-links: $footer.social-links
-
 
 -- end: ftd.mobile
 
@@ -668,16 +678,18 @@ social-links: $footer.social-links
 
 
 
+
+
 -- component footer-desktop:
-string info: Stay in touch with everything you need
-string copyright: Copyright ©2022. Fastn Inc.
+string info: 
+string copyright:
 optional ftd.image-src site-logo: 
-integer logo-width: $common.logo-width
-integer logo-height: $common.logo-height
-optional string site-url: $common.site-url
-optional string site-name: $common.site-name
-pr.toc-item list footer-links: $common.footer-toc.sections
-common.social-media list social-links: $common.social-links
+integer logo-width: 
+integer logo-height: 
+optional string site-url: 
+optional string site-name:
+pr.toc-item list footer-links: 
+common.social-media list social-links: 
 
 -- ftd.row:
 max-width.fixed.percent: 85
@@ -999,8 +1011,6 @@ ftd.ui list right-sidebar:
 width: fill-container
 padding-horizontal.px: 20
 margin-top.px: 50
-border-color: $inherited.colors.border
-border-top-width.px: 1 
 max-width.fixed.percent: 20
 children: $right-sidebar.right-sidebar
 
@@ -1124,6 +1134,12 @@ padding-horizontal.px: 24
 
 
 
+
+
+
+
+
+
 -- component list-item-bold:
 body body:
 
@@ -1155,6 +1171,8 @@ $list-item-bold.body
 
 
 
+
+
 -- component cards:
 children wrapper:
 
@@ -1165,8 +1183,14 @@ width: fill-container
 
 -- end: ftd.row
 
-
 -- end: cards
+
+
+
+
+
+
+
 
 
 
@@ -1210,10 +1234,12 @@ padding-vertical.rem: 0.37
 background.solid: $inherited.colors.cta-primary.base
 border-radius.px: 4
 margin-top.rem: 2
+
 -- end: ftd.column
 
-
 -- end: card
+
+
 
 
 
@@ -1242,14 +1268,13 @@ align-self: center
 
 -- ftd.column:
 spacing.fixed.px: 4
+color: $inherited.colors.text
 
 -- ftd.text: $tip.title
 role: $inherited.types.heading-tiny
-color: $inherited.colors.text
 
 -- ftd.text: 
 role: $inherited.types.copy-regular
-color: $inherited.colors.text
 
 $tip.body
 
@@ -1258,6 +1283,11 @@ $tip.body
 -- end: ftd.row
 
 -- end: tip
+
+
+
+
+
 
 
 
@@ -1285,12 +1315,18 @@ style: regular
 width: fill-container
 children: $link.wrapper
 
-
 -- end: ftd.column
 
 -- end: ftd.column
 
 -- end: link
+
+
+
+
+
+
+
 
 
 
@@ -1333,12 +1369,6 @@ margin-left.rem: 1.8
 
 
 
-
-
-
-
-
-
 -- component footer-mobile:
 string info: 
 string copyright: 
@@ -1349,7 +1379,6 @@ optional string site-url:
 optional string site-name: 
 pr.toc-item list footer-links: 
 common.social-media list social-links:
-
 
 -- ftd.column:
 width: fill-container
@@ -1412,6 +1441,10 @@ width: fill-container
 -- end: ftd.column
 
 -- end: footer-mobile
+
+
+
+
 
 
 
@@ -1485,6 +1518,11 @@ $loop$: $footer-mobile-list.children as $obj
 
 
 
+
+
+
+
+
 -- component footer-list-toc:
 caption title:
 optional string url: /
@@ -1516,6 +1554,10 @@ margin-bottom.px: 12
 -- end: ftd.column
 
 -- end: footer-list-toc
+
+
+
+
 
 
 
