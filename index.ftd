@@ -118,7 +118,7 @@ development. The functionality will work as expected in production.
 -- code:
 lang: ftd
 
-\-- FTD.ROW
+\-- ftd.row
 
 npx create-docusaurus@latest my-website classic
 
@@ -135,7 +135,7 @@ database of choice.
 -- code:
 lang: ftd
 
-\-- FTD.ROW
+\-- ftd.row
 
 npx create-docusaurus@latest my-website classic
 
@@ -152,7 +152,7 @@ database of choice.
 -- code:
 lang: ftd
 
-\-- FTD.ROW
+\-- ftd.row
 
 npx create-docusaurus@latest my-website classic
 
@@ -198,7 +198,7 @@ Layers panel.
 -- code:
 lang: ftd
 
-\-- FTD.ROW
+\-- ftd.row
 
 npx create-docusaurus@latest my-website classic
 
@@ -215,7 +215,7 @@ database of choice.
 -- code:
 lang: ftd
 
-\-- FTD.ROW
+\-- ftd.row
 
 npx create-docusaurus@latest my-website classic
 
@@ -261,7 +261,7 @@ Layers panel.
 -- code:
 lang: ftd
 
-\-- FTD.ROW
+\-- ftd.row
 
 npx create-docusaurus@latest my-website classic
 
@@ -825,7 +825,7 @@ spacing.fixed.rem: 0.43
 
 -- ftd.text: $footer-list.title
 role: $inherited.types.copy-regular
-color: $inherited.colors.text
+color: $inherited.colors.text-strong
 link: $footer-list.url
 width: fill-container
 style: bold
@@ -860,7 +860,7 @@ pr.toc-item list children:
 
 -- ftd.text: $footer-list-child.title
 role: $inherited.types.copy-regular
-color: $inherited.colors.text-strong
+color: $inherited.colors.text
 link: $footer-list-child.url
 width: fill-container
 
