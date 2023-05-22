@@ -4,35 +4,7 @@
 -- import: fastn-community.github.io/set-1-ds/common/fonts as fonts
 
 
--- ftd.image-src site-logo: 
-light: https://fastn.com/-/fastn.com/images/fastn.svg
-dark: https://fastn.com/-/fastn.com/images/fastn-dark.svg
 
--- $ps.current-product: 2
-
--- boolean login-button: false
-
--- boolean pricing-cta: false
-
--- string site-url: index.html
-
--- string site-name: Doc Site
-
--- pr.sitemap-data sitemap:
-$processor$: pr.sitemap
-
--- pr.toc-item list sections:
-
--- pr.toc-item list sub-sections:
-
--- pr.toc-item list extra:
-
--- pr.toc-item list toc:
-
--- pr.toc-item list footer-toc:
-
--- pr.toc-item list footer-list:
-$processor$: pr.toc
 
 
 
@@ -83,7 +55,6 @@ sub-sections: $header.sub-sections
 logo-width: $header.logo-width 
 logo-height: $header.logo-height 
 
-
 -- ftd.mobile:
 
 -- header-mobile:
@@ -117,12 +88,13 @@ sub-sections: $header.sub-sections
 logo-width: $header.logo-width 
 logo-height: $header.logo-height 
 
-
 -- end: ftd.desktop
 
 -- end: ftd.column
 
 -- end: header
+
+
 
 
 
@@ -147,7 +119,6 @@ integer logo-height: 44
 width: fill-container
 background.solid: $inherited.colors.background.base
 padding-horizontal.px: 40
-
 
 -- ftd.row:
 width: fill-container
@@ -203,7 +174,7 @@ width: fill-container
 
 -- ftd.text: $header-desktop.current-section.title
 if: { header-desktop.current-section.title != NULL }
-role: $inherited.types.heading-small
+role: $inherited.types.label-small
 color: $inherited.colors.text-strong
 link: $header-desktop.current-section.url
 align-self: center
@@ -221,16 +192,15 @@ link: $header-desktop.current-subsection.url
 white-space: nowrap
 align-self: center
 
-
 -- ftd.image:
-if: { header-desktop.current-page != NULL &&  header-desktop.current-subsection != NULL }
+if: { header-desktop.current-page != NULL }
 src: $assets.files.static.right.svg
 align-self: center
 
 -- ftd.text: $header-desktop.current-page.title 
 if: { header-desktop.current-page != NULL }
 role: $inherited.types.label-small
-color: $inherited.colors.text-strong
+color: $inherited.colors.accent.primary
 link: $header-desktop.current-page.url 
 white-space: nowrap
 align-self: center
@@ -254,11 +224,6 @@ url: $obj.url
 -- end: ftd.column
 
 -- end: header-desktop
-
-
-
-
-
 
 
 
@@ -366,6 +331,10 @@ align-self: center
 
 
 
+
+
+
+
 -- component subsections-links:
 caption title:
 optional boolean is-active:
@@ -374,21 +343,12 @@ pr.toc-item list item:
 
 -- ftd.column:
 
-
 -- ftd.text: $subsections-links.title
-if: { !subsections-links.is-active }
 color: $inherited.colors.text
 role: $inherited.types.button-medium
 white-space: nowrap
 link: $subsections-links.url
-opacity: 0.6
-
--- ftd.text: $subsections-links.title
-if: { subsections-links.is-active }
-color: $inherited.colors.text
-role: $inherited.types.button-medium
-white-space: nowrap
-link: $subsections-links.url
+opacity if { !subsections-links.is-active }: 0.6
 
 -- end: ftd.column
 
@@ -472,7 +432,6 @@ background.solid: $inherited.colors.background.step-1
 
 -- ftd.row:
 width: fill-container
-
 
 -- ftd.row:
 width: fill-container
@@ -584,7 +543,6 @@ children: $obj.children
 is-active: $obj.is-active
 link: $obj.url
 
-
 -- end: ftd.column
 
 -- end: ftd.column
@@ -616,7 +574,6 @@ boolean $open: false
 $on-click$: $ftd.toggle($a = $header-toc-item-mobile-view.open)
 $on-click-outside$: $ftd.set-bool($a = $header-toc-item-mobile-view.open, v = false)
 
-
 -- ftd.text: $header-toc-item-mobile-view.title
 link if { header-toc-item-mobile-view.link != NULL }: $header-toc-item-mobile-view.link
 role: $inherited.types.copy-small
@@ -625,8 +582,6 @@ padding-left.px: 10
 color: $inherited.colors.text
 color if { header-toc-item-mobile-view.is-active }: $inherited.colors.cta-primary.base 
 
-
-
 -- show-children-mobile:
 if: { !ftd.is_empty(header-toc-item-mobile-view.children) }
 children: $header-toc-item-mobile-view.children
@@ -634,7 +589,6 @@ children: $header-toc-item-mobile-view.children
 -- end: ftd.column
 
 -- end: header-toc-item-mobile-view
-
 
 
 
@@ -673,7 +627,6 @@ $loop$: $show-children-mobile.children as $obj
 -- component links-mobile:
 pr.toc-item obj:
 
-
 -- ftd.column:
 width: fill-container
 
@@ -689,21 +642,6 @@ opacity if { !links-mobile.obj.is-active }: 0.6
 -- end: ftd.column
 
 -- end: links-mobile
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -748,12 +686,6 @@ top.px: 20
 
 
 
-
-
-
-
-
-
 -- component menu-mobile:
 optional ftd.image-src site-logo:
 optional string site-name:
@@ -764,7 +696,6 @@ boolean $show-section: false
 pr.toc-item list sub-sections:
 integer logo-width: 120
 integer logo-height: 44
-
 
 -- ftd.column:
 width.fixed.calc: 100% - 48px
@@ -777,7 +708,6 @@ padding-top.px: 20
 padding-horizontal.px: 24
 background.solid: $inherited.colors.background.step-1
 z-index: 14
-
 
 -- ftd.column:
 if: { !ftd.is_empty(menu-mobile.sections) }
@@ -793,12 +723,9 @@ $show-section: $menu-mobile.show-section
 
 -- end: ftd.column
 
-
 -- end: ftd.column
 
 -- end: menu-mobile
-
-
 
 
 
@@ -833,14 +760,6 @@ margin-left.px: 10
 -- end: ftd.column
 
 -- end: header-item-mobile-view
-
-
-
-
-
-
-
-
 
 
 
@@ -891,12 +810,3 @@ children: $header-item-mobile.children
 -- end: ftd.column
 
 -- end: header-item-mobile
-
-
-
-
-
-
-
-
-
