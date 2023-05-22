@@ -24,12 +24,12 @@ exposing: h0, h1, h2, h3, markdown
 -- fastn.sitemap:
 
 # Why fastn: /
-icon: /static/houglass.svg
+icon: static/hourglass.svg
 
 ## Why fastn Child: /
 
 - Home: /
-icon: /static/houglass.svg
+icon: static/hourglass.svg
   - Component Library: /
   - Front end infrastructure: /
   - Front end infrastructure: /
@@ -38,7 +38,7 @@ icon: /static/houglass.svg
 ## Why fastn Child: /header/
 
 - Home: /
-icon: /static/houglass.svg
+icon: static/hourglass.svg
   - Component Library: /
   - Front end infrastructure: /
   - Front end infrastructure: /
