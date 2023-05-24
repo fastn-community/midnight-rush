@@ -2,8 +2,8 @@
 
 ## May 24, 2023
 
-- [Added changelog.md and fixing build issue](https://github.com/fastn-community/doc-site/commit/f7c92b5e51c13fe22ed9c5ea150035bfbf9cd65d)
-- [Added documentation, LICENSE and Readme.md](https://github.com/fastn-community/set-1-ds/commit/04a223063c4944fec93e0efcc18e202ed2dc102c)
+- [Added changelog.md and fixing build issue](https://github.com/fastn-community/set-1-ds/pull/5/commits/c38303f60cf2ec388ebd96f0bb3d2c3c03b6045c)
+- [Added documentation, LICENSE and Readme.md](https://github.com/fastn-community/set-1-ds/commit/0a98fa9816ccbc194b7bcc5528d54269ce53ddb5)
 
 ## May 22, 2023
 
