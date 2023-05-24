@@ -71,9 +71,6 @@ toc: $header.toc
 current-section: $header.current-section
 current-page: $header.current-page
 current-subsection: $header.current-subsection
-login-btn-txt: $header.login-btn-txt
-login-btn-url: $header.login-btn-url
-login-button: $header.login-button
 logo-width: $header.logo-width 
 logo-height: $header.logo-height 
 
@@ -90,6 +87,9 @@ current-section: $header.current-section
 current-page: $header.current-page
 current-subsection: $header.current-subsection
 sub-sections: $header.sub-sections 
+login-btn-txt: $header.login-btn-txt
+login-btn-url: $header.login-btn-url
+login-button: $header.login-button
 logo-width: $header.logo-width 
 logo-height: $header.logo-height 
 

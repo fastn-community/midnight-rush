@@ -21,6 +21,7 @@ export: code, rendered
 -- page: Documentation 
 sidebar: true
 show-footer: true
+login-button: true
 
 -- page.footer:
 
