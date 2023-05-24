@@ -18,264 +18,46 @@ export: code, rendered
 
 
 
--- page: Documentation 
-sidebar: true
-show-footer: true
+-- page: Overview
+document-title: fastn set-1-ds Template. Build Your Own Website with Ease
+document-description: Simple, easy-to-use set-1-ds template to build your own documentation website, personal website, or blog. Change colours and typography effortlessly.
+site-logo: $common.site-logo
+github-url: https://github.com/fastn-community/set-1-ds/
+github-icon: true
 
--- page.footer:
+⚡️ `set-1-ds` will help you create a beautiful documentation site in no time.
 
--- footer:
-site-name: $common.site-name
-site-url: $common.site-url 
-logo-width: $common.logo-width
-logo-height: $common.logo-height
-footer-links: $common.footer-links
-social-links: $common.social-links
+It provides out-of-the-box documentation features that can be used to create any
+kind of site(personal website, blog, etc).
 
--- end: page.footer
+-- h2: 🚀 Fast Track 
 
--- page.right-sidebar:
+Create your first fastn [web-site](https://fastn.com/expander/hello-world/-/build/) 
+project in just 5 minutes!
 
--- toc-title: On this page
+ [Click here](https://github.com/fastn-stack/fastn-template/) to use `set-1-ds`
+for your fastn project.
 
--- link-group: Creating a personal account
-cta: #id-of-the-heading
+-- h2: 🌟 Whats next?
 
--- link: Signup with email
-cta: #id-of-the-heading
+Create your first page. 
+[Click here to know more](https://fastn-community.github.io/set-1-ds/page/).
 
--- link: Sign up with Git provider
-cta: #id-of-the-heading
+-- h2: 👀 Want to learn more?
 
--- end: link-group
+Feel free to check [our expander course](https://fastn.com/expander/) or jump
+into our [FifthTry Discord server](https://discord.gg/bucrdvptYd).
 
--- link-group: Login methods and connections
-cta: #id-of-the-heading
 
--- link: Existing login connection
-cta: #id-of-the-heading
+-- h2: 🎯 Used by?
 
--- link: Choosing a connection when creating a projectSign up with Git provider
-cta: #id-of-the-heading
+Our all documentation sites uses this `set-1-ds` theme.
 
--- end: link-group
-
--- link-group: Create Edge Middleware
-cta: #id-of-the-heading
-
--- end: page.right-sidebar
-
--- page.body:
-
-Our suite of products are open source and available on Github. You are free to 
-
--- h1: Introduction to Fastn
-
-Our suite of products are open source and available on Github. You are free to
-download install and customize them to your needs.We’d love to hear your
-feedback and suggestions, and collectively make Documentation easier and better
-for everyone. We enable teams to iterate quickly and develop, preview, and ship
-delightful user experiences. Fastn has zero-configuration support for 35+
-frontend frameworks and integrates with your headless content, commerce, or
-database of choice.
-
--- h3: Creating a personal account
-
-Our suite of products are open source and available on Github. You are free to
-download install and customize them to your needs.We’d love to hear your
-feedback and suggestions, and collectively make Documentation easier and better
-for everyone. We enable teams to iterate quickly and develop, preview, and ship
-delightful user experiences. Fastn has zero-configuration support for 35+
-frontend frameworks and integrates with your headless content, commerce, or
-database of choice.
-
--- cards:
-
--- card: Title
-
-Write Something Here
-
--- card: Title
-
-Write Something Here
-
--- end: cards
-
--- image: 
-src: $assets.files.static.image-placeholder.svg
-width.fixed.percent: 100
-
--- tip: 
-
-Please note that some functionality (for example, anchor links) will not work in
-development. The functionality will work as expected in production.
-
--- tip: 
-
-Please note that some functionality (for example, anchor links) will not work in
-development. The functionality will work as expected in production.
-
--- code:
-lang: ftd
-
-\-- ftd.row
-
-npx create-docusaurus@latest my-website classic
-
--- h3: Signup with email
-
-Our suite of products are open source and available on Github. You are free to
-download install and customize them to your needs.We’d love to hear your
-feedback and suggestions, and collectively make Documentation easier and better
-for everyone. We enable teams to iterate quickly and develop, preview, and ship
-delightful user experiences. Fastn has zero-configuration support for 35+
-frontend frameworks and integrates with your headless content, commerce, or
-database of choice.
-
--- code:
-lang: ftd
-
-\-- ftd.row
-
-npx create-docusaurus@latest my-website classic
-
--- h3: Sign up with Git provider
-
-Our suite of products are open source and available on Github. You are free to
-download install and customize them to your needs.We’d love to hear your
-feedback and suggestions, and collectively make Documentation easier and better
-for everyone. We enable teams to iterate quickly and develop, preview, and ship
-delightful user experiences. Fastn has zero-configuration support for 35+
-frontend frameworks and integrates with your headless content, commerce, or
-database of choice.
-
--- code:
-lang: ftd
-
-\-- ftd.row
-
-npx create-docusaurus@latest my-website classic
-
--- h3: Login methods and connections
-
-Our suite of products are open source and available on Github. You are free to
-download install and customize them to your needs.We’d love to hear your
-feedback and suggestions, and collectively make Documentation easier and better
-for everyone. We enable teams to iterate quickly and develop, preview, and ship
-delightful user experiences. Fastn has zero-configuration support for 35+
-frontend frameworks and integrates with your headless content, commerce, or
-database of choice.
-
--- image: 
-src: $assets.files.static.image-placeholder.svg
-width.fixed.percent: 100
-
--- list-item-bold: 
-
-Lists can be nested as deeply as needed, and they may alternate between ordered
-and unordered.
-
--- list-item-bold: 
-
-Lists should align with the font-size, font-weight, and line-height of
-paragraphs, but are styled with bullets or numbers.
-
--- list-item-bold: 
-
-Lists can have similar children elements as paragraphs to provide emphasis on a
-certain word or phrase.
-
--- list-item-bold: 
-
-You can switch between an unordered list and ordered list by changing the
-component variant in the Design panel.
-
--- list-item-bold: 
-
-You can remove a list item from the default component by deleting it in the
-Layers panel.
-
--- code:
-lang: ftd
-
-\-- ftd.row
-
-npx create-docusaurus@latest my-website classic
-
--- h3: Existing login connection
-
-Our suite of products are open source and available on Github. You are free to
-download install and customize them to your needs.We’d love to hear your
-feedback and suggestions, and collectively make Documentation easier and better
-for everyone. We enable teams to iterate quickly and develop, preview, and ship
-delightful user experiences. Fastn has zero-configuration support for 35+
-frontend frameworks and integrates with your headless content, commerce, or
-database of choice.
-
--- code:
-lang: ftd
-
-\-- ftd.row
-
-npx create-docusaurus@latest my-website classic
-
--- h3: Choosing a connection when creating a project
-
-Our suite of products are open source and available on Github. You are free to
-download install and customize them to your needs.We’d love to hear your
-feedback and suggestions, and collectively make Documentation easier and better
-for everyone. We enable teams to iterate quickly and develop, preview, and ship
-delightful user experiences. Fastn has zero-configuration support for 35+
-frontend frameworks and integrates with your headless content, commerce, or
-database of choice.
-
--- image: 
-src: $assets.files.static.image-placeholder.svg
-width.fixed.percent: 100
-
--- list-item-bold: 
-
-Lists can be nested as deeply as needed, and they may alternate between ordered
-and unordered.
-
--- list-item-bold: 
-
-Lists should align with the font-size, font-weight, and line-height of
-paragraphs, but are styled with bullets or numbers.
-
--- list-item-bold: 
-
-Lists can have similar children elements as paragraphs to provide emphasis on a
-certain word or phrase.
-
--- list-item-bold: 
-
-You can switch between an unordered list and ordered list by changing the
-component variant in the Design panel.
-
--- list-item-bold: 
-
-You can remove a list item from the default component by deleting it in the
-Layers panel.
-
--- code:
-lang: ftd
-
-\-- ftd.row
-
-npx create-docusaurus@latest my-website classic
-
--- h3: Create Edge Middleware
-
-Our suite of products are open source and available on Github. You are free to
-download install and customize them to your needs.We’d love to hear your
-feedback and suggestions, and collectively make Documentation easier and better
-for everyone. We enable teams to iterate quickly and develop, preview, and ship
-delightful user experiences. Fastn has zero-configuration support for 35+
-frontend frameworks and integrates with your headless content, commerce, or
-database of choice.
+- [fastn.com](https://fastn.com/home/)
+- [FifthTry.com](https://www.fifthtry.com/)
 
 -- end: page
+
 
 
 
@@ -295,8 +77,8 @@ optional body body:
 optional ftd.image-src site-logo: 
 integer logo-width: $common.logo-width
 integer logo-height: $common.logo-height
-optional string $site-url: $common.site-url
-optional string site-name: $common.site-name
+string site-url: $common.site-url
+optional string site-name: 
 pr.toc-item list toc: $common.sitemap.toc
 pr.toc-item list sections: $common.sitemap.sections
 pr.toc-item list sub-sections: $common.sitemap.subsections
@@ -304,6 +86,9 @@ optional pr.toc-item current-section: $common.sitemap.current-section
 optional pr.toc-item current-subsection: $common.sitemap.current-subsection
 optional pr.toc-item current-page: $common.sitemap.current-page
 children wrapper:
+optional string login-btn-txt: Login
+optional string login-btn-url: index.html
+boolean login-button: false
 ftd.type-data types: $typo.types
 ftd.color-scheme colors: $cs.main
 ftd.ui list right-sidebar:
@@ -313,6 +98,8 @@ ftd.ui list footer:
 boolean full-width: false
 boolean show-banner: false
 ftd.ui list banner:
+boolean github-icon: false
+optional string github-url: 
 
 -- ftd.document:
 title if { page.document-title != NULL }: $page.document-title
@@ -346,6 +133,9 @@ current-subsection: $page.current-subsection
 current-page: $page.current-page
 sub-sections: $page.sub-sections
 body: $page.body
+login-btn-txt: $page.login-btn-txt
+login-btn-url: $page.login-btn-url
+login-button: $page.login-button
 logo-height: $page.logo-height
 logo-width: $page.logo-width
 site-name: $page.site-name
@@ -353,6 +143,8 @@ site-logo: $page.site-logo
 site-url: $page.site-url 
 sidebar: $page.sidebar
 right-sidebar: $page.right-sidebar
+github-icon: $page.github-icon
+github-url: $page.github-url
 
 -- end: ftd.desktop
 
@@ -371,6 +163,8 @@ site-name: $page.site-name
 site-logo: $page.site-logo
 site-url: $page.site-url
 right-sidebar: $page.sidebar
+github-icon: $page.github-icon
+github-url: $page.github-url
 
 -- end: ftd.mobile
 
@@ -412,10 +206,15 @@ optional pr.toc-item current-section:
 optional pr.toc-item current-page:
 optional pr.toc-item current-subsection:
 children wrapper:
+optional string login-btn-txt: Login
+optional string login-btn-url: index.html
+boolean login-button: false
 optional integer logo-width: 
 optional integer logo-height: 
 boolean sidebar: false
 ftd.ui list right-sidebar:
+boolean github-icon: false
+optional string github-url: 
 
 -- ftd.column:
 width: fill-container
@@ -427,12 +226,17 @@ current-section: $doc-page-desktop.current-section
 current-subsection: $doc-page-desktop.current-subsection
 current-page: $doc-page-desktop.current-page
 toc: $doc-page-desktop.toc
+login-button: $doc-page-desktop.login-button
+login-btn-txt: $doc-page-desktop.login-btn-txt
+login-btn-url: $doc-page-desktop.login-btn-url
 site-logo: $doc-page-desktop.site-logo
 site-url: $doc-page-desktop.site-url
 site-name: $doc-page-desktop.site-name
 logo-height: $doc-page-desktop.logo-height
 logo-width: $doc-page-desktop.logo-width
 menu-icon: $assets.files.static.hamburger.svg
+github-icon: $doc-page-desktop.github-icon
+github-url: $doc-page-desktop.github-url
 
 -- ftd.column:
 margin-horizontal.rem: 2.5
@@ -504,7 +308,8 @@ min-width.fixed.percent: 20
 min-height.fixed.calc: 100vh - 0px
 height: fill-container
 width.fixed.percent: 28.5
-padding-horizontal.px: 26
+padding-right.px: 26
+padding-left.px: 41
 padding-top.px: 50
 spacing.fixed.rem: 1.5
 
@@ -1081,6 +886,8 @@ optional pr.toc-item current-page:
 optional pr.toc-item current-subsection:
 boolean right-sidebar: false
 children wrapper:
+boolean github-icon: false
+optional string github-url: 
 
 -- ftd.column:
 width: fill-container
@@ -1098,6 +905,8 @@ site-url: $doc-page-mobile.site-url
 site-name: $doc-page-mobile.site-name
 logo-height: 38
 menu-icon: $assets.files.static.hamburger.svg
+github-icon: $doc-page-mobile.github-icon
+github-url: $doc-page-mobile.github-url
 
 -- ftd.column:
 width: fill-container
@@ -1585,7 +1394,7 @@ margin-bottom.px: 12
 -- ftd.text: $footer-list-toc.title
 if: { !footer-list-toc.show-subsections }
 color: $inherited.colors.text
-role: $inherited.types.button-medium
+role: $inherited.types.copy-regular
 link: $footer-list-toc.url
 width: fill-container
 white-space: nowrap
@@ -1609,7 +1418,7 @@ caption title:
 
 -- ftd.row:
 align-content: center
-spacing.fixed.rem: 1.2
+spacing.fixed.rem: 1.13
 margin-bottom.rem: 1.2
 
 -- ftd.image:
@@ -1617,9 +1426,66 @@ src: $assets.files.static.hamburger.svg
 
 -- ftd.text: $toc-title.title
 role: $inherited.types.button-medium
-color: $inherited.colors.text
+color: $inherited.colors.text-strong
 style: bold
 
 -- end: ftd.row
 
 -- end: toc-title
+
+
+
+
+
+
+
+
+
+
+
+-- component compact-text:
+caption title:
+optional body body:
+children inner:
+
+-- ftd.column:
+width: fill-container
+padding-top.px: 14
+padding-bottom.px: 16
+border-bottom-width.px: 1
+border-color: $inherited.colors.border
+
+-- ftd.text: $compact-text.title
+role: $inherited.types.heading-small
+color: $inherited.colors.text-strong
+padding-bottom.px: 16
+padding-top.px: 8
+region: h4
+
+-- ftd.column:
+width: fill-container
+;; margin-bottom.px if { compact-text.body != NULL }: -26
+
+-- ftd.text:
+if: { compact-text.body != NULL }
+text: $compact-text.body
+role: $inherited.types.fine-print
+color: $inherited.colors.text
+
+-- ftd.text.classes:
+
+-- string: markdown
+
+-- end: ftd.text.classes
+
+-- ftd.column:
+children: $compact-text.inner
+width: fill-container
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: compact-text
