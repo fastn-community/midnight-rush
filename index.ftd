@@ -21,6 +21,7 @@ export: code, rendered
 -- page: Documentation 
 sidebar: true
 show-footer: true
+login-button: true
 
 -- page.footer:
 
@@ -304,6 +305,9 @@ optional pr.toc-item current-section: $common.sitemap.current-section
 optional pr.toc-item current-subsection: $common.sitemap.current-subsection
 optional pr.toc-item current-page: $common.sitemap.current-page
 children wrapper:
+optional string login-btn-txt: Login
+optional string login-btn-url: index.html
+boolean login-button: false
 ftd.type-data types: $typo.types
 ftd.color-scheme colors: $cs.main
 ftd.ui list right-sidebar:
@@ -346,6 +350,9 @@ current-subsection: $page.current-subsection
 current-page: $page.current-page
 sub-sections: $page.sub-sections
 body: $page.body
+login-btn-txt: $page.login-btn-txt
+login-btn-url: $page.login-btn-url
+login-button: $page.login-button
 logo-height: $page.logo-height
 logo-width: $page.logo-width
 site-name: $page.site-name
@@ -412,6 +419,9 @@ optional pr.toc-item current-section:
 optional pr.toc-item current-page:
 optional pr.toc-item current-subsection:
 children wrapper:
+optional string login-btn-txt: Login
+optional string login-btn-url: index.html
+boolean login-button: false
 optional integer logo-width: 
 optional integer logo-height: 
 boolean sidebar: false
@@ -427,6 +437,9 @@ current-section: $doc-page-desktop.current-section
 current-subsection: $doc-page-desktop.current-subsection
 current-page: $doc-page-desktop.current-page
 toc: $doc-page-desktop.toc
+login-button: $doc-page-desktop.login-button
+login-btn-txt: $doc-page-desktop.login-btn-txt
+login-btn-url: $doc-page-desktop.login-btn-url
 site-logo: $doc-page-desktop.site-logo
 site-url: $doc-page-desktop.site-url
 site-name: $doc-page-desktop.site-name
