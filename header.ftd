@@ -132,6 +132,7 @@ padding-horizontal.px: 40
 width: fill-container
 spacing.fixed.px: 48
 padding-vertical.px: 40
+align-content: center
 
 -- ftd.row:
 link: $header-desktop.site-url
@@ -142,7 +143,6 @@ if: { header-desktop.site-logo != NULL }
 src: $header-desktop.site-logo
 width.fixed.px: $header-desktop.logo-width
 height.fixed.px: $header-desktop.logo-height
-align-self: center
 
 -- ftd.text: $header-desktop.site-name
 if: { header-desktop.site-name != NULL }
@@ -150,7 +150,6 @@ role: $inherited.types.heading-medium
 color: $inherited.colors.text-strong
 margin-left.px if { header-desktop.site-logo != NULL }: 16
 white-space: nowrap
-align-self: center
 
 -- fallback-title:
 if: { header-desktop.site-logo == NULL }
@@ -159,7 +158,7 @@ site-name: $header-desktop.site-name
 -- end: ftd.row
 
 -- ftd.row: 
-align-self: center
+width: fill-container
 spacing.fixed.px: 32
 
 -- header-item: $obj.title
