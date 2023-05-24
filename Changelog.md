@@ -13,3 +13,19 @@
 ## May 21, 2023
 
 - [Added new component in page component](https://github.com/fastn-community/set-1-ds/commit/3a389adf3eacc9326f581b3308953b03866dae9a)
+
+
+## May 20, 2021
+
+- [ Added right-sidebar in page component ](https://github.com/fastn-community/set-1-ds/commit/5b325db20dea5ffaaa89611115bafb81889202f7)
+
+
+## May 19, 2021
+
+- [ Added right-sidebar in page component ](https://github.com/fastn-community/set-1-ds/commit/5b325db20dea5ffaaa89611115bafb81889202f7)
+
+
+
+## May 18, 2021
+
+- [ Added page component](https://github.com/fastn-community/set-1-ds/commit/4960fa1aaf164cc16492e7b6e1b1243c4dd808b2)
