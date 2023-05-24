@@ -21,7 +21,6 @@ export: code, rendered
 -- page: Overview
 document-title: fastn set-1-ds Template. Build Your Own Website with Ease
 document-description: Simple, easy-to-use set-1-ds template to build your own documentation website, personal website, or blog. Change colours and typography effortlessly.
-document-image: https://fastn-community.github.io/set-1-ds/-/fastn-community.github.io/set-1-ds/static/set-1-ds-og-image.jpg
 site-logo: $common.site-logo
 github-url: https://github.com/fastn-community/set-1-ds/
 github-icon: true
@@ -58,6 +57,14 @@ Our all documentation sites uses this `set-1-ds` theme.
 - [FifthTry.com](https://www.fifthtry.com/)
 
 -- end: page
+
+
+
+
+
+
+
+
 
 
 
