@@ -6,8 +6,6 @@
 
 -- fastn.dependency: fastn-community.github.io/set-1-cs as cs
 
--- fastn.dependency: fastn-community.github.io/opensans-font
-
 -- fastn.dependency: fastn-community.github.io/dark-mode-switcher
 -- fastn.dependency: fastn-community.github.io/code-block
 -- fastn.dependency: fastn-community.github.io/typography
