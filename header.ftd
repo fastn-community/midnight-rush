@@ -29,6 +29,8 @@ boolean login-button: false
 integer logo-width: 120
 integer logo-height: 44
 boolean $sidebar-open: false
+boolean github-icon: false
+optional string github-url: 
 
 -- ftd.column:
 width: fill-container
@@ -56,6 +58,8 @@ sections: $header.sections
 sub-sections: $header.sub-sections 
 logo-width: $header.logo-width 
 logo-height: $header.logo-height 
+github-icon: $header.github-icon
+github-url: $header.github-url
 
 -- ftd.mobile:
 
@@ -92,6 +96,8 @@ login-btn-url: $header.login-btn-url
 login-button: $header.login-button
 logo-width: $header.logo-width 
 logo-height: $header.logo-height 
+github-icon: $header.github-icon
+github-url: $header.github-url
 
 -- end: ftd.desktop
 
@@ -122,6 +128,8 @@ optional string login-btn-url:
 boolean login-button: false
 integer logo-width: 120
 integer logo-height: 44
+boolean github-icon: 
+optional string github-url: 
 
 -- ftd.column:
 width: fill-container
@@ -176,6 +184,10 @@ login: $header-desktop.login-btn-txt
 login-btn-url: $header-desktop.login-btn-url
 
 -- end: ftd.row
+
+-- github-button:
+if: { header-desktop.github-icon }
+github-url: $header-desktop.github-url
 
 -- end: ftd.row
 
@@ -234,7 +246,6 @@ is-active: $obj.is-active
 url: $obj.url
 
 -- end: ftd.row
-
 -- end: ftd.row
 
 -- end: ftd.column
@@ -293,6 +304,7 @@ icon-github: $login-signup.icon-github
 optional string login:
 optional string login-btn-url: 
 optional ftd.image-src icon-github:
+boolean $hover: false
 
 -- ftd.row:
 width.fixed.px: 114
@@ -300,6 +312,9 @@ background.solid: $inherited.colors.cta-primary.base
 border-radius.px: 4
 height.fixed.px: 44
 align-content: center
+background.solid if { login-signup-desktop.hover }: $inherited.colors.cta-primary.hover
+$on-mouse-enter$: $ftd.set-bool($a = $login-signup-desktop.hover, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $login-signup-desktop.hover, v = false)
 
 -- ftd.text: $login-signup-desktop.login
 role: $inherited.types.copy-regular
@@ -310,7 +325,6 @@ link: $login-signup-desktop.login-btn-url
 -- end: ftd.row
 
 -- end: login-signup-desktop
-
 
 
 
@@ -406,7 +420,6 @@ role: $inherited.types.copy-regular
 link if { header-item.link != NULL}: $header-item.link
 white-space: nowrap
 color: $inherited.colors.text-strong
-padding-top.rem: 0.4
 opacity: 0.6
 
 -- ftd.text: $header-item.title
@@ -415,7 +428,6 @@ role: $inherited.types.copy-regular
 white-space: nowrap
 link if { header-item.link != NULL }: $header-item.link
 color: $inherited.colors.text-strong
-padding-top.rem: 0.4
 style: bold
 
 -- end: ftd.row
@@ -462,7 +474,7 @@ color: $inherited.colors.text
 role: $inherited.types.button-medium
 white-space: nowrap
 link: $subsections-links.url
-opacity if { !subsections-links.is-active }: 0.6
+color if { subsections-links.is-active }: $inherited.colors.text-strong
 
 -- end: ftd.column
 
@@ -826,6 +838,8 @@ boolean $show-section: false
 pr.toc-item list sub-sections:
 integer logo-width: 120
 integer logo-height: 44
+boolean github-icon: 
+optional string github-url: 
 
 -- ftd.column:
 width.fixed.calc: 100% - 48px
@@ -850,6 +864,14 @@ children: $obj.children
 is-active: $obj.is-active
 link: $obj.url
 $show-section: $menu-mobile.show-section
+
+-- end: ftd.column
+
+-- ftd.column:
+if: { menu-mobile.github-icon }
+
+-- github-button:
+github-url: $menu-mobile.github-url
 
 -- end: ftd.column
 
@@ -940,3 +962,44 @@ children: $header-item-mobile.children
 -- end: ftd.column
 
 -- end: header-item-mobile
+
+
+
+
+
+
+
+
+
+
+
+
+-- component github-button:
+string github-url:
+ftd.image-src icon-github: $assets.files.static.icon-github.svg 
+
+-- ftd.column:
+
+-- ftd.desktop:
+
+-- ftd.image:
+src: $github-button.icon-github
+height.fixed.px: 22
+link: $github-button.github-url
+margin-left.px: 10
+align-self: center
+
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- ftd.image:
+src: $github-button.icon-github
+height.fixed.px: 22
+link: $github-button.github-url
+
+-- end: ftd.mobile
+
+-- end: ftd.column
+
+-- end: github-button

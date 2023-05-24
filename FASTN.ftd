@@ -11,6 +11,7 @@
 -- fastn.dependency: fastn-community.github.io/dark-mode-switcher
 -- fastn.dependency: fastn-community.github.io/code-block
 -- fastn.dependency: fastn-community.github.io/typography
+-- fastn.dependency: fastn-community.github.io/footer
 
 -- fastn.auto-import: fastn-community.github.io/code-block as cb
 exposing: code, rendered
@@ -20,27 +21,23 @@ exposing: h0, h1, h2, h3, markdown
 
 -- fastn.auto-import: typo
 -- fastn.auto-import: cs
+-- fastn.auto-import: fastn-community.github.io/set-1-ds/FASTN/config as my-ds
 
 -- fastn.sitemap:
 
-# Why fastn: /
-icon: static/hourglass.svg
+# Home: /index.html
 
-## Why fastn Child: /
-
-- Home: /
-icon: static/hourglass.svg
-  - Component Library: /
-  - Front end infrastructure: /
-  - Front end infrastructure: /
-  - Front end infrastructure: /    
-
-## Why fastn Child: /header/
-
-- Home: /
-icon: static/hourglass.svg
-  - Component Library: /
-  - Front end infrastructure: /
-  - Front end infrastructure: /
-  - Front end infrastructure: /
-# Use Cases: /
+- Overview: index.html
+- Getting Started: /getting-started/
+- Adding Favicon: /favicon/
+- Adding Logo & Sitename: /logo/
+- Changing Color Scheme: /cs/
+- Changing Typography: /types/
+- Creating A Page: /page/
+- Adding a image: /image/
+- Adding Assets: /assets/
+- Markdown Primer: /markdown/
+- Understanding Sitemap: /sitemap/
+- Adding Right Sidebar: /right-sidebar/
+- Adding Footer: /footer/
+- SEO: /seo/
