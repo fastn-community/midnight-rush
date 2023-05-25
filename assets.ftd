@@ -7,6 +7,8 @@
 
 -- my-ds.page.right-sidebar:
 
+-- ds.toc-title: On this page
+
 -- ds.link-group: How to link image assets?
 cta: assets/#how-to-link-image-assets
 

@@ -1,6 +1,7 @@
 -- import: fastn-community.github.io/set-1-ds/assets
 -- import: fastn/processors as pr
 -- import: fastn-community.github.io/set-1-ds/common
+-- import: fastn-community.github.io/set-1-ds/common/fonts as fonts
 -- import: fastn-community.github.io/dark-mode-switcher as dms
 -- import: fastn-community.github.io/set-1-ds/header as h
 
@@ -46,6 +47,17 @@ cta: #used-by
 
 -- end: page.right-sidebar
 
+-- page.footer:
+
+-- footer:
+site-logo: $common.site-logo
+site-url: $common.site-url 
+logo-width: $common.logo-width
+logo-height: $common.logo-height
+footer-links: $common.footer-links
+social-links: $common.social-links
+
+-- end: page.footer
 
 -- page.body:
 
@@ -269,12 +281,12 @@ github-url: $doc-page-desktop.github-url
 -- ftd.column:
 margin-horizontal.rem: 2.5
 margin-bottom.rem: 3.12
-margin-top.px: 10
 
 -- ftd.text: $doc-page-desktop.title
 if: { doc-page-desktop.title != NULL }
 role: $inherited.types.heading-large
 color: $inherited.colors.text-strong
+margin-bottom.rem: 1.32
 
 -- tf.markdown:
 if: {doc-page-desktop.body != NULL}
@@ -428,9 +440,10 @@ width: fill-container
 -- ftd.text:
 link if { childrens.toc.url != NULL } : $childrens.toc.url
 text: $childrens.toc.title
-role: $inherited.types.copy-small
+role: $inherited.types.button-medium
 color: $inherited.colors.text
 color if { childrens.toc.is-active }: $inherited.colors.text-strong
+style: regular
 
 -- ftd.column:
 if: {!ftd.is_empty(childrens.toc.children) }
@@ -468,7 +481,7 @@ spacing.fixed.px: 24
 -- ftd.text:
 link if { child-of-childrens.toc.url != NULL } : $child-of-childrens.toc.url
 text: $child-of-childrens.toc.title
-role: $inherited.types.copy-small
+role: $inherited.types.button-medium
 color: $inherited.colors.text
 color if { child-of-childrens.toc.is-active }: $inherited.colors.text-strong
 
@@ -693,7 +706,7 @@ pr.toc-item list children:
 -- ftd.column:
 
 -- ftd.text: $footer-list-child.title
-role: $inherited.types.copy-regular
+role: $fonts.copy-regular
 color: $inherited.colors.text
 link: $footer-list-child.url
 width: fill-container
@@ -1186,7 +1199,6 @@ role: $inherited.types.button-small
 color: $inherited.colors.text
 color if { link.active}: $inherited.colors.accent.primary
 link: $link.cta
-opacity if { !link.active}: 0.6
 style: regular
 
 -- ftd.column:
@@ -1224,7 +1236,6 @@ role: $inherited.types.button-medium
 color: $inherited.colors.text
 color if { link-group.active}: $inherited.colors.accent.primary
 link: $link-group.cta
-opacity if { !link-group.active}: 0.6
 style: bold
 
 -- ftd.column:

@@ -17,8 +17,10 @@ cta: types/#fastn-typography-collection
 -- ds.link-group: How to add a typography?
 cta: types/#how-to-add-a-typography
 
--- ds.link-group: How to create a global my-ds page module for set-1-ds?
+-- ds.link: How to create a global my-ds page module for set-1-ds?
 cta: types/#how-to-create-a-global-my-ds-page-module-for-Set-1-ds
+
+-- end: ds.link-group
 
 -- end: my-ds.page.right-sidebar
 

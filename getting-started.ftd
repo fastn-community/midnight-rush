@@ -13,8 +13,10 @@
 -- ds.link-group: Creating fastn web-site using set-1-ds
 cta: getting-started/#creating-fastn-web-site-using-set-1-ds
 
--- ds.link-group: How to publish a package?
+-- ds.link: How to publish a package?
 cta: getting-started/#how-to-publish-a-package
+
+-- end: ds.link-group
 
 -- ds.link-group: Whats next?
 cta: getting-started/#what-next

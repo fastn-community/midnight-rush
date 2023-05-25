@@ -13,8 +13,10 @@
 -- ds.link-group: How to add color scheme?
 cta: cs/#how-to-add-color-scheme
 
--- ds.link-group: How to create a global my-ds page module for set-1-ds?
+-- ds.link: How to create a global my-ds page module for set-1-ds?
 cta: cs/#how-to-create-a-global-my-ds-page-module-for-set-1-ds
+
+-- end: ds.link-group
 
 -- end: my-ds.page.right-sidebar
 
