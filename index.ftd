@@ -30,6 +30,8 @@ sidebar: true
 
 -- page.right-sidebar:
 
+-- ds.toc-title: On this page
+
 -- link-group: Fast Track
 cta: #fast-track
 
@@ -380,6 +382,7 @@ link if { toc-instance.toc.url != NULL }: $toc-instance.toc.url
 text: $toc-instance.toc.title
 role: $inherited.types.button-medium
 color: $inherited.colors.text-strong
+color if { !toc-instance.toc.is-active  }: $inherited.colors.text
 width: fill-container
 
 -- ftd.image:
@@ -500,7 +503,7 @@ optional ftd.image-src site-logo:
 integer logo-width: $common.logo-width
 integer logo-height: $common.logo-height
 optional string site-url: $common.site-url
-optional string site-name: $common.site-name
+optional string site-name: 
 pr.toc-item list footer-links: $common.footer-toc.sections
 common.social-media list social-links: $common.social-links
 
@@ -656,7 +659,7 @@ spacing.fixed.rem: 0.43
 
 -- ftd.text: $footer-list.title
 role: $inherited.types.copy-regular
-color: $inherited.colors.text-strong
+color: $inherited.colors.text
 link: $footer-list.url
 width: fill-container
 style: bold
