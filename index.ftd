@@ -259,7 +259,7 @@ $doc-page-desktop.body
 width: fill-container
 align-content if { ftd.is_empty(doc-page-desktop.toc) }: center
 border-top-width.px: 1
-border-color: $inherited.colors.text
+border-color: $inherited.colors.border
 margin-bottom.rem: 3.15
 
 -- render-toc:
@@ -270,7 +270,7 @@ toc-obj: $doc-page-desktop.toc
 padding-horizontal.px: 50
 padding-top.px: 50
 border-right-width.px: 1
-border-color: $inherited.colors.text
+border-color: $inherited.colors.border
 width: fill-container
 align-content: top-left
 children: $doc-page-desktop.wrapper
