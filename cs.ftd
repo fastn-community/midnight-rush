@@ -13,16 +13,16 @@
 -- ds.link-group: How to add color scheme?
 cta: cs/#how-to-add-color-scheme
 
--- ds.link-group: How to create a global my-ds page module for set-2-ds?
-cta: cs/#how-to-create-a-global-my-ds-page-module-for-set-2-ds
+-- ds.link-group: How to create a global my-ds page module for set-1-ds?
+cta: cs/#how-to-create-a-global-my-ds-page-module-for-set-1-ds
 
 -- end: my-ds.page.right-sidebar
 
 -- my-ds.page.body:
 
-In this section, we will learn about changing color scheme of `set-2-ds`.
+In this section, we will learn about changing color scheme of `set-1-ds`.
 
-`set-2-ds` uses `fastn` default color scheme. If you wish to update color
+`set-1-ds` uses `fastn` default color scheme. If you wish to update color
 scheme, choose a color scheme from our[fastn-community]
 (https://fastn.com/featured/cs/) color schemes.
 
@@ -44,11 +44,11 @@ example:
 -- ds.code:
 lang: ftd
 
-\-- fastn.dependency: fastn-community.github.io/set-2-ds
+\-- fastn.dependency: fastn-community.github.io/set-1-ds
 \-- fastn.dependency: fastn-community.github.io/set-2-cs
 
--- ds.h3: How to create a global `my-ds` page module for `set-2-ds`?
-id: how-to-create-a-global-my-ds-page-module-for-set-2-ds
+-- ds.h3: How to create a global `my-ds` page module for `set-1-ds`?
+id: how-to-create-a-global-my-ds-page-module-for-set-1-ds
 
 You can create a `my-ds.ftd` module inside your `fastn` package and create your
 custom `my-ds` page component.
