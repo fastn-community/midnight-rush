@@ -35,7 +35,7 @@ id: how-to-add-color-scheme
 To add color scheme to your fastn web sites. Edit your `FASTN.ftd` file and add
 color scheme dependency into it.
 
-In below example we are using https://fastn-community.github.io/set-2-cs/
+In below example we are using https://fastn-community.github.io/set-1-cs/
 color scheme.
 
 Add color scheme dependency into your `FASTN.ftd` file as shown in below
@@ -45,7 +45,7 @@ example:
 lang: ftd
 
 \-- fastn.dependency: fastn-community.github.io/set-1-ds
-\-- fastn.dependency: fastn-community.github.io/set-2-cs
+\-- fastn.dependency: fastn-community.github.io/set-1-cs
 
 -- ds.h3: How to create a global `my-ds` page module for `set-1-ds`?
 id: how-to-create-a-global-my-ds-page-module-for-set-1-ds
