@@ -18,7 +18,7 @@ cta: types/#fastn-typography-collection
 cta: types/#how-to-add-a-typography
 
 -- ds.link-group: How to create a global my-ds page module for set-1-ds?
-cta: types/#how-to-create-a-global-my-ds-page-module-for-set-1-ds
+cta: types/#how-to-create-a-global-my-ds-page-module-for-Set-1-ds
 
 -- end: my-ds.page.right-sidebar
 
@@ -52,7 +52,7 @@ lang: ftd
 \-- fastn.dependency: fastn-community.github.io/set-1-typography
 
 -- ds.h3: How to create a global `my-ds` page module for `set-1-ds`?
-id: how-to-create-a-global-my-ds-page-module-for-set-1-ds
+id: how-to-create-a-global-my-ds-page-module-for-Set-1-ds
 
 You can create a `my-ds.ftd` module inside your `fastn` package and create your
 custom `my-ds` page component.
