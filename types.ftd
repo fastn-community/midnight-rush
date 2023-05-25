@@ -148,6 +148,7 @@ Add this file inside your `fastn` project and deploy or run `fastn serve` on
 your localhost. Access your localhost in browser
 e.g.`http://127.0.0.1:8000/typography/` you will see page text with
 [set-1-typography](https://fastn-community.github.io/set-1-typography/) font
-sizes in [Roboto](https://fastn-community.github.io/roboto-font/) font.
+sizes in [Opensans](https://fastn-community.github.io/opensans-font/) font and 
+[Poppins](https://fastn-community.github.io/poppins-font/) font.
 
 -- end: my-ds.page
