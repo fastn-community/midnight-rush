@@ -185,6 +185,7 @@ sidebar: $page.sidebar
 right-sidebar: $page.right-sidebar
 github-icon: $page.github-icon
 github-url: $page.github-url
+full-width: $page.full-width
 
 -- end: ftd.desktop
 
@@ -255,6 +256,7 @@ boolean sidebar: false
 ftd.ui list right-sidebar:
 boolean github-icon: false
 optional string github-url: 
+boolean full-width:
 
 -- ftd.column:
 width: fill-container
@@ -279,8 +281,9 @@ github-icon: $doc-page-desktop.github-icon
 github-url: $doc-page-desktop.github-url
 
 -- ftd.column:
-margin-horizontal.rem: 2.5
+padding-horizontal.rem: 2.5
 margin-bottom.rem: 3.12
+width: fill-container
 
 -- ftd.text: $doc-page-desktop.title
 if: { doc-page-desktop.title != NULL }
@@ -297,10 +300,8 @@ $doc-page-desktop.body
 
 -- ftd.row:
 width: fill-container
-align-content if { ftd.is_empty(doc-page-desktop.toc) }: center
-border-top-width.px: 1
-border-color: $inherited.colors.border
 margin-bottom.rem: 3.15
+align-content if { ftd.is_empty(doc-page-desktop.toc) && !doc-page-desktop.sidebar }: center
 
 -- render-toc:
 if: { !ftd.is_empty(doc-page-desktop.toc) }
@@ -311,17 +312,21 @@ padding-horizontal.rem: 3.12
 padding-top.rem: 1.8
 border-right-width.px: 1
 border-color: $inherited.colors.border
-width: fill-container
 align-content: top-left
 children: $doc-page-desktop.wrapper
 spacing.fixed.em: 0.8
 border-left-width.px: 1
-min-height: fill-container
+min-height.fixed.calc: 100vh - 135px
+max-width.fixed.px if { ftd.is_empty(doc-page-desktop.toc) && !doc-page-desktop.full-width && !doc-page-desktop.sidebar }: 800
+max-width if { doc-page-desktop.full-width }: fill-container
+width: fill-container
+width if { doc-page-desktop.full-width }: fill-container
+border-top-width.px: 1
 
 -- end: ftd.column
 
 -- right-sidebar:
-if: { doc-page-desktop.sidebar}
+if: { doc-page-desktop.sidebar }
 right-sidebar: $doc-page-desktop.right-sidebar
 
 -- end: ftd.row
@@ -352,6 +357,8 @@ padding-right.px: 26
 padding-left.px: 41
 padding-top.px: 50
 spacing.fixed.rem: 1.5
+border-top-width.px: 1
+border-color: $inherited.colors.border
 
 -- toc-instance:
 $loop$: $render-toc.toc-obj as $obj
@@ -896,9 +903,11 @@ ftd.ui list right-sidebar:
 -- ftd.column:
 width: fill-container
 padding-horizontal.px: 20
-margin-top.px: 50
+padding-top.px: 50
 max-width.fixed.percent: 20
 children: $right-sidebar.right-sidebar
+border-top-width.px: 1
+border-color: $inherited.colors.border
 
 -- end: ftd.column
 
