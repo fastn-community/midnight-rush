@@ -11,7 +11,7 @@ dark: https://fastn.com/-/fastn.com/images/fastn-dark.svg
 children wrapper:
 optional caption title:
 optional body body:
-boolean sidebar: false
+boolean sidebar: true
 ftd.ui list right-sidebar:
 optional string document-title:
 optional string document-description:

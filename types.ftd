@@ -1,17 +1,41 @@
 -- import: fastn-community.github.io/set-1-ds as ds
 
+
+
+
+
 -- my-ds.page: Changing Typography
+
+
+-- my-ds.page.right-sidebar:
+
+-- ds.toc-title: On this page
+
+-- ds.link-group: fastn Typography collection:
+cta: types/#fastn-typography-collection
+
+-- ds.link-group: How to add a typography?
+cta: types/#how-to-add-a-typography
+
+-- ds.link-group: How to create a global my-ds page module for set-1-ds?
+cta: types/#how-to-create-a-global-my-ds-page-module-for-set-1-ds
+
+-- end: my-ds.page.right-sidebar
+
+-- my-ds.page.body:
 
 In this section, we will learn about changing typography of `set-1-ds`.
 
 `set-1-ds` uses `fastn` default typography. If you wish to update it, 
 
 -- ds.h2: fastn Typography collection:
+id: fastn-typography-collection
 
 Choose a typography of font of your choice from our fastn-community.
 [Click here to search](https://github.com/orgs/fastn-community/repositories?q=typography&type=all&sort=).
 
 -- ds.h2: How to add a typography?
+id: how-to-add-a-typography
 
 To add typography to your fastn web sites. Edit your `FASTN.ftd` file and add
 typography dependency into it.
@@ -28,6 +52,7 @@ lang: ftd
 \-- fastn.dependency: fastn-community.github.io/set-1-typography
 
 -- ds.h3: How to create a global `my-ds` page module for `set-1-ds`?
+id: how-to-create-a-global-my-ds-page-module-for-set-1-ds
 
 You can create a `my-ds.ftd` module inside your `fastn` package and create your
 custom `my-ds` page component.
