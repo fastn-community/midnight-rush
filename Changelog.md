@@ -1,5 +1,10 @@
 # Set-1-ds Change Log
 
+## May 25, 2023
+
+- [Updated docs](https://github.com/fastn-community/set-1-ds/commit/2a78cd2318e28849b58470b14642e0c411c6c0c5)
+
+
 ## May 24, 2023
 
 - [Added changelog.md and fixing build issue](https://github.com/fastn-community/set-1-ds/pull/5/commits/c38303f60cf2ec388ebd96f0bb3d2c3c03b6045c)
