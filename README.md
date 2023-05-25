@@ -8,7 +8,7 @@ It provides out-of-the-box documentation features that can be used to create any
 
 ## How it looks?
 
-![set-1-ds](/static/set-1-ds-example-dark.jpg)
+![set-1-ds](/static/set-1-ds-example)
 
 ## 🚀 Fast Track
 
