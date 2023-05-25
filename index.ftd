@@ -1,6 +1,7 @@
 -- import: fastn-community.github.io/set-1-ds/assets
 -- import: fastn/processors as pr
 -- import: fastn-community.github.io/set-1-ds/common
+-- import: fastn-community.github.io/set-1-ds/common/fonts as fonts
 -- import: fastn-community.github.io/dark-mode-switcher as dms
 -- import: fastn-community.github.io/set-1-ds/header as h
 
@@ -18,19 +19,56 @@ export: code, rendered
 
 
 
+
 -- page: Overview
 document-title: fastn set-1-ds Template. Build Your Own Website with Ease
 document-description: Simple, easy-to-use set-1-ds template to build your own documentation website, personal website, or blog. Change colours and typography effortlessly.
+document-image: https://fastn-community.github.io/set-1-ds/-/fastn-community.github.io/set-1-ds/static/set-1-ds-og-image.jpg
 site-logo: $common.site-logo
 github-url: https://github.com/fastn-community/set-1-ds/
 github-icon: true
+sidebar: true
+
+-- page.right-sidebar:
+
+-- toc-title: On this page
+
+-- link-group: Fast Track
+cta: #fast-track
+
+-- link-group: Whats next?
+cta: #whats-next
+
+-- link-group: Want to learn more?
+cta: #want-to-learn-more
+
+-- link-group: Used by?
+cta: #used-by
+
+-- end: page.right-sidebar
+
+-- page.footer:
+
+-- footer:
+site-logo: $common.site-logo
+site-url: $common.site-url 
+logo-width: $common.logo-width
+logo-height: $common.logo-height
+footer-links: $common.footer-links
+social-links: $common.social-links
+
+-- end: page.footer
+
+-- page.body:
 
 ⚡️ `set-1-ds` will help you create a beautiful documentation site in no time.
 
 It provides out-of-the-box documentation features that can be used to create any
 kind of site(personal website, blog, etc).
 
+
 -- h2: 🚀 Fast Track 
+id: fast-track
 
 Create your first fastn [web-site](https://fastn.com/expander/hello-world/-/build/) 
 project in just 5 minutes!
@@ -39,17 +77,19 @@ project in just 5 minutes!
 for your fastn project.
 
 -- h2: 🌟 Whats next?
+id: whats-next
 
 Create your first page. 
 [Click here to know more](https://fastn-community.github.io/set-1-ds/page/).
 
 -- h2: 👀 Want to learn more?
+id: want-to-learn-more
 
 Feel free to check [our expander course](https://fastn.com/expander/) or jump
 into our [FifthTry Discord server](https://discord.gg/bucrdvptYd).
 
-
 -- h2: 🎯 Used by?
+id: used-by
 
 Our all documentation sites uses this `set-1-ds` theme.
 
@@ -241,12 +281,12 @@ github-url: $doc-page-desktop.github-url
 -- ftd.column:
 margin-horizontal.rem: 2.5
 margin-bottom.rem: 3.12
-margin-top.px: 10
 
 -- ftd.text: $doc-page-desktop.title
 if: { doc-page-desktop.title != NULL }
 role: $inherited.types.heading-large
 color: $inherited.colors.text-strong
+margin-bottom.rem: 1.32
 
 -- tf.markdown:
 if: {doc-page-desktop.body != NULL}
@@ -259,7 +299,7 @@ $doc-page-desktop.body
 width: fill-container
 align-content if { ftd.is_empty(doc-page-desktop.toc) }: center
 border-top-width.px: 1
-border-color: $inherited.colors.text
+border-color: $inherited.colors.border
 margin-bottom.rem: 3.15
 
 -- render-toc:
@@ -270,7 +310,7 @@ toc-obj: $doc-page-desktop.toc
 padding-horizontal.px: 50
 padding-top.px: 50
 border-right-width.px: 1
-border-color: $inherited.colors.text
+border-color: $inherited.colors.border
 width: fill-container
 align-content: top-left
 children: $doc-page-desktop.wrapper
@@ -354,6 +394,7 @@ link if { toc-instance.toc.url != NULL }: $toc-instance.toc.url
 text: $toc-instance.toc.title
 role: $inherited.types.button-medium
 color: $inherited.colors.text-strong
+color if { !toc-instance.toc.is-active  }: $inherited.colors.text
 width: fill-container
 
 -- ftd.image:
@@ -399,9 +440,10 @@ width: fill-container
 -- ftd.text:
 link if { childrens.toc.url != NULL } : $childrens.toc.url
 text: $childrens.toc.title
-role: $inherited.types.copy-small
+role: $inherited.types.button-medium
 color: $inherited.colors.text
 color if { childrens.toc.is-active }: $inherited.colors.text-strong
+style: regular
 
 -- ftd.column:
 if: {!ftd.is_empty(childrens.toc.children) }
@@ -439,7 +481,7 @@ spacing.fixed.px: 24
 -- ftd.text:
 link if { child-of-childrens.toc.url != NULL } : $child-of-childrens.toc.url
 text: $child-of-childrens.toc.title
-role: $inherited.types.copy-small
+role: $inherited.types.button-medium
 color: $inherited.colors.text
 color if { child-of-childrens.toc.is-active }: $inherited.colors.text-strong
 
@@ -474,7 +516,7 @@ optional ftd.image-src site-logo:
 integer logo-width: $common.logo-width
 integer logo-height: $common.logo-height
 optional string site-url: $common.site-url
-optional string site-name: $common.site-name
+optional string site-name: 
 pr.toc-item list footer-links: $common.footer-toc.sections
 common.social-media list social-links: $common.social-links
 
@@ -630,7 +672,7 @@ spacing.fixed.rem: 0.43
 
 -- ftd.text: $footer-list.title
 role: $inherited.types.copy-regular
-color: $inherited.colors.text-strong
+color: $inherited.colors.text
 link: $footer-list.url
 width: fill-container
 style: bold
@@ -664,7 +706,7 @@ pr.toc-item list children:
 -- ftd.column:
 
 -- ftd.text: $footer-list-child.title
-role: $inherited.types.copy-regular
+role: $fonts.copy-regular
 color: $inherited.colors.text
 link: $footer-list-child.url
 width: fill-container
@@ -1157,7 +1199,6 @@ role: $inherited.types.button-small
 color: $inherited.colors.text
 color if { link.active}: $inherited.colors.accent.primary
 link: $link.cta
-opacity if { !link.active}: 0.6
 style: regular
 
 -- ftd.column:
@@ -1195,7 +1236,6 @@ role: $inherited.types.button-medium
 color: $inherited.colors.text
 color if { link-group.active}: $inherited.colors.accent.primary
 link: $link-group.cta
-opacity if { !link-group.active}: 0.6
 style: bold
 
 -- ftd.column:
