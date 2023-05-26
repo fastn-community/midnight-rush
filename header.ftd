@@ -139,7 +139,7 @@ padding-horizontal.px: 40
 -- ftd.row:
 width: fill-container
 spacing.fixed.px: 48
-padding-vertical.px: 40
+padding-vertical.px: 20
 align-content: center
 
 -- ftd.row:
@@ -193,7 +193,8 @@ github-url: $header-desktop.github-url
 
 -- ftd.row:
 if: { header-desktop.current-section != NULL }
-padding-vertical.px: 50
+padding-top.px: 20
+padding-bottom.px: 42
 width: fill-container
 align-content: center
 
