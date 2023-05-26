@@ -204,7 +204,7 @@ width: fill-container
 if: { header-desktop.current-section.title != NULL }
 role: $inherited.types.link
 color: $inherited.colors.text-strong
-color if { header-desktop.current-subsection == NULL }: $inherited.colors.accent.primary
+color if { header-desktop.current-subsection == NULL && header-desktop.current-page == NULL  }: $inherited.colors.accent.primary
 link: $header-desktop.current-section.url
 align-self: center
 style: regular
