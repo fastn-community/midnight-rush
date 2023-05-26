@@ -47,8 +47,8 @@ This is addition body content for above image
 -- ds.rendered.output:
 
 -- ds.image: This is image caption
-link: https://fastn.com
-src: https://fastn.com/-/fastn.com/images/github-pages.png
+link: https://fastn-community.github.io/set-1-ds/image/
+src: $assets.files.static.image-placeholder.jpg
 
 This is addition body content for above image.
 
