@@ -22,7 +22,7 @@ for inline anchor links etc.
 
 `set-1-ds` comes with inbuit `-- ds.markdown` component.
 
--- ds.h2: Markdown
+-- ds.h3: Markdown
 id: markdown
 
 -- ds.code:
