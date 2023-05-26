@@ -1,0 +1,28 @@
+-- import: fastn-community.github.io/set-1-ds as ds
+
+
+
+
+
+-- my-ds.page: Author Details
+
+-- my-ds.page.right-sidebar:
+
+-- ds.toc-title: On this page
+
+-- ds.link-group: Coming Soon 
+cta: author/#coming-soon-author-details
+
+-- end: my-ds.page.right-sidebar
+
+-- my-ds.page.body:
+
+In this section, we will learn about adding author details.
+
+-- ds.h2: Coming Soon 
+id: coming-soon-author-details 
+
+This page is under constuction. We are preparing something amazing and
+exciting for you.
+
+-- end: my-ds.page

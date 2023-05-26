@@ -1,0 +1,29 @@
+-- import: fastn-community.github.io/set-1-ds as ds
+
+
+
+
+
+-- my-ds.page: Sample Post 
+
+-- my-ds.page.right-sidebar:
+
+-- ds.toc-title: On this page
+
+-- ds.link-group: Coming Soon 🚧
+cta: blog-articles/category-1/sample-post-2/#coming-soon-sample-post
+
+-- end: my-ds.page.right-sidebar
+
+-- my-ds.page.body:
+
+Write some information of this category here. Change the title according to the
+category of your blog.
+
+-- ds.h2: Coming Soon 🚧
+id: coming-soon-sample-post
+
+This page is under constuction. We are preparing something amazing and
+exciting for you.
+
+-- end: my-ds.page
