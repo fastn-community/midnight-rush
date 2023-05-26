@@ -67,7 +67,7 @@ It provides out-of-the-box documentation features that can be used to create any
 kind of site(personal website, blog, etc).
 
 
--- h2: 🚀 Fast Track 
+-- h3: 🚀 Fast Track 
 id: fast-track
 
 Create your first fastn [web-site](https://fastn.com/expander/hello-world/-/build/) 
@@ -76,19 +76,19 @@ project in just 5 minutes!
  [Click here](https://github.com/fastn-stack/fastn-template/) to use `set-1-ds`
 for your fastn project.
 
--- h2: 🌟 Whats next?
+-- h3: 🌟 Whats next?
 id: whats-next
 
 Create your first page. 
 [Click here to know more](https://fastn-community.github.io/set-1-ds/page/).
 
--- h2: 👀 Want to learn more?
+-- h3: 👀 Want to learn more?
 id: want-to-learn-more
 
 Feel free to check [our expander course](https://fastn.com/expander/) or jump
 into our [FifthTry Discord server](https://discord.gg/bucrdvptYd).
 
--- h2: 🎯 Used by?
+-- h3: 🎯 Used by?
 id: used-by
 
 Our all documentation sites uses this `set-1-ds` theme.
@@ -308,7 +308,8 @@ toc-obj: $doc-page-desktop.toc
 
 -- ftd.column:
 padding-horizontal.rem: 3.12
-padding-top.rem: 1.8
+padding-top.rem: 2.4
+padding-bottom.px: 50
 border-right-width.px: 1
 border-color: $inherited.colors.border
 align-content: top-left
@@ -910,7 +911,7 @@ ftd.ui list right-sidebar:
 -- ftd.column:
 width: fill-container
 padding-horizontal.px: 20
-padding-top.px: 50
+padding-vertical.px: 50
 max-width.fixed.percent: 20
 children: $right-sidebar.right-sidebar
 border-top-width.px: 1
