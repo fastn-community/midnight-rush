@@ -44,8 +44,5 @@ exposing: h0, h1, h2, h3, markdown
 
 # Blog  🚧: /blog/
 
-- Adding a new blog post 🚧: /post/
-- Post List 🚧: /post-list/
-- Adding Author Details 🚧: /author/
-- Sample Post 🚧: /blog-articles/category-1/sample-post-2/
-- Sample Author Bio 🚧: /blog-authors/amitu/
+- Overview 🚧: /blog/
+- Sample Post 🚧: /blog/
