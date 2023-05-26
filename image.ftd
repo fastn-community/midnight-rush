@@ -39,7 +39,7 @@ width: fill-container
 -- ds.rendered.input:
 
 \-- ds.image: This is image caption
-link: fastn-community.github.io/set-1-ds/image
+link: https://fastn-community.github.io/set-1-ds/image
 src: $assets.files.static.image-placeholder.jpg
 
 This is addition body content for above image
@@ -47,7 +47,7 @@ This is addition body content for above image
 -- ds.rendered.output:
 
 -- ds.image: This is image caption
-link: fastn-community.github.io/set-1-ds/image
+link: https://fastn-community.github.io/set-1-ds/image
 src: $assets.files.static.image-placeholder.jpg
 
 This is addition body content for above image.
