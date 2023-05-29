@@ -13,22 +13,19 @@
 -- ds.link-group: How to add color scheme?
 cta: cs/#how-to-add-color-scheme
 
--- ds.link: How to create a global my-ds page module for set-1-ds?
+-- ds.link-group: How to create a global my-ds page module for set-1-ds?
 cta: cs/#how-to-create-a-global-my-ds-page-module-for-set-1-ds
-
--- end: ds.link-group
 
 -- end: my-ds.page.right-sidebar
 
 -- my-ds.page.body:
 
-In this section, we will learn about changing color scheme of `set-1-ds`.
+In this section, we will learn about changing the color scheme of `set-1-ds`.
 
-`set-1-ds` uses `fastn` default color scheme. If you wish to update color
-scheme, choose a color scheme from our[fastn-community]
-(https://fastn.com/featured/cs/) color schemes.
+`set-1-ds` uses `fastn` default color scheme. If you wish to update the color
+scheme, choose a color scheme from our[fastn-community](https://fastn.com/featured/cs/) color schemes.
 
-To choose one of featured color scheme, visit our[featured color schemes]
+To choose one of the featured color schemes, visit our[featured color schemes]
 (https://fastn.com/featured/cs/)
 
 -- ds.h3: How to add color scheme?
@@ -37,10 +34,10 @@ id: how-to-add-color-scheme
 To add color scheme to your fastn web sites. Edit your `FASTN.ftd` file and add
 color scheme dependency into it.
 
-In below example we are using https://fastn-community.github.io/set-1-cs/
+In the below example we are using https://fastn-community.github.io/set-1-cs/
 color scheme.
 
-Add color scheme dependency into your `FASTN.ftd` file as shown in below
+Add color scheme dependency into your `FASTN.ftd` file as shown below
 example:
 
 -- ds.code:
@@ -103,8 +100,8 @@ children: $page.wrapper
 
 -- ds.markdown:
 
-Click on download icon of above code-block. `my-ds.ftd` file will be downloaded.
-Import this file inside your new `.ftd` file.
+Click on the download icon of the above code-block. `my-ds.ftd` file will be
+downloaded. Import this file inside your new `.ftd` file.
 
 Then use `my-ds` component to create a new page using it.
 
@@ -119,14 +116,14 @@ download: cs.ftd
 
 This is body area. It contains multiple paragraphs.
 
-At vero eos et accusamus et iusto odio dignissimos 
-ducimus qui blanditiis praesentium voluptatum.
+At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+praesentium voluptatum.
 
 \-- ds.h1: This is heading level 1
 
 This is heading level 1 optional body content.
 
-\-- ds.h3: This is heading level 2
+\-- ds.h2: This is heading level 2
 
 This is heading level 2 optional body content.
 
@@ -136,14 +133,14 @@ This is heading level 3 optional body content.
 
 \-- end: my-ds.page
 
-
 -- ds.markdown:
 
-Click on download icon of above code-block. `cs.ftd` file will be downloaded.
+Click on the download icon of the above code-block. `cs.ftd` file will be
+downloaded.
 
 Add this file inside your `fastn` project and deploy or run `fastn serve` on
-your localhost. Access your localhost in browser e.g.`http://127.0.0.1:8000/cs
-you will see page colors with[SET 1 CS]
+your localhost. Access your localhost in the browser
+e.g.`http://127.0.0.1:8000/cs/` you will see page colors with[SET 1 CS]
 (https://fastn-community.github.io/set-1-cs/)
 
 -- end: my-ds.page
