@@ -1,12 +1,10 @@
 -- import: fastn-community.github.io/set-1-ds as ds
--- import: fastn-community.github.io/set-1-ds/assets
 
 
 
 
 
 -- my-ds.page: Right Sidebar
-sidebar: true
 
 -- my-ds.page.right-sidebar:
 
