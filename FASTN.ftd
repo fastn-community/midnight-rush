@@ -1,6 +1,7 @@
 -- import: fastn
 
 -- fastn.package: fastn-community.github.io/set-1-ds
+favicon: https://fastn-community.github.io/set-1-ds/-/fastn-community.github.io/set-1-ds/favicon.svg
 
 -- fastn.dependency: fastn-community.github.io/set-1-typography as typo
 
