@@ -15,10 +15,10 @@ ftd.ui list right-sidebar:
 optional string document-title:
 optional string document-description:
 optional ftd.raw-image-src document-image:
-optional ftd.image-src site-logo: $common.site-logo
+optional string site-name: NULL
 
 -- ds.page: $page.title
-site-logo: $page.site-logo
+site-name: $page.site-name
 body: $page.body
 show-footer: true
 right-sidebar: $page.right-sidebar
