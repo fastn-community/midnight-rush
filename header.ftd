@@ -138,7 +138,7 @@ padding-horizontal.px: 40
 
 -- ftd.row:
 width: fill-container
-spacing.fixed.px: 64
+spacing.fixed.px: 84
 padding-vertical.px: 20
 align-content: center
 
@@ -197,10 +197,10 @@ padding-top.px: 20
 padding-bottom.px: 42
 width: fill-container
 align-content: center
-spacing.fixed.px: 12
 
 -- ftd.row:
 width: fill-container
+spacing.fixed.px: 8
 
 -- ftd.text: $header-desktop.current-section.title
 if: { header-desktop.current-section.title != NULL }
