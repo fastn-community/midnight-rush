@@ -3,13 +3,16 @@
 
 -- boolean show-footer: true
 
--- ftd.image-src site-logo: $assets.files.static.ipsum-logo.svg
 
 -- integer logo-width: 200
 
 -- integer logo-height: 44
 
--- string $site-url: index.html
+-- string site-name: SET 1 DS
+
+-- string site-url: /
+
+-- ftd.image-src site-logo: $assets.files.static.ipsum-logo.svg
 
 -- integer $width: 1320
 
