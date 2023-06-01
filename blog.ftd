@@ -22,56 +22,49 @@ post-data: $meta-data.meta
 -- ds.h2: Latest Blogs
 
 -- ds.post-card:
-post-data: $common.meta-1
+post-data: $meta-data.meta-1
 
 -- ds.post-card:
-post-data: $common.meta-2
+post-data: $meta-data.meta-1
 
 -- ds.post-card:
-post-data: $common.meta-3
+post-data: $meta-data.meta-1
 
 -- ds.post-card:
-post-data: $common.meta-4
+post-data: $meta-data.meta-1
 
 -- ds.post-card:
-post-data: $common.meta-5
+post-data: $meta-data.meta-1
 
 -- ds.post-card:
-post-data: $common.meta-6
-
-
--- ds.post-card:
-post-data: $common.meta-7
-
+post-data: $meta-data.meta-1
 
 -- ds.post-card:
-post-data: $common.meta-8
-
-
--- ds.post-card:
-post-data: $common.meta-9
+post-data: $meta-data.meta-1
 
 -- ds.post-card:
-post-data: $common.meta-10
-
-
--- ds.post-card:
-post-data: $common.meta-11
-
+post-data: $meta-data.meta-1
 
 -- ds.post-card:
-post-data: $common.meta-12
+post-data: $meta-data.meta-1
 
 -- ds.post-card:
-post-data: $common.meta-10
-
-
--- ds.post-card:
-post-data: $common.meta-11
-
+post-data: $meta-data.meta-1
 
 -- ds.post-card:
-post-data: $common.meta-12
+post-data: $meta-data.meta-1
+
+-- ds.post-card:
+post-data: $meta-data.meta-1
+
+-- ds.post-card:
+post-data: $meta-data.meta-1
+
+-- ds.post-card:
+post-data: $meta-data.meta-1
+
+-- ds.post-card:
+post-data: $meta-data.meta-1
 
 -- end: ds.posts
 

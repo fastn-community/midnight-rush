@@ -23,6 +23,21 @@ doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
 
 
 
+-- common.post-meta meta-1: Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.
+published-on: July 22, 2014 at 10:02 pm
+post-image: $assets.files.static.post-list.image-1.svg
+post-url: blog-articles/sample-post
+author: $author.patrica
+cta-txt: Read more
+cta-url: /
+
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
+doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore 
+
+
+
+
+
 
 -- my-ds.page:
 sidebar: false
@@ -198,13 +213,13 @@ src: $assets.files.static.article.image-5.svg
 -- end: ds.h2
 
 -- ds.post-card:
-post-data: $common.meta-1
+post-data: $meta-1
 
 -- ds.post-card:
-post-data: $common.meta-2
+post-data: $meta-1
 
 -- ds.post-card:
-post-data: $common.meta-3
+post-data: $meta-1
 
 -- end: ds.posts
 

@@ -61,7 +61,7 @@ social-links: $common.social-links
 
 -- page.body:
 
-⚡️ `set-1-ds` will help you create a beautiful documentation site in no time.
+`set-1-ds` will help you create a beautiful documentation site in no time.
 
 It provides out-of-the-box documentation features that can be used to create any
 kind of site(personal website, blog, etc).
@@ -157,8 +157,9 @@ background.solid: $inherited.colors.background.base
 -- ftd.column:
 if: { page.show-banner}
 width: fill-container
+max-width.fixed.px: 1320
 children: $page.banner
-align-content: center
+align-self: center
 
 -- end: ftd.column
 
@@ -215,7 +216,8 @@ github-url: $page.github-url
 if: { page.show-footer}
 width: fill-container
 children: $page.footer
-align-content: center
+align-self: center
+max-width.fixed.px: 1320
 
 -- end: ftd.column
 
@@ -260,6 +262,8 @@ boolean full-width:
 
 -- ftd.column:
 width: fill-container
+max-width.fixed.px: 1320
+align-self: center
 
 -- h.header:
 sections: $doc-page-desktop.sections
@@ -310,12 +314,12 @@ toc-obj: $doc-page-desktop.toc
 padding-horizontal.rem: 3.12
 padding-top.rem: 2.85
 padding-bottom.px: 50
-border-right-width.px if {  doc-page-desktop.sidebar }: 1
+border-right-width.px if { doc-page-desktop.sidebar }: 1
 border-color: $inherited.colors.border
 align-content: top-left
 children: $doc-page-desktop.wrapper
 spacing.fixed.em: 0.8
-border-left-width.px if { !ftd.is_empty(doc-page-desktop.toc)  }: 1
+border-left-width.px if { !ftd.is_empty(doc-page-desktop.toc) }: 1
 min-height.fixed.calc: 100vh - 128px
 max-width.fixed.px if { ftd.is_empty(doc-page-desktop.toc) && !doc-page-desktop.full-width && !doc-page-desktop.sidebar }: 800
 max-width if { doc-page-desktop.full-width }: fill-container
@@ -403,8 +407,9 @@ link if { toc-instance.toc.url != NULL }: $toc-instance.toc.url
 text: $toc-instance.toc.title
 role: $inherited.types.button-medium
 color: $inherited.colors.text-strong
-color if { !toc-instance.toc.is-active  }: $inherited.colors.text
+color if { !toc-instance.toc.is-active }: $inherited.colors.text
 width: fill-container
+style if { toc-instance.toc.is-active }: bold
 
 -- ftd.image:
 if: { !ftd.is_empty(toc-instance.toc.children) }
@@ -453,6 +458,7 @@ role: $inherited.types.button-medium
 color: $inherited.colors.text
 color if { childrens.toc.is-active }: $inherited.colors.text-strong
 style: regular
+style if { childrens.toc.is-active }: bold
 
 -- ftd.column:
 if: {!ftd.is_empty(childrens.toc.children) }
@@ -1105,7 +1111,7 @@ width: fill-container
 -- component card:
 caption title:
 body body:
-ftd.image-src src:  $assets.files.static.dollar.svg
+ftd.image-src src: $assets.files.static.dollar.svg
 string cta-label: Button
 string cta-url: /
 
@@ -1255,7 +1261,7 @@ role: $inherited.types.button-medium
 color: $inherited.colors.text
 color if { link-group.active}: $inherited.colors.accent.primary
 link: $link-group.cta
-style: bold
+style if { link-group.active}: bold
 
 -- ftd.column:
 width: fill-container
@@ -1362,7 +1368,7 @@ width: fill-container
 -- component footer-mobile-list:
 caption title:
 string url:
-boolean $shows-data:  false
+boolean $shows-data: false
 boolean is-active: false
 pr.toc-item list children: 
 
@@ -1567,7 +1573,7 @@ common.post-meta post-data:
 timestamp: $featured-post.post-data.published-on
 author: $featured-post.post-data.author
 image: $featured-post.post-data.post-image
-url:  $featured-post.post-data.post-url
+url: $featured-post.post-data.post-url
 body: $featured-post.post-data.body
 cta-txt: $featured-post.post-data.cta-txt
 cta-url: $featured-post.post-data.cta-url
@@ -1606,7 +1612,7 @@ width: fill-container
 timestamp: $featured-post-card.timestamp
 author: $featured-post-card.author
 image: $featured-post-card.image
-url:  $featured-post-card.url
+url: $featured-post-card.url
 body: $featured-post-card.body
 cta-txt: $featured-post-card.cta-txt
 cta-url: $featured-post-card.cta-url
@@ -1619,7 +1625,7 @@ cta-url: $featured-post-card.cta-url
 timestamp: $featured-post-card.timestamp
 author: $featured-post-card.author
 image: $featured-post-card.image
-url:  $featured-post-card.url
+url: $featured-post-card.url
 body: $featured-post-card.body
 cta-txt: $featured-post-card.cta-txt
 cta-url: $featured-post-card.cta-url
@@ -1889,7 +1895,6 @@ bio-url: $featured-post-card-mobile.author.bio-url
 
 
 
-
 -- component user:
 caption title:
 optional string bio-url:
@@ -1942,7 +1947,7 @@ common.post-meta post-data:
 timestamp: $post-card.post-data.published-on
 image: $post-card.post-data.post-image
 author: $post-card.post-data.author
-url:  $post-card.post-data.post-url
+url: $post-card.post-data.post-url
 body: $post-card.post-data.body
 cta-txt: $post-card.post-data.cta-txt
 cta-url: $post-card.post-data.cta-url
@@ -1979,16 +1984,15 @@ link: $post-card-ui.url
 
 -- ftd.column:
 anchor: parent
-width.fixed.percent if { ftd.device != "mobile" }: 98
 width: fill-container
-height if { ftd.device != "mobile" }: fill-container
+height.fixed.percent if { ftd.device != "mobile" }: 87
 height.fixed.percent: 82
 z-index: 100
-top.px: 0
+top.px: 34
 top.px if { ftd.device == "mobile" }: 48
-left.px: 4
+left.px: 0
 left.px if { ftd.device == "mobile" }: 0
-border-radius.px: 20
+border-radius.px: 17
 background.solid: $common.blur
 
 -- end: ftd.column
@@ -2005,7 +2009,7 @@ height: fill-container
 -- ftd.column:
 width.fixed.percent: 85
 anchor: parent
-bottom.px: 16
+bottom.px: 56
 bottom.px if { ftd.device == "mobile" }: 74
 left.px: 32
 right.px: 32
@@ -2063,8 +2067,8 @@ width: fill-container
 -- newsletter-desktop: $newsletter.title
 cta-txt: $newsletter.cta-txt
 cta-url: $newsletter.cta-url 
-cta-placeholder: $newsletter.cta-placeholder  
-body: $newsletter.body  
+cta-placeholder: $newsletter.cta-placeholder 
+body: $newsletter.body 
 info-icon: $newsletter.info-icon 
 bg-color: $newsletter.bg-color 
 
@@ -2075,8 +2079,8 @@ bg-color: $newsletter.bg-color
 -- newsletter-mobile: $newsletter.title
 cta-txt: $newsletter.cta-txt
 cta-url: $newsletter.cta-url 
-cta-placeholder: $newsletter.cta-placeholder  
-body: $newsletter.body  
+cta-placeholder: $newsletter.cta-placeholder 
+body: $newsletter.body 
 info-icon: $newsletter.info-icon 
 bg-color: $newsletter.bg-color 
 
@@ -2301,9 +2305,10 @@ spacing.fixed.px: 16
 
 -- component post:
 common.post-meta meta:
-children atictles-container:
+children container:
 string previous-cta-txt: Back to blog
 optional string previous-cta-url:
+string share-txt: Share
 
 -- ftd.column:
 width: fill-container
@@ -2313,9 +2318,10 @@ image: $post.meta.post-image
 author: $post.meta.author
 share: $post.meta.share
 timestamp: $post.meta.published-on
-atictles-container: $post.atictles-container
+container: $post.container
 previous-cta-txt: $post.previous-cta-txt
 previous-cta-url: $post.previous-cta-url
+share-txt: $post.share-txt
 
 $post.meta.body
 
@@ -2339,9 +2345,10 @@ common.author-meta author:
 string timestamp:
 optional body body:
 common.social-media list share:
-children atictles-container:
+children container:
 string previous-cta-txt: Back to blog
 optional string previous-cta-url:
+string share-txt: 
 
 -- ftd.column:
 
@@ -2353,9 +2360,10 @@ author: $article-card.author
 timestamp: $article-card.timestamp
 body: $article-card.body
 share: $article-card.share
-atictles-container: $article-card.atictles-container
+container: $article-card.container
 previous-cta-txt: $article-card.previous-cta-txt
 previous-cta-url: $article-card.previous-cta-url
+share-txt: $article-card.share-txt
 
 -- end: ftd.desktop
 
@@ -2367,9 +2375,10 @@ author: $article-card.author
 timestamp: $article-card.timestamp
 body: $article-card.body
 share: $article-card.share
-atictles-container: $article-card.atictles-container
+container: $article-card.container
 previous-cta-txt: $article-card.previous-cta-txt
 previous-cta-url: $article-card.previous-cta-url
+share-txt: $article-card.share-txt
 
 -- end: ftd.mobile
 
@@ -2393,9 +2402,10 @@ common.author-meta author:
 string timestamp:
 optional body body:
 common.social-media list share:
-children atictles-container:
+children container:
 string previous-cta-txt:
 optional string previous-cta-url:
+string share-txt: 
 
 -- ftd.column:
 color: $inherited.colors.text
@@ -2429,7 +2439,7 @@ width: fill-container
 spacing: space-between
 
 -- ftd.column:
-width.fixed.percent: 15
+width.fixed.percent: 20
 color: $inherited.colors.text-strong
 
 -- ftd.text: $article-card-desktop.timestamp
@@ -2437,23 +2447,23 @@ role: $inherited.types.fine-print
 white-space: nowrap
 margin-bottom.rem: 1.87
 
-
 -- ftd.row:
 link if { article-card-desktop.author.bio-url != NULL }: $article-card-desktop.author.bio-url
 spacing.fixed.px: 12
 
 -- ftd.image:
-if: {  article-card-desktop.author.image != NULL }
+if: { article-card-desktop.author.image != NULL }
 src: $article-card-desktop.author.image
 
 -- ftd.text: $article-card-desktop.author.title
 role: $inherited.types.copy-regular
 style: bold
 color: $inherited.colors.text-strong
+white-space: nowrap
 
 -- end: ftd.row
 
--- ftd.text: Share
+-- ftd.text: $article-card-desktop.share-txt
 if: { !ftd.is_empty(article-card-desktop.share) }
 role: $inherited.types.button-small
 style: regular
@@ -2493,7 +2503,7 @@ margin-top.em: 2.1
 $article-card-desktop.body
 
 -- ftd.column:
-children: $article-card-desktop.atictles-container
+children: $article-card-desktop.container
 width: fill-container
 spacing.fixed.px: 32
 
@@ -2524,9 +2534,10 @@ common.author-meta author:
 string timestamp:
 optional body body:
 common.social-media list share:
-children atictles-container:
+children container:
 string previous-cta-txt:
 optional string previous-cta-url:
+string share-txt: 
 
 -- ftd.column:
 color: $inherited.colors.text
@@ -2564,7 +2575,7 @@ link if { article-card-mobile.author.bio-url != NULL }: $article-card-mobile.aut
 spacing.fixed.px: 12
 
 -- ftd.image:
-if: {  article-card-mobile.author.image != NULL }
+if: { article-card-mobile.author.image != NULL }
 src: $article-card-mobile.author.image
 
 -- ftd.text: $article-card-mobile.author.title
@@ -2574,7 +2585,7 @@ style: bold
 
 -- end: ftd.row
 
--- ftd.text: Share
+-- ftd.text: $article-card-mobile.share-txt
 if: { !ftd.is_empty(article-card-mobile.share) }
 role: $inherited.types.button-small
 style: regular
@@ -2606,7 +2617,7 @@ width: fill-container
 $article-card-mobile.body
 
 -- ftd.column:
-children: $article-card-mobile.atictles-container
+children: $article-card-mobile.container
 width: fill-container
 spacing.fixed.px: 24
 
@@ -2752,8 +2763,6 @@ role: $inherited.types.copy-small
 -- ftd.text:
 text: $author-bio-desktop.body
 role: $inherited.types.copy-regular
-
-
 
 -- end: ftd.column
 
