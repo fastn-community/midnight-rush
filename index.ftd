@@ -1784,7 +1784,6 @@ bio-url: $featured-post-card-desktop.author.bio-url
 
 
 
-
 -- component featured-post-card-mobile:
 caption title:
 string timestamp:
@@ -2526,7 +2525,6 @@ spacing.fixed.px: 32
 
 
 
-
 -- component article-card-mobile:
 caption title:
 optional ftd.image-src image:
@@ -2626,9 +2624,6 @@ spacing.fixed.px: 24
 -- end: ftd.column
 
 -- end: article-card-mobile
-
-
-
 
 
 
@@ -2776,6 +2771,7 @@ role: $inherited.types.copy-regular
 
 
 
+
 -- component author-bio-mobile:
 caption title:
 string profile:
@@ -2820,12 +2816,3 @@ role: $inherited.types.fine-print
 -- end: ftd.column
 
 -- end: author-bio-mobile
-
-
-
-
-
-
-
-
-
