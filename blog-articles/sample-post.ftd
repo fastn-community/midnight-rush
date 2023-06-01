@@ -209,7 +209,6 @@ post-data: $common.meta-3
 -- end: ds.posts
 
 -- ds.newsletter: Freakishly simple. Downright useful. Ready to make the jump?
-info-icon: $assets.files.assets.okay.svg
 
 Sign up in 2 minutes
 

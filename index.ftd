@@ -2278,6 +2278,7 @@ spacing: space-between
 -- ftd.mobile:
 
 -- ftd.column:
+width: fill-container
 children: $posts.container
 spacing.fixed.px: 16
 
