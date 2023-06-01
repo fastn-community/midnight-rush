@@ -281,8 +281,8 @@ github-icon: $doc-page-desktop.github-icon
 github-url: $doc-page-desktop.github-url
 
 -- ftd.column:
-padding-horizontal.rem: 2.5
-margin-bottom.rem: 3.12
+padding-horizontal.rem if { doc-page-desktop.body != NULL } : 2.5
+margin-bottom.rem if { doc-page-desktop.body != NULL }: 3.12
 width: fill-container
 
 -- ftd.text: $doc-page-desktop.title
@@ -292,7 +292,7 @@ color: $inherited.colors.text-strong
 margin-bottom.rem: 1.32
 
 -- tf.markdown:
-if: {doc-page-desktop.body != NULL}
+if: { doc-page-desktop.body != NULL }
 
 $doc-page-desktop.body
 
@@ -1558,13 +1558,6 @@ width: fill-container
 
 
 
-
-
-
-
-
-
-
 -- component featured-post:
 common.post-meta post-data:
 
@@ -1582,6 +1575,14 @@ cta-url: $featured-post.post-data.cta-url
 -- end: ftd.column
 
 -- end: featured-post
+
+
+
+
+
+
+
+
 
 
 -- component featured-post-card:
@@ -1633,6 +1634,11 @@ cta-url: $featured-post-card.cta-url
 
 
 
+
+
+
+
+
 -- component featured-post-card-desktop:
 caption title:
 string timestamp:
@@ -1648,7 +1654,7 @@ optional string cta-url:
 -- ftd.row:
 align-self: center
 width: fill-container
-spacing: space-between
+spacing.fixed.rem: 5.5
 padding-vertical.rem: 2
 padding-horizontal.rem: 2
 height.fixed.px: 450
@@ -1657,7 +1663,6 @@ margin-bottom.px: 174
 -- ftd.column:
 width.fixed.percent: 50
 height: fill-container
-
 
 -- ftd.image: 
 src: $featured-post-card-desktop.image
@@ -1668,7 +1673,7 @@ height: fill-container
 
 -- ftd.column:
 align-self: center
-width.fixed.percent: 40
+width.fixed.percent: 33
 
 -- ftd.row:
 spacing.fixed.px: 18
@@ -1676,12 +1681,15 @@ color: $inherited.colors.text
 margin-bottom.rem: 1.5
 
 -- ftd.row:
-spacing.fixed.px: 5
+spacing.fixed.px: 8
+align-content: center
+role: $inherited.types.copy-small
 
 -- ftd.image:
 src: $assets.files.static.calendar.svg
 
 -- ftd.text: $featured-post-card-desktop.timestamp
+style: bold
 
 -- end: ftd.row
 
@@ -1710,13 +1718,14 @@ src: $assets.files.static.comments.svg
 -- end: ftd.row
 
 -- ftd.text: $featured-post-card-desktop.title
-role: $inherited.types.heading-tiny
+role: $inherited.types.button-large
 color: $inherited.colors.text-strong
+style: bold
 margin-bottom.rem: 0.75
 
 -- ftd.text:
 if: { featured-post-card-desktop.body != NULL }
-role: $inherited.types.copy-regular
+role: $fonts.copy-regular
 color: $inherited.colors.text
 margin-bottom.rem: 1.5
 
@@ -1747,11 +1756,6 @@ align-self: center
 
 -- end: ftd.row
 
--- ftd.text: |
-if: { ftd.device != "mobile" }
-color: $inherited.colors.border
-role: $inherited.types.blockquote
-
 -- user: $featured-post-card-desktop.author.title
 image: $featured-post-card-desktop.author.image
 profile: $featured-post-card-desktop.author.profile
@@ -1763,6 +1767,15 @@ profile: $featured-post-card-desktop.author.profile
 -- end: ftd.row
 
 -- end: featured-post-card-desktop
+
+
+
+
+
+
+
+
+
 
 
 -- component featured-post-card-mobile:
@@ -1779,31 +1792,28 @@ optional string cta-url:
 
 -- ftd.column:
 width: fill-container
-spacing.fixed.px: 32
+spacing.fixed.px: 24
 padding-vertical.rem: 2
 margin-bottom.px: 64
 margin-top.px: 32
+color: $inherited.colors.text
 
 -- ftd.text: $featured-post-card-mobile.title
 role: $inherited.types.heading-tiny
 color: $inherited.colors.text-strong
 
-
 -- ftd.image: 
 src: $featured-post-card-mobile.image
 width: fill-container
 
-
 -- ftd.text:
 if: { featured-post-card-mobile.body != NULL }
 role: $inherited.types.copy-regular
-color: $inherited.colors.text
 
 $featured-post-card-mobile.body
 
 -- ftd.row:
 spacing.fixed.px: 18
-color: $inherited.colors.text
 
 -- ftd.row:
 spacing.fixed.px: 5
@@ -1848,7 +1858,6 @@ link if { featured-post-card-mobile.cta-url != NULL }: $featured-post-card-mobil
 border-radius.px: 50
 spacing.fixed.px: 3
 
-
 -- ftd.text: Read More
 role: $inherited.types.link
 min-width.fixed.px: 87
@@ -1866,11 +1875,12 @@ image: $featured-post-card-mobile.author.image
 profile: $featured-post-card-mobile.author.profile
 bio-url: $featured-post-card-mobile.author.profile
 
-
-
 -- end: ftd.column
 
 -- end: featured-post-card-mobile
+
+
+
 
 
 
@@ -1887,6 +1897,9 @@ optional ftd.image-src image:
 
 -- ftd.row:
 spacing.fixed.px: 16
+border-left-width.px if { ftd.device != "mobile" }: 1
+border-color: $inherited.colors.border
+padding-left.px: 20
 link if { user.bio-url != NULL }: $user.bio-url
 
 -- ftd.image:
@@ -1899,6 +1912,7 @@ align-self: center
 -- ftd.text: $user.title
 role: $inherited.types.blockquote
 color: $inherited.colors.text-strong
+style: bold
 
 -- ftd.text: $user.profile
 if: { user.profile != NULL }
@@ -1910,11 +1924,6 @@ color: $inherited.colors.text
 -- end: ftd.row
 
 -- end: user
-
-
-
-
-
 
 
 
@@ -1938,6 +1947,8 @@ cta-txt: $post-card.post-data.cta-txt
 cta-url: $post-card.post-data.cta-url
 
 -- end: post-card
+
+
 
 
 
@@ -1977,18 +1988,14 @@ bottom.px if { ftd.device == "mobile" }: 120
 left.px: 32
 right.px: 32
 z-index: 1000
-border-bottom-left-radius.px: 20
-border-bottom-right-radius.px: 20
 
 -- ftd.text: $post-card-ui.title
 color: $inherited.colors.text-strong
 margin-bottom.px: 18
 role: $inherited.types.copy-regular
 
-
-
-
 -- ftd.row:
+spacing.fixed.px: 3
 
 -- ftd.text: $post-card-ui.cta-txt
 color: $inherited.colors.cta-primary.base
@@ -2009,6 +2016,11 @@ src: $assets.files.static.arrow-forward.svg
 
 
 
+
+
+
+
+
 -- component newsletter:
 caption title:
 string cta-txt: Sign me up
@@ -2016,11 +2028,12 @@ string cta-url: /
 string cta-placeholder: Enter your work email...
 optional body body:
 optional ftd.image-src cta-icon:
-optional ftd.image-src info-icon: 
+ftd.image-src info-icon: $assets.files.static.check-circle.svg
 integer width: 1200
 ftd.color bg-color: $inherited.colors.background.step-1
 
 -- ftd.column:
+width: fill-container
 
 -- ftd.desktop:
 
@@ -2046,10 +2059,18 @@ bg-color: $newsletter.bg-color
 
 -- end: ftd.mobile
 
-
 -- end: ftd.column
 
 -- end: newsletter
+
+
+
+
+
+
+
+
+
 
 -- component newsletter-desktop:
 caption title:
@@ -2065,6 +2086,7 @@ width: fill-container
 align-content: center
 
 -- ftd.row:
+width.fixed.percent: 85
 margin-vertical.px: 60
 padding-top.px: 69
 padding-bottom.px: 65
@@ -2073,7 +2095,7 @@ background.solid: $newsletter-desktop.bg-color
 border-radius.px: 20
 align-content: center
 spacing: space-between
-width.fixed.percent: 85
+
 
 -- ftd.text: $newsletter-desktop.title
 role: $inherited.types.heading-small
@@ -2092,7 +2114,6 @@ padding-vertical.px: 15
 padding-horizontal.px: 15
 border-radius.px: 30
 width.fixed.px: 310
-
 
 -- ftd.text: $newsletter-desktop.cta-txt
 role: $inherited.types.link
@@ -2138,6 +2159,9 @@ color: $inherited.colors.text-strong
 
 
 
+
+
+
 -- component newsletter-mobile:
 caption title:
 string cta-txt: 
@@ -2147,14 +2171,9 @@ optional body body:
 optional ftd.image-src info-icon: 
 ftd.color bg-color: 
 
-
 -- ftd.column:
-margin-vertical.px if { ftd.device != "mobile" }: 60
-padding-top.px: 69
-padding-bottom.px: 65
-padding-horizontal.px: 75
-padding-vertical.px if { ftd.device == "mobile" }: 24
-padding-horizontal.px if { ftd.device == "mobile" }: 24
+padding-vertical.px: 24
+padding-horizontal.px: 24
 background.solid: $newsletter-mobile.bg-color
 border-radius.px: 20
 align-content: center
@@ -2168,14 +2187,11 @@ padding-right.px: 16
 width: fill-container
 text-align: center
 
-
 -- ftd.text-input:
 placeholder: $newsletter-mobile.cta-placeholder
 padding-vertical.px: 15
 padding-horizontal.px: 15
 border-radius.px: 30
-
-
 
 -- ftd.text: $newsletter-mobile.cta-txt
 role: $inherited.types.link
@@ -2188,7 +2204,6 @@ padding-horizontal.rem: 1.75
 link if { newsletter-mobile.cta-url != NULL }: $newsletter-mobile.cta-url
 border-radius.px: 50
 white-space: nowrap
-
 
 -- ftd.row: 
 spacing.fixed.px: 10
@@ -2208,11 +2223,7 @@ color: $inherited.colors.text-strong
 
 -- end: ftd.column
 
-
 -- end: newsletter-mobile
-
-
-
 
 
 
@@ -2264,18 +2275,10 @@ spacing.fixed.px: 16
 
 
 
-
-
-
-
-
-
-
-
 -- component post:
 common.post-meta meta:
 children atictles-container:
-string previous-cta-txt: back
+string previous-cta-txt: Back to blog
 optional string previous-cta-url:
 
 -- ftd.column:
@@ -2300,6 +2303,11 @@ $post.meta.body
 
 
 
+
+
+
+
+
 -- component article-card:
 caption title:
 optional ftd.image-src image:
@@ -2308,7 +2316,7 @@ string timestamp:
 optional body body:
 common.social-media list share:
 children atictles-container:
-string previous-cta-txt:
+string previous-cta-txt: Back to blog
 optional string previous-cta-url:
 
 -- ftd.column:
@@ -2325,7 +2333,6 @@ atictles-container: $article-card.atictles-container
 previous-cta-txt: $article-card.previous-cta-txt
 previous-cta-url: $article-card.previous-cta-url
 
-
 -- end: ftd.desktop
 
 -- ftd.mobile:
@@ -2340,12 +2347,17 @@ atictles-container: $article-card.atictles-container
 previous-cta-txt: $article-card.previous-cta-txt
 previous-cta-url: $article-card.previous-cta-url
 
-
 -- end: ftd.mobile
 
 -- end: ftd.column
 
 -- end: article-card
+
+
+
+
+
+
 
 
 
@@ -2369,12 +2381,15 @@ padding-horizontal.rem: 5.63
 -- ftd.row:
 if: { article-card-desktop.previous-cta-url != NULL }
 link: $article-card-desktop.previous-cta-url
+spacing.fixed.px: 8
+align-content: center
 
 -- ftd.image:
 src: $assets.files.static.arrow-back.svg
 
 -- ftd.text: $article-card-desktop.previous-cta-txt
 role: $inherited.types.fine-print
+color: $inherited.colors.accent.primary
 
 -- end: ftd.row
 
@@ -2391,17 +2406,27 @@ spacing: space-between
 
 -- ftd.column:
 width.fixed.percent: 15
+color: $inherited.colors.text-strong
 
 -- ftd.text: $article-card-desktop.timestamp
 role: $inherited.types.fine-print
 white-space: nowrap
-color: $inherited.colors.text
 margin-bottom.rem: 1.87
 
--- user: $article-card-desktop.author.title
-image: $article-card-desktop.author.image
-bio-url: $article-card-desktop.author.bio-url
 
+-- ftd.row:
+link if { article-card-desktop.author.bio-url != NULL }: $article-card-desktop.author.bio-url
+spacing.fixed.px: 12
+
+-- ftd.image:
+if: {  article-card-desktop.author.image != NULL }
+src: $article-card-desktop.author.image
+
+-- ftd.text: $article-card-desktop.author.title
+role: $inherited.types.copy-regular
+style: bold
+
+-- end: ftd.row
 
 -- ftd.text: Share
 if: { !ftd.is_empty(article-card-desktop.share) }
@@ -2445,6 +2470,7 @@ $article-card-desktop.body
 -- ftd.column:
 children: $article-card-desktop.atictles-container
 width: fill-container
+spacing.fixed.px: 32
 
 -- end: ftd.column
 
@@ -2455,12 +2481,6 @@ width: fill-container
 -- end: ftd.column
 
 -- end: article-card-desktop
-
-
-
-
-
-
 
 
 
@@ -2491,12 +2511,15 @@ spacing.fixed.px: 24
 -- ftd.row:
 if: { article-card-mobile.previous-cta-url != NULL }
 link: $article-card-mobile.previous-cta-url
+spacing.fixed.px: 8
+align-content: center
 
 -- ftd.image:
 src: $assets.files.static.arrow-back.svg
 
 -- ftd.text: $article-card-mobile.previous-cta-txt
 role: $inherited.types.fine-print
+color: $inherited.colors.accent.primary
 
 -- end: ftd.row
 
@@ -2509,11 +2532,28 @@ height: hug-content
 -- ftd.text: $article-card-mobile.timestamp
 role: $inherited.types.copy-regular
 white-space: nowrap
+color: $inherited.colors.text-strong
 
+-- ftd.row:
+link if { article-card-mobile.author.bio-url != NULL }: $article-card-mobile.author.bio-url
+spacing.fixed.px: 12
 
--- user: $article-card-mobile.author.title
-image: $article-card-mobile.author.image
-bio-url: $article-card-mobile.author.bio-url
+-- ftd.image:
+if: {  article-card-mobile.author.image != NULL }
+src: $article-card-mobile.author.image
+
+-- ftd.text: $article-card-mobile.author.title
+role: $inherited.types.copy-regular
+color: $inherited.colors.text-strong
+style: bold
+
+-- end: ftd.row
+
+-- ftd.text: Share
+if: { !ftd.is_empty(article-card-mobile.share) }
+role: $inherited.types.button-small
+style: regular
+margin-top.rem: 3.5
 
 -- ftd.row:
 if: { !ftd.is_empty(article-card-mobile.share) }
@@ -2532,7 +2572,6 @@ role: $inherited.types.heading-large
 color: $inherited.colors.text-strong
 width: fill-container
 
-
 -- ftd.text:
 if: { article-card-mobile.body != NULL }
 role: $inherited.types.copy-regular
@@ -2544,9 +2583,11 @@ $article-card-mobile.body
 -- ftd.column:
 children: $article-card-mobile.atictles-container
 width: fill-container
+spacing.fixed.px: 24
 
 -- end: ftd.column
 
 -- end: ftd.column
 
 -- end: article-card-mobile
+

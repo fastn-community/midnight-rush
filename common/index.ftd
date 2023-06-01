@@ -1,6 +1,6 @@
 -- import: fastn/processors as pr
 -- import: fastn-community.github.io/set-1-ds/assets
--- import: fastn-community.github.io/set-1-ds/blog-authors/ganesh as author
+-- import: fastn-community.github.io/set-1-ds/blog-authors/patrica as author
 
 
 -- boolean show-footer: true
@@ -144,7 +144,7 @@ social-media list share:
 published-on: July 22, 2014 at 10:02 pm
 post-image: $assets.files.static.post-list.image-1.svg
 post-url: blog-articles/category-1/sample-post-1/
-author: $author.ganesh
+author: $author.patrica
 cta-txt: Read more
 cta-url: /
 
@@ -159,7 +159,7 @@ doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
 published-on: July 22, 2014 at 10:02 pm
 post-image: $assets.files.static.post-list.image-2.svg
 post-url: blog-articles/category-1/sample-post-1/
-author: $author.ganesh
+author: $author.patrica
 cta-txt: Read more
 cta-url: /
 
@@ -173,7 +173,7 @@ doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
 published-on: July 22, 2014 at 10:02 pm
 post-image: $assets.files.static.post-list.image-3.svg
 post-url: blog-articles/category-1/sample-post-1/
-author: $author.ganesh
+author: $author.patrica
 cta-txt: Read more
 cta-url: /
 
@@ -187,7 +187,7 @@ doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
 published-on: July 22, 2014 at 10:02 pm
 post-image: $assets.files.static.post-list.image-4.svg
 post-url: blog-articles/category-1/sample-post-1/
-author: $author.ganesh
+author: $author.patrica
 cta-txt: Read more
 cta-url: /
 
@@ -200,7 +200,7 @@ doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
 published-on: July 22, 2014 at 10:02 pm
 post-image: $assets.files.static.post-list.image-5.svg
 post-url: blog-articles/category-1/sample-post-1/
-author: $author.ganesh
+author: $author.patrica
 cta-txt: Read more
 cta-url: /
 
@@ -213,7 +213,7 @@ doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
 published-on: July 22, 2014 at 10:02 pm
 post-image: $assets.files.static.post-list.image-6.svg
 post-url: blog-articles/category-1/sample-post-1/
-author: $author.ganesh
+author: $author.patrica
 cta-txt: Read more
 cta-url: /
 
@@ -227,7 +227,7 @@ doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
 published-on: July 22, 2014 at 10:02 pm
 post-image: $assets.files.static.post-list.image-7.svg
 post-url: blog-articles/category-1/sample-post-1/
-author: $author.ganesh
+author: $author.patrica
 cta-txt: Read more
 cta-url: /
 
@@ -241,7 +241,7 @@ doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
 published-on: July 22, 2014 at 10:02 pm
 post-image: $assets.files.static.post-list.image-8.svg
 post-url: blog-articles/category-1/sample-post-1/
-author: $author.ganesh
+author: $author.patrica
 cta-txt: Read more
 cta-url: /
 
@@ -254,7 +254,7 @@ doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
 published-on: July 22, 2014 at 10:02 pm
 post-image: $assets.files.static.post-list.image-9.svg
 post-url: blog-articles/category-1/sample-post-1/
-author: $author.ganesh
+author: $author.patrica
 cta-txt: Read more
 cta-url: /
 
@@ -268,7 +268,7 @@ doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
 published-on: July 22, 2014 at 10:02 pm
 post-image: $assets.files.static.post-list.image-10.svg
 post-url: blog-articles/category-1/sample-post-1/
-author: $author.ganesh
+author: $author.patrica
 cta-txt: Read more
 cta-url: /
 
@@ -282,7 +282,7 @@ doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
 published-on: July 22, 2014 at 10:02 pm
 post-image: $assets.files.static.post-list.image-11.svg
 post-url: blog-articles/category-1/sample-post-1/
-author: $author.ganesh
+author: $author.patrica
 cta-txt: Read more
 cta-url: /
 
@@ -296,7 +296,7 @@ doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
 published-on: July 22, 2014 at 10:02 pm
 post-image: $assets.files.static.post-list.image-12.svg
 post-url: blog-articles/category-1/sample-post-1/
-author: $author.ganesh
+author: $author.patrica
 cta-txt: Read more
 cta-url: /
 

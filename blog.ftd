@@ -1,7 +1,5 @@
--- import: fastn-community.github.io/set-1-ds/assets
 -- import: fastn-community.github.io/set-1-ds as ds
 -- import: fastn-community.github.io/set-1-ds/common
--- import: fastn-community.github.io/set-1-ds/blog-authors/ganesh as author
 -- import: fastn-community.github.io/set-1-ds/blog-articles/sample-post as meta-data
 
 ; Change below details for your new blog post
@@ -75,11 +73,10 @@ post-data: $common.meta-11
 -- ds.post-card:
 post-data: $common.meta-12
 
+-- end: ds.posts
+
 -- ds.newsletter: Freakishly simple. Downright useful. Ready to make the jump?
-info-icon: $assets.files.assets.okay.svg
 
 Sign up in 2 minutes
-
--- end: ds.posts
 
 -- end: my-ds.page

@@ -1,15 +1,17 @@
 -- import: fastn-community.github.io/set-1-ds/assets
 -- import: fastn-community.github.io/set-1-ds as ds
 -- import: fastn-community.github.io/set-1-ds/common
--- import: fastn-community.github.io/set-1-ds/blog-authors/ganesh as author
+-- import: fastn-community.github.io/set-1-ds/blog-authors/patrica as author
 
 
 
--- common.post-meta meta: Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.
+
+
+-- common.post-meta meta: Morbi eu risus nulla. Aliquam erat volutp nullam vitae ex id justo modo facilisis.
 published-on: July 22, 2014 at 10:02 pm
 post-image: $assets.files.static.image.svg
 post-url: blog-articles/category-1/sample-post-1/
-author: $author.ganesh
+author: $author.patrica
 cta-txt: Read more
 cta-url: /
 share: $common.share-links
@@ -28,6 +30,7 @@ full-width: true
 
 -- ds.post: 
 meta: $meta
+previous-cta-url: https://fastn-community.github.io/set-1-ds/blog/
 
 -- ds.markdown:
 
@@ -57,7 +60,6 @@ sit aspernatur aut odit aut f.
 
 `Duis aute irure dolor` in reprehenderit in voluptate velit esse cillum dolore eu.
 
-
 -- ds.list-item-bold:
 
 Unordered lists are displayed with a preceding bullet point.
@@ -85,7 +87,7 @@ You can remove a list item from the default component by deleting it in the Laye
 
 
 -- ds.image:
-src: $assets.files.static.article.image-2.svg
+src: $assets.files.static.article.image-4.svg
 
 
 -- ds.image:
@@ -101,7 +103,7 @@ With Flex, you can run your business on one platform, seamlessly across all digi
 Flex is the only saas business platform that lets you run your business on one platform.
 
 -- ds.image:
-src: $assets.files.static.article.image-4.svg
+src: $assets.files.static.article.image-2.svg
 
 -- ds.h3: Flex is a simple, beautiful tool that helps you work sanely
 
@@ -173,7 +175,7 @@ You can remove a list item from the default component by deleting it in the Laye
 The only SaaS business platform that combines CRM, marketing automation & commerce.
 
 -- ds.image:
-src: $assets.files.static.article.image-4.svg
+src: $assets.files.static.article.image-6.svg
 
 -- ds.h3: Flex is a simple, beautiful tool that helps you work sanely
 
@@ -183,6 +185,8 @@ With a single point of view, Flex integrates customer data and marketing tools i
 With Flex, you can run your business on one platform, seamlessly across all digital channels—and grow it anywhere.  With a single point of view, Flex integrates customer data and marketing tools in one flexible cloud platform that lets you get business results wherever they show up.
 Flex is the only saas business platform that lets you run your business on one platform.
 
+-- ds.image:
+src: $assets.files.static.article.image-5.svg
 
 -- end: ds.post
 
