@@ -1,24 +1,85 @@
+-- import: fastn-community.github.io/set-1-ds/assets
 -- import: fastn-community.github.io/set-1-ds as ds
+-- import: fastn-community.github.io/set-1-ds/common
+-- import: fastn-community.github.io/set-1-ds/blog-authors/ganesh as author
+-- import: fastn-community.github.io/set-1-ds/blog-articles/sample-post as meta-data
 
--- my-ds.page: Blog
+; Change below details for your new blog post
 
--- my-ds.page.right-sidebar:
 
--- ds.toc-title: On this page
 
--- ds.link-group: Coming Soon 🚧
-cta: blog/#coming-soon
 
--- end: my-ds.page.right-sidebar
+-- my-ds.page: Category title - News & Culture
+full-width: true
+sidebar: false
 
--- my-ds.page.body:
+Write some information of this category here. Change the title according to the
+category of your blog.
 
-In this section, we will learn about creating blog article page in `set-1-ds`.
+-- ds.posts:
 
--- ds.h3: Coming Soon 🚧
-id: coming-soon
+-- ds.featured-post:
+post-data: $meta-data.meta
 
-This page is under constuction. We are preparing something amazing and
-exciting for you.
+-- ds.h2: Latest Blogs
+
+-- ds.post-card:
+post-data: $common.meta-1
+
+-- ds.post-card:
+post-data: $common.meta-2
+
+-- ds.post-card:
+post-data: $common.meta-3
+
+-- ds.post-card:
+post-data: $common.meta-4
+
+-- ds.post-card:
+post-data: $common.meta-5
+
+-- ds.post-card:
+post-data: $common.meta-6
+
+
+-- ds.post-card:
+post-data: $common.meta-7
+
+
+-- ds.post-card:
+post-data: $common.meta-8
+
+
+-- ds.post-card:
+post-data: $common.meta-9
+
+-- ds.post-card:
+post-data: $common.meta-10
+
+
+-- ds.post-card:
+post-data: $common.meta-11
+
+
+-- ds.post-card:
+post-data: $common.meta-12
+
+-- ds.post-card:
+post-data: $common.meta-10
+
+
+-- ds.post-card:
+post-data: $common.meta-11
+
+
+-- ds.post-card:
+post-data: $common.meta-12
+
+-- ds.newsletter: Freakishly simple. Downright useful. Ready to make the jump?
+info-icon: $assets.files.assets.okay.svg
+
+Sign up in 2 minutes
+
+-- end: ds.posts
 
 -- end: my-ds.page

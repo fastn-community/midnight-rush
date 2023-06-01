@@ -16,6 +16,7 @@ optional string document-title:
 optional string document-description:
 optional ftd.raw-image-src document-image:
 optional string site-name: NULL
+boolean full-width: false
 
 -- ds.page: $page.title
 site-name: $page.site-name
@@ -23,6 +24,7 @@ body: $page.body
 show-footer: true
 right-sidebar: $page.right-sidebar
 sidebar: $page.sidebar
+full-width: $page.full-width
 document-title: $page.document-title
 document-description: $page.document-description
 document-image: $page.document-image
