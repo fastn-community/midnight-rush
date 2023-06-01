@@ -1975,6 +1975,7 @@ border-radius.px: 20
 height.fixed.px : 533
 margin-bottom.px if { ftd.device != "mobile" }: 72
 z-index: 0
+link: $post-card-ui.url
 
 -- ftd.column:
 anchor: parent
