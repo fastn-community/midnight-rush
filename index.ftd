@@ -2030,7 +2030,7 @@ optional body body:
 optional ftd.image-src cta-icon:
 ftd.image-src info-icon: $assets.files.static.check-circle.svg
 integer width: 1200
-ftd.color bg-color: $inherited.colors.background.step-1
+ftd.color bg-color: $inherited.colors.background.step-2
 
 -- ftd.column:
 width: fill-container
