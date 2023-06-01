@@ -101,6 +101,14 @@ src: $assets.files.static.ball.svg
 
 
 
+-- ftd.color blur:
+light: #12080880
+dark: #12080880
+
+
+
+
+
 
 -- pr.toc-item list footer-links:
 $processor$: pr.toc

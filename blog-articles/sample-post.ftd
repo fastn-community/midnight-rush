@@ -10,7 +10,7 @@
 -- common.post-meta meta: Morbi eu risus nulla. Aliquam erat volutp nullam vitae ex id justo modo facilisis.
 published-on: July 22, 2014 at 10:02 pm
 post-image: $assets.files.static.image.svg
-post-url: blog-articles/category-1/sample-post-1/
+post-url: blog-articles/sample-post/
 author: $author.patrica
 cta-txt: Read more
 cta-url: /
@@ -30,26 +30,28 @@ full-width: true
 
 -- ds.post: 
 meta: $meta
-previous-cta-url: https://fastn-community.github.io/set-1-ds/blog/
+previous-cta-url: blog/
 
 -- ds.markdown:
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
-doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore 
-veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
-magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam 
-est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed.
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
+ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque
+porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
+adipisci velit, sed.
 
-***Lorem ipsum*** dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+***Lorem ipsum*** dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+   consequat.
 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
 culpa qui officia deserunt mollit anim id est laborum.
 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
 fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
 
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
@@ -58,33 +60,25 @@ beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
 sit aspernatur aut odit aut f.
 
 
-`Duis aute irure dolor` in reprehenderit in voluptate velit esse cillum dolore eu.
+`Duis aute irure dolor` in reprehenderit in voluptate velit esse cillum dolore
+eu.
 
--- ds.list-item-bold:
+- Unordered lists are displayed with a preceding bullet point.
 
-Unordered lists are displayed with a preceding bullet point.
+- Lists can be nested as deeply as needed, and they may alternate between
+  ordered and unordered.
 
--- ds.list-item-bold:
+- Lists should align with the font-size, font-weight, and line-height of
+  paragraphs, but are styled with bullets or numbers.
 
-Lists can be nested as deeply as needed, and they may alternate between ordered and unordered.
+- Lists can have similar children elements as paragraphs to provide emphasis on
+  a certain word or phrase.
 
+- You can switch between an unordered list and ordered list by changing the
+  component variant in the Design panel.
 
--- ds.list-item-bold:
-
-Lists should align with the font-size, font-weight, and line-height of paragraphs, but are styled with bullets or numbers.
-
--- ds.list-item-bold:
-
-Lists can have similar children elements as paragraphs to provide emphasis on a certain word or phrase.
-
--- ds.list-item-bold:
-
-You can switch between an unordered list and ordered list by changing the component variant in the Design panel.
-
--- ds.list-item-bold:
-
-You can remove a list item from the default component by deleting it in the Layers panel.
-
+- You can remove a list item from the default component by deleting it in the
+  Layers panel.
 
 -- ds.image:
 src: $assets.files.static.article.image-4.svg
@@ -96,94 +90,101 @@ src: $assets.files.static.article.image-3.svg
 
 -- ds.h3: Flex is a simple, beautiful tool that helps you work sanely
 
-The only SaaS business platform that combines CRM, marketing automation & commerce.
+The only SaaS business platform that combines CRM, marketing automation &
+commerce.
 
-With a single point of view, Flex integrates customer data and marketing tools in one flexible cloud platform that lets you get business results wherever they show up.  Flex is the only saas business platform that lets you run your business on one platform, seamlessly across all digital channels.
-With Flex, you can run your business on one platform, seamlessly across all digital channels—and grow it anywhere.  With a single point of view, Flex integrates customer data and marketing tools in one flexible cloud platform that lets you get business results wherever they show up.
-Flex is the only saas business platform that lets you run your business on one platform.
+With a single point of view, Flex integrates customer data and marketing tools
+in one flexible cloud platform that lets you get business results wherever they
+show up.  Flex is the only saas business platform that lets you run your
+business on one platform, seamlessly across all digital channels. With Flex,
+you can run your business on one platform, seamlessly across all digital
+channels—and grow it anywhere.  With a single point of view, Flex integrates
+customer data and marketing tools in one flexible cloud platform that lets you
+get business results wherever they show up. Flex is the only saas business
+platform that lets you run your business on one platform.
 
 -- ds.image:
 src: $assets.files.static.article.image-2.svg
 
 -- ds.h3: Flex is a simple, beautiful tool that helps you work sanely
 
-The only SaaS business platform that combines CRM, marketing automation & commerce.
+The only SaaS business platform that combines CRM, marketing automation &
+commerce.
 
--- ds.list-item-bold:
+- Unordered lists are displayed with a preceding bullet point.
 
-Unordered lists are displayed with a preceding bullet point.
+- Lists can be nested as deeply as needed, and they may alternate between
+  ordered and unordered.
 
--- ds.list-item-bold:
+- Lists should align with the font-size, font-weight, and line-height of
+  paragraphs, but are styled with bullets or numbers.
 
-Lists can be nested as deeply as needed, and they may alternate between ordered and unordered.
+- Lists can have similar children elements as paragraphs to provide emphasis on
+  a certain word or phrase.
 
+- You can switch between an unordered list and ordered list by changing the
+  component variant in the Design panel.
 
--- ds.list-item-bold:
-
-Lists should align with the font-size, font-weight, and line-height of paragraphs, but are styled with bullets or numbers.
-
--- ds.list-item-bold:
-
-Lists can have similar children elements as paragraphs to provide emphasis on a certain word or phrase.
-
--- ds.list-item-bold:
-
-You can switch between an unordered list and ordered list by changing the component variant in the Design panel.
-
--- ds.list-item-bold:
-
-You can remove a list item from the default component by deleting it in the Layers panel.
+- You can remove a list item from the default component by deleting it in the
+  Layers panel.
 
 
 -- ds.h3: Flex is a simple, beautiful tool that helps you work sanely
 
-The only SaaS business platform that combines CRM, marketing automation & commerce.
+The only SaaS business platform that combines CRM, marketing automation &
+commerce.
 
-With a single point of view, Flex integrates customer data and marketing tools in one flexible cloud platform that lets you get business results wherever they show up.  Flex is the only saas business platform that lets you run your business on one platform, seamlessly across all digital channels.
-With Flex, you can run your business on one platform, seamlessly across all digital channels—and grow it anywhere.  With a single point of view, Flex integrates customer data and marketing tools in one flexible cloud platform that lets you get business results wherever they show up.
-Flex is the only saas business platform that lets you run your business on one platform.
-
-
--- ds.list-item-bold:
-
-Unordered lists are displayed with a preceding bullet point.
-
--- ds.list-item-bold:
-
-Lists can be nested as deeply as needed, and they may alternate between ordered and unordered.
+With a single point of view, Flex integrates customer data and marketing tools
+in one flexible cloud platform that lets you get business results wherever they
+show up.  Flex is the only saas business platform that lets you run your
+business on one platform, seamlessly across all digital channels. With Flex,
+you can run your business on one platform, seamlessly across all digital
+channels—and grow it anywhere.  With a single point of view, Flex integrates
+customer data and marketing tools in one flexible cloud platform that lets you
+get business results wherever they show up. Flex is the only saas business
+platform that lets you run your business on one platform.
 
 
--- ds.list-item-bold:
+- Unordered lists are displayed with a preceding bullet point.
 
-Lists should align with the font-size, font-weight, and line-height of paragraphs, but are styled with bullets or numbers.
+- Lists can be nested as deeply as needed, and they may alternate between
+  ordered and unordered.
 
--- ds.list-item-bold:
+- Lists should align with the font-size, font-weight, and line-height of
+  paragraphs, but are styled with bullets or numbers.
 
-Lists can have similar children elements as paragraphs to provide emphasis on a certain word or phrase.
+- Lists can have similar children elements as paragraphs to provide emphasis on
+  a certain word or phrase.
 
--- ds.list-item-bold:
+- You can switch between an unordered list and ordered list by changing the
+  component variant in the Design panel.
 
-You can switch between an unordered list and ordered list by changing the component variant in the Design panel.
-
--- ds.list-item-bold:
-
-You can remove a list item from the default component by deleting it in the Layers panel.
+- You can remove a list item from the default component by deleting it in the
+  Layers panel.
 
 
 -- ds.h3: Flex is a simple, beautiful tool that helps you work sanely
 
-The only SaaS business platform that combines CRM, marketing automation & commerce.
+The only SaaS business platform that combines CRM, marketing automation &
+commerce.
 
 -- ds.image:
 src: $assets.files.static.article.image-6.svg
 
 -- ds.h3: Flex is a simple, beautiful tool that helps you work sanely
 
-The only SaaS business platform that combines CRM, marketing automation & commerce.
+The only SaaS business platform that combines CRM, marketing automation &
+commerce.
 
-With a single point of view, Flex integrates customer data and marketing tools in one flexible cloud platform that lets you get business results wherever they show up.  Flex is the only saas business platform that lets you run your business on one platform, seamlessly across all digital channels.
-With Flex, you can run your business on one platform, seamlessly across all digital channels—and grow it anywhere.  With a single point of view, Flex integrates customer data and marketing tools in one flexible cloud platform that lets you get business results wherever they show up.
-Flex is the only saas business platform that lets you run your business on one platform.
+With a single point of view, Flex integrates customer data and marketing tools
+in one flexible cloud platform that lets you get business results wherever they
+show up.  Flex is the only saas business platform that lets you run your
+business on one platform, seamlessly across all digital channels. With Flex,
+you can run your business on one platform, seamlessly across all digital
+channels—and grow it anywhere.  With a single point of view, Flex integrates
+customer data and marketing tools in one flexible cloud platform that lets you
+get business results wherever they show up. Flex is the only saas business
+platform that lets you run your business on one platform.
 
 -- ds.image:
 src: $assets.files.static.article.image-5.svg

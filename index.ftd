@@ -1740,7 +1740,7 @@ if: { featured-post-card-desktop.cta-txt != NULL }
 background.solid: $inherited.colors.cta-primary.base
 padding-vertical.rem: 1.21
 padding-horizontal.rem: 1
-link if { featured-post-card-desktop.cta-url != NULL }: $featured-post-card-desktop.cta-url
+link if { featured-post-card-desktop.url != NULL }: $featured-post-card-desktop.url
 border-radius.px: 50
 spacing.fixed.px: 3
 
@@ -1971,31 +1971,52 @@ optional string cta-url:
 width.fixed.percent if { ftd.device != "mobile" }: 30
 width: fill-container
 border-radius.px: 20
-z-index: 0
+height.fixed.px : 533
 margin-bottom.px if { ftd.device != "mobile" }: 72
+z-index: 0
+
+-- ftd.column:
+anchor: parent
+width.fixed.percent if { ftd.device != "mobile" }: 98
+width: fill-container
+height if { ftd.device != "mobile" }: fill-container
+height.fixed.percent: 82
+z-index: 100
+top.px: 0
+top.px if { ftd.device == "mobile" }: 48
+left.px: 4
+left.px if { ftd.device == "mobile" }: 0
+border-radius.px: 20
+background.solid: $common.blur
+
+-- end: ftd.column
 
 -- ftd.image:
 src: $post-card-ui.image
+anchor: parent
+top.px: 0
+left.px: 0
+z-index: 10
 width: fill-container
 height: fill-container
-opacity: 0.8
 
 -- ftd.column:
 width.fixed.percent: 85
 anchor: parent
 bottom.px: 16
-bottom.px if { ftd.device == "mobile" }: 120
+bottom.px if { ftd.device == "mobile" }: 74
 left.px: 32
 right.px: 32
 z-index: 1000
+border-bottom-left-radius.px: 20
+border-bottom-right-radius.px: 20
 
 -- ftd.text: $post-card-ui.title
-color: $fonts.white
+color: $inherited.colors.text-strong
 margin-bottom.px: 18
 role: $inherited.types.copy-regular
 
 -- ftd.row:
-spacing.fixed.px: 3
 
 -- ftd.text: $post-card-ui.cta-txt
 color: $inherited.colors.cta-primary.base
