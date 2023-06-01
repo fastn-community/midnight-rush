@@ -14,3 +14,14 @@ company: XVY Pvt. Ltd.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 
+
+
+
+
+-- my-ds.page: 
+sidebar: false
+
+-- ds.author-bio: 
+author: $patrica
+
+-- end: my-ds.page
