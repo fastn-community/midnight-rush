@@ -5,7 +5,6 @@
 
 -- boolean show-footer: true
 
-
 -- integer logo-width: 200
 
 -- integer logo-height: 44
@@ -31,11 +30,24 @@ $processor$: pr.toc
 -- fastn.app-ui apps:
 $processor$: pr.fastn-apps
 
+
+
+
+
 -- record social-media:
 ftd.image-src src:
 string link: /
 
+
+
+
+
 -- social-media list share:
+
+
+
+
+
 
 -- social-media list share-links:
 
@@ -56,6 +68,10 @@ link: /
 src: $assets.files.static.ball.svg
 
 -- end: share-links
+
+
+
+
 
 -- social-media list social-links:
 
@@ -80,6 +96,10 @@ link: /
 src: $assets.files.static.ball.svg
 
 -- end: social-links
+
+
+
+
 
 
 -- pr.toc-item list footer-links:
@@ -110,10 +130,6 @@ $processor$: pr.toc
 
 
 
-
-
-
-
 -- record author-meta:
 caption title:
 string profile:
@@ -121,6 +137,7 @@ string company:
 optional string bio-url:
 optional ftd.image-src image:
 body body:
+
 
 
 
@@ -137,6 +154,8 @@ optional integer comments:
 optional string cta-txt:
 optional string cta-url:
 social-media list share:
+
+
 
 
 
@@ -169,6 +188,7 @@ doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
 
 
 
+
 -- post-meta meta-3: Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.
 published-on: July 22, 2014 at 10:02 pm
 post-image: $assets.files.static.post-list.image-3.svg
@@ -179,6 +199,7 @@ cta-url: /
 
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
 doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore 
+
 
 
 
@@ -196,6 +217,8 @@ doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
 
 
 
+
+
 -- post-meta meta-5: Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.
 published-on: July 22, 2014 at 10:02 pm
 post-image: $assets.files.static.post-list.image-5.svg
@@ -209,6 +232,8 @@ doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
 
 
 
+
+
 -- post-meta meta-6: Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.
 published-on: July 22, 2014 at 10:02 pm
 post-image: $assets.files.static.post-list.image-6.svg
@@ -219,6 +244,7 @@ cta-url: /
 
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
 doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+
 
 
 
@@ -237,6 +263,7 @@ doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
 
 
 
+
 -- post-meta meta-8: Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.
 published-on: July 22, 2014 at 10:02 pm
 post-image: $assets.files.static.post-list.image-8.svg
@@ -247,6 +274,8 @@ cta-url: /
 
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
 doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore 
+
+
 
 
 
@@ -264,6 +293,7 @@ doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
 
 
 
+
 -- post-meta meta-10: Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.
 published-on: July 22, 2014 at 10:02 pm
 post-image: $assets.files.static.post-list.image-10.svg
@@ -273,7 +303,8 @@ cta-txt: Read more
 cta-url: /
 
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
-doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore 
+doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+
 
 
 
@@ -288,6 +319,7 @@ cta-url: /
 
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
 doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore 
+
 
 
 

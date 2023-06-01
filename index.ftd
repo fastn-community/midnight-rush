@@ -1990,7 +1990,7 @@ right.px: 32
 z-index: 1000
 
 -- ftd.text: $post-card-ui.title
-color: $inherited.colors.text-strong
+color: $fonts.white
 margin-bottom.px: 18
 role: $inherited.types.copy-regular
 
@@ -2425,6 +2425,7 @@ src: $article-card-desktop.author.image
 -- ftd.text: $article-card-desktop.author.title
 role: $inherited.types.copy-regular
 style: bold
+color: $inherited.colors.text-strong
 
 -- end: ftd.row
 
