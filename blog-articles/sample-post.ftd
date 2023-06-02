@@ -12,9 +12,7 @@ published-on: July 22, 2014 at 10:02 pm
 post-image: $assets.files.static.image.svg
 post-url: blog-articles/sample-post/
 author: $author.patrica
-cta-txt1: Read more
-cta-url1: blog-articles/sample-post/
-share: $common.share-links
+social-list: $common.share-links
 
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
 doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore 
@@ -28,8 +26,6 @@ published-on: July 22, 2014 at 10:02 pm
 post-image: $assets.files.static.post-list.image-1.svg
 post-url: blog-articles/sample-post
 author: $author.patrica
-cta-txt1: Read more
-cta-url1: blog-articles/sample-post/
 
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
 doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore 

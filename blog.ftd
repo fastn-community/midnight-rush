@@ -18,6 +18,8 @@ category of your blog.
 
 -- ds.featured-post:
 post-data: $meta-data.meta
+cta-primary: Read more
+cta-primary-url: blog-articles/sample-post/
 
 -- ds.h2: Latest Blogs
 
