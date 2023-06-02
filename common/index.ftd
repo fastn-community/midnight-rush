@@ -1,10 +1,11 @@
 -- import: fastn/processors as pr
 -- import: fastn-community.github.io/set-1-ds/assets
+-- import: fastn-community.github.io/set-1-ds/blog-authors/patrica as author
+
 
 -- boolean show-footer: true
 
-
--- integer logo-width: 200
+-- integer logo-width: 180
 
 -- integer logo-height: 44
 
@@ -29,9 +30,48 @@ $processor$: pr.toc
 -- fastn.app-ui apps:
 $processor$: pr.fastn-apps
 
+
+
+
+
 -- record social-media:
 ftd.image-src src:
 string link: /
+
+
+
+
+
+-- social-media list share:
+
+
+
+
+
+
+-- social-media list share-links:
+
+-- social-media:
+link: /
+src: $assets.files.static.meta.svg
+
+-- social-media: 
+link: /
+src: $assets.files.static.figma.svg
+
+-- social-media:
+link: /
+src: $assets.files.static.google.svg
+
+-- social-media: 
+link: /
+src: $assets.files.static.ball.svg
+
+-- end: share-links
+
+
+
+
 
 -- social-media list social-links:
 
@@ -58,6 +98,18 @@ src: $assets.files.static.ball.svg
 -- end: social-links
 
 
+
+
+
+-- ftd.color blur:
+light: #12080880
+dark: #12080880
+
+
+
+
+
+
 -- pr.toc-item list footer-links:
 $processor$: pr.toc
 
@@ -81,4 +133,97 @@ $processor$: pr.toc
   - Footer link 2: /
   - Footer link 3: /
   - Footer link 4: /
+
+
+
+
+
+
+-- record tags-list:
+caption title:
+string tag-link:
+
+
+
+
+
+-- tags-list list topic:
+
+-- tags-list: Design Inspiration
+tag-link: blog/
+
+-- end: topic
+
+
+
+
+
+-- tags-list list tags:
+
+-- tags-list: Programming
+tag-link: blog/
+
+-- tags-list: Data Science
+tag-link: blog/
+
+-- tags-list: Technology
+tag-link: blog/
+
+-- tags-list: Writing
+tag-link: blog/
+
+-- tags-list: AI/ML
+tag-link: blog/
+
+-- tags-list: UI/UX
+tag-link: blog/
+
+-- end: tags
+
+
+
+
+
+
+-- record author-meta:
+caption title:
+string profile:
+string company:
+optional string bio-url:
+optional ftd.image-src image:
+body body:
+
+
+
+
+
+-- record post-meta:
+caption title:
+string published-on:
+optional ftd.image-src post-image:
+optional body body:
+string post-url:
+author-meta author:
+social-media list social-list:
+tags-list list tags:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
