@@ -157,11 +157,13 @@ optional ftd.image-src post-image:
 optional body body:
 string post-url:
 author-meta author:
-optional integer likes:
-optional integer comments:
-optional string cta-txt:
-optional string cta-url:
+optional string info: 
+optional string cta-txt1: 
+optional string cta-url1:
+optional string cta-txt2: 
+optional string cta-url2:
 social-media list share:
+optional string tag:
 
 
 

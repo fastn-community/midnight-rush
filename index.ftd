@@ -915,6 +915,7 @@ border-radius.px: 3
 
 -- component right-sidebar:
 ftd.ui list right-sidebar:
+optional boolean blog: false
 
 -- ftd.column:
 width: fill-container
@@ -1251,6 +1252,7 @@ caption title:
 string cta:
 children wrapper:
 boolean $active: false
+optional boolean blog: false
 
 -- ftd.column:
 $on-click$: $ftd.set-bool($a= $link-group.active, v = true)
@@ -1575,8 +1577,11 @@ author: $featured-post.post-data.author
 image: $featured-post.post-data.post-image
 url: $featured-post.post-data.post-url
 body: $featured-post.post-data.body
-cta-txt: $featured-post.post-data.cta-txt
-cta-url: $featured-post.post-data.cta-url
+info: $featured-post.post-data.info
+cta-txt1: $featured-post.post-data.cta-txt1
+cta-url1: $featured-post.post-data.cta-url1
+cta-txt2: $featured-post.post-data.cta-txt2
+cta-url2: $featured-post.post-data.cta-url2
 
 -- end: ftd.column
 
@@ -1600,8 +1605,11 @@ string url:
 optional body body:
 optional integer likes:
 optional integer comments:
-optional string cta-txt:
-optional string cta-url:
+optional string info: 
+optional string cta-txt1: 
+optional string cta-url1:
+optional string cta-txt2: 
+optional string cta-url2:
 
 -- ftd.column:
 width: fill-container
@@ -1614,8 +1622,11 @@ author: $featured-post-card.author
 image: $featured-post-card.image
 url: $featured-post-card.url
 body: $featured-post-card.body
-cta-txt: $featured-post-card.cta-txt
-cta-url: $featured-post-card.cta-url
+info: $featured-post-card.info
+cta-txt1: $featured-post-card.cta-txt1
+cta-url1: $featured-post-card.cta-url1
+cta-txt2: $featured-post-card.cta-txt2
+cta-url2: $featured-post-card.cta-url2
 
 -- end: ftd.desktop
 
@@ -1627,8 +1638,11 @@ author: $featured-post-card.author
 image: $featured-post-card.image
 url: $featured-post-card.url
 body: $featured-post-card.body
-cta-txt: $featured-post-card.cta-txt
-cta-url: $featured-post-card.cta-url
+info: $featured-post-card.info
+cta-txt1: $featured-post-card.cta-txt1
+cta-url1: $featured-post-card.cta-url1
+cta-txt2: $featured-post-card.cta-txt2
+cta-url2: $featured-post-card.cta-url2
 
 -- end: ftd.mobile
 
@@ -1652,10 +1666,11 @@ common.author-meta author:
 ftd.image-src image:
 string url:
 optional body body:
-optional integer likes:
-optional integer comments:
-optional string cta-txt:
-optional string cta-url:
+optional string info: 
+optional string cta-txt1: 
+optional string cta-url1:
+optional string cta-txt2: 
+optional string cta-url2:
 
 -- ftd.row:
 align-self: center
@@ -1682,44 +1697,17 @@ align-self: center
 width.fixed.percent: 33
 
 -- ftd.row:
-spacing.fixed.px: 18
-color: $inherited.colors.text
-margin-bottom.rem: 1.5
-
--- ftd.row:
 spacing.fixed.px: 8
 align-content: center
 role: $inherited.types.copy-small
+color: $inherited.colors.text
+margin-bottom.rem: 1.5
 
 -- ftd.image:
 src: $assets.files.static.calendar.svg
 
 -- ftd.text: $featured-post-card-desktop.timestamp
 style: bold
-
--- end: ftd.row
-
--- ftd.row:
-if: { featured-post-card-desktop.likes != NULL }
-spacing.fixed.px: 5
-
--- ftd.image:
-src: $assets.files.static.likes.svg
-
--- ftd.integer: $featured-post-card-desktop.likes
-
--- end: ftd.row
-
--- ftd.row:
-if: { featured-post-card-desktop.comments != NULL }
-spacing.fixed.px: 5
-
--- ftd.image:
-src: $assets.files.static.comments.svg
-
--- ftd.integer: $featured-post-card-desktop.comments
-
--- end: ftd.row
 
 -- end: ftd.row
 
@@ -1742,11 +1730,11 @@ spacing.fixed.px: 20
 align-content: center
 
 -- ftd.row:
-if: { featured-post-card-desktop.cta-txt != NULL }
+if: { featured-post-card-desktop.cta-txt1 != NULL }
 background.solid: $inherited.colors.cta-primary.base
 padding-vertical.rem: 1.21
 padding-horizontal.rem: 1
-link if { featured-post-card-desktop.url != NULL }: $featured-post-card-desktop.url
+link if { featured-post-card-desktop.cta-txt1 != NULL }: $featured-post-card-desktop.cta-url1
 border-radius.px: 50
 spacing.fixed.px: 3
 
@@ -1791,10 +1779,11 @@ common.author-meta author:
 ftd.image-src image:
 string url:
 optional body body:
-optional integer likes:
-optional integer comments:
-optional string cta-txt:
-optional string cta-url:
+optional string info: 
+optional string cta-txt1: 
+optional string cta-url1:
+optional string cta-txt2: 
+optional string cta-url2:
 
 -- ftd.column:
 width: fill-container
@@ -1819,10 +1808,9 @@ role: $inherited.types.copy-regular
 $featured-post-card-mobile.body
 
 -- ftd.row:
-spacing.fixed.px: 18
-
--- ftd.row:
 spacing.fixed.px: 5
+role: $inherited.types.copy-small
+color: $inherited.colors.text
 
 -- ftd.image:
 src: $assets.files.static.calendar.svg
@@ -1832,35 +1820,11 @@ src: $assets.files.static.calendar.svg
 -- end: ftd.row
 
 -- ftd.row:
-if: { featured-post-card-mobile.likes != NULL }
-spacing.fixed.px: 5
-
--- ftd.image:
-src: $assets.files.static.likes.svg
-
--- ftd.integer: $featured-post-card-mobile.likes
-
--- end: ftd.row
-
--- ftd.row:
-if: { featured-post-card-mobile.comments != NULL }
-spacing.fixed.px: 5
-
--- ftd.image:
-src: $assets.files.static.comments.svg
-
--- ftd.integer: $featured-post-card-mobile.comments
-
--- end: ftd.row
-
--- end: ftd.row
-
--- ftd.row:
-if: { featured-post-card-mobile.cta-txt != NULL }
+if: { featured-post-card-mobile.cta-txt1 != NULL }
 background.solid: $inherited.colors.cta-primary.base
 padding-vertical.rem: 1.21
 padding-horizontal.rem: 1
-link if { featured-post-card-mobile.cta-url != NULL }: $featured-post-card-mobile.cta-url
+link if { featured-post-card-mobile.cta-txt1 != NULL }: $featured-post-card-mobile.cta-url1
 border-radius.px: 50
 spacing.fixed.px: 3
 
@@ -1948,8 +1912,7 @@ image: $post-card.post-data.post-image
 author: $post-card.post-data.author
 url: $post-card.post-data.post-url
 body: $post-card.post-data.body
-cta-txt: $post-card.post-data.cta-txt
-cta-url: $post-card.post-data.cta-url
+tag: $post-card.post-data.tag
 
 -- end: post-card
 
@@ -1969,8 +1932,8 @@ common.author-meta author:
 ftd.image-src image:
 string url:
 optional body body:
-optional string cta-txt:
-optional string cta-url:
+string cta-txt: Read More
+optional string tag:
 
 -- ftd.column:
 width.fixed.percent if { ftd.device != "mobile" }: 30
@@ -2308,6 +2271,8 @@ children container:
 string previous-cta-txt: Back to blog
 optional string previous-cta-url:
 string share-txt: Share
+optional boolean sidebar: false
+ftd.ui list right-sidebar:
 
 -- ftd.column:
 width: fill-container
@@ -2587,7 +2552,6 @@ style: bold
 if: { !ftd.is_empty(article-card-mobile.share) }
 role: $inherited.types.button-small
 style: regular
-margin-top.rem: 3.5
 
 -- ftd.row:
 if: { !ftd.is_empty(article-card-mobile.share) }
