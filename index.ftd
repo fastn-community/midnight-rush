@@ -2093,7 +2093,6 @@ border-radius.px: 20
 align-content: center
 spacing: space-between
 
-
 -- ftd.text: $newsletter-desktop.title
 role: $inherited.types.heading-small
 color: $inherited.colors.text-strong
