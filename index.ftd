@@ -140,6 +140,8 @@ boolean show-banner: false
 ftd.ui list banner:
 boolean github-icon: false
 optional string github-url: 
+boolean blog: false
+ftd.ui list hero:
 
 -- ftd.document:
 title if { page.document-title != NULL }: $page.document-title
@@ -187,6 +189,8 @@ right-sidebar: $page.right-sidebar
 github-icon: $page.github-icon
 github-url: $page.github-url
 full-width: $page.full-width
+blog: $page.blog
+hero: $page.hero
 
 -- end: ftd.desktop
 
@@ -259,6 +263,8 @@ ftd.ui list right-sidebar:
 boolean github-icon: false
 optional string github-url: 
 boolean full-width:
+boolean blog: false
+ftd.ui list hero:
 
 -- ftd.column:
 width: fill-container
@@ -302,13 +308,28 @@ $doc-page-desktop.body
 
 -- end: ftd.column
 
+-- ftd.column:
+children: $doc-page-desktop.hero
+width: fill-container
+
+-- end: ftd.column
+
 -- ftd.row:
 width: fill-container
 align-content if { ftd.is_empty(doc-page-desktop.toc) && !doc-page-desktop.sidebar }: center
 
+-- ftd.column:
+if: { !doc-page-desktop.blog }
+min-width.fixed.percent: 20
+min-height.fixed.calc: 100vh - 200px
+height: fill-container
+width.fixed.percent: 28.5
+
 -- render-toc:
 if: { !ftd.is_empty(doc-page-desktop.toc) }
 toc-obj: $doc-page-desktop.toc
+
+-- end: ftd.column
 
 -- ftd.column:
 padding-horizontal.rem: 3.12
@@ -319,14 +340,14 @@ border-color: $inherited.colors.border
 align-content: top-left
 children: $doc-page-desktop.wrapper
 spacing.fixed.em: 0.8
-border-left-width.px if { !ftd.is_empty(doc-page-desktop.toc) }: 1
+border-left-width.px if {  !doc-page-desktop.blog && !ftd.is_empty(doc-page-desktop.toc)  }: 1
 min-height.fixed.calc: 100vh - 128px
 max-width.fixed.px if { ftd.is_empty(doc-page-desktop.toc) && !doc-page-desktop.full-width && !doc-page-desktop.sidebar }: 800
 max-width if { doc-page-desktop.full-width }: fill-container
+max-width if { doc-page-desktop.blog }: fill-container
 width: fill-container
 width if { doc-page-desktop.full-width }: fill-container
-border-top-width.px if { !ftd.is_empty(doc-page-desktop.toc) || doc-page-desktop.sidebar }: 1
-
+border-top-width.px if { !ftd.is_empty(doc-page-desktop.toc) && !doc-page-desktop.blog || doc-page-desktop.sidebar }: 1
 
 -- end: ftd.column
 
@@ -357,7 +378,7 @@ pr.toc-item list toc-obj:
 min-width.fixed.percent: 20
 min-height.fixed.calc: 100vh - 200px
 height: fill-container
-width.fixed.percent: 28.5
+width: fill-container
 padding-right.px: 26
 padding-left.px: 41
 padding-vertical.px: 50

@@ -7,19 +7,20 @@
 
 
 
--- my-ds.page: Category title - News & Culture
-full-width: true
+-- my-ds.page: 
 sidebar: false
+blog: true
 
-Write some information of this category here. Change the title according to the
-category of your blog.
-
--- ds.posts:
+-- my-ds.page.hero:
 
 -- ds.featured-post:
 post-data: $meta-data.meta
 cta-primary: Read more
 cta-primary-url: blog-articles/sample-post/
+
+-- end: my-ds.page.hero
+
+-- ds.posts:
 
 -- ds.h2: Latest Blogs
 
