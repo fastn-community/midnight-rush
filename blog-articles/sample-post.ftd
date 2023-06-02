@@ -37,7 +37,7 @@ doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
 
 -- my-ds.page:
 sidebar: false
-full-width: true
+blog: true
 
 -- ds.post: 
 meta: $meta

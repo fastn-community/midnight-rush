@@ -138,6 +138,53 @@ $processor$: pr.toc
 
 
 
+
+-- record tags-list:
+caption title:
+string tag-link:
+
+
+
+
+
+-- tags-list list topic:
+
+-- tags-list: Design Inspiration
+tag-link: blog/
+
+-- end: topic
+
+
+
+
+
+-- tags-list list tags:
+
+-- tags-list: Programming
+tag-link: blog/
+
+-- tags-list: Data Science
+tag-link: blog/
+
+-- tags-list: Technology
+tag-link: blog/
+
+-- tags-list: Writing
+tag-link: blog/
+
+-- tags-list: AI/ML
+tag-link: blog/
+
+-- tags-list: UI/UX
+tag-link: blog/
+
+-- end: tags
+
+
+
+
+
+
 -- record author-meta:
 caption title:
 string profile:
@@ -158,5 +205,25 @@ optional body body:
 string post-url:
 author-meta author:
 social-media list social-list:
-optional string tag:
+tags-list list tags:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

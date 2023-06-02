@@ -211,6 +211,8 @@ site-url: $page.site-url
 right-sidebar: $page.sidebar
 github-icon: $page.github-icon
 github-url: $page.github-url
+blog: $page.blog
+hero: $page.hero
 
 -- end: ftd.mobile
 
@@ -977,6 +979,8 @@ boolean right-sidebar: false
 children wrapper:
 boolean github-icon: false
 optional string github-url: 
+boolean blog: false
+ftd.ui list hero:
 
 -- ftd.column:
 width: fill-container
@@ -996,6 +1000,7 @@ logo-height: 38
 menu-icon: $assets.files.static.hamburger.svg
 github-icon: $doc-page-mobile.github-icon
 github-url: $doc-page-mobile.github-url
+blog: $doc-page-mobile.blog
 
 -- ftd.column:
 width: fill-container
@@ -1015,6 +1020,12 @@ if: { doc-page-mobile.title != NULL }
 if: {doc-page-mobile.body != NULL}
 
 $doc-page-mobile.body
+
+-- ftd.column:
+children: $doc-page-mobile.hero
+width: fill-container
+
+-- end: ftd.column
 
 -- ftd.column:
 children: $doc-page-mobile.wrapper
@@ -1703,7 +1714,7 @@ spacing.fixed.rem: 5.5
 padding-vertical.rem: 2
 padding-horizontal.rem: 2
 height.fixed.px: 450
-margin-bottom.px: 174
+margin-bottom.px: 100
 
 -- ftd.column:
 width.fixed.percent: 50
@@ -1941,7 +1952,7 @@ image: $post-card.post-data.post-image
 author: $post-card.post-data.author
 url: $post-card.post-data.post-url
 body: $post-card.post-data.body
-tag: $post-card.post-data.tag
+tags: $post-card.post-data.tags
 
 -- end: post-card
 
@@ -1962,7 +1973,7 @@ ftd.image-src image:
 string url:
 optional body body:
 string cta-txt: Read More
-optional string tag:
+common.tags-list list tags:
 
 -- ftd.column:
 width.fixed.percent if { ftd.device != "mobile" }: 30
@@ -2252,7 +2263,10 @@ color: $inherited.colors.text-strong
 
 
 -- component posts:
+optional caption title:
+optional body body:
 children container:
+common.tags-list list topics:
 
 -- ftd.column:
 width: fill-container
@@ -2808,3 +2822,25 @@ role: $inherited.types.fine-print
 -- end: ftd.column
 
 -- end: author-bio-mobile
+
+
+
+
+
+
+
+
+
+-- component topic:
+caption title:
+string tag-link:
+
+-- ftd.text: $topic.title
+color: $inherited.colors.cta-primary.base
+role: $inherited.types.button-small
+background.solid: rgba(36, 176, 126, 0.4)
+padding-horizontal.px: 10
+padding-vertical.px: 5
+link: $topic.tag-link
+
+-- end: topic
