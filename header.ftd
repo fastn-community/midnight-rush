@@ -31,6 +31,7 @@ integer logo-height: 44
 boolean $sidebar-open: false
 boolean github-icon: false
 optional string github-url: 
+boolean blog: false
 
 -- ftd.column:
 width: fill-container
@@ -77,6 +78,7 @@ current-page: $header.current-page
 current-subsection: $header.current-subsection
 logo-width: $header.logo-width 
 logo-height: $header.logo-height 
+blog: $header.blog
 
 -- end: ftd.mobile
 
@@ -519,6 +521,7 @@ optional pr.toc-item current-section:
 optional pr.toc-item current-page:
 integer logo-width: 120
 integer logo-height: 38
+boolean blog: false
 
 -- ftd.column: 
 width: fill-container
@@ -855,6 +858,7 @@ integer logo-width: 120
 integer logo-height: 44
 boolean github-icon: 
 optional string github-url: 
+
 
 -- ftd.column:
 width.fixed.calc: 100% - 48px

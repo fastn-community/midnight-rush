@@ -1,24 +1,78 @@
 -- import: fastn-community.github.io/set-1-ds as ds
+-- import: fastn-community.github.io/set-1-ds/common
+-- import: fastn-community.github.io/set-1-ds/blog-articles/sample-post as meta-data
 
--- my-ds.page: Blog
+; Change below details for your new blog post
 
--- my-ds.page.right-sidebar:
 
--- ds.toc-title: On this page
 
--- ds.link-group: Coming Soon 🚧
-cta: blog/#coming-soon
 
--- end: my-ds.page.right-sidebar
+-- my-ds.page: 
+sidebar: false
+blog: true
 
--- my-ds.page.body:
+-- my-ds.page.hero:
 
-In this section, we will learn about creating blog article page in `set-1-ds`.
+-- ds.featured-post:
+post-data: $meta-data.meta
+cta-primary: Read more
+cta-primary-url: blog-articles/sample-post/
 
--- ds.h3: Coming Soon 🚧
-id: coming-soon
+-- end: my-ds.page.hero
 
-This page is under constuction. We are preparing something amazing and
-exciting for you.
+-- ds.posts:
+
+-- ds.h2: Latest Blogs
+
+-- ds.post-card:
+post-data: $meta-data.meta-1
+
+-- ds.post-card:
+post-data: $meta-data.meta-1
+
+-- ds.post-card:
+post-data: $meta-data.meta-1
+
+-- ds.post-card:
+post-data: $meta-data.meta-1
+
+-- ds.post-card:
+post-data: $meta-data.meta-1
+
+-- ds.post-card:
+post-data: $meta-data.meta-1
+
+-- ds.post-card:
+post-data: $meta-data.meta-1
+
+-- ds.post-card:
+post-data: $meta-data.meta-1
+
+-- ds.post-card:
+post-data: $meta-data.meta-1
+
+-- ds.post-card:
+post-data: $meta-data.meta-1
+
+-- ds.post-card:
+post-data: $meta-data.meta-1
+
+-- ds.post-card:
+post-data: $meta-data.meta-1
+
+-- ds.post-card:
+post-data: $meta-data.meta-1
+
+-- ds.post-card:
+post-data: $meta-data.meta-1
+
+-- ds.post-card:
+post-data: $meta-data.meta-1
+
+-- end: ds.posts
+
+-- ds.newsletter: Freakishly simple. Downright useful. Ready to make the jump?
+
+Sign up in 2 minutes
 
 -- end: my-ds.page
