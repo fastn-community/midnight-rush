@@ -1877,7 +1877,6 @@ optional ftd.image-src image:
 
 -- ftd.row:
 spacing.fixed.px: 16
-padding-left.px: 20
 link if { user.bio-url != NULL }: $user.bio-url
 
 -- ftd.image:
