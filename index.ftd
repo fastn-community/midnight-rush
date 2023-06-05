@@ -159,7 +159,7 @@ background.solid: $inherited.colors.background.base
 -- ftd.column:
 if: { page.show-banner}
 width: fill-container
-max-width.fixed.px: 1320
+max-width.fixed.px: $common.max-width
 children: $page.banner
 align-self: center
 
@@ -223,7 +223,7 @@ if: { page.show-footer}
 width: fill-container
 children: $page.footer
 align-self: center
-max-width.fixed.px: 1320
+max-width.fixed.px: $common.max-width
 
 -- end: ftd.column
 
@@ -270,7 +270,7 @@ ftd.ui list hero:
 
 -- ftd.column:
 width: fill-container
-max-width.fixed.px: 1320
+max-width.fixed.px: $common.max-width
 align-self: center
 
 -- h.header:
