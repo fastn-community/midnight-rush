@@ -15,7 +15,7 @@
 
 -- ftd.image-src site-logo: $assets.files.static.ipsum-logo.svg
 
--- integer $width: 1320
+-- integer max-width: 1320
 
 -- pr.sitemap-data sitemap:
 $processor$: pr.sitemap
