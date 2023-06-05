@@ -11,7 +11,7 @@
 
 -- string site-name: SET 1 DS
 
--- string site-url: /
+-- string site-url: index.html
 
 -- ftd.image-src site-logo: $assets.files.static.ipsum-logo.svg
 
