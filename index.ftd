@@ -303,26 +303,25 @@ width: fill-container
 align-content if { ftd.is_empty(doc-page-desktop.toc) && !doc-page-desktop.sidebar }: center
 
 -- ftd.column:
-if: { !doc-page-desktop.blog }
+if: { !doc-page-desktop.blog  && !ftd.is_empty(doc-page-desktop.toc)}
 min-width.fixed.percent: 20
 min-height.fixed.calc: 100vh - 200px
 height: fill-container
 width.fixed.percent: 28.5
 
 -- render-toc:
-if: { !ftd.is_empty(doc-page-desktop.toc) }
 toc-obj: $doc-page-desktop.toc
 
 -- end: ftd.column
 
 -- ftd.column:
-padding-horizontal.rem: 3.12
-padding-top.rem: 2.85
+padding-horizontal.px: 50
+padding-top.px if { !doc-page-desktop.blog }: 45
 padding-bottom.px: 50
 border-right-width.px if { doc-page-desktop.sidebar }: 1
 border-color: $inherited.colors.border
 align-content: top-left
-spacing.fixed.em: 0.8
+spacing.fixed.px: 12
 border-left-width.px if {  !doc-page-desktop.blog && !ftd.is_empty(doc-page-desktop.toc)  }: 1
 min-height.fixed.calc: 100vh - 128px
 max-width.fixed.px if { ftd.is_empty(doc-page-desktop.toc) && !doc-page-desktop.full-width && !doc-page-desktop.sidebar }: 800
@@ -339,7 +338,7 @@ width: fill-container
 if: { doc-page-desktop.title != NULL }
 role: $inherited.types.heading-large
 color: $inherited.colors.text-strong
-margin-bottom.rem: 1.32
+margin-bottom.px: 20
 
 -- tf.markdown:
 if: { doc-page-desktop.body != NULL }
@@ -387,7 +386,7 @@ width: fill-container
 padding-right.px: 26
 padding-left.px: 41
 padding-vertical.px: 50
-spacing.fixed.rem: 1.5
+spacing.fixed.px: 24
 border-top-width.px: 1
 border-color: $inherited.colors.border
 
@@ -629,8 +628,8 @@ align-content: center
 max-width.fixed.percent: 85
 width: fill-container
 align-self: center
-padding-top.rem: 2.62
-padding-bottom.rem: 3.95
+padding-top.px: 42
+padding-bottom.px: 62
 color: $inherited.colors.text
 background.solid: $inherited.colors.background.base
 spacing: space-between
@@ -640,7 +639,7 @@ spacing: space-between
 -- ftd.row:
 link: $footer-desktop.site-url
 align-content: center
-margin-bottom.rem: 1.5
+margin-bottom.px: 24
 
 -- ftd.image:
 if: { footer-desktop.site-logo != NULL }
@@ -718,7 +717,7 @@ boolean is-active:
 pr.toc-item list children:
 
 -- ftd.column:
-spacing.fixed.rem: 0.43
+spacing.fixed.px: 6
 
 -- ftd.text: $footer-list.title
 role: $inherited.types.copy-regular
@@ -811,8 +810,8 @@ role: $inherited.types.label-large
 border-bottom-left-radius.px: 5
 border-bottom-right-radius.px: 5
 background.solid: $inherited.colors.background.step-1
-padding-vertical.rem: 0.5
-padding-horizontal.rem: 1.25
+padding-vertical.px: 8
+padding-horizontal.px: 205
 text-align: center
 
 -- ftd.column:
@@ -845,7 +844,7 @@ string src:
 src: $iframe.src
 height.fixed.px: 400
 width: fill-container
-margin-bottom.rem: 2.15
+margin-bottom.px: 32.15
 
 -- end: iframe
 
@@ -865,7 +864,7 @@ caption v:
 youtube: $youtube.v
 height.fixed.px: 400
 width: fill-container
-margin-bottom.rem: 2.15
+margin-bottom.px: 32.15
 
 -- end: youtube
 
@@ -926,7 +925,7 @@ caption title:
 -- ftd.text: $highlight.title
 background.solid: $inherited.colors.custom.two
 color: $inherited.colors.background.base
-padding.rem: 0.75
+padding.px: 12
 border-radius.px: 3
 
 -- end: highlight
@@ -1166,12 +1165,12 @@ src: $card.src
 -- ftd.text: $card.title
 color: $inherited.colors.text-strong
 role: $inherited.types.heading-small
-margin-top.rem: 1
+margin-top.px: 16
 
 -- ftd.text:
 color: $inherited.colors.text
 role: $inherited.types.copy-regular
-margin-top.rem: 1
+margin-top.px: 16
 
 $card.body
 
@@ -1180,11 +1179,11 @@ role: $inherited.types.button-large
 color: $inherited.colors.cta-primary.text
 white-space: nowrap
 text-align: center
-padding-horizontal.rem: 1.37
-padding-vertical.rem: 0.37
+padding-horizontal.px: 22
+padding-vertical.px: 6
 background.solid: $inherited.colors.cta-primary.base
 border-radius.px: 4
-margin-top.rem: 2
+margin-top.px: 32
 
 -- end: ftd.column
 
@@ -1255,7 +1254,7 @@ boolean $active: false
 
 -- ftd.column:
 $on-click$: $ftd.set-bool($a= $link.active, v = true)
-spacing.fixed.rem: 0.81
+spacing.fixed.px: 13
 
 -- ftd.text: $link.title
 role: $inherited.types.button-small
@@ -1293,7 +1292,7 @@ optional boolean blog: false
 
 -- ftd.column:
 $on-click$: $ftd.set-bool($a= $link-group.active, v = true)
-spacing.fixed.rem: 0.81
+spacing.fixed.px: 13
 
 -- ftd.text: $link-group.title
 role: $inherited.types.button-medium
@@ -1305,7 +1304,7 @@ style if { link-group.active}: bold
 -- ftd.column:
 width: fill-container
 children: $link-group.wrapper
-margin-left.rem: 1.8
+margin-left.px: 28
 
 -- end: ftd.column
 
@@ -1335,8 +1334,8 @@ common.social-media list social-links:
 
 -- ftd.column:
 width: fill-container
-padding-top.rem: 7.06
-padding-bottom.rem: 3.95
+padding-top.px: 112
+padding-bottom.px: 64
 color: $inherited.colors.text
 padding-horizontal.px: 24
 
@@ -1349,7 +1348,7 @@ $loop$: $footer-mobile.footer-links as $obj
 -- ftd.row:
 link: $footer-mobile.site-url
 align-content: center
-margin-vertical.rem: 1.5
+margin-vertical.px: 24
 
 -- ftd.image:
 if: { footer-mobile.site-logo != NULL }
@@ -1522,8 +1521,8 @@ caption title:
 
 -- ftd.row:
 align-content: center
-spacing.fixed.rem: 1.13
-margin-bottom.rem: 1.2
+spacing.fixed.px: 18
+margin-bottom.px: 20
 
 -- ftd.image:
 src: $assets.files.static.hamburger.svg
@@ -1715,15 +1714,16 @@ optional string cta-secondary-url:
 -- ftd.row:
 align-self: center
 width: fill-container
-spacing.fixed.rem: 5.5
-padding-vertical.rem: 2
-padding-horizontal.rem: 2
+spacing.fixed.px: 88
+padding-vertical.px: 32
+padding-horizontal.px: 32
 height.fixed.px: 450
 margin-bottom.px: 100
 
 -- ftd.column:
 width.fixed.percent: 50
 height: fill-container
+link: $featured-post-card-desktop.url
 
 -- ftd.image: 
 src: $featured-post-card-desktop.image
@@ -1736,12 +1736,14 @@ height: fill-container
 align-self: center
 width.fixed.percent: 33
 
+
 -- ftd.row:
 spacing.fixed.px: 8
 align-content: center
 role: $inherited.types.copy-small
 color: $inherited.colors.text
-margin-bottom.rem: 1.5
+margin-bottom.px: 24
+link: $featured-post-card-desktop.url
 
 -- ftd.image:
 src: $assets.files.static.calendar.svg
@@ -1755,13 +1757,14 @@ style: bold
 role: $inherited.types.button-large
 color: $inherited.colors.text-strong
 style: bold
-margin-bottom.rem: 0.75
+margin-bottom.px: 12
+link: $featured-post-card-desktop.url
 
 -- ftd.text:
 if: { featured-post-card-desktop.body != NULL }
 role: $fonts.copy-regular
 color: $inherited.colors.text
-margin-bottom.rem: 1.5
+margin-bottom.px: 24
 
 $featured-post-card-desktop.body
 
@@ -1772,8 +1775,8 @@ align-content: center
 -- ftd.row:
 if: { featured-post-card-desktop.cta-primary != NULL }
 background.solid: $inherited.colors.cta-primary.base
-padding-vertical.rem: 1.21
-padding-horizontal.rem: 1
+padding-vertical.px: 201
+padding-horizontal.px: 16
 link if { featured-post-card-desktop.cta-primary-url != NULL }: $featured-post-card-desktop.cta-primary-url
 border-radius.px: 50
 spacing.fixed.px: 3
@@ -1836,7 +1839,7 @@ optional string cta-secondary-url:
 -- ftd.column:
 width: fill-container
 spacing.fixed.px: 24
-padding-vertical.rem: 2
+padding-vertical.px: 32
 margin-bottom.px: 64
 margin-top.px: 32
 color: $inherited.colors.text
@@ -1848,6 +1851,7 @@ color: $inherited.colors.text-strong
 -- ftd.image: 
 src: $featured-post-card-mobile.image
 width: fill-container
+link: $featured-post-card-mobile.url
 
 -- ftd.text:
 if: { featured-post-card-mobile.body != NULL }
@@ -1870,8 +1874,8 @@ src: $assets.files.static.calendar.svg
 -- ftd.row:
 if: { featured-post-card-mobile.cta-primary != NULL }
 background.solid: $inherited.colors.cta-primary.base
-padding-vertical.rem: 1.21
-padding-horizontal.rem: 1
+padding-vertical.px: 201
+padding-horizontal.px: 16
 link if { featured-post-card-mobile.cta-primary != NULL }: $featured-post-card-mobile.cta-primary-url
 border-radius.px: 50
 spacing.fixed.px: 3
@@ -1979,6 +1983,7 @@ string url:
 optional body body:
 string cta-txt: Read More
 common.tags-list list tags:
+boolean $hover: false
 
 -- ftd.column:
 width.fixed.percent if { ftd.device != "mobile" }: 30
@@ -1988,8 +1993,11 @@ height.fixed.px : 533
 margin-bottom.px if { ftd.device != "mobile" }: 72
 z-index: 0
 link: $post-card-ui.url
+$on-mouse-enter$: $ftd.set-bool($a = $post-card-ui.hover, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $post-card-ui.hover, v = false)
 
 -- ftd.column:
+if: { !post-card-ui.hover }
 anchor: parent
 width: fill-container
 height.fixed.percent if { ftd.device != "mobile" }: 87
@@ -2154,8 +2162,8 @@ min-width.fixed.px: 87
 text-align: center
 color: $inherited.colors.text-strong
 background.solid: $inherited.colors.cta-primary.base
-padding-vertical.rem: 0.78
-padding-horizontal.rem: 1.75
+padding-vertical.px: 13
+padding-horizontal.px: 28
 link if { newsletter-desktop.cta-url != NULL }: $newsletter-desktop.cta-url
 border-radius.px: 50
 white-space: nowrap
@@ -2232,8 +2240,8 @@ min-width.fixed.px: 87
 text-align: center
 color: $inherited.colors.text-strong
 background.solid: $inherited.colors.cta-primary.base
-padding-vertical.rem: 0.78
-padding-horizontal.rem: 1.75
+padding-vertical.px: 12
+padding-horizontal.px: 28
 link if { newsletter-mobile.cta-url != NULL }: $newsletter-mobile.cta-url
 border-radius.px: 50
 white-space: nowrap
@@ -2421,7 +2429,7 @@ string share-txt:
 -- ftd.column:
 color: $inherited.colors.text
 width: fill-container
-padding-horizontal.rem: 5.63
+padding-horizontal.px: 90
 
 -- ftd.row:
 if: { article-card-desktop.previous-cta-url != NULL }
@@ -2443,7 +2451,7 @@ if: {article-card-desktop.image != NULL}
 src: $article-card-desktop.image
 width: fill-container
 height: hug-content
-margin-vertical.rem: 3.5
+margin-vertical.px: 56
 
 -- ftd.row:
 width: fill-container
@@ -2456,7 +2464,7 @@ color: $inherited.colors.text-strong
 -- ftd.text: $article-card-desktop.timestamp
 role: $inherited.types.fine-print
 white-space: nowrap
-margin-bottom.rem: 1.87
+margin-bottom.px: 30
 
 -- ftd.row:
 link if { article-card-desktop.author.bio-url != NULL }: $article-card-desktop.author.bio-url
@@ -2478,11 +2486,11 @@ white-space: nowrap
 if: { !ftd.is_empty(article-card-desktop.share) }
 role: $inherited.types.button-small
 style: regular
-margin-top.rem: 3.5
+margin-top.px: 56
 
 -- ftd.row:
 if: { !ftd.is_empty(article-card-desktop.share) }
-margin-top.rem: 1.13
+margin-top.px: 18
 spacing.fixed.px: 24
 wrap: true
 
@@ -2498,7 +2506,7 @@ link: $obj.link
 
 -- ftd.column:
 width.fixed.percent: 70
-padding-vertical.rem: 3.12
+padding-vertical.px: 50
 color: $inherited.colors.text
 
 -- ftd.text: $article-card-desktop.title
@@ -2769,6 +2777,8 @@ role: $inherited.types.copy-small
 -- ftd.text:
 text: $author-bio-desktop.body
 role: $inherited.types.copy-regular
+text-align: center
+width: fill-container
 
 -- end: ftd.column
 
