@@ -1736,7 +1736,6 @@ height: fill-container
 align-self: center
 width.fixed.percent: 33
 
-
 -- ftd.row:
 spacing.fixed.px: 8
 align-content: center
@@ -1775,7 +1774,7 @@ align-content: center
 -- ftd.row:
 if: { featured-post-card-desktop.cta-primary != NULL }
 background.solid: $inherited.colors.cta-primary.base
-padding-vertical.px: 201
+padding-vertical.px: 20
 padding-horizontal.px: 16
 link if { featured-post-card-desktop.cta-primary-url != NULL }: $featured-post-card-desktop.cta-primary-url
 border-radius.px: 50
