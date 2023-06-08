@@ -19,6 +19,7 @@ optional string site-name: NULL
 boolean full-width: false
 boolean blog: false
 ftd.ui list hero:
+ftd.color bgcolor: $inherited.colors.background.base
 
 -- ds.page: $page.title
 site-name: $page.site-name
@@ -34,6 +35,7 @@ github-url: https://github.com/fastn-community/set-1-ds/
 github-icon: true
 blog: $page.blog
 hero: $page.hero
+bgcolor: $page.bgcolor
 
 -- ds.page.footer:
 

@@ -213,13 +213,21 @@ tags-list list tags:
 
 
 
+-- ftd.color step-2:
+light: #F1F1F1
+dark: #07324D
 
 
 
 
+-- ftd.color custom-two:
+light: #ffe8e7
+dark: #083C5D
 
 
-
+-- ftd.color custom-four:
+light: #fcf5f5
+dark: #083c5d
 
 
 
