@@ -811,7 +811,7 @@ border-bottom-left-radius.px: 5
 border-bottom-right-radius.px: 5
 background.solid: $inherited.colors.background.step-1
 padding-vertical.px: 8
-padding-horizontal.px: 205
+padding-horizontal.px: 20
 text-align: center
 
 -- ftd.column:
@@ -1873,7 +1873,7 @@ src: $assets.files.static.calendar.svg
 -- ftd.row:
 if: { featured-post-card-mobile.cta-primary != NULL }
 background.solid: $inherited.colors.cta-primary.base
-padding-vertical.px: 201
+padding-vertical.px: 20
 padding-horizontal.px: 16
 link if { featured-post-card-mobile.cta-primary != NULL }: $featured-post-card-mobile.cta-primary-url
 border-radius.px: 50
