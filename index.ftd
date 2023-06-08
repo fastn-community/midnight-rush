@@ -142,6 +142,7 @@ boolean github-icon: false
 optional string github-url: 
 boolean blog: false
 ftd.ui list hero:
+ftd.color bgcolor: $inherited.colors.background.base
 
 -- ftd.document:
 title if { page.document-title != NULL }: $page.document-title
@@ -154,7 +155,7 @@ og-image: $page.document-image
 
 -- ftd.column:
 width: fill-container
-background.solid: $inherited.colors.background.base
+background.solid: $page.bgcolor
 
 -- ftd.column:
 if: { page.show-banner}
@@ -191,6 +192,7 @@ github-url: $page.github-url
 full-width: $page.full-width
 blog: $page.blog
 hero: $page.hero
+bgcolor: $page.bgcolor
 
 -- end: ftd.desktop
 
@@ -213,6 +215,7 @@ github-icon: $page.github-icon
 github-url: $page.github-url
 blog: $page.blog
 hero: $page.hero
+bgcolor: $page.bgcolor
 
 -- end: ftd.mobile
 
@@ -224,6 +227,7 @@ width: fill-container
 children: $page.footer
 align-self: center
 max-width.fixed.px: $common.max-width
+background.solid: $inherited.colors.background.base
 
 -- end: ftd.column
 
@@ -267,6 +271,7 @@ optional string github-url:
 boolean full-width:
 boolean blog: false
 ftd.ui list hero:
+ftd.color bgcolor:
 
 -- ftd.column:
 width: fill-container
@@ -291,6 +296,7 @@ logo-width: $doc-page-desktop.logo-width
 menu-icon: $assets.files.static.hamburger.svg
 github-icon: $doc-page-desktop.github-icon
 github-url: $doc-page-desktop.github-url
+bgcolor: $doc-page-desktop.bgcolor
 
 -- ftd.column:
 children: $doc-page-desktop.hero
@@ -984,6 +990,7 @@ boolean github-icon: false
 optional string github-url: 
 boolean blog: false
 ftd.ui list hero:
+ftd.color bgcolor:
 
 -- ftd.column:
 width: fill-container
@@ -1004,6 +1011,8 @@ menu-icon: $assets.files.static.hamburger.svg
 github-icon: $doc-page-mobile.github-icon
 github-url: $doc-page-mobile.github-url
 blog: $doc-page-mobile.blog
+bgcolor: $doc-page-mobile.bgcolor
+
 
 -- ftd.column:
 width: fill-container
@@ -1710,6 +1719,7 @@ optional string cta-primary:
 optional string cta-primary-url:
 optional string cta-secondary: 
 optional string cta-secondary-url:
+boolean $mouse-in: false
 
 -- ftd.row:
 align-self: center
@@ -1779,6 +1789,9 @@ padding-horizontal.px: 16
 link if { featured-post-card-desktop.cta-primary-url != NULL }: $featured-post-card-desktop.cta-primary-url
 border-radius.px: 50
 spacing.fixed.px: 3
+background.solid if { featured-post-card-desktop.mouse-in }: $inherited.colors.cta-primary.hover
+$on-mouse-enter$: $ftd.set-bool($a = $featured-post-card-desktop.mouse-in, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $featured-post-card-desktop.mouse-in, v = false)
 
 -- ftd.text: $featured-post-card-desktop.cta-primary
 role: $inherited.types.link
@@ -2120,7 +2133,8 @@ string cta-url:
 string cta-placeholder: 
 optional body body:
 optional ftd.image-src info-icon: 
-ftd.color bg-color: 
+ftd.color bg-color:
+boolean $mouse-in: false
 
 -- ftd.column:
 width: fill-container
@@ -2166,6 +2180,9 @@ padding-horizontal.px: 28
 link if { newsletter-desktop.cta-url != NULL }: $newsletter-desktop.cta-url
 border-radius.px: 50
 white-space: nowrap
+background.solid if { newsletter-desktop.mouse-in }: $inherited.colors.cta-primary.hover
+$on-mouse-enter$: $ftd.set-bool($a = $newsletter-desktop.mouse-in, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $newsletter-desktop.mouse-in, v = false)
 
 -- end: ftd.row
 
