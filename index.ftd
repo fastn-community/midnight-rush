@@ -66,7 +66,6 @@ social-links: $common.social-links
 It provides out-of-the-box documentation features that can be used to create any
 kind of site(personal website, blog, etc).
 
-
 -- h3: 🚀 Fast Track 
 id: fast-track
 
@@ -97,7 +96,6 @@ Our all documentation sites uses this `set-1-ds` theme.
 - [FifthTry.com](https://www.fifthtry.com/)
 
 -- end: page
-
 
 
 
@@ -420,7 +418,6 @@ align-content: center
 spacing.fixed.px: 12
 $on-click$: $ftd.toggle($a = $toc-instance.toc-clone.is-open)
 
-
 -- ftd.image:
 if: { toc-instance.toc.font-icon != NULL }
 src: $toc-instance.toc.font-icon
@@ -477,7 +474,7 @@ pr.toc-item toc:
 width: fill-container
 
 -- ftd.text:
-link if { childrens.toc.url != NULL } : $childrens.toc.url
+link if { childrens.toc.url != NULL }: $childrens.toc.url
 text: $childrens.toc.title
 role: $inherited.types.button-medium
 color: $inherited.colors.text
@@ -486,7 +483,7 @@ style: regular
 style if { childrens.toc.is-active }: bold
 
 -- ftd.column:
-if: {!ftd.is_empty(childrens.toc.children) }
+if: { !ftd.is_empty(childrens.toc.children) }
 width: fill-container
 margin-top.px: 24
 spacing.fixed.px: 24
@@ -519,15 +516,14 @@ padding-left.px: 10
 spacing.fixed.px: 24
 
 -- ftd.text:
-link if { child-of-childrens.toc.url != NULL } : $child-of-childrens.toc.url
+link if { child-of-childrens.toc.url != NULL }: $child-of-childrens.toc.url
 text: $child-of-childrens.toc.title
 role: $inherited.types.button-medium
 color: $inherited.colors.text
 color if { child-of-childrens.toc.is-active }: $inherited.colors.text-strong
 
-
 -- ftd.column:
-if: {!ftd.is_empty(child-of-childrens.toc.children) }
+if: { !ftd.is_empty(child-of-childrens.toc.children) }
 width: fill-container
 
 -- child-of-childrens:
@@ -1567,7 +1563,6 @@ region: h4
 
 -- ftd.column:
 width: fill-container
-;; margin-bottom.px if { compact-text.body != NULL }: -26
 
 -- ftd.text:
 if: { compact-text.body != NULL }
