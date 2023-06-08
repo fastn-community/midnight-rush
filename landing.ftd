@@ -1,7 +1,11 @@
 -- import: fastn-community.github.io/set-1-ds as ds
 -- import: fastn-community.github.io/set-1-ds/assets
 -- import: fastn-community.github.io/set-1-ds/common
+
 -- integer $current-slide: 1
+
+
+
 
 
 -- my-ds.page:
@@ -46,7 +50,6 @@ cta-link: index.html
 
 Can’t wait to get paid? Fastn Flow helps you avoid gaps in cash flow, stay flexible, and grow your business on your terms.
 
-
 -- hero-image-right: Smart dashboard, powerful integrations
 image: $assets.files.static.landing.smart_dashboard.png
 url: landing/
@@ -54,7 +57,6 @@ cta-primary: Sign me up
 cta-link: index.html
 
 Our dashboard is simple to navigate and packed with useful features. It also integrates seamlessly with accounting platforms like Quickbooks.
-
 
 -- content: Experiences
 image: $assets.files.static.landing.image.svg
@@ -91,6 +93,10 @@ faqs-list: $list-of-faqs
 Sign up in 2 minutes
 
 -- end: my-ds.page
+
+
+
+
 
 
 
@@ -232,7 +238,6 @@ padding-horizontal.px: 28
 padding-vertical.px: 12
 border-radius.px: 32
 
-
 -- end: ftd.row
 
 -- end: ftd.column
@@ -246,7 +251,6 @@ link: $hero-with-image-desktop.url
 src: $hero-with-image-desktop.image
 width: fill-container
 height: fill-container
-
 
 -- end: ftd.column
 
@@ -356,6 +360,9 @@ link: $hero-with-image-mobile.url
 
 
 
+
+
+
 -- component logo-cloud:
 caption title:
 optional body body:
@@ -403,16 +410,14 @@ width: fill-container
 padding-vertical.px: 100
 spacing.fixed.px: 17
 align-content: center
-
--- ftd.text: $logo-cloud-desktop.title
 role: $inherited.types.copy-regular
 color: $inherited.colors.text
+
+-- ftd.text: $logo-cloud-desktop.title
 style: medium
 
 -- ftd.text:
 if: { logo-cloud-desktop.body != NULL }
-role: $inherited.types.copy-regular
-color: $inherited.colors.text
 
 $logo-cloud-desktop.body
 
@@ -517,7 +522,6 @@ width: fill-container
 
 -- end: ftd.column
 
-
 -- end: content-desktop
 
 
@@ -566,6 +570,9 @@ $content-mobile.body
 -- end: ftd.column
 
 -- end: content-mobile
+
+
+
 
 
 
@@ -624,6 +631,7 @@ link: $obj.link
 
 
 
+
 -- component logo-lists:
 ftd.image-src logo:
 string link:
@@ -640,8 +648,6 @@ link: $logo-lists.link
 -- end: ftd.row
 
 -- end: logo-lists
-
-
 
 
 
@@ -839,6 +845,7 @@ link: $hero-image-left-mobile.url
 
 
 
+
 -- component hero-image-right: 
 caption title:
 ftd.image-src image:
@@ -913,7 +920,6 @@ padding-horizontal.px: $hero-image-right-desktop.padding-horizontal
 align-content: center
 margin-bottom.px: 50
 
-
 -- ftd.column:
 padding-top.px: 100
 spacing.fixed.px: 20
@@ -930,7 +936,6 @@ color: $inherited.colors.text
 $hero-image-right-desktop.body
 
 
-
 -- ftd.text: $hero-image-right-desktop.cta-primary
 role: $inherited.types.button-large
 color: $inherited.colors.background.base
@@ -942,7 +947,6 @@ $on-mouse-leave$: $ftd.set-bool($a = $hero-image-right-desktop.mouse-in, v = fal
 padding-horizontal.px: 28
 padding-vertical.px: 10
 border-radius.px: 32
-
 
 -- end: ftd.column
 
@@ -1021,6 +1025,8 @@ link: $hero-image-right-mobile.url
 -- end: ftd.column
 
 -- end: hero-image-right-mobile
+
+
 
 
 
@@ -1256,6 +1262,13 @@ $banner-card-list.body
 
 
 
+
+
+
+
+
+
+
 -- component testimonials-card:
 optional caption title:
 testimonial list testimonials:
@@ -1282,6 +1295,11 @@ testimonials: $testimonials-card.testimonials
 -- end: ftd.column
 
 -- end: testimonials-card
+
+
+
+
+
 
 
 
@@ -1357,8 +1375,8 @@ border-width.px: 1
 $on-click$: $ftd.toggle($a = $nav-lists.active, v = false)
 $on-click$: $ftd.set-integer($a = $current-slide, v = $nav-lists.index)
 background.solid if { nav-lists.active }: $inherited.colors.custom.one
-background.solid: #ffffff
-border-color: #000000
+background.solid: $common.white
+border-color: $common.black
 
 -- end: ftd.row
 
@@ -1485,6 +1503,8 @@ color: $inherited.colors.text
 
 
 
+
+
 -- component features-card:
 caption title:
 body body:
@@ -1570,7 +1590,6 @@ border-radius.px: 10
 src: $features-card-details.icon
 width: auto
 
-
 -- ftd.text: $features-card-details.title
 link: $features-card-details.url
 role: $inherited.types.copy-regular
@@ -1583,7 +1602,6 @@ color: $inherited.colors.text
 $features-card-details.body
 
 -- end: ftd.column
-
 
 -- end: features-card-details
 
@@ -1681,12 +1699,12 @@ role: $inherited.types.copy-regular
 color: $inherited.colors.text-strong
 margin-top.px: 18
 
-
 $faqs-list-detail.body
 
 -- end: ftd.column
 
 -- end: faqs-list-detail
+
 
 
 
@@ -1908,6 +1926,30 @@ color: $inherited.colors.text-strong
 
 
 
+-- component centered-block:
+children blocks:
+
+-- ftd.column:
+width: fill-container
+max-width.fixed.px: 1320
+align-content: center
+background.solid: $inherited.colors.background.base
+
+-- ftd.column:
+align-content: center
+children: $centered-block.blocks
+max-width.fixed.px: 1032
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: centered-block
+
+
+
+
+
 
 
 
@@ -2003,15 +2045,6 @@ services and help you create outstanding digital products.
 
 
 
-
-
-
-
-
-
-
-
-
 -- record testimonial:
 optional caption title:
 string user: 
@@ -2035,7 +2068,6 @@ index: 2
 -- testimonial: Get busy living or get busy dying.
 user: Stephen King
 index: 3
-
 
 -- end: list-of-testimonials
 
@@ -2117,57 +2149,6 @@ link: /
 
 
 
--- component centered-block:
-children blocks:
-
--- ftd.column:
-width: fill-container
-max-width.fixed.px: 1320
-align-content: center
-background.solid: $inherited.colors.background.base
-
--- ftd.column:
-align-content: center
-children: $centered-block.blocks
-max-width.fixed.px: 1032
-
--- end: ftd.column
-
-
--- end: ftd.column
-
--- end: centered-block
-
-
-
-
-
-
-
-
-
-
-
-
--- component slider-wrapper:
-optional integer index:
-optional integer reset:
-children slide:
-
--- ftd.column:
-if : { slider-wrapper.index == slider-wrapper.reset }
-width: fill-container
-align-content: center
-children: $slider-wrapper.slide
-
--- end: ftd.column
-
--- end: slider-wrapper
-
-
-
-
-
 
 
 
@@ -2191,7 +2172,3 @@ index: 2
 index: 3
 
 -- end: navs
-
-
-
-

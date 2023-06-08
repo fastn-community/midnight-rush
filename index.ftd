@@ -327,7 +327,7 @@ width: fill-container
 align-content if { ftd.is_empty(doc-page-desktop.toc) && !doc-page-desktop.sidebar }: center
 
 -- ftd.column:
-if: { !doc-page-desktop.blog }
+if: { !doc-page-desktop.blog && doc-page-desktop.sidebar}
 min-width.fixed.percent: 20
 min-height.fixed.calc: 100vh - 200px
 height: fill-container

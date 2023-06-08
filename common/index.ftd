@@ -217,19 +217,21 @@ tags-list list tags:
 light: #F1F1F1
 dark: #07324D
 
-
-
-
 -- ftd.color custom-two:
 light: #ffe8e7
 dark: #083C5D
-
 
 -- ftd.color custom-four:
 light: #fcf5f5
 dark: #083c5d
 
+-- ftd.color white:
+light: #ffffff
+dark: #ffffff
 
+-- ftd.color black:
+light: #000000
+dark: #000000
 
 
 
