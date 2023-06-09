@@ -2035,7 +2035,7 @@ border-bottom-left-radius.px: 20
 border-bottom-right-radius.px: 20
 
 -- ftd.text: $post-card-ui.title
-color: $inherited.colors.text-strong
+color: $inherited.colors.custom.six
 margin-bottom.px: 18
 role: $inherited.types.copy-regular
 
@@ -2143,7 +2143,7 @@ spacing: space-between
 
 -- ftd.text: $newsletter-desktop.title
 role: $inherited.types.heading-small
-color: $inherited.colors.text-strong
+color: $inherited.colors.custom.six
 padding-right.px: 16
 
 -- ftd.column:
@@ -2188,7 +2188,7 @@ src: $newsletter-desktop.info-icon
 if: { newsletter-desktop.body != NULL }
 text: $newsletter-desktop.body
 role: $inherited.types.label-small
-color: $inherited.colors.text-strong
+color: $inherited.colors.custom.six
 
 -- end: ftd.row
 
@@ -2230,7 +2230,7 @@ width: fill-container
 
 -- ftd.text: $newsletter-mobile.title
 role: $inherited.types.heading-small
-color: $inherited.colors.text-strong
+color: $inherited.colors.custom.six
 padding-right.px: 16
 width: fill-container
 text-align: center
@@ -2268,7 +2268,7 @@ src: $newsletter-mobile.info-icon
 if: { newsletter-mobile.body != NULL }
 text: $newsletter-mobile.body
 role: $inherited.types.label-small
-color: $inherited.colors.text-strong
+color: $inherited.colors.custom.six
 
 -- end: ftd.row
 
