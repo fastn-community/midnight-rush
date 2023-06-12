@@ -41,7 +41,6 @@ blog: true
 
 -- ds.post: 
 meta: $meta
-previous-cta-url: blog/
 
 -- ds.markdown:
 
