@@ -14,7 +14,7 @@ sidebar: false
 bgcolor: $inherited.colors.background.step-1
 
 -- hero-with-image: We transform ideas into digital outcomes.
-url: landing/
+link: landing/
 cta-primary: Sign me up
 cta-primary-link: /
 cta-placeholder: Enter your work email
@@ -36,7 +36,7 @@ and grow together.
 
 -- hero-image-right: Easy payments  and invoicing
 image: $assets.files.static.landing.invoicing.png
-url: landing/
+link: landing/
 cta-primary: Sign me up
 cta-link: index.html
 
@@ -44,7 +44,7 @@ Pay and get paid like never before. Auto-generate promo-banners, send reminders,
 
 -- hero-image-left: Better cash control with our flow
 image: $assets.files.static.landing.cash_control.png
-url: landing/
+link: landing/
 cta-primary: Sign me up
 cta-link: index.html
 
@@ -52,7 +52,7 @@ Can’t wait to get paid? Fastn Flow helps you avoid gaps in cash flow, stay fle
 
 -- hero-image-right: Smart dashboard, powerful integrations
 image: $assets.files.static.landing.smart_dashboard.png
-url: landing/
+link: landing/
 cta-primary: Sign me up
 cta-link: index.html
 
@@ -107,7 +107,7 @@ Sign up in 2 minutes
 caption title:
 body body:
 ftd.image-src image:
-optional string url:
+optional string link:
 optional string cta-placeholder:
 optional string cta-primary:
 optional string cta-primary-link:
@@ -122,7 +122,7 @@ width: fill-container
 
 -- hero-with-image-desktop: $hero-with-image.title
 body: $hero-with-image.body
-url: $hero-with-image.url
+link: $hero-with-image.link
 image: $hero-with-image.image
 cta-primary: $hero-with-image.cta-primary
 cta-primary-link: $hero-with-image.cta-primary-link
@@ -136,13 +136,14 @@ cta-placeholder: $hero-with-image.cta-placeholder
 
 -- hero-with-image-mobile: $hero-with-image.title
 body: $hero-with-image.body
-url: $hero-with-image.url
+link: $hero-with-image.link
 image: $hero-with-image.image
 cta-primary: $hero-with-image.cta-primary
 cta-primary-link: $hero-with-image.cta-primary-link
 cta-secondary: $hero-with-image.cta-secondary
 cta-secondary-link: $hero-with-image.cta-secondary-link
 right-align: $hero-with-image.right-align
+cta-placeholder: $hero-with-image.cta-placeholder
 
 -- end: ftd.mobile
 
@@ -163,7 +164,7 @@ right-align: $hero-with-image.right-align
 caption title:
 body body:
 ftd.image-src image:
-optional string url:
+optional string link:
 optional string cta-primary:
 optional string cta-primary-link:
 optional string cta-secondary:
@@ -192,7 +193,6 @@ color: $inherited.colors.text
 text-align: center
 
 $hero-with-image-desktop.body
-
 
 -- ftd.row:
 align-self: center
@@ -245,7 +245,7 @@ border-radius.px: 32
 -- ftd.column:
 width.fixed.percent: 50
 height.fixed.percent: 50
-link: $hero-with-image-desktop.url
+link: $hero-with-image-desktop.link
 
 -- ftd.image:
 src: $hero-with-image-desktop.image
@@ -271,12 +271,13 @@ height: fill-container
 caption title:
 body body:
 ftd.image-src image:
-optional string url:
+optional string link:
 optional string cta-primary:
 optional string cta-primary-link:
 optional string cta-secondary:
 optional string cta-secondary-link:
 optional boolean right-align:
+optional string cta-placeholder: 
 optional boolean $mouse-in: false
 optional boolean $mouse-enter: false
 
@@ -309,30 +310,32 @@ if: { !hero-with-image-mobile.right-align }
 align-self: center
 spacing.fixed.px: 16
 
--- ftd.row:
-background.solid: $inherited.colors.cta-primary.base
-background.solid if { hero-with-image-mobile.mouse-in }: $inherited.colors.cta-primary.hover
-$on-mouse-enter$: $ftd.set-bool($a = $hero-with-image-mobile.mouse-in, v = true)
-$on-mouse-leave$: $ftd.set-bool($a = $hero-with-image-mobile.mouse-in, v = false)
+-- ftd.text-input:
+if: { hero-with-image-mobile.cta-placeholder != NULL }
+placeholder: $hero-with-image-mobile.cta-placeholder
 padding-horizontal.px: 28
-padding-vertical.px: 10
+padding-vertical.px: 12
+border-width.px: 1
+role: $inherited.types.button-large
+border-color: $inherited.colors.background.base
+border-radius.px: 32
+color: $inherited.colors.text-strong
+background.solid: $inherited.colors.background.step-1
+width.fixed.percent if { ftd.device == "mobile" }: 50
+
 
 -- ftd.text: $hero-with-image-mobile.cta-primary
 if: { hero-with-image-mobile.cta-primary != NULL }
 role: $inherited.types.button-large
 color: $inherited.colors.background.base
 link: $hero-with-image-mobile.cta-primary-link
-
--- end: ftd.row
-
--- ftd.row:
-border-color: $inherited.colors.shadow
-border-width.px: 1
-background.solid if { hero-with-image-mobile.mouse-enter }: $inherited.colors.cta-primary.hover
-$on-mouse-enter$: $ftd.set-bool($a = $hero-with-image-mobile.mouse-enter, v = true)
-$on-mouse-leave$: $ftd.set-bool($a = $hero-with-image-mobile.mouse-enter, v = false)
+background.solid: $inherited.colors.cta-primary.base
+background.solid if { hero-with-image-mobile.mouse-in }: $inherited.colors.cta-primary.hover
+$on-mouse-enter$: $ftd.set-bool($a = $hero-with-image-mobile.mouse-in, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $hero-with-image-mobile.mouse-in, v = false)
 padding-horizontal.px: 28
 padding-vertical.px: 10
+border-radius.px: 32
 
 -- ftd.text: $hero-with-image-mobile.cta-secondary
 if: { hero-with-image-mobile.cta-secondary != NULL }
@@ -340,15 +343,22 @@ role: $inherited.types.button-large
 color: $inherited.colors.shadow
 color if { hero-with-image-mobile.mouse-enter }: $inherited.colors.background.step-1
 link: $hero-with-image-mobile.cta-secondary-link
+border-color: $inherited.colors.shadow
+border-width.px: 1
+background.solid if { hero-with-image-mobile.mouse-enter }: $inherited.colors.cta-primary.hover
+$on-mouse-enter$: $ftd.set-bool($a = $hero-with-image-mobile.mouse-enter, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $hero-with-image-mobile.mouse-enter, v = false)
+padding-horizontal.px: 28
+padding-vertical.px: 10
+border-radius.px: 32
 
--- end: ftd.row
 
 -- end: ftd.row
 
 -- ftd.image:
 src: $hero-with-image-mobile.image
 width.fixed.px: 380
-link: $hero-with-image-mobile.url
+link: $hero-with-image-mobile.link
 
 -- end: ftd.column
 
@@ -470,6 +480,7 @@ image: $content.image
 -- content-mobile: $content.title
 body: $content.body
 bg-image: $content.bg-image
+image: $content.image
 
 -- end: ftd.mobile
 
@@ -537,23 +548,12 @@ width: fill-container
 caption title:
 body body:
 ftd.background-image bg-image: 
+optional ftd.image-src image:
 
 -- ftd.column:
 padding-vertical.px: 80
-
--- ftd.row:
-background.image: $content-mobile.bg-image
-width: fill-container
-height.fixed.px: 150
-anchor: parent
-z-index: 0
-
--- end: ftd.row
-
--- ftd.column:
 spacing.fixed.px: 16
 width: fill-container
-z-index: 1
 
 -- ftd.text: $content-mobile.title
 role: $inherited.types.heading-large
@@ -565,7 +565,10 @@ color: $inherited.colors.text
 
 $content-mobile.body
 
--- end: ftd.column
+-- ftd.image:
+if: { content-mobile.image != NULL }
+src: $content-mobile.image
+width: fill-container
 
 -- end: ftd.column
 
@@ -608,8 +611,7 @@ $logo-cloud-mobile.body
 -- end: ftd.column
 
 -- ftd.column:
-wrap: true
-spacing.fixed.px: 10
+spacing.fixed.px: 24
 width: fill-container
 
 -- logo-lists:
@@ -663,7 +665,7 @@ caption title:
 ftd.image-src image:
 optional string cta-primary:
 optional string cta-link:
-optional string url:
+optional string link:
 body body:
 ftd.color bg-color: $inherited.colors.custom.four
 integer padding-vertical: 50
@@ -679,7 +681,7 @@ image: $hero-image-left.image
 cta-primary: $hero-image-left.cta-primary
 cta-link: $hero-image-left.cta-link
 body: $hero-image-left.body
-url: $hero-image-left.url
+link: $hero-image-left.link
 bg-color: $hero-image-left.bg-color
 padding-vertical: $hero-image-left.padding-vertical
 padding-horizontal: $hero-image-left.padding-horizontal
@@ -693,7 +695,7 @@ image: $hero-image-left.image
 cta-primary: $hero-image-left.cta-primary
 cta-link: $hero-image-left.cta-link
 body: $hero-image-left.body
-url: $hero-image-left.url
+link: $hero-image-left.link
 
 -- end: ftd.mobile
 
@@ -720,7 +722,7 @@ body body:
 ftd.color bg-color: 
 integer padding-vertical:
 integer padding-horizontal: 
-optional string url:
+optional string link:
 
 -- ftd.row:
 width: fill-container
@@ -735,7 +737,7 @@ margin-bottom.px: 50
 -- ftd.image:
 src: $hero-image-left-desktop.image
 width: auto
-link: $hero-image-left-desktop.url
+link: $hero-image-left-desktop.link
 
 -- ftd.column:
 spacing.fixed.px: 20
@@ -786,7 +788,7 @@ optional string cta-primary:
 optional string cta-link:
 optional boolean $mouse-in: false
 body body:
-optional string url:
+optional string link:
 
 -- ftd.column:
 width: fill-container
@@ -806,32 +808,24 @@ color: $inherited.colors.text
 
 $hero-image-left-mobile.body
 
--- ftd.row:
-align-content: center
-spacing.fixed.px: 16
+-- ftd.text: $hero-image-left-mobile.cta-primary
+role: $inherited.types.button-large
+color: $inherited.colors.background.base
+link: $hero-image-left-mobile.cta-link
 background.solid: $inherited.colors.cta-primary.base
 padding-horizontal.px: 28
 padding-vertical.px: 10
 background.solid if { hero-image-left-mobile.mouse-in }: $inherited.colors.cta-primary.hover
 $on-mouse-enter$: $ftd.set-bool($a = $hero-image-left-mobile.mouse-in, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $hero-image-left-mobile.mouse-in, v = false)
-
--- ftd.text: $hero-image-left-mobile.cta-primary
-role: $inherited.types.button-large
-color: $inherited.colors.background.base
-link: $hero-image-left-mobile.cta-link
-
--- ftd.image:
-src: $assets.files.static.arrow-to-right.svg
-
--- end: ftd.row
+border-radius.px: 32
 
 -- end: ftd.column
 
 -- ftd.image:
 src: $hero-image-left-mobile.image
 width: fill-container
-link: $hero-image-left-mobile.url
+link: $hero-image-left-mobile.link
 
 -- end: ftd.column
 
@@ -852,7 +846,7 @@ ftd.image-src image:
 optional string cta-primary:
 optional string cta-link:
 body body:
-optional string url:
+optional string link:
 ftd.color bg-color: $inherited.colors.custom.four
 integer padding-vertical: 50
 integer padding-horizontal: 85
@@ -867,7 +861,7 @@ image: $hero-image-right.image
 cta-primary: $hero-image-right.cta-primary
 cta-link: $hero-image-right.cta-link
 body: $hero-image-right.body
-url: $hero-image-right.url
+link: $hero-image-right.link
 bg-color: $hero-image-right.bg-color
 padding-vertical: $hero-image-right.padding-vertical
 padding-horizontal: $hero-image-right.padding-horizontal
@@ -881,7 +875,7 @@ image: $hero-image-right.image
 cta-primary: $hero-image-right.cta-primary
 cta-link: $hero-image-right.cta-link
 body: $hero-image-right.body
-url: $hero-image-right.url
+link: $hero-image-right.link
 
 -- end: ftd.mobile
 
@@ -905,7 +899,7 @@ optional string cta-primary:
 optional string cta-link:
 optional boolean $mouse-in: false
 body body:
-optional string url:
+optional string link:
 ftd.color bg-color: $inherited.colors.custom.four
 integer padding-vertical: 50
 integer padding-horizontal: 85
@@ -953,7 +947,7 @@ border-radius.px: 32
 -- ftd.image:
 src: $hero-image-right-desktop.image
 width: auto
-link: $hero-image-right-desktop.url
+link: $hero-image-right-desktop.link
 
 -- end: ftd.row
 
@@ -975,7 +969,7 @@ optional string cta-primary:
 optional string cta-link:
 optional boolean $mouse-in: false
 body body:
-optional string url:
+optional string link:
 
 -- ftd.column:
 width: fill-container
@@ -995,32 +989,24 @@ color: $inherited.colors.text
 
 $hero-image-right-mobile.body
 
--- ftd.row:
-align-content: center
+-- ftd.text: $hero-image-right-mobile.cta-primary
+role: $inherited.types.button-large
+color: $inherited.colors.background.base
+link: $hero-image-right-mobile.cta-link
 background.solid: $inherited.colors.shadow
 background.solid if { hero-image-right-mobile.mouse-in }: $inherited.colors.cta-primary.hover
 $on-mouse-enter$: $ftd.set-bool($a = $hero-image-right-mobile.mouse-in, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $hero-image-right-mobile.mouse-in, v = false)
 padding-horizontal.px: 28
 padding-vertical.px: 10
-spacing.fixed.px: 16
-
--- ftd.text: $hero-image-right-mobile.cta-primary
-role: $inherited.types.button-large
-color: $inherited.colors.background.base
-link: $hero-image-right-mobile.cta-link
-
--- ftd.image:
-src: $assets.files.static.arrow-to-right.svg
-
--- end: ftd.row
+border-radius.px: 32
 
 -- end: ftd.column
 
 -- ftd.image:
 src: $hero-image-right-mobile.image
 width: fill-container
-link: $hero-image-right-mobile.url
+link: $hero-image-right-mobile.link
 
 -- end: ftd.column
 
@@ -1188,7 +1174,7 @@ $banner-card-mobile.body
 
 -- ftd.column:
 width: fill-container
-spacing.fixed.px: 45
+margin-bottom.px: 64
 
 -- banner-card-list:
 $loop$: $banner-card-mobile.info-cards as $obj
@@ -1552,7 +1538,7 @@ $loop$: $features-card.features as $obj
 title: $obj.title
 icon: $obj.icon
 body: $obj.body
-url: $obj.url
+link: $obj.link
 
 -- end: ftd.row
 
@@ -1573,12 +1559,13 @@ url: $obj.url
 caption title: 
 ftd.image-src icon:
 body body:
-optional string url:
+optional string link:
 
 -- ftd.column:
 spacing.fixed.px: 24
 min-height.fixed.px: 276
 width.fixed.percent: 45
+width if { ftd.device == "mobile"}: fill-container
 border-width.px: 1
 border-color: $inherited.colors.custom.one
 background.solid: $inherited.colors.background.step-2
@@ -1591,7 +1578,7 @@ src: $features-card-details.icon
 width: auto
 
 -- ftd.text: $features-card-details.title
-link: $features-card-details.url
+link: $features-card-details.link
 role: $inherited.types.copy-regular
 color: $inherited.colors.text-strong
 
@@ -1717,7 +1704,7 @@ $faqs-list-detail.body
 -- component search-card:
 caption title:
 string cta-txt: Sign me up
-string cta-url: /
+string cta-link: /
 string cta-placeholder: Enter your work email...
 optional body body:
 optional ftd.image-src cta-icon:
@@ -1732,7 +1719,7 @@ width: fill-container
 
 -- search-card-desktop: $search-card.title
 cta-txt: $search-card.cta-txt
-cta-url: $search-card.cta-url 
+cta-link: $search-card.cta-link 
 cta-placeholder: $search-card.cta-placeholder 
 body: $search-card.body 
 info-icon: $search-card.info-icon 
@@ -1744,7 +1731,7 @@ bg-color: $search-card.bg-color
 
 -- search-card-mobile: $search-card.title
 cta-txt: $search-card.cta-txt
-cta-url: $search-card.cta-url 
+cta-link: $search-card.cta-link 
 cta-placeholder: $search-card.cta-placeholder 
 body: $search-card.body 
 info-icon: $search-card.info-icon 
@@ -1768,7 +1755,7 @@ bg-color: $search-card.bg-color
 -- component search-card-desktop:
 caption title:
 string cta-txt: 
-string cta-url: 
+string cta-link: 
 string cta-placeholder: 
 optional body body:
 optional ftd.image-src info-icon: 
@@ -1815,7 +1802,7 @@ color: $inherited.colors.text-strong
 background.solid: $inherited.colors.cta-primary.base
 padding-vertical.px: 13
 padding-horizontal.px: 28
-link if { search-card-desktop.cta-url != NULL }: $search-card-desktop.cta-url
+link if { search-card-desktop.cta-link != NULL }: $search-card-desktop.cta-link
 border-radius.px: 50
 white-space: nowrap
 
@@ -1857,7 +1844,7 @@ color: $inherited.colors.text-strong
 -- component search-card-mobile:
 caption title:
 string cta-txt: 
-string cta-url: 
+string cta-link: 
 string cta-placeholder: 
 optional body body:
 optional ftd.image-src info-icon: 
@@ -1866,6 +1853,7 @@ ftd.color bg-color:
 -- ftd.column:
 padding-vertical.px: 24
 padding-horizontal.px: 24
+margin-top.px: 50
 background.solid: $search-card-mobile.bg-color
 border-radius.px: 20
 align-content: center
@@ -1893,7 +1881,7 @@ color: $inherited.colors.text-strong
 background.solid: $inherited.colors.cta-primary.base
 padding-vertical.px: 12
 padding-horizontal.px: 28
-link if { search-card-mobile.cta-url != NULL }: $search-card-mobile.cta-url
+link if { search-card-mobile.cta-link != NULL }: $search-card-mobile.cta-link
 border-radius.px: 50
 white-space: nowrap
 
@@ -2002,34 +1990,34 @@ Orders are usually shipped within 1-2 business days after placing the order.
 caption title: 
 ftd.image-src icon:
 body body:
-optional string url:
+optional string link:
 
 -- feature list list-of-features:
 
 -- feature: Strategy and Consultancy
 icon: $assets.files.static.landing.strategy.svg
-url: landing/
+link: landing/
 
 We are an award-winning strategic design company that provides consultancy
 services and help you create outstanding digital products.
 
 -- feature: Strategy and Consultancy
 icon: $assets.files.static.landing.strategy.svg
-url: landing/
+link: landing/
 
 We are an award-winning strategic design company that provides consultancy
 services and help you create outstanding digital products.
 
 -- feature: Strategy and Consultancy
 icon: $assets.files.static.landing.strategy.svg
-url: landing/
+link: landing/
 
 We are an award-winning strategic design company that provides consultancy
 services and help you create outstanding digital products.
 
 -- feature: Strategy and Consultancy
 icon: $assets.files.static.landing.strategy.svg
-url: landing/
+link: landing/
 
 We are an award-winning strategic design company that provides consultancy
 services and help you create outstanding digital products.
