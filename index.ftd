@@ -2073,8 +2073,6 @@ string cta-placeholder: Enter your work email...
 optional body body:
 optional ftd.image-src cta-icon:
 ftd.image-src info-icon: $assets.files.static.check-circle.svg
-integer width: 1200
-ftd.color bg-color: $inherited.colors.background.step-2
 
 -- ftd.column:
 width: fill-container
@@ -2087,7 +2085,6 @@ cta-link: $newsletter.cta-link
 cta-placeholder: $newsletter.cta-placeholder 
 body: $newsletter.body 
 info-icon: $newsletter.info-icon 
-bg-color: $newsletter.bg-color 
 
 -- end: ftd.desktop
 
@@ -2099,8 +2096,7 @@ cta-link: $newsletter.cta-link
 cta-placeholder: $newsletter.cta-placeholder 
 body: $newsletter.body 
 info-icon: $newsletter.info-icon 
-bg-color: $newsletter.bg-color 
-
+ 
 -- end: ftd.mobile
 
 -- end: ftd.column
@@ -2123,7 +2119,6 @@ string cta-link:
 string cta-placeholder: 
 optional body body:
 optional ftd.image-src info-icon: 
-ftd.color bg-color:
 boolean $mouse-in: false
 
 -- ftd.column:
@@ -2136,14 +2131,14 @@ margin-vertical.px: 60
 padding-top.px: 69
 padding-bottom.px: 65
 padding-horizontal.px: 75
-background.solid: $newsletter-desktop.bg-color
+background.solid: $inherited.colors.background.step-2
 border-radius.px: 20
 align-content: center
 spacing: space-between
 
 -- ftd.text: $newsletter-desktop.title
 role: $inherited.types.heading-small
-color: $inherited.colors.custom.six
+color: $inherited.colors.text-strong
 padding-right.px: 16
 
 -- ftd.column:
@@ -2188,7 +2183,7 @@ src: $newsletter-desktop.info-icon
 if: { newsletter-desktop.body != NULL }
 text: $newsletter-desktop.body
 role: $inherited.types.label-small
-color: $inherited.colors.custom.six
+color: $inherited.colors.text-strong
 
 -- end: ftd.row
 
@@ -2216,13 +2211,12 @@ string cta-link:
 string cta-placeholder: 
 optional body body:
 optional ftd.image-src info-icon: 
-ftd.color bg-color: 
 boolean $mouse-in: false
 
 -- ftd.column:
 padding-vertical.px: 24
 padding-horizontal.px: 24
-background.solid: $newsletter-mobile.bg-color
+background.solid: $inherited.colors.background.step-2
 border-radius.px: 20
 align-content: center
 spacing.fixed.px: 32
