@@ -38,7 +38,7 @@ and grow together.
 image: $assets.files.static.landing.invoicing.png
 link: landing/
 cta-primary: Sign me up
-cta-link: index.html
+cta-primary-link: index.html
 
 Pay and get paid like never before. Auto-generate promo-banners, send reminders, schedule payments, and instantly access money when someone pays you.
 
@@ -46,7 +46,7 @@ Pay and get paid like never before. Auto-generate promo-banners, send reminders,
 image: $assets.files.static.landing.cash_control.png
 link: landing/
 cta-primary: Sign me up
-cta-link: index.html
+cta-primary-link: index.html
 
 Can’t wait to get paid? Fastn Flow helps you avoid gaps in cash flow, stay flexible, and grow your business on your terms.
 
@@ -54,7 +54,7 @@ Can’t wait to get paid? Fastn Flow helps you avoid gaps in cash flow, stay fle
 image: $assets.files.static.landing.smart_dashboard.png
 link: landing/
 cta-primary: Sign me up
-cta-link: index.html
+cta-primary-link: index.html
 
 Our dashboard is simple to navigate and packed with useful features. It also integrates seamlessly with accounting platforms like Quickbooks.
 
@@ -664,7 +664,7 @@ link: $logo-lists.link
 caption title:
 ftd.image-src image:
 optional string cta-primary:
-optional string cta-link:
+optional string cta-primary-link:
 optional string link:
 body body:
 ftd.color bg-color: $inherited.colors.custom.four
@@ -679,7 +679,7 @@ width: fill-container
 -- hero-image-left-desktop: $hero-image-left.title
 image: $hero-image-left.image
 cta-primary: $hero-image-left.cta-primary
-cta-link: $hero-image-left.cta-link
+cta-primary-link: $hero-image-left.cta-primary-link
 body: $hero-image-left.body
 link: $hero-image-left.link
 bg-color: $hero-image-left.bg-color
@@ -693,7 +693,7 @@ padding-horizontal: $hero-image-left.padding-horizontal
 -- hero-image-left-mobile: $hero-image-left.title
 image: $hero-image-left.image
 cta-primary: $hero-image-left.cta-primary
-cta-link: $hero-image-left.cta-link
+cta-primary-link: $hero-image-left.cta-primary-link
 body: $hero-image-left.body
 link: $hero-image-left.link
 
@@ -716,7 +716,7 @@ link: $hero-image-left.link
 caption title:
 ftd.image-src image:
 optional string cta-primary:
-optional string cta-link:
+optional string cta-primary-link:
 optional boolean $mouse-in: false
 body body:
 ftd.color bg-color: 
@@ -756,7 +756,7 @@ $hero-image-left-desktop.body
 -- ftd.text: $hero-image-left-desktop.cta-primary
 role: $inherited.types.button-large
 color: $inherited.colors.background.base
-link: $hero-image-left-desktop.cta-link
+link: $hero-image-left-desktop.cta-primary-link
 text-align: center
 background.solid: $inherited.colors.cta-primary.base
 padding-horizontal.px: 28
@@ -785,7 +785,7 @@ border-radius.px: 32
 caption title:
 ftd.image-src image:
 optional string cta-primary:
-optional string cta-link:
+optional string cta-primary-link:
 optional boolean $mouse-in: false
 body body:
 optional string link:
@@ -811,7 +811,7 @@ $hero-image-left-mobile.body
 -- ftd.text: $hero-image-left-mobile.cta-primary
 role: $inherited.types.button-large
 color: $inherited.colors.background.base
-link: $hero-image-left-mobile.cta-link
+link: $hero-image-left-mobile.cta-primary-link
 background.solid: $inherited.colors.cta-primary.base
 padding-horizontal.px: 28
 padding-vertical.px: 10
@@ -844,7 +844,7 @@ link: $hero-image-left-mobile.link
 caption title:
 ftd.image-src image:
 optional string cta-primary:
-optional string cta-link:
+optional string cta-primary-link:
 body body:
 optional string link:
 ftd.color bg-color: $inherited.colors.custom.four
@@ -859,7 +859,7 @@ width: fill-container
 -- hero-image-right-desktop: $hero-image-right.title
 image: $hero-image-right.image
 cta-primary: $hero-image-right.cta-primary
-cta-link: $hero-image-right.cta-link
+cta-primary-link: $hero-image-right.cta-primary-link
 body: $hero-image-right.body
 link: $hero-image-right.link
 bg-color: $hero-image-right.bg-color
@@ -873,7 +873,7 @@ padding-horizontal: $hero-image-right.padding-horizontal
 -- hero-image-right-mobile: $hero-image-right.title
 image: $hero-image-right.image
 cta-primary: $hero-image-right.cta-primary
-cta-link: $hero-image-right.cta-link
+cta-primary-link: $hero-image-right.cta-primary-link
 body: $hero-image-right.body
 link: $hero-image-right.link
 
@@ -896,7 +896,7 @@ link: $hero-image-right.link
 caption title:
 ftd.image-src image:
 optional string cta-primary:
-optional string cta-link:
+optional string cta-primary-link:
 optional boolean $mouse-in: false
 body body:
 optional string link:
@@ -933,7 +933,7 @@ $hero-image-right-desktop.body
 -- ftd.text: $hero-image-right-desktop.cta-primary
 role: $inherited.types.button-large
 color: $inherited.colors.background.base
-link: $hero-image-right-desktop.cta-link
+link: $hero-image-right-desktop.cta-primary-link
 background.solid: $inherited.colors.shadow
 background.solid if { hero-image-right-desktop.mouse-in }: $inherited.colors.cta-primary.hover
 $on-mouse-enter$: $ftd.set-bool($a = $hero-image-right-desktop.mouse-in, v = true)
@@ -966,7 +966,7 @@ link: $hero-image-right-desktop.link
 caption title:
 ftd.image-src image:
 optional string cta-primary:
-optional string cta-link:
+optional string cta-primary-link:
 optional boolean $mouse-in: false
 body body:
 optional string link:
@@ -992,7 +992,7 @@ $hero-image-right-mobile.body
 -- ftd.text: $hero-image-right-mobile.cta-primary
 role: $inherited.types.button-large
 color: $inherited.colors.background.base
-link: $hero-image-right-mobile.cta-link
+link: $hero-image-right-mobile.cta-primary-link
 background.solid: $inherited.colors.shadow
 background.solid if { hero-image-right-mobile.mouse-in }: $inherited.colors.cta-primary.hover
 $on-mouse-enter$: $ftd.set-bool($a = $hero-image-right-mobile.mouse-in, v = true)
@@ -1704,7 +1704,7 @@ $faqs-list-detail.body
 -- component search-card:
 caption title:
 string cta-txt: Sign me up
-string cta-link: /
+string cta-primary-link: /
 string cta-placeholder: Enter your work email...
 optional body body:
 optional ftd.image-src cta-icon:
@@ -1719,7 +1719,7 @@ width: fill-container
 
 -- search-card-desktop: $search-card.title
 cta-txt: $search-card.cta-txt
-cta-link: $search-card.cta-link 
+cta-primary-link: $search-card.cta-primary-link 
 cta-placeholder: $search-card.cta-placeholder 
 body: $search-card.body 
 info-icon: $search-card.info-icon 
@@ -1731,7 +1731,7 @@ bg-color: $search-card.bg-color
 
 -- search-card-mobile: $search-card.title
 cta-txt: $search-card.cta-txt
-cta-link: $search-card.cta-link 
+cta-primary-link: $search-card.cta-primary-link 
 cta-placeholder: $search-card.cta-placeholder 
 body: $search-card.body 
 info-icon: $search-card.info-icon 
@@ -1755,7 +1755,7 @@ bg-color: $search-card.bg-color
 -- component search-card-desktop:
 caption title:
 string cta-txt: 
-string cta-link: 
+string cta-primary-link: 
 string cta-placeholder: 
 optional body body:
 optional ftd.image-src info-icon: 
@@ -1802,7 +1802,7 @@ color: $inherited.colors.text-strong
 background.solid: $inherited.colors.cta-primary.base
 padding-vertical.px: 13
 padding-horizontal.px: 28
-link if { search-card-desktop.cta-link != NULL }: $search-card-desktop.cta-link
+link if { search-card-desktop.cta-primary-link != NULL }: $search-card-desktop.cta-primary-link
 border-radius.px: 50
 white-space: nowrap
 
@@ -1844,7 +1844,7 @@ color: $inherited.colors.text-strong
 -- component search-card-mobile:
 caption title:
 string cta-txt: 
-string cta-link: 
+string cta-primary-link: 
 string cta-placeholder: 
 optional body body:
 optional ftd.image-src info-icon: 
@@ -1881,7 +1881,7 @@ color: $inherited.colors.text-strong
 background.solid: $inherited.colors.cta-primary.base
 padding-vertical.px: 12
 padding-horizontal.px: 28
-link if { search-card-mobile.cta-link != NULL }: $search-card-mobile.cta-link
+link if { search-card-mobile.cta-primary-link != NULL }: $search-card-mobile.cta-primary-link
 border-radius.px: 50
 white-space: nowrap
 
