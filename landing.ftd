@@ -1093,7 +1093,6 @@ border-top-right-radius.px: 10
 $loop$: $banner-card-desktop.info-cards as $obj
 title: $obj.title
 body: $obj.body
-bgcolor: $obj.bgcolor
 is-first: $obj.is-first
 is-last: $obj.is-last
 
@@ -1104,7 +1103,7 @@ width.fixed.percent: 70
 height.fixed.percent: 92
 background.solid: $inherited.colors.background.step-2
 z-index: 20
-border-color: $inherited.colors.background.base
+border-color: $inherited.colors.custom.seven
 right.px: 72
 border-width.px: 2
 border-radius.px: 20
@@ -1170,7 +1169,6 @@ margin-bottom.px: 64
 $loop$: $banner-card-mobile.info-cards as $obj
 title: $obj.title
 body: $obj.body
-bgcolor: $obj.bgcolor
 is-first: $obj.is-first
 is-last: $obj.is-last 
 
@@ -1210,7 +1208,7 @@ boolean is-last:
 z-index: 60
 width.fixed.percent: 75
 margin-left.px: 70
-background.solid if { banner-card-list.bgcolor != NULL }: $banner-card-list.bgcolor
+background.solid: $inherited.colors.background.base
 padding-vertical.px: 40
 padding-horizontal.px: 54
 border-top-left-radius.px if { banner-card-list.is-first }: 20
@@ -1220,7 +1218,7 @@ border-bottom-right-radius.px if { banner-card-list.is-last }: 20
 border-width.px if { banner-card-list.is-first || banner-card-list.is-last }: 2
 border-left-width.px if { !banner-card-list.is-first && !banner-card-list.is-last }: 2
 border-right-width.px if { !banner-card-list.is-first && !banner-card-list.is-last }: 2
-border-color: $inherited.colors.background.step-1
+border-color: $inherited.colors.custom.seven
 
 -- ftd.text: $banner-card-list.title
 role: $inherited.types.heading-large
@@ -1351,8 +1349,8 @@ border-width.px: 1
 $on-click$: $ftd.toggle($a = $nav-lists.active, v = false)
 $on-click$: $ftd.set-integer($a = $current-slide, v = $nav-lists.index)
 background.solid if { nav-lists.active }: $inherited.colors.custom.one
-background.solid: $common.white
-border-color: $common.black
+background.solid: $inherited.colors.custom.six
+border-color: $inherited.colors.custom.seven
 
 -- end: ftd.row
 
@@ -2071,25 +2069,21 @@ index: 3
 -- record info-card:
 caption title:
 body body:
-optional ftd.color bgcolor:
 boolean is-first: false
 boolean is-last: false
 
 -- info-card list list-of-info-cards:
 
 -- info-card: +87%
-bgcolor: $common.step-2
 is-first: true
 
 increased attendee engagement of Bitwise
 
 -- info-card: 1.7M
-bgcolor: $common.custom-two
 
 pipeline generated at Everbridge
 
 -- info-card: 58%
-bgcolor: $common.custom-four
 is-last: true
 
 attendee conversion rate at Interfolio

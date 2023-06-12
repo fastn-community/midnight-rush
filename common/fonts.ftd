@@ -19,11 +19,3 @@ weight: 400
 desktop: $copy-regular-desktop
 mobile: $copy-regular-mobile
 
-
-
-
-
-
--- ftd.color white:
-light: #ffffff
-dark: #ffffff
