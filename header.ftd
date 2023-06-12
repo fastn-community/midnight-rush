@@ -32,7 +32,6 @@ boolean $sidebar-open: false
 boolean github-icon: false
 optional string github-url: 
 boolean blog: false
-ftd.color bgcolor:
 
 -- ftd.column:
 width: fill-container
@@ -101,7 +100,6 @@ logo-width: $header.logo-width
 logo-height: $header.logo-height 
 github-icon: $header.github-icon
 github-url: $header.github-url
-bgcolor: $header.bgcolor
 
 -- end: ftd.desktop
 
@@ -134,11 +132,10 @@ integer logo-width: 120
 integer logo-height: 44
 boolean github-icon: 
 optional string github-url:
-ftd.color bgcolor:   
 
 -- ftd.column:
 width: fill-container
-background.solid: $header-desktop.bgcolor
+background.solid: $inherited.colors.background.base
 padding-horizontal.px: 40
 
 -- ftd.row:
