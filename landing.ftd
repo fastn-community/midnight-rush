@@ -27,7 +27,6 @@ services and help you create outstanding digital products.
 -- logo-cloud: Trusted by the top companies in this industry
 logo-list: $list-of-logos
 
-
 -- content: Built for the next generation of small business
 
 Fastn is an all-in-one payments platform where businesses can connect, transact,
@@ -1063,9 +1062,15 @@ padding-vertical.px: 128
 align-content: center
 background.solid: $inherited.colors.background.step-1
 
+-- ftd.image: 
+src: $banner-card-desktop.src
+left.px: 0
+top.px: 238
+align-self: end
+
 -- ftd.column:
-width.fixed.percent: 40
-padding-left.px: 165
+width.fixed.percent: 36
+align-content: center
 spacing.fixed.px: 16
 
 -- ftd.text: $banner-card-desktop.title
@@ -1077,12 +1082,6 @@ role: $inherited.types.copy-regular
 color: $inherited.colors.text
 
 $banner-card-desktop.body
-
--- ftd.image: 
-src: $banner-card-desktop.src
-anchor: parent
-left.px: 0
-top.px: 238
 
 -- end: ftd.column
 
@@ -1214,7 +1213,7 @@ width.fixed.percent: 75
 margin-left.px: 70
 background.solid if { banner-card-list.bgcolor != NULL }: $banner-card-list.bgcolor
 padding-vertical.px: 40
-padding-horizontal.px: 65
+padding-horizontal.px: 54
 border-top-left-radius.px if { banner-card-list.is-first }: 20
 border-bottom-left-radius.px if { banner-card-list.is-last }: 20
 border-top-right-radius.px if { banner-card-list.is-first }: 20
