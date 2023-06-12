@@ -1723,7 +1723,6 @@ cta-primary-link: $search-card.cta-primary-link
 cta-placeholder: $search-card.cta-placeholder 
 body: $search-card.body 
 info-icon: $search-card.info-icon 
-bg-color: $search-card.bg-color 
 
 -- end: ftd.desktop
 
@@ -1735,7 +1734,6 @@ cta-primary-link: $search-card.cta-primary-link
 cta-placeholder: $search-card.cta-placeholder 
 body: $search-card.body 
 info-icon: $search-card.info-icon 
-bg-color: $search-card.bg-color 
 
 -- end: ftd.mobile
 
@@ -1771,7 +1769,7 @@ margin-vertical.px: 50
 padding-top.px: 69
 padding-bottom.px: 65
 padding-horizontal.px: 75
-background.solid: $search-card-desktop.bg-color
+background.solid: $inherited.colors.custom.four
 border-radius.px: 20
 align-content: center
 spacing: space-between
@@ -1848,13 +1846,12 @@ string cta-primary-link:
 string cta-placeholder: 
 optional body body:
 optional ftd.image-src info-icon: 
-ftd.color bg-color: 
 
 -- ftd.column:
 padding-vertical.px: 24
 padding-horizontal.px: 24
 margin-top.px: 50
-background.solid: $search-card-mobile.bg-color
+background.solid: $inherited.colors.custom.four
 border-radius.px: 20
 align-content: center
 spacing.fixed.px: 32
