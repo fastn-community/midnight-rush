@@ -1999,7 +1999,6 @@ $on-mouse-enter$: $ftd.set-bool($a = $post-card-ui.hover, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $post-card-ui.hover, v = false)
 
 -- ftd.column:
-if: { !post-card-ui.hover }
 anchor: parent
 width: fill-container
 height.fixed.percent if { ftd.device != "mobile" }: 87
@@ -2010,7 +2009,8 @@ top.px if { ftd.device == "mobile" }: 48
 left.px: 0
 left.px if { ftd.device == "mobile" }: 0
 border-radius.px: 17
-background.solid: $common.blur
+background.solid: $inherited.colors.custom.ten
+background.solid if { post-card-ui.hover }: $inherited.colors.custom.nine
 
 -- end: ftd.column
 
@@ -2333,8 +2333,6 @@ spacing.fixed.px: 16
 -- component post:
 common.post-meta meta:
 children container:
-string previous-cta-txt: Back to blog
-optional string previous-cta-url:
 string share-txt: Share
 optional boolean sidebar: false
 ftd.ui list right-sidebar:
@@ -2348,8 +2346,6 @@ author: $post.meta.author
 share: $post.meta.social-list
 timestamp: $post.meta.published-on
 container: $post.container
-previous-cta-txt: $post.previous-cta-txt
-previous-cta-url: $post.previous-cta-url
 share-txt: $post.share-txt
 
 $post.meta.body
@@ -2375,8 +2371,6 @@ string timestamp:
 optional body body:
 common.social-media list share:
 children container:
-string previous-cta-txt: Back to blog
-optional string previous-cta-url:
 string share-txt: 
 
 -- ftd.column:
@@ -2390,8 +2384,6 @@ timestamp: $article-card.timestamp
 body: $article-card.body
 share: $article-card.share
 container: $article-card.container
-previous-cta-txt: $article-card.previous-cta-txt
-previous-cta-url: $article-card.previous-cta-url
 share-txt: $article-card.share-txt
 
 -- end: ftd.desktop
@@ -2405,8 +2397,6 @@ timestamp: $article-card.timestamp
 body: $article-card.body
 share: $article-card.share
 container: $article-card.container
-previous-cta-txt: $article-card.previous-cta-txt
-previous-cta-url: $article-card.previous-cta-url
 share-txt: $article-card.share-txt
 
 -- end: ftd.mobile
@@ -2432,29 +2422,12 @@ string timestamp:
 optional body body:
 common.social-media list share:
 children container:
-string previous-cta-txt:
-optional string previous-cta-url:
 string share-txt: 
 
 -- ftd.column:
 color: $inherited.colors.text
 width: fill-container
-padding-horizontal.px: 90
-
--- ftd.row:
-if: { article-card-desktop.previous-cta-url != NULL }
-link: $article-card-desktop.previous-cta-url
-spacing.fixed.px: 8
-align-content: center
-
--- ftd.image:
-src: $assets.files.static.arrow-back.svg
-
--- ftd.text: $article-card-desktop.previous-cta-txt
-role: $inherited.types.fine-print
-color: $inherited.colors.accent.primary
-
--- end: ftd.row
+padding-horizontal.px: 32
 
 -- ftd.image:
 if: {article-card-desktop.image != NULL}
@@ -2563,29 +2536,12 @@ string timestamp:
 optional body body:
 common.social-media list share:
 children container:
-string previous-cta-txt:
-optional string previous-cta-url:
 string share-txt: 
 
 -- ftd.column:
 color: $inherited.colors.text
 width: fill-container
 spacing.fixed.px: 24
-
--- ftd.row:
-if: { article-card-mobile.previous-cta-url != NULL }
-link: $article-card-mobile.previous-cta-url
-spacing.fixed.px: 8
-align-content: center
-
--- ftd.image:
-src: $assets.files.static.arrow-back.svg
-
--- ftd.text: $article-card-mobile.previous-cta-txt
-role: $inherited.types.fine-print
-color: $inherited.colors.accent.primary
-
--- end: ftd.row
 
 -- ftd.image:
 if: {article-card-mobile.image != NULL}
