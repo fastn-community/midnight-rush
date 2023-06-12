@@ -113,7 +113,7 @@ optional string cta-primary:
 optional string cta-primary-link:
 optional string cta-secondary:
 optional string cta-secondary-link:
-optional boolean right-align: false
+optional boolean align-right: false
 
 -- ftd.column:
 width: fill-container
@@ -142,7 +142,7 @@ cta-primary: $hero-with-image.cta-primary
 cta-primary-link: $hero-with-image.cta-primary-link
 cta-secondary: $hero-with-image.cta-secondary
 cta-secondary-link: $hero-with-image.cta-secondary-link
-right-align: $hero-with-image.right-align
+align-right: $hero-with-image.align-right
 cta-placeholder: $hero-with-image.cta-placeholder
 
 -- end: ftd.mobile
@@ -276,20 +276,20 @@ optional string cta-primary:
 optional string cta-primary-link:
 optional string cta-secondary:
 optional string cta-secondary-link:
-optional boolean right-align:
+optional boolean align-right:
 optional string cta-placeholder: 
 optional boolean $mouse-in: false
 optional boolean $mouse-enter: false
 
 -- ftd.column:
-align-content if { !hero-with-image-mobile.right-align }: center
+align-content if { !hero-with-image-mobile.align-right }: center
 width: fill-container
 spacing.fixed.px: 45
-spacing.fixed.px if { hero-with-image-mobile.right-align }: 24
+spacing.fixed.px if { hero-with-image-mobile.align-right }: 24
 
 -- ftd.column:
 spacing.fixed.px: 24
-width.fixed.percent if { !hero-with-image-mobile.right-align }: 70
+width.fixed.percent if { !hero-with-image-mobile.align-right }: 70
 
 -- ftd.text: $hero-with-image-mobile.title
 role: $inherited.types.heading-medium
@@ -306,7 +306,7 @@ $hero-with-image-mobile.body
 -- end: ftd.column
 
 -- ftd.row:
-if: { !hero-with-image-mobile.right-align }
+if: { !hero-with-image-mobile.align-right }
 align-self: center
 spacing.fixed.px: 16
 
