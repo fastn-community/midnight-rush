@@ -15,7 +15,7 @@ sidebar: false
 -- hero-with-image: We transform ideas into digital outcomes.
 link: landing/
 cta-primary: Sign me up
-cta-primary-link: /
+cta-primary-link: index.html
 cta-placeholder: Enter your work email
 image: $assets.files.static.landing.hero.svg
 
@@ -75,11 +75,10 @@ business.
 testimonials: $list-of-testimonials
 nav: $navs
 
--- features-card: We Transform ideas into digital outcomes
+-- features-card: Why Fastn?
 features: $list-of-features
 
-We are an award-winning strategic design company that provides consultancy
-services and help you create outstanding digital products.
+We’re putting your other payments platform in timeout.
 
 -- end: centered-block
 
@@ -208,7 +207,7 @@ padding-horizontal.px: 28
 padding-vertical.px: 12
 border-width.px: 1
 role: $inherited.types.button-large
-border-color: $inherited.colors.background.base
+border-color: $inherited.colors.shadow
 border-radius.px: 32
 color: $inherited.colors.text-strong
 background.solid: $inherited.colors.background.step-1
@@ -1053,7 +1052,7 @@ info-cards: $banner-card.info-cards
 caption title:
 body body:
 info-card list info-cards:
-ftd.image-src src: $assets.files.static.landing.arrow.svg
+ftd.image-src image: $assets.files.static.landing.arrow.svg
 
 -- ftd.row:
 spacing: space-between
@@ -1063,7 +1062,7 @@ align-content: center
 background.solid: $inherited.colors.background.step-1
 
 -- ftd.image: 
-src: $banner-card-desktop.src
+src: $banner-card-desktop.image
 left.px: 0
 top.px: 238
 align-self: end
@@ -1553,7 +1552,6 @@ body body:
 optional string link:
 
 -- ftd.column:
-spacing.fixed.px: 24
 min-height.fixed.px: 276
 width.fixed.percent: 45
 width if { ftd.device == "mobile"}: fill-container
@@ -1567,11 +1565,14 @@ border-radius.px: 10
 -- ftd.image:
 src: $features-card-details.icon
 width: auto
+margin-bottom.px: 24
 
 -- ftd.text: $features-card-details.title
 link: $features-card-details.link
 role: $inherited.types.copy-regular
 color: $inherited.colors.text-strong
+margin-bottom.px: 8
+style: bold
 
 -- ftd.text:
 role: $inherited.types.copy-small
@@ -1622,7 +1623,6 @@ width: fill-container
 -- faqs-list-detail:
 $loop$: $faqs.faqs-list as $obj
 title: $obj.title
-icon: $obj.icon
 body: $obj.body
 
 -- end: ftd.column
@@ -1643,7 +1643,6 @@ body: $obj.body
 -- component faqs-list-detail:
 caption title: 
 optional body body:
-ftd.image-src icon:
 optional boolean $toggle-down: false
 
 -- ftd.column:
@@ -1695,7 +1694,7 @@ $faqs-list-detail.body
 -- component search-card:
 caption title:
 string cta-txt: Sign me up
-string cta-primary-link: /
+string cta-primary-link: index.html
 string cta-placeholder: Enter your work email...
 optional body body:
 optional ftd.image-src cta-icon:
@@ -1932,34 +1931,48 @@ max-width.fixed.px: 1032
 -- record faq:
 caption title: 
 optional body body:
-ftd.image-src icon:
+
 
 -- faq list list-of-faqs:
 
--- faq: How long does it take to ship my order?
-icon: $assets.files.static.downArrow.svg
+-- faq: Are there really zero fees?
 
-Orders are usually shipped within 1-2 business days after placing the order.
+At Fastn, we believe businesses shouldn’t have to wait or pay to access money
+they’ve already earned. That’s why it doesn’t cost a penny to create an account
+and there are zero transaction fees when you use the Fastn platform to pay and
+get paid. If you decide to leverage some of our more premium payment features
+(like Fastn Flow, which lets you get paid before your client pays you) there
+may be a small service fee—
 
--- faq: What shipping options do you have?
-icon: $assets.files.static.downArrow.svg
+-- faq: Is Fastn secure?
 
-Orders are usually shipped within 1-2 business days after placing the order.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie ante
+in luctus rutrum.
 
--- faq: What shipping options do you have?
-icon: $assets.files.static.downArrow.svg
+-- faq: Does Fastn replace my accounting software?
 
-Orders are usually shipped within 1-2 business days after placing the order.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie ante
+in luctus rutrum.
 
--- faq: What shipping options do you have?
-icon: $assets.files.static.downArrow.svg
+-- faq: Is Fastn a bank?
 
-Orders are usually shipped within 1-2 business days after placing the order.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie ante
+in luctus rutrum.
 
--- faq: What shipping options do you have?
-icon: $assets.files.static.downArrow.svg
+-- faq: Are the payments really instant?
 
-Orders are usually shipped within 1-2 business days after placing the order.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie ante
+in luctus rutrum.
+
+-- faq: Do my clients and vendors have to sign up for Fastn too?
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie ante
+in luctus rutrum.
+
+-- faq: How does Fastn make money?
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie ante
+in luctus rutrum.
 
 -- end: list-of-faqs
 
@@ -2100,23 +2113,23 @@ string link:
 
 -- logos: 
 logo: $assets.files.static.landing.logo-1.svg
-link: /
+link: landing/
 
 -- logos: 
 logo: $assets.files.static.landing.logo-2.svg
-link: /
+link: landing/
 
 -- logos: 
 logo: $assets.files.static.landing.logo-3.svg
-link: /
+link: landing/
 
 -- logos: 
 logo: $assets.files.static.landing.logo-4.svg
-link: /
+link: landing/
 
 -- logos: 
 logo: $assets.files.static.landing.logo-5.svg
-link: /
+link: landing/
 
 -- end: list-of-logos
 
