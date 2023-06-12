@@ -1145,7 +1145,7 @@ caption title:
 body body:
 ftd.image-src src: $assets.files.static.dollar.svg
 string cta-label: Button
-string cta-url: /
+string cta-link: index.html
 
 -- ftd.column:
 padding-top.px: 40
@@ -1473,7 +1473,7 @@ $loop$: $footer-mobile-list.children as $obj
 
 -- component footer-list-toc:
 caption title:
-optional string url: /
+optional string url: index.html
 boolean is-active: false
 children wrap:
 pr.toc-item list children: 
@@ -2068,7 +2068,7 @@ src: $assets.files.static.arrow-forward.svg
 -- component newsletter:
 caption title:
 string cta-txt: Sign me up
-string cta-url: /
+string cta-link: index.html
 string cta-placeholder: Enter your work email...
 optional body body:
 optional ftd.image-src cta-icon:
@@ -2083,7 +2083,7 @@ width: fill-container
 
 -- newsletter-desktop: $newsletter.title
 cta-txt: $newsletter.cta-txt
-cta-url: $newsletter.cta-url 
+cta-link: $newsletter.cta-link 
 cta-placeholder: $newsletter.cta-placeholder 
 body: $newsletter.body 
 info-icon: $newsletter.info-icon 
@@ -2095,7 +2095,7 @@ bg-color: $newsletter.bg-color
 
 -- newsletter-mobile: $newsletter.title
 cta-txt: $newsletter.cta-txt
-cta-url: $newsletter.cta-url 
+cta-link: $newsletter.cta-link 
 cta-placeholder: $newsletter.cta-placeholder 
 body: $newsletter.body 
 info-icon: $newsletter.info-icon 
@@ -2119,7 +2119,7 @@ bg-color: $newsletter.bg-color
 -- component newsletter-desktop:
 caption title:
 string cta-txt: 
-string cta-url: 
+string cta-link: 
 string cta-placeholder: 
 optional body body:
 optional ftd.image-src info-icon: 
@@ -2167,7 +2167,7 @@ color: $inherited.colors.text-strong
 background.solid: $inherited.colors.cta-primary.base
 padding-vertical.px: 13
 padding-horizontal.px: 28
-link if { newsletter-desktop.cta-url != NULL }: $newsletter-desktop.cta-url
+link if { newsletter-desktop.cta-link != NULL }: $newsletter-desktop.cta-link
 border-radius.px: 50
 white-space: nowrap
 background.solid if { newsletter-desktop.mouse-in }: $inherited.colors.cta-primary.hover
@@ -2212,7 +2212,7 @@ color: $inherited.colors.custom.six
 -- component newsletter-mobile:
 caption title:
 string cta-txt: 
-string cta-url: 
+string cta-link: 
 string cta-placeholder: 
 optional body body:
 optional ftd.image-src info-icon: 
@@ -2249,7 +2249,7 @@ color: $inherited.colors.text-strong
 background.solid: $inherited.colors.cta-primary.base
 padding-vertical.px: 12
 padding-horizontal.px: 28
-link if { newsletter-mobile.cta-url != NULL }: $newsletter-mobile.cta-url
+link if { newsletter-mobile.cta-link != NULL }: $newsletter-mobile.cta-link
 border-radius.px: 50
 white-space: nowrap
 background.solid if { newsletter-mobile.mouse-in }: $inherited.colors.cta-primary.hover
