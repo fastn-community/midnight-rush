@@ -1651,7 +1651,6 @@ string cta-primary-link: index.html
 string input-placeholder: Enter your work email...
 optional body body:
 optional ftd.image-src cta-icon:
-ftd.image-src info-icon: $assets.files.static.check-circle.svg
 optional string help-info:
 
 -- ftd.column:
@@ -1664,7 +1663,6 @@ cta-txt: $search-card.cta-txt
 cta-primary-link: $search-card.cta-primary-link 
 input-placeholder: $search-card.input-placeholder 
 body: $search-card.body 
-info-icon: $search-card.info-icon 
 help-info: $search-card.help-info 
 
 -- end: ftd.desktop
@@ -1676,7 +1674,6 @@ cta-txt: $search-card.cta-txt
 cta-primary-link: $search-card.cta-primary-link 
 input-placeholder: $search-card.input-placeholder 
 body: $search-card.body 
-info-icon: $search-card.info-icon 
 help-info: $search-card.help-info 
 
 -- end: ftd.mobile
@@ -1700,7 +1697,7 @@ string cta-txt:
 string cta-primary-link: 
 string input-placeholder: 
 optional body body:
-optional ftd.image-src info-icon: 
+ftd.image-src info-icon: $assets.files.static.check-circle.svg 
 optional string help-info:
 
 -- ftd.row:
@@ -1759,15 +1756,14 @@ white-space: nowrap
 -- end: ftd.row
 
 -- ftd.row: 
+if: { search-card-desktop.help-info != NULL }
 spacing.fixed.px: 10
 align-content: center
 
 -- ftd.image:
-if: { search-card-desktop.info-icon != NULL }
 src: $search-card-desktop.info-icon
 
 -- ftd.text:
-if: { search-card-desktop.help-info != NULL }
 text: $search-card-desktop.help-info
 role: $inherited.types.label-small
 color: $inherited.colors.text-strong
@@ -1796,7 +1792,7 @@ string cta-primary-link:
 string input-placeholder: 
 optional body body:
 optional string help-info:
-optional ftd.image-src info-icon: 
+ftd.image-src info-icon: $assets.files.static.check-circle.svg
 
 -- ftd.column:
 padding-vertical.px: 24
@@ -1840,15 +1836,14 @@ border-radius.px: 50
 white-space: nowrap
 
 -- ftd.row: 
+if: { search-card-mobile.help-info != NULL }
 spacing.fixed.px: 10
 align-content: center
 
 -- ftd.image:
-if: { search-card-mobile.info-icon != NULL }
 src: $search-card-mobile.info-icon
 
 -- ftd.text:
-if: { search-card-mobile.help-info != NULL }
 text: $search-card-mobile.help-info
 role: $inherited.types.label-small
 color: $inherited.colors.text-strong
