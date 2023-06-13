@@ -1686,7 +1686,6 @@ string cta-primary: Sign me up
 string cta-primary-link: index.html
 string input-placeholder: Enter your work email...
 optional body body:
-optional ftd.image-src cta-icon:
 optional string help-info:
 optional string label:
 
