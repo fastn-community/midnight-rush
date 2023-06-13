@@ -555,7 +555,7 @@ logos list logo-list:
 
 -- ftd.column:
 width: fill-container
-spacing.fixed.px: 24
+spacing.fixed.px: 52
 padding-top.px: 80
 
 -- ftd.column:
@@ -576,7 +576,7 @@ $logo-cloud-mobile.body
 -- end: ftd.column
 
 -- ftd.column:
-spacing.fixed.px: 24
+spacing.fixed.px: 40
 width: fill-container
 
 -- logo-lists:
@@ -1618,6 +1618,7 @@ color: $inherited.colors.text-strong
 
 -- ftd.image:
 src: $assets.files.static.landing.toggle-down.svg
+src if { faqs-list-detail.toggle-down }: $assets.files.static.landing.toggle-up.svg
 height.fixed.px: 35
 width.fixed.px: 35
 
