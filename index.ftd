@@ -1445,7 +1445,7 @@ align-self: center
 -- ftd.column:
 if: { footer-mobile-list.shows-data }
 spacing.fixed.px: 14
-margin-top.px if { $footer-mobile-list.shows-data }: 12
+margin-top.px: 24
 
 -- footer-list-toc: 
 title: $obj.title
