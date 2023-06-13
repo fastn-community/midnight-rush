@@ -1647,7 +1647,7 @@ spacing.fixed.px if { ftd.device == "mobile"}: 25
 $on-click$: $ftd.toggle($a = $faqs-list-detail.toggle)
 
 -- ftd.text: $faqs-list-detail.title
-role: $inherited.types.heading-small
+role: $inherited.types.heading-tiny
 color: $inherited.colors.text-strong
 width: fill-container
 
