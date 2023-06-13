@@ -78,8 +78,7 @@ We’re putting your other payments platform in timeout.
 faqs-list: $list-of-faqs
 
 -- search-card: Freakishly simple. Downright useful. Ready to make the jump?
-
-Sign up in 2 minutes
+help-info: Sign up in 2 minutes
 
 -- end: my-ds.page
 
@@ -1653,6 +1652,7 @@ string input-placeholder: Enter your work email...
 optional body body:
 optional ftd.image-src cta-icon:
 ftd.image-src info-icon: $assets.files.static.check-circle.svg
+optional string help-info:
 
 -- ftd.column:
 width: fill-container
@@ -1665,6 +1665,7 @@ cta-primary-link: $search-card.cta-primary-link
 input-placeholder: $search-card.input-placeholder 
 body: $search-card.body 
 info-icon: $search-card.info-icon 
+help-info: $search-card.help-info 
 
 -- end: ftd.desktop
 
@@ -1676,6 +1677,7 @@ cta-primary-link: $search-card.cta-primary-link
 input-placeholder: $search-card.input-placeholder 
 body: $search-card.body 
 info-icon: $search-card.info-icon 
+help-info: $search-card.help-info 
 
 -- end: ftd.mobile
 
@@ -1699,13 +1701,10 @@ string cta-primary-link:
 string input-placeholder: 
 optional body body:
 optional ftd.image-src info-icon: 
-
--- ftd.column:
-width: fill-container
-align-content: center
+optional string help-info:
 
 -- ftd.row:
-width.fixed.percent: 100
+width: fill-container
 margin-vertical.px: 50
 padding-top.px: 69
 padding-bottom.px: 65
@@ -1715,10 +1714,22 @@ border-radius.px: 20
 align-content: center
 spacing: space-between
 
+-- ftd.column:
+width: fill-container
+
 -- ftd.text: $search-card-desktop.title
 role: $inherited.types.heading-small
 color: $inherited.colors.text-strong
 padding-right.px: 16
+margin-bottom.px: 18
+
+-- ftd.text:
+if: { search-card-desktop.body != NULL }
+text: $search-card-desktop.body
+role: $inherited.types.copy-regular
+color: $inherited.colors.text-strong
+
+-- end: ftd.column
 
 -- ftd.column:
 
@@ -1756,8 +1767,8 @@ if: { search-card-desktop.info-icon != NULL }
 src: $search-card-desktop.info-icon
 
 -- ftd.text:
-if: { search-card-desktop.body != NULL }
-text: $search-card-desktop.body
+if: { search-card-desktop.help-info != NULL }
+text: $search-card-desktop.help-info
 role: $inherited.types.label-small
 color: $inherited.colors.text-strong
 
@@ -1766,8 +1777,6 @@ color: $inherited.colors.text-strong
 -- end: ftd.column
 
 -- end: ftd.row
-
--- end: ftd.column
 
 -- end: search-card-desktop
 
@@ -1786,6 +1795,7 @@ string cta-txt:
 string cta-primary-link: 
 string input-placeholder: 
 optional body body:
+optional string help-info:
 optional ftd.image-src info-icon: 
 
 -- ftd.column:
@@ -1804,6 +1814,12 @@ color: $inherited.colors.text-strong
 padding-right.px: 16
 width: fill-container
 text-align: center
+
+-- ftd.text:
+if: { search-card-mobile.body != NULL }
+text: $search-card-mobile.body
+role: $inherited.types.copy-regular
+color: $inherited.colors.text-strong
 
 -- ftd.text-input:
 placeholder: $search-card-mobile.input-placeholder
@@ -1832,8 +1848,8 @@ if: { search-card-mobile.info-icon != NULL }
 src: $search-card-mobile.info-icon
 
 -- ftd.text:
-if: { search-card-mobile.body != NULL }
-text: $search-card-mobile.body
+if: { search-card-mobile.help-info != NULL }
+text: $search-card-mobile.help-info
 role: $inherited.types.label-small
 color: $inherited.colors.text-strong
 
