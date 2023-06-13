@@ -296,7 +296,7 @@ spacing.fixed.px: 16
 if: { hero-with-image-mobile.input-placeholder != NULL }
 placeholder: $hero-with-image-mobile.input-placeholder
 padding-horizontal.px: 28
-padding-vertical.px: 12
+padding-vertical.px: 10
 border-width.px: 1
 role: $inherited.types.button-large
 border-color: $inherited.colors.shadow
@@ -315,7 +315,7 @@ background.solid if { hero-with-image-mobile.mouse-in }: $inherited.colors.cta-p
 $on-mouse-enter$: $ftd.set-bool($a = $hero-with-image-mobile.mouse-in, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $hero-with-image-mobile.mouse-in, v = false)
 padding-horizontal.px: 28
-padding-vertical.px: 10
+padding-vertical.px: 11
 border-radius.px: 32
 
 -- end: ftd.row
