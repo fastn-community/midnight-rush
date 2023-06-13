@@ -1330,8 +1330,8 @@ common.social-media list social-links:
 
 -- ftd.column:
 width: fill-container
-padding-top.px: 112
-padding-bottom.px: 64
+padding-top.px: 48
+padding-bottom.px: 84
 color: $inherited.colors.text
 padding-horizontal.px: 24
 
