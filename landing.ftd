@@ -17,7 +17,7 @@ link: landing/
 cta-primary: Sign me up
 cta-primary-link: index.html
 input-placeholder: Enter your work email
-image: $assets.files.static.landing.hero.svg
+image: $assets.files.static.landing.hero.jpg
 
 We are an award-winning strategic design company that provides consultancy
 services and help you create outstanding digital products.
@@ -170,6 +170,7 @@ background.solid: $inherited.colors.background.step-1
 width: fill-container
 spacing: space-between
 max-width.fixed.px: 1040
+height.fixed.px: 650
 
 -- ftd.column:
 spacing.fixed.px: 24
@@ -224,6 +225,7 @@ white-space: nowrap
 width.fixed.percent: 50
 height.fixed.percent: 50
 link: $hero-with-image-desktop.link
+align-self: center
 
 -- ftd.image:
 src: $hero-with-image-desktop.image
@@ -321,6 +323,7 @@ border-radius.px: 32
 -- ftd.image:
 src: $hero-with-image-mobile.image
 width: fill-container
+height.fixed.px: 348
 link: $hero-with-image-mobile.link
 
 -- end: ftd.column
@@ -469,7 +472,7 @@ optional ftd.image-src image:
 
 -- ftd.column:
 align-self if { content-desktop.image != NULL }: center
-padding-vertical.px: 100
+padding-bottom.px: 100
 spacing.fixed.px: 16
 max-width.fixed.px: $common.max-width
 width: fill-container
@@ -515,7 +518,7 @@ ftd.background-image bg-image:
 optional ftd.image-src image:
 
 -- ftd.column:
-padding-vertical.px: 80
+padding-bottom.px: 60
 spacing.fixed.px: 16
 width: fill-container
 
@@ -555,11 +558,10 @@ logos list logo-list:
 -- ftd.column:
 width: fill-container
 spacing.fixed.px: 52
-padding-top.px: 80
+padding-vertical.px: 60
 
 -- ftd.column:
 spacing.fixed.px: 17
-padding-top.px: 30
 
 -- ftd.text: $logo-cloud-mobile.title
 role: $inherited.types.heading-large
@@ -1097,7 +1099,7 @@ body body:
 info-card list info-cards:
 
 -- ftd.column:
-padding-vertical.px: 80
+padding-bottom.px: 120
 width: fill-container
 spacing.fixed.px: 24
 
@@ -1217,6 +1219,7 @@ nav: $testimonials-card.nav
 
 -- testimonials-card-mobile: $testimonials-card.title
 testimonials: $testimonials-card.testimonials
+nav: $testimonials-card.nav
 
 -- end: ftd.mobile
 
@@ -1322,11 +1325,16 @@ border-color: $inherited.colors.custom.seven
 -- component testimonials-card-mobile:
 optional caption title:
 testimonial list testimonials:
+testimonial-nav list nav:
 
 -- ftd.column:
 width: fill-container
 spacing.fixed.px: 32
 align-content: center
+min-height.fixed.px: 340
+background.solid: $inherited.colors.custom.two
+border-radius.px: 20
+padding-horizontal.px: 40
 
 -- ftd.text: $testimonials-card-mobile.title
 if: { testimonials-card-mobile.title != NULL }
@@ -1341,6 +1349,15 @@ designation: $obj.designation
 avatar: $obj.avatar
 body: $obj.body
 index: $obj.index
+
+-- ftd.row:
+spacing.fixed.px: 12
+
+-- nav-lists:
+$loop$: $testimonials-card-mobile.nav as $obj
+index: $obj.index
+
+-- end: ftd.row
 
 -- end: ftd.column
 
@@ -1393,13 +1410,14 @@ src: $testimonials-card-details.avatar
 width: auto
 
 -- ftd.row:
+if: { ftd.device != "mobile" }
 spacing.fixed.px: 4
-align-content: center
 
 -- ftd.row:
 width.fixed.px: 20
 height.fixed.px: 1
 background.solid: $inherited.colors.text
+margin-top.px: 12
 
 -- end: ftd.row
 
@@ -1408,6 +1426,7 @@ role: $inherited.types.copy-regular
 color: $inherited.colors.text
 
 -- ftd.text:,
+if: { testimonials-card-details.designation != NULL }
 role: $inherited.types.copy-regular
 color: $inherited.colors.text
 
@@ -1417,6 +1436,21 @@ role: $inherited.types.copy-regular
 color: $inherited.colors.text
 
 -- end: ftd.row
+
+-- ftd.column:
+if: { ftd.device == "mobile" }
+spacing.fixed.px: 4
+
+-- ftd.text: $testimonials-card-details.user
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+-- ftd.text: $testimonials-card-details.designation
+if: { testimonials-card-details.designation != NULL }
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+-- end: ftd.column
 
 -- end: ftd.row
 
@@ -1595,7 +1629,8 @@ body: $obj.body
 -- component faqs-list-detail:
 caption title: 
 optional body body:
-optional boolean $toggle-down: false
+optional ftd.image-src icon:
+optional boolean $toggle: false
 
 -- ftd.column:
 width: fill-container
@@ -1609,22 +1644,23 @@ width if { ftd.device == "mobile"}: fill-container
 align-self: center
 spacing: space-between
 spacing.fixed.px if { ftd.device == "mobile"}: 25
-$on-click$: $ftd.toggle($a = $faqs-list-detail.toggle-down)
+$on-click$: $ftd.toggle($a = $faqs-list-detail.toggle)
 
 -- ftd.text: $faqs-list-detail.title
 role: $inherited.types.heading-small
 color: $inherited.colors.text-strong
+width: fill-container
 
 -- ftd.image:
 src: $assets.files.static.landing.toggle-down.svg
-src if { faqs-list-detail.toggle-down }: $assets.files.static.landing.toggle-up.svg
+src if { faqs-list-detail.toggle }: $assets.files.static.landing.toggle-up.svg
 height.fixed.px: 35
 width.fixed.px: 35
 
 -- end: ftd.row
 
 -- ftd.text:
-if: { $faqs-list-detail.body != NULL && faqs-list-detail.toggle-down }
+if: { $faqs-list-detail.body != NULL && faqs-list-detail.toggle }
 role: $inherited.types.copy-regular
 color: $inherited.colors.text-strong
 margin-top.px: 18
@@ -1646,12 +1682,13 @@ $faqs-list-detail.body
 
 -- component search-card:
 caption title:
-string cta-txt: Sign me up
+string cta-primary: Sign me up
 string cta-primary-link: index.html
 string input-placeholder: Enter your work email...
 optional body body:
 optional ftd.image-src cta-icon:
 optional string help-info:
+optional string label:
 
 -- ftd.column:
 width: fill-container
@@ -1659,7 +1696,7 @@ width: fill-container
 -- ftd.desktop:
 
 -- search-card-desktop: $search-card.title
-cta-txt: $search-card.cta-txt
+cta-txt: $search-card.cta-primary
 cta-primary-link: $search-card.cta-primary-link 
 input-placeholder: $search-card.input-placeholder 
 body: $search-card.body 
@@ -1670,7 +1707,7 @@ help-info: $search-card.help-info
 -- ftd.mobile:
 
 -- search-card-mobile: $search-card.title
-cta-txt: $search-card.cta-txt
+cta-txt: $search-card.cta-primary
 cta-primary-link: $search-card.cta-primary-link 
 input-placeholder: $search-card.input-placeholder 
 body: $search-card.body 
@@ -1697,8 +1734,8 @@ string cta-txt:
 string cta-primary-link: 
 string input-placeholder: 
 optional body body:
-ftd.image-src info-icon: $assets.files.static.check-circle.svg 
 optional string help-info:
+ftd.image-src info-icon: $assets.files.static.check-circle.svg 
 
 -- ftd.row:
 width: fill-container
