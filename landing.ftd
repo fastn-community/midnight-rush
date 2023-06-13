@@ -299,7 +299,7 @@ padding-horizontal.px: 28
 padding-vertical.px: 12
 border-width.px: 1
 role: $inherited.types.button-large
-border-color: $inherited.colors.background.base
+border-color: $inherited.colors.shadow
 border-radius.px: 32
 color: $inherited.colors.text-strong
 background.solid: $inherited.colors.background.step-1
@@ -1758,9 +1758,10 @@ margin-bottom.px: 18
 
 -- ftd.text:
 if: { search-card-desktop.body != NULL }
-text: $search-card-desktop.body
 role: $inherited.types.copy-regular
 color: $inherited.colors.text-strong
+
+$search-card-desktop.body
 
 -- end: ftd.column
 
@@ -1799,8 +1800,7 @@ align-content: center
 -- ftd.image:
 src: $search-card-desktop.info-icon
 
--- ftd.text:
-text: $search-card-desktop.help-info
+-- ftd.text: $search-card-desktop.help-info
 role: $inherited.types.label-small
 color: $inherited.colors.text-strong
 
@@ -1849,9 +1849,10 @@ text-align: center
 
 -- ftd.text:
 if: { search-card-mobile.body != NULL }
-text: $search-card-mobile.body
 role: $inherited.types.copy-regular
 color: $inherited.colors.text-strong
+
+$search-card-mobile.body
 
 -- ftd.text-input:
 placeholder: $search-card-mobile.input-placeholder
@@ -1879,8 +1880,7 @@ align-content: center
 -- ftd.image:
 src: $search-card-mobile.info-icon
 
--- ftd.text:
-text: $search-card-mobile.help-info
+-- ftd.text: $search-card-mobile.help-info
 role: $inherited.types.label-small
 color: $inherited.colors.text-strong
 
