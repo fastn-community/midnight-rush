@@ -16,7 +16,7 @@ sidebar: false
 link: landing/
 cta-primary: Sign me up
 cta-primary-link: index.html
-cta-placeholder: Enter your work email
+input-placeholder: Enter your work email
 image: $assets.files.static.landing.hero.svg
 
 We are an award-winning strategic design company that provides consultancy
@@ -97,7 +97,7 @@ caption title:
 body body:
 ftd.image-src image:
 optional string link:
-optional string cta-placeholder:
+optional string input-placeholder:
 optional string cta-primary:
 optional string cta-primary-link:
 optional string cta-secondary:
@@ -117,7 +117,7 @@ cta-primary: $hero-with-image.cta-primary
 cta-primary-link: $hero-with-image.cta-primary-link
 cta-secondary: $hero-with-image.cta-secondary
 cta-secondary-link: $hero-with-image.cta-secondary-link
-cta-placeholder: $hero-with-image.cta-placeholder
+input-placeholder: $hero-with-image.input-placeholder
 
 -- end: ftd.desktop
 
@@ -132,7 +132,7 @@ cta-primary-link: $hero-with-image.cta-primary-link
 cta-secondary: $hero-with-image.cta-secondary
 cta-secondary-link: $hero-with-image.cta-secondary-link
 align-right: $hero-with-image.align-right
-cta-placeholder: $hero-with-image.cta-placeholder
+input-placeholder: $hero-with-image.input-placeholder
 
 -- end: ftd.mobile
 
@@ -160,7 +160,7 @@ optional string cta-secondary:
 optional string cta-secondary-link:
 optional boolean $mouse-in: false
 optional boolean $mouse-enter: false
-optional string cta-placeholder:
+optional string input-placeholder:
 
 -- ftd.column:
 width: fill-container
@@ -176,7 +176,6 @@ max-width.fixed.px: 1040
 spacing.fixed.px: 24
 width.fixed.percent: 40
 align-self: center
-max-width.fixed.px: 1120
 
 -- ftd.text: $hero-with-image-desktop.title
 role: $inherited.types.heading-large
@@ -193,8 +192,8 @@ align-self: center
 spacing.fixed.px: 16
 
 -- ftd.text-input:
-if: { hero-with-image-desktop.cta-placeholder != NULL }
-placeholder: $hero-with-image-desktop.cta-placeholder
+if: { hero-with-image-desktop.input-placeholder != NULL }
+placeholder: $hero-with-image-desktop.input-placeholder
 padding-horizontal.px: 28
 padding-vertical.px: 12
 border-width.px: 1
@@ -259,7 +258,7 @@ optional string cta-primary-link:
 optional string cta-secondary:
 optional string cta-secondary-link:
 optional boolean align-right:
-optional string cta-placeholder: 
+optional string input-placeholder: 
 optional boolean $mouse-in: false
 optional boolean $mouse-enter: false
 
@@ -293,8 +292,8 @@ align-self: center
 spacing.fixed.px: 16
 
 -- ftd.text-input:
-if: { hero-with-image-mobile.cta-placeholder != NULL }
-placeholder: $hero-with-image-mobile.cta-placeholder
+if: { hero-with-image-mobile.input-placeholder != NULL }
+placeholder: $hero-with-image-mobile.input-placeholder
 padding-horizontal.px: 28
 padding-vertical.px: 12
 border-width.px: 1
@@ -322,7 +321,7 @@ border-radius.px: 32
 
 -- ftd.image:
 src: $hero-with-image-mobile.image
-width.fixed.px: 380
+width: fill-container
 link: $hero-with-image-mobile.link
 
 -- end: ftd.column
@@ -387,6 +386,7 @@ spacing.fixed.px: 17
 align-content: center
 role: $inherited.types.copy-regular
 color: $inherited.colors.text
+max-width.fixed.px: $common.max-width
 
 -- ftd.text: $logo-cloud-desktop.title
 style: medium
@@ -398,9 +398,9 @@ $logo-cloud-desktop.body
 
 -- ftd.row:
 margin-top.px: 15
-wrap: true
-spacing: space-between
+spacing.fixed.px: 72
 width: fill-container
+overflow-y: auto
 
 -- logo-lists:
 $loop$: $logo-cloud-desktop.logo-list as $obj
@@ -472,7 +472,7 @@ optional ftd.image-src image:
 align-self if { content-desktop.image != NULL }: center
 padding-vertical.px: 100
 spacing.fixed.px: 16
-max-width.fixed.px: 1320
+max-width.fixed.px: $common.max-width
 width: fill-container
 
 -- ftd.text: $content-desktop.title
@@ -632,8 +632,6 @@ optional string cta-primary:
 optional string cta-primary-link:
 optional string link:
 body body:
-integer padding-vertical: 50
-integer padding-horizontal: 85
 
 -- ftd.column:
 width: fill-container
@@ -646,8 +644,6 @@ cta-primary: $hero-image-left.cta-primary
 cta-primary-link: $hero-image-left.cta-primary-link
 body: $hero-image-left.body
 link: $hero-image-left.link
-padding-vertical: $hero-image-left.padding-vertical
-padding-horizontal: $hero-image-left.padding-horizontal
 
 -- end: ftd.desktop
 
@@ -681,18 +677,16 @@ ftd.image-src image:
 optional string cta-primary:
 optional string cta-primary-link:
 optional boolean $mouse-in: false
-body body:
-integer padding-vertical:
-integer padding-horizontal: 
+body body: 
 optional string link:
 
 -- ftd.row:
 width: fill-container
 spacing: space-between
 background.solid: $inherited.colors.custom.four
-padding-vertical.px: $hero-image-left-desktop.padding-vertical
+padding-vertical.px: 50
 border-radius.px: 20
-padding-horizontal.px: $hero-image-left-desktop.padding-horizontal
+padding-horizontal.px: 85
 align-content: center
 margin-bottom.px: 50
 
@@ -809,8 +803,6 @@ optional string cta-primary:
 optional string cta-primary-link:
 body body:
 optional string link:
-integer padding-vertical: 50
-integer padding-horizontal: 85
 
 -- ftd.column:
 width: fill-container
@@ -823,8 +815,6 @@ cta-primary: $hero-image-right.cta-primary
 cta-primary-link: $hero-image-right.cta-primary-link
 body: $hero-image-right.body
 link: $hero-image-right.link
-padding-vertical: $hero-image-right.padding-vertical
-padding-horizontal: $hero-image-right.padding-horizontal
 
 -- end: ftd.desktop
 
@@ -860,16 +850,14 @@ optional string cta-primary-link:
 optional boolean $mouse-in: false
 body body:
 optional string link:
-integer padding-vertical: 50
-integer padding-horizontal: 85
 
 -- ftd.row:
 width: fill-container
 spacing: space-between
 background.solid: $inherited.colors.custom.four
-padding-vertical.px: $hero-image-right-desktop.padding-vertical
+padding-vertical.px: 50
 border-radius.px: 20
-padding-horizontal.px: $hero-image-right-desktop.padding-horizontal
+padding-horizontal.px: 85
 align-content: center
 margin-bottom.px: 50
 
@@ -1660,11 +1648,10 @@ $faqs-list-detail.body
 caption title:
 string cta-txt: Sign me up
 string cta-primary-link: index.html
-string cta-placeholder: Enter your work email...
+string input-placeholder: Enter your work email...
 optional body body:
 optional ftd.image-src cta-icon:
 ftd.image-src info-icon: $assets.files.static.check-circle.svg
-integer width: 1200
 
 -- ftd.column:
 width: fill-container
@@ -1674,7 +1661,7 @@ width: fill-container
 -- search-card-desktop: $search-card.title
 cta-txt: $search-card.cta-txt
 cta-primary-link: $search-card.cta-primary-link 
-cta-placeholder: $search-card.cta-placeholder 
+input-placeholder: $search-card.input-placeholder 
 body: $search-card.body 
 info-icon: $search-card.info-icon 
 
@@ -1685,7 +1672,7 @@ info-icon: $search-card.info-icon
 -- search-card-mobile: $search-card.title
 cta-txt: $search-card.cta-txt
 cta-primary-link: $search-card.cta-primary-link 
-cta-placeholder: $search-card.cta-placeholder 
+input-placeholder: $search-card.input-placeholder 
 body: $search-card.body 
 info-icon: $search-card.info-icon 
 
@@ -1708,7 +1695,7 @@ info-icon: $search-card.info-icon
 caption title:
 string cta-txt: 
 string cta-primary-link: 
-string cta-placeholder: 
+string input-placeholder: 
 optional body body:
 optional ftd.image-src info-icon: 
 
@@ -1739,7 +1726,7 @@ spacing.fixed.px: 20
 margin-bottom.px: 20
 
 -- ftd.text-input:
-placeholder: $search-card-desktop.cta-placeholder
+placeholder: $search-card-desktop.input-placeholder
 padding-vertical.px: 15
 padding-horizontal.px: 15
 border-radius.px: 30
@@ -1796,7 +1783,7 @@ color: $inherited.colors.text-strong
 caption title:
 string cta-txt: 
 string cta-primary-link: 
-string cta-placeholder: 
+string input-placeholder: 
 optional body body:
 optional ftd.image-src info-icon: 
 
@@ -1818,7 +1805,7 @@ width: fill-container
 text-align: center
 
 -- ftd.text-input:
-placeholder: $search-card-mobile.cta-placeholder
+placeholder: $search-card-mobile.input-placeholder
 padding-vertical.px: 15
 padding-horizontal.px: 15
 border-radius.px: 30
