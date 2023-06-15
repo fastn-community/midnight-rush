@@ -38,6 +38,9 @@ doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
 -- my-ds.page:
 sidebar: false
 blog: true
+document-title: fastn midnight-rush Template. Build Your Own Website with Ease
+document-description: Simple, easy-to-use midnight-rush template to build your own documentation website, personal website, or blog. Change colours and typography effortlessly.
+document-image: https://fastn-community.github.io/midnight-rush/-/fastn-community.github.io/midnight-rush/static/midnight-rush-og-image.jpg
 
 -- ds.post: 
 meta: $meta

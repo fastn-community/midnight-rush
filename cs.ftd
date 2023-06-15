@@ -5,6 +5,9 @@
 
 
 -- my-ds.page: Changing Color Scheme
+document-title: fastn midnight-rush Template. Build Your Own Website with Ease
+document-description: Simple, easy-to-use midnight-rush template to build your own documentation website, personal website, or blog. Change colours and typography effortlessly.
+document-image: https://fastn-community.github.io/midnight-rush/-/fastn-community.github.io/midnight-rush/static/midnight-rush-og-image.jpg
 
 -- my-ds.page.right-sidebar:
 
@@ -34,7 +37,7 @@ id: how-to-add-color-scheme
 To add color scheme to your fastn web sites. Edit your `FASTN.ftd` file and add
 color scheme dependency into it.
 
-In the below example we are using https://fastn-community.github.io/set-1-cs/
+In the below example we are using https://fastn-community.github.io/midnight-rush-cs/
 color scheme.
 
 Add color scheme dependency into your `FASTN.ftd` file as shown below
@@ -44,7 +47,7 @@ example:
 lang: ftd
 
 \-- fastn.dependency: fastn-community.github.io/midnight-rush
-\-- fastn.dependency: fastn-community.github.io/set-1-cs
+\-- fastn.dependency: fastn-community.github.io/midnight-rush-cs
 
 -- ds.h3: How to create a global `my-ds` page module for `midnight-rush`?
 id: How-to-create-a-global-my-ds-page-module-for-midnight-rush
@@ -63,7 +66,7 @@ lang: ftd
 download: my-ds.ftd
 
 \-- import: fastn-community.github.io/midnight-rush as ds
-\-- import: fastn-community.github.io/set-1-cs
+\-- import: fastn-community.github.io/midnight-rush-cs
 
 \-- component page:
 children wrapper:
@@ -75,7 +78,7 @@ boolean sidebar: false
 site-logo: $fastn-assets.files.images.fastn.svg
 body: $page.body
 sidebar: $page.sidebar
-colors: $set-1-cs.main
+colors: $midnight-rush-cs.main
 
 \-- end: ds.page.banner
 
@@ -141,6 +144,6 @@ downloaded.
 Add this file inside your `fastn` project and deploy or run `fastn serve` on
 your localhost. Access your localhost in the browser
 e.g.`http://127.0.0.1:8000/cs/` you will see page colors with[SET 1 CS]
-(https://fastn-community.github.io/set-1-cs/)
+(https://fastn-community.github.io/midnight-rush-cs/)
 
 -- end: my-ds.page

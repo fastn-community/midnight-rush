@@ -7,9 +7,12 @@
 
 
 
--- my-ds.page: 
+-- my-ds.page: Blog
 sidebar: false
 blog: true
+document-title: fastn midnight-rush Template. Build Your Own Website with Ease
+document-description: Simple, easy-to-use midnight-rush template to build your own documentation website, personal website, or blog. Change colours and typography effortlessly.
+document-image: https://fastn-community.github.io/midnight-rush/-/fastn-community.github.io/midnight-rush/static/midnight-rush-og-image.jpg
 
 -- my-ds.page.hero:
 
@@ -19,6 +22,16 @@ cta-primary: Read more
 cta-primary-url: blog-articles/sample-post/
 
 -- end: my-ds.page.hero
+
+-- my-ds.page.hero:
+
+In this section, we will learn about creating a blog article page in `midnight-rush`.
+
+By following our simple blog documentation you can create a blog post. We have 
+developed featured article list, blog article & author's bio pages. Lets 
+understand how to use them.
+
+💡 [Click here](/post-list/) to create a featured blog posts page.
 
 -- ds.posts:
 

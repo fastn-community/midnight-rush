@@ -1,10 +1,14 @@
 -- import: fastn-community.github.io/midnight-rush as ds
+-- import: fastn.com/expander/ds/understanding-sitemap as ds-sitemap
 
 
 
 
 
 -- my-ds.page: Understanding Sitemap
+document-title: fastn midnight-rush Template. Build Your Own Website with Ease
+document-description: Simple, easy-to-use midnight-rush template to build your own documentation website, personal website, or blog. Change colours and typography effortlessly.
+document-image: https://fastn-community.github.io/midnight-rush/-/fastn-community.github.io/midnight-rush/static/midnight-rush-og-image.jpg
 
 -- my-ds.page.right-sidebar:
 
