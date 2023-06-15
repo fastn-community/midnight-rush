@@ -1,4 +1,4 @@
--- import: fastn-community.github.io/set-1-ds as ds
+-- import: fastn-community.github.io/midnight-rush as ds
 
 
 
@@ -6,7 +6,7 @@
 
 -- my-ds.page: SEO
 document-description: Custom SEO description
-document-image: https://fastn.com/-/fastn.com/images/featured/set-1-ds.png
+document-image: https://fastn.com/-/fastn.com/images/featured/midnight-rush.png
 
 -- my-ds.page.right-sidebar:
 
@@ -25,7 +25,7 @@ cta: seo/#how-to-add-page-document-image
 
 -- my-ds.page.body:
 
-In this section, we will learn about `set-1-ds` SEO features for your `fastn`
+In this section, we will learn about `midnight-rush` SEO features for your `fastn`
 website.
 
 -- ds.youtube:
@@ -81,6 +81,6 @@ same will be added into `<meta>` `og-image` and `twitter:image`
 lang: ftd
 
 \-- ds.page: This is page title
-document-image: https://fastn.com/-/fastn.com/images/featured/set-1-ds.png
+document-image: https://fastn.com/-/fastn.com/images/featured/midnight-rush.png
 
 -- end: my-ds.page

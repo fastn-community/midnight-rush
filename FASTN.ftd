@@ -1,7 +1,7 @@
 -- import: fastn
 
--- fastn.package: fastn-community.github.io/set-1-ds
-favicon: https://fastn-community.github.io/set-1-ds/-/fastn-community.github.io/set-1-ds/favicon.svg
+-- fastn.package: fastn-community.github.io/midnight-rush
+favicon: https://fastn-community.github.io/midnight-rush/-/fastn-community.github.io/midnight-rush/favicon.svg
 
 -- fastn.dependency: fastn-community.github.io/set-1-typography as typo
 
@@ -22,7 +22,7 @@ exposing: h0, h1, h2, h3, markdown
 
 -- fastn.auto-import: typo
 -- fastn.auto-import: cs
--- fastn.auto-import: fastn-community.github.io/set-1-ds/FASTN/config as my-ds
+-- fastn.auto-import: fastn-community.github.io/midnight-rush/FASTN/config as my-ds
 
 -- fastn.sitemap:
 

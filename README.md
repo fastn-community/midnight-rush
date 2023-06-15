@@ -1,14 +1,14 @@
-# Welcome to [FASTN set-1-ds](https://fastn-community.github.io/set-1-ds/)
-![Contributors](https://img.shields.io/github/contributors/fastn-community/set-1-ds?color=dark-green) [![Discord](https://img.shields.io/discord/793929082483769345)](https://discord.com/channels/793929082483769345/) ![License](https://img.shields.io/github/license/fastn-community/set-1-ds)
+# Welcome to [FASTN midnight-rush](https://fastn-community.github.io/midnight-rush/)
+![Contributors](https://img.shields.io/github/contributors/fastn-community/midnight-rush?color=dark-green) [![Discord](https://img.shields.io/discord/793929082483769345)](https://discord.com/channels/793929082483769345/) ![License](https://img.shields.io/github/license/fastn-community/midnight-rush)
 # Overview
 
-⚡️ [set-1-ds](https://fastn-community.github.io/set-1-ds/) will help you create a beautiful documentation site in no time.
+⚡️ [midnight-rush](https://fastn-community.github.io/midnight-rush/) will help you create a beautiful documentation site in no time.
 
 It provides out-of-the-box documentation features that can be used to create any kind of site(personal website, blog, etc).
 
 ## How it looks?
 
-![set-1-ds](/static/set-1-ds-example-dark.png)
+![midnight-rush](/static/midnight-rush-example-dark.png)
 
 ## 🚀 Fast Track
 
@@ -16,9 +16,9 @@ Use this fastn template to create your first [fastn web-site](https://fastn.com/
 
 ## 🌟 Whats next?
 
-Read our [set-1-ds documentation](https://fastn-community.github.io/set-1-ds/)
+Read our [midnight-rush documentation](https://fastn-community.github.io/midnight-rush/)
 
-Create your first page. [Click here to know more](https://fastn-community.github.io/set-1-ds/page/)
+Create your first page. [Click here to know more](https://fastn-community.github.io/midnight-rush/page/)
 
 ## ⚓ [Changelog](Changelog.md)
 

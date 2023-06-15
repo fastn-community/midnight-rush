@@ -1,4 +1,4 @@
--- import: fastn-community.github.io/set-1-ds as ds
+-- import: fastn-community.github.io/midnight-rush as ds
 
 
 
@@ -17,7 +17,7 @@ cta: page/#how-to-create-a-new-page
 
 -- my-ds.page.body:
 
-In this section, we will learn about creating pages in `set-1-ds`.
+In this section, we will learn about creating pages in `midnight-rush`.
 
 The `page` component empowers you to create **one-off standalone pages**. You
 can use other fastn components, or markdown.

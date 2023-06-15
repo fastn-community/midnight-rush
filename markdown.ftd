@@ -1,4 +1,4 @@
--- import: fastn-community.github.io/set-1-ds as ds
+-- import: fastn-community.github.io/midnight-rush as ds
 
 
 
@@ -17,10 +17,10 @@ cta: markdown/#markdown
 
 -- my-ds.page.body:
 
-`set-1-ds` supports markdown. If you want to use it you can use `--
+`midnight-rush` supports markdown. If you want to use it you can use `--
 ds.mardkdown` for inline anchor links etc.
 
-`set-1-ds` comes with an inbuilt `-- ds.markdown` component.
+`midnight-rush` comes with an inbuilt `-- ds.markdown` component.
 
 -- ds.h3: Markdown
 id: markdown

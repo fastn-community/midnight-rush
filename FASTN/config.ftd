@@ -1,5 +1,5 @@
--- import: fastn-community.github.io/set-1-ds as ds
--- import: fastn-community.github.io/set-1-ds/common
+-- import: fastn-community.github.io/midnight-rush as ds
+-- import: fastn-community.github.io/midnight-rush/common
 
 -- ftd.image-src fastn-logo:
 light: https://fastn.com/-/fastn.com/images/fastn.svg
@@ -30,7 +30,7 @@ full-width: $page.full-width
 document-title: $page.document-title
 document-description: $page.document-description
 document-image: $page.document-image
-github-url: https://github.com/fastn-community/set-1-ds/
+github-url: https://github.com/fastn-community/midnight-rush/
 github-icon: true
 blog: $page.blog
 hero: $page.hero
