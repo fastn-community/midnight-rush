@@ -1,0 +1,753 @@
+-- import: fastn-community.github.io/set-1-ds/assets
+-- import: fastn/processors as pr
+-- import: fastn-community.github.io/set-1-ds/common
+-- import: fastn-community.github.io/set-1-ds/common/fonts as fonts
+-- import: fastn-community.github.io/set-1-ds/blog-authors/patrica as author
+-- import: fastn-community.github.io/set-1-ds as ds
+
+
+
+
+
+
+-- common.post-meta meta: Designathon 2023: A magical experience!
+published-on: July 22, 2014 at 10:02 pm
+post-image: $assets.files.static.image.svg
+post-url: blog-articles/sample-post/
+author: $author.patrica
+social-list: $common.share-links
+tags: $common.topic
+
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
+doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore 
+
+-- my-ds.page:
+sidebar: false
+full-width: true
+
+-- post: 
+meta: $meta
+sidebar: true
+
+-- post.right-sidebar:
+
+-- post-card:
+post-data: $meta
+
+-- post-card:
+post-data: $meta
+
+-- post-card:
+post-data: $meta
+
+-- end: post.right-sidebar
+
+-- ds.markdown:
+
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
+ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque
+porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
+adipisci velit, sed.
+
+***Lorem ipsum*** dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+   consequat.
+
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+culpa qui officia deserunt mollit anim id est laborum.
+
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
+doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore 
+beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas 
+sit aspernatur aut odit aut f.
+
+
+`Duis aute irure dolor` in reprehenderit in voluptate velit esse cillum dolore
+eu.
+
+- Unordered lists are displayed with a preceding bullet point.
+
+- Lists can be nested as deeply as needed, and they may alternate between
+  ordered and unordered.
+
+- Lists should align with the font-size, font-weight, and line-height of
+  paragraphs, but are styled with bullets or numbers.
+
+- Lists can have similar children elements as paragraphs to provide emphasis on
+  a certain word or phrase.
+
+- You can switch between an unordered list and ordered list by changing the
+  component variant in the Design panel.
+
+- You can remove a list item from the default component by deleting it in the
+  Layers panel.
+
+-- ds.image:
+src: $assets.files.static.article.image-4.svg
+
+
+-- ds.image:
+src: $assets.files.static.article.image-3.svg
+
+
+-- ds.h3: Flex is a simple, beautiful tool that helps you work sanely
+
+The only SaaS business platform that combines CRM, marketing automation &
+commerce.
+
+With a single point of view, Flex integrates customer data and marketing tools
+in one flexible cloud platform that lets you get business results wherever they
+show up.  Flex is the only saas business platform that lets you run your
+business on one platform, seamlessly across all digital channels. With Flex,
+you can run your business on one platform, seamlessly across all digital
+channels—and grow it anywhere.  With a single point of view, Flex integrates
+customer data and marketing tools in one flexible cloud platform that lets you
+get business results wherever they show up. Flex is the only saas business
+platform that lets you run your business on one platform.
+
+-- ds.image:
+src: $assets.files.static.article.image-2.svg
+
+-- ds.h3: Flex is a simple, beautiful tool that helps you work sanely
+
+The only SaaS business platform that combines CRM, marketing automation &
+commerce.
+
+- Unordered lists are displayed with a preceding bullet point.
+
+- Lists can be nested as deeply as needed, and they may alternate between
+  ordered and unordered.
+
+- Lists should align with the font-size, font-weight, and line-height of
+  paragraphs, but are styled with bullets or numbers.
+
+- Lists can have similar children elements as paragraphs to provide emphasis on
+  a certain word or phrase.
+
+- You can switch between an unordered list and ordered list by changing the
+  component variant in the Design panel.
+
+- You can remove a list item from the default component by deleting it in the
+  Layers panel.
+
+
+-- ds.h3: Flex is a simple, beautiful tool that helps you work sanely
+
+The only SaaS business platform that combines CRM, marketing automation &
+commerce.
+
+With a single point of view, Flex integrates customer data and marketing tools
+in one flexible cloud platform that lets you get business results wherever they
+show up.  Flex is the only saas business platform that lets you run your
+business on one platform, seamlessly across all digital channels. With Flex,
+you can run your business on one platform, seamlessly across all digital
+channels—and grow it anywhere.  With a single point of view, Flex integrates
+customer data and marketing tools in one flexible cloud platform that lets you
+get business results wherever they show up. Flex is the only saas business
+platform that lets you run your business on one platform.
+
+
+- Unordered lists are displayed with a preceding bullet point.
+
+- Lists can be nested as deeply as needed, and they may alternate between
+  ordered and unordered.
+
+- Lists should align with the font-size, font-weight, and line-height of
+  paragraphs, but are styled with bullets or numbers.
+
+- Lists can have similar children elements as paragraphs to provide emphasis on
+  a certain word or phrase.
+
+- You can switch between an unordered list and ordered list by changing the
+  component variant in the Design panel.
+
+- You can remove a list item from the default component by deleting it in the
+  Layers panel.
+
+
+-- ds.h3: Flex is a simple, beautiful tool that helps you work sanely
+
+The only SaaS business platform that combines CRM, marketing automation &
+commerce.
+
+-- ds.image:
+src: $assets.files.static.article.image-6.svg
+
+-- ds.h3: Flex is a simple, beautiful tool that helps you work sanely
+
+The only SaaS business platform that combines CRM, marketing automation &
+commerce.
+
+With a single point of view, Flex integrates customer data and marketing tools
+in one flexible cloud platform that lets you get business results wherever they
+show up.  Flex is the only saas business platform that lets you run your
+business on one platform, seamlessly across all digital channels. With Flex,
+you can run your business on one platform, seamlessly across all digital
+channels—and grow it anywhere.  With a single point of view, Flex integrates
+customer data and marketing tools in one flexible cloud platform that lets you
+get business results wherever they show up. Flex is the only saas business
+platform that lets you run your business on one platform.
+
+-- ds.image:
+src: $assets.files.static.article.image-5.svg
+
+-- end: post
+
+-- search-card: Freakishly simple. Downright useful. Ready to make the jump?
+help-info: Sign up in 2 minutes
+
+-- end: my-ds.page
+
+
+
+
+
+
+
+
+
+
+
+-- component post:
+common.post-meta meta:
+children container:
+optional boolean sidebar: false
+string share-txt: Share
+ftd.ui list right-sidebar:
+
+-- ftd.column:
+width: fill-container
+
+-- article-card: $post.meta.title
+image: $post.meta.post-image
+author: $post.meta.author
+timestamp: $post.meta.published-on
+tags: $post.meta.tags
+container: $post.container
+sidebar: $post.sidebar
+right-sidebar: $post.right-sidebar
+
+$post.meta.body
+
+-- end: ftd.column
+
+-- end: post
+
+
+
+
+
+
+
+
+
+
+-- component article-card:
+caption title:
+optional ftd.image-src image:
+common.author-meta author:
+string timestamp:
+optional body body:
+children container:
+optional boolean sidebar: false
+ftd.ui list right-sidebar:
+common.tags-list list tags: $common.tag
+
+-- ftd.column:
+width: fill-container
+
+
+-- ftd.desktop:
+
+-- article-card-desktop: $article-card.title
+image: $article-card.image
+author: $article-card.author
+timestamp: $article-card.timestamp
+body: $article-card.body
+tags: $article-card.tags
+container: $article-card.container
+sidebar: $article-card.sidebar
+right-sidebar: $article-card.right-sidebar
+
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- article-card-mobile: $article-card.title
+image: $article-card.image
+author: $article-card.author
+timestamp: $article-card.timestamp
+body: $article-card.body
+container: $article-card.container
+sidebar: $article-card.sidebar
+right-sidebar: $article-card.right-sidebar
+
+
+
+-- end: ftd.mobile
+
+-- end: ftd.column
+
+-- end: article-card
+
+
+
+
+
+
+
+
+
+
+-- component article-card-desktop:
+caption title:
+optional ftd.image-src image:
+common.author-meta author:
+string timestamp:
+optional body body:
+children container:
+optional boolean sidebar: false
+ftd.ui list right-sidebar:
+string written-by: Authored by
+string posted-on: Posted on
+common.tags-list list tags:
+
+
+-- ftd.row:
+color: $inherited.colors.text
+width: fill-container
+background.solid: $inherited.colors.background.base
+padding-horizontal.px: 12
+
+-- ftd.column:
+max-width.fixed.percent: 75
+width: fill-container
+color: $inherited.colors.text
+margin-right.px: 48
+
+-- ftd.row:
+width: fill-container
+
+-- ftd.text: $obj.title
+role: $inherited.types.heading-tiny
+link: $obj.tag-link
+$loop$: $article-card-desktop.tags as $obj
+color: $inherited.colors.text
+style: light
+
+-- end: ftd.row
+
+-- ftd.text: $article-card-desktop.title
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+margin-bottom.px: 32
+
+-- ftd.text: $article-card-desktop.timestamp
+role: $inherited.types.heading-tiny
+style: light
+margin-bottom.px: 40
+
+-- ftd.text:
+if: { article-card-desktop.body != NULL }
+role: $inherited.types.copy-regular
+margin-bottom.px: 40
+style: light
+
+$article-card-desktop.body
+
+-- ftd.image:
+if: { article-card-desktop.image != NULL }
+src: $article-card-desktop.image
+width: fill-container
+height: hug-content
+margin-bottom.px: 48
+
+-- ftd.column:
+children: $article-card-desktop.container
+width: fill-container
+spacing.fixed.px: 32
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- ftd.column:
+width: fill-container
+max-width.fixed.percent: 25
+spacing: space-between
+
+-- ftd.column:
+background.solid: $inherited.colors.background.step-1
+border-radius.px: 8
+padding-vertical.px: 20
+padding-horizontal.px: 8
+width: fill-container
+align-content: center
+link if { article-card-desktop.author.bio-url != NULL }: $article-card-desktop.author.bio-url
+color: $inherited.colors.text-strong
+margin-bottom.px: 40
+
+-- ftd.text: $article-card-desktop.written-by
+role: $inherited.types.copy-small
+white-space: nowrap
+margin-bottom.px: 18
+
+-- ftd.image:
+if: { article-card-desktop.author.image != NULL }
+src: $article-card-desktop.author.image
+margin-bottom.px: 18
+border-radius.px: 100
+width.fixed.px: 90
+height: auto
+
+-- ftd.text: $article-card-desktop.author.title
+role: $inherited.types.copy-regular
+white-space: nowrap
+
+-- ftd.text: $article-card-desktop.author.profile
+role: $inherited.types.copy-small
+white-space: nowrap
+
+-- end: ftd.column
+
+-- ftd.column:
+if: { article-card-desktop.sidebar }
+children: $article-card-desktop.right-sidebar
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: article-card-desktop
+
+
+
+
+
+
+
+
+
+
+-- component article-card-mobile:
+caption title:
+optional ftd.image-src image:
+common.author-meta author:
+string timestamp:
+optional body body:
+children container:
+optional boolean sidebar: false
+ftd.ui list right-sidebar:
+string written-by: Written by
+string posted-on: Posted on
+
+-- ftd.column:
+color: $inherited.colors.text
+width: fill-container
+spacing.fixed.px: 24
+
+-- ftd.text: $article-card-mobile.title
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 12
+role: $inherited.types.copy-large
+color: $inherited.colors.text-strong
+
+-- ftd.text: $article-card-mobile.posted-on
+
+-- ftd.text: $article-card-mobile.timestamp
+
+-- end: ftd.row
+
+-- ftd.image:
+if: { article-card-mobile.image != NULL}
+src: $article-card-mobile.image
+width: fill-container
+height: hug-content
+
+-- ftd.text:
+if: { article-card-mobile.body != NULL }
+role: $inherited.types.copy-regular
+width: fill-container
+
+$article-card-mobile.body
+
+-- ftd.column:
+children: $article-card-mobile.container
+width: fill-container
+spacing.fixed.px: 24
+
+-- end: ftd.column
+
+-- ftd.column:
+background.solid: $inherited.colors.background.step-1
+border-radius.px: 8
+padding-vertical.px: 20
+padding-horizontal.px: 8
+width: fill-container
+align-content: center
+link if { article-card-mobile.author.bio-url != NULL }: $article-card-mobile.author.bio-url
+color: $inherited.colors.text-strong
+margin-top.px if { ftd.device == "mobile" }: 40
+margin-bottom.px: 40
+
+-- ftd.text: $article-card-mobile.written-by
+role: $inherited.types.copy-small
+white-space: nowrap
+margin-bottom.px: 18
+
+-- ftd.image:
+if: { article-card-mobile.author.image != NULL }
+src: $article-card-mobile.author.image
+margin-bottom.px: 18
+border-radius.px: 100
+width.fixed.px: 90
+height: auto
+
+-- ftd.text: $article-card-mobile.author.title
+role: $inherited.types.copy-regular
+white-space: nowrap
+
+-- ftd.text: $article-card-mobile.author.profile
+role: $inherited.types.copy-small
+white-space: nowrap
+
+-- end: ftd.column
+
+-- ftd.column:
+if: { article-card-mobile.sidebar }
+children: $article-card-mobile.right-sidebar
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: article-card-mobile
+
+
+
+
+
+
+
+
+
+
+
+-- component post-card:
+common.post-meta post-data:
+
+-- post-card-ui: $post-card.post-data.title
+timestamp: $post-card.post-data.published-on
+image: $post-card.post-data.post-image
+author: $post-card.post-data.author
+url: $post-card.post-data.post-url
+body: $post-card.post-data.body
+tags: $post-card.post-data.tags
+
+-- end: post-card
+
+
+
+
+
+
+
+
+
+
+-- component post-card-ui:
+caption title:
+string timestamp:
+common.author-meta author:
+ftd.image-src image:
+string url:
+optional body body:
+string cta-txt: Read More
+common.tags-list list tags: $common.tag
+boolean $hover: false
+string written-by: By
+string posted-on: on
+
+-- ftd.column:
+width: fill-container
+margin-bottom.px: 22
+$on-mouse-enter$: $ftd.set-bool($a = $post-card-ui.hover, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $post-card-ui.hover, v = false)
+background.solid if { post-card-ui.hover }: $inherited.colors.background.step-1
+border-width.px: 1
+border-radius.px: 12
+padding-vertical.px: 24
+padding-horizontal.px: 24
+border-color: $inherited.colors.text
+color: $inherited.colors.text
+
+-- ftd.row:
+width: fill-container
+
+-- ftd.text: $obj.title
+role: $inherited.types.copy-regular
+link: $obj.tag-link
+$loop$: $post-card-ui.tags as $obj
+style: light
+color: $inherited.colors.text
+
+-- end: ftd.row
+
+-- ftd.text: $post-card-ui.title
+color: $inherited.colors.text-strong
+role: $inherited.types.copy-large
+style: medium
+margin-top.px: 8
+link: $post-card-ui.url
+
+-- ftd.text: $post-card-ui.timestamp
+role: $inherited.types.copy-regular
+style: light
+
+-- ftd.image:
+if: { post-card-ui.image != NULL}
+src: $post-card-ui.image
+width: fill-container
+height: hug-content
+margin-top.px: 24
+border-radius.px: 12
+
+-- end: ftd.column
+
+-- end: post-card-ui
+
+
+
+
+
+
+
+
+
+
+-- component search-card: 
+caption title:
+string cta-primary: Get In Touch
+string cta-primary-link: index.html
+optional body body:
+string input-placeholder: Enter your email...
+optional string help-info:
+boolean $hover: false
+
+-- ftd.column:
+width: fill-container
+align-content: center
+spacing.fixed.px: 56
+padding-vertical.px: 80
+
+-- ftd.column:
+width if { ftd.device == "mobile"}: fill-container
+width.fixed.px: 700
+color: $inherited.colors.text-strong
+
+-- ftd.text: $search-card.title
+role: $inherited.types.heading-large
+padding-right.px: 16
+margin-bottom.px: 45
+max-width.fixed.percent: 50
+text-align: center
+
+-- ftd.text: $search-card.help-info
+if: { search-card.help-info != NULL }
+role: $inherited.types.copy-large
+margin-bottom.px: 30
+
+-- ftd.text:
+if: { search-card.body != NULL }
+role: $inherited.types.copy-regular
+
+$search-card.body
+
+-- ftd.row:
+width.fixed.px: 730
+width.fixed.px if { ftd.device == "mobile" }: 400
+spacing.fixed.px: 8
+align-content: center
+
+-- ftd.text-input:
+placeholder: $search-card.input-placeholder
+padding-vertical.px: 15
+padding-horizontal.px: 15
+border-radius.px: 30
+width.fixed.px: 310
+
+-- ftd.text: $search-card.cta-primary
+role: $inherited.types.link
+min-width.fixed.px: 87
+text-align: center
+color: $inherited.colors.text-strong
+background.solid: $inherited.colors.cta-primary.base
+padding-vertical.px: 13
+padding-horizontal.px: 28
+link if { search-card.cta-primary-link != NULL }: $search-card.cta-primary-link
+border-radius.px: 50
+white-space: nowrap
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: search-card
+
+
+
+
+
+
+
+
+
+
+
+
+-- component footer:
+string info: Stay in touch with everything you need
+string copyright: Copyright ©2022. Fastn Inc.
+optional ftd.image-src site-logo: 
+integer logo-width: $common.logo-width
+integer logo-height: $common.logo-height
+optional string site-url: $common.site-url
+optional string site-name: 
+pr.toc-item list footer-links: $common.footer-toc.sections
+common.social-media list social-links: $common.social-links
+pr.toc-item list footer-list: $common.sitemap.sections
+
+
+-- ftd.column:
+
+-- footer-desktop: 
+info: $footer.info
+copyright: $footer.copyright
+site-logo: $footer.site-logo
+logo-width: $footer.logo-width
+logo-height: $footer.logo-height
+site-url: $footer.site-url
+site-name: $footer.site-name
+footer-links: $footer.footer-links
+social-links: $footer.social-links
+
+-- end: ftd.column
+
+
+-- end: footer

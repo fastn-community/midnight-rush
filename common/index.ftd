@@ -31,6 +31,16 @@ $processor$: pr.toc
 $processor$: pr.fastn-apps
 
 
+-- pr.sitemap-data footer-toc:
+$processor$: pr.full-sitemap
+
+-- ftd.shadow help-banner:
+color: #a9a7a5ba
+x-offset.px: -2
+y-offset.px: 8
+blur.px: 10
+inset-body: false
+spread.px: 0
 
 
 
@@ -146,6 +156,7 @@ string tag-link:
 
 
 
+-- tags-list list tag:
 
 -- tags-list list topic:
 
@@ -215,7 +226,20 @@ tags-list list tags:
 
 
 
+-- record footer-toc-list:
+caption title:
+string url:
+boolean is-last:
 
+
+-- footer-toc-list list footer-list-toc:
+
+
+-- footer-toc-list:
+
+
+
+-- end: footer-list-toc
 
 
 
