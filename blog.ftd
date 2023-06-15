@@ -23,7 +23,7 @@ cta-primary-url: blog-articles/sample-post/
 
 -- end: my-ds.page.hero
 
--- my-ds.page.hero:
+-- my-ds.page.body:
 
 In this section, we will learn about creating a blog article page in `midnight-rush`.
 
