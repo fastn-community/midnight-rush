@@ -144,7 +144,6 @@ To see your live website click on the `Settings` tab and follow the below steps:
 src: $assets.files.static.domains.figure-8.png
 width: fill-container
 
-
 -- ds.h2: 3: GitHub repository link to Godaddy website
 id: gitHub-repository-link-to-godaddy-website 
 
