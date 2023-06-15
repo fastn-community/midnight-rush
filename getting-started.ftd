@@ -1,17 +1,20 @@
--- import: fastn-community.github.io/set-1-ds as ds
+-- import: fastn-community.github.io/midnight-rush as ds
 
 
 
 
 
 -- my-ds.page: Getting Started
+document-title: fastn midnight-rush Template. Build Your Own Website with Ease
+document-description: Simple, easy-to-use midnight-rush template to build your own documentation website, personal website, or blog. Change colours and typography effortlessly.
+document-image: https://fastn-community.github.io/midnight-rush/-/fastn-community.github.io/midnight-rush/static/midnight-rush-og-image.jpg
 
 -- my-ds.page.right-sidebar:
 
 -- ds.toc-title: On this page
 
--- ds.link-group: Creating fastn web-site using set-1-ds
-cta: getting-started/#creating-fastn-web-site-using-set-1-ds
+-- ds.link-group: Creating fastn web-site using midnight-rush
+cta: getting-started/#creating-fastn-web-site-using-midnight-rush
 
 -- ds.link: How to publish a package?
 cta: getting-started/#how-to-publish-a-package
@@ -25,12 +28,12 @@ cta: getting-started/#what-next
 
 -- my-ds.page.body:
 
-You can create your documentation web-sites using `set-1-ds`. `set-1-ds` also
+You can create your documentation web-sites using `midnight-rush`. `midnight-rush` also
 helps authors, entrepreneurs, corporate groups and bloggers to create their own
 fastn web project.
 
--- ds.h3: 🎨 Creating fastn web-site using `set-1-ds`
-id: creating-fastn-web-site-using-set-1-ds
+-- ds.h3: 🎨 Creating fastn web-site using `midnight-rush`
+id: creating-fastn-web-site-using-midnight-rush
 
 Please, refer [this documentation](https://fastn.com/github-pages/) to
 understand how to create fastn website repository on GitHub.
@@ -53,25 +56,25 @@ v: tsHB2Vrhb2c
 id: what-next
 
 `-- page` component comes with inbuit navbar, sidebar and body content area.
-Start creating new `.ftd` files inside your project and use `set-1-ds` `page`
+Start creating new `.ftd` files inside your project and use `midnight-rush` `page`
 component to write your documentation, blog posts etc.
 
-✨ [Click here](https://fastn-community.github.io/set-1-ds/page/) to know more
+✨ [Click here](https://fastn-community.github.io/midnight-rush/page/) to know more
 details of `page` component.
 
-✨ [Click here](https://fastn-community.github.io/set-1-ds/sitemap/) to learn how
+✨ [Click here](https://fastn-community.github.io/midnight-rush/sitemap/) to learn how
 to generate better `sitemap` for navigation.
 
-✨ [Click here](https://fastn-community.github.io/set-1-ds/types/) to know
+✨ [Click here](https://fastn-community.github.io/midnight-rush/types/) to know
 more details of inbuit `typography`.
 
-✨ [Click here](https://fastn-community.github.io/set-1-ds/markdown/) to know
+✨ [Click here](https://fastn-community.github.io/midnight-rush/markdown/) to know
 about markdown.
 
-✨ [Click here](https://fastn-community.github.io/set-1-ds/seo/) to know about
+✨ [Click here](https://fastn-community.github.io/midnight-rush/seo/) to know about
 SEO support.
 
-✨ [Click here](https://fastn-community.github.io/set-1-ds/assets/) to know about
+✨ [Click here](https://fastn-community.github.io/midnight-rush/assets/) to know about
 Static Assets.
 
 -- end: my-ds.page

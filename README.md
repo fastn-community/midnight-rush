@@ -1,28 +1,46 @@
-# Welcome to [FASTN set-1-ds](https://fastn-community.github.io/set-1-ds/)
-![Contributors](https://img.shields.io/github/contributors/fastn-community/set-1-ds?color=dark-green) [![Discord](https://img.shields.io/discord/793929082483769345)](https://discord.com/channels/793929082483769345/) ![License](https://img.shields.io/github/license/fastn-community/set-1-ds)
-# Overview
+# Midnight Rush
 
-⚡️ [set-1-ds](https://fastn-community.github.io/set-1-ds/) will help you create a beautiful documentation site in no time.
+[midnight-rush](https://fastn-community.github.io/midnight-rush/) will help you create
+a beautiful documentation site in no time.
 
-It provides out-of-the-box documentation features that can be used to create any kind of site(personal website, blog, etc).
+It provides out-of-the-box documentation features that can be used to create any
+kind of site(personal website, blog, etc).
 
-## How it looks?
+# Preview
 
-![set-1-ds](/static/set-1-ds-example-dark.png)
+![midnight-rush](/static/midnight-rush-example-dark.jpg)
 
-## 🚀 Fast Track
+## Get Rolling
 
-Use this fastn template to create your first [fastn web-site](https://fastn.com/expander/hello-world/-/build/) project in just 5 minutes!
+[Click here](https://fastn-community.github.io/midnight-rush/) to learn how to use this template.
 
-## 🌟 Whats next?
+# [Dive into the Docs](https://fastn-community.github.io/midnight-rush/)
 
-Read our [set-1-ds documentation](https://fastn-community.github.io/set-1-ds/)
+# See it in Action!
 
-Create your first page. [Click here to know more](https://fastn-community.github.io/set-1-ds/page/)
+Explore websites and projects that have utilized this component/template 
+**[here](https://fastn-community.github.io/midnight-rush/#dart-used-by)** for
+inspiration.
 
-## ⚓ [Changelog](Changelog.md)
+## [Changelog](Changelog.md)
 
-## 👀 Want to learn more?
+## [Contribute](https://fastn-community.github.io/midnight-rush/contribute/)
 
-Feel free to check our [expander course](https://fastn.com/expander/) or jump into our [FifthTry Discord server](https://discord.gg/bucrdvptYd).
+## fastn and Curious?
 
+Discover more of fastn here.
+
+- [Expander Crash Course](https://fastn.com/expander/)
+- [Video Tutorials](https://fastn.com/expander/hello-world/-/build/)
+- [Explore more Templates/ Components/ Package](https://fastn.com/featured/)
+
+## Become a fastn Contributor
+
+1.  Finish the [Expander Crash Course](https://fastn.com/expander/)
+2.  Share your progress and ideas on [Discord](https://discord.gg/bucrdvptYd).
+3.  Let our team guide you on your contributor journey.
+
+## Become a fastn-trailblazer
+
+- [Join our Discord Server](https://discord.gg/bucrdvptYd) to connect with other fastn enthusiasts and stay up to date with the latest developments.
+- [Star us on GitHub](https://github.com/fastn-stack/fastn/)

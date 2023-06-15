@@ -1,6 +1,6 @@
 -- import: fastn/processors as pr
--- import: fastn-community.github.io/set-1-ds/assets
--- import: fastn-community.github.io/set-1-ds/blog-authors/patrica as author
+-- import: fastn-community.github.io/midnight-rush/assets
+-- import: fastn-community.github.io/midnight-rush/blog-authors/patrica as author
 
 
 -- boolean show-footer: true

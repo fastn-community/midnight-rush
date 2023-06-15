@@ -1,10 +1,14 @@
--- import: fastn-community.github.io/set-1-ds as ds
+-- import: fastn-community.github.io/midnight-rush as ds
+-- import: fastn.com/expander/ds/understanding-sitemap as ds-sitemap
 
 
 
 
 
 -- my-ds.page: Understanding Sitemap
+document-title: fastn midnight-rush Template. Build Your Own Website with Ease
+document-description: Simple, easy-to-use midnight-rush template to build your own documentation website, personal website, or blog. Change colours and typography effortlessly.
+document-image: https://fastn-community.github.io/midnight-rush/-/fastn-community.github.io/midnight-rush/static/midnight-rush-og-image.jpg
 
 -- my-ds.page.right-sidebar:
 
@@ -20,7 +24,7 @@ cta: sitemap/#sample-fastn-sitemap-code-snippet
 
 -- my-ds.page.body:
 
-The `set-1-ds` page component has an inbuilt header. Just using the `page`
+The `midnight-rush` page component has an inbuilt header. Just using the `page`
 header will appear on your page.
 
 Header is built using [header](https://fastn-community.github.io/header) component.
@@ -52,7 +56,7 @@ To learn more about how to implement `fastn.sitemap` go through this
 id: sample-fastn-sitemap-code-snippet
 
 Below is a set of simple sitemap links which you will see on the header and
-toc-sidebar in your `set-1-ds` project.
+toc-sidebar in your `midnight-rush` project.
 
 Add below code inside your `FASTN.ftd` file
 
@@ -72,12 +76,12 @@ lang: ftd
 -- ds.markdown:
 
 In the above code snippet `Home` is the main section that will be active when
-you are on the homepage of your `set-1-ds` project. OnClick of `Home` link it
-will take you to the `index.html` which is the homepage of your `set-1-ds`
+you are on the homepage of your `midnight-rush` project. OnClick of `Home` link it
+will take you to the `index.html` which is the homepage of your `midnight-rush`
 project.
 
 Another link `/article-1/` will go to the `article.ftd` file which you
-created inside the root folder of your `set-1-ds` project. And it will be seen
+created inside the root folder of your `midnight-rush` project. And it will be seen
 inside the `toc-sidebar` as toc link to the `Home` section.
 
 `Star us on GitHub` will point to `https://github.com/fastn-stack/fastn` which
