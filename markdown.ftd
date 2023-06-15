@@ -1,10 +1,13 @@
--- import: fastn-community.github.io/set-1-ds as ds
+-- import: fastn-community.github.io/midnight-rush as ds
 
 
 
 
 
 -- my-ds.page: Markdown Primer
+document-title: fastn midnight-rush Template. Build Your Own Website with Ease
+document-description: Simple, easy-to-use midnight-rush template to build your own documentation website, personal website, or blog. Change colours and typography effortlessly.
+document-image: https://fastn-community.github.io/midnight-rush/-/fastn-community.github.io/midnight-rush/static/midnight-rush-og-image.jpg
 
 -- my-ds.page.right-sidebar:
 
@@ -17,10 +20,10 @@ cta: markdown/#markdown
 
 -- my-ds.page.body:
 
-`set-1-ds` supports markdown. If you want to use it you can use `--
+`midnight-rush` supports markdown. If you want to use it you can use `--
 ds.mardkdown` for inline anchor links etc.
 
-`set-1-ds` comes with an inbuilt `-- ds.markdown` component.
+`midnight-rush` comes with an inbuilt `-- ds.markdown` component.
 
 -- ds.h3: Markdown
 id: markdown

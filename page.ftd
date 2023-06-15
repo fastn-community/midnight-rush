@@ -1,10 +1,13 @@
--- import: fastn-community.github.io/set-1-ds as ds
+-- import: fastn-community.github.io/midnight-rush as ds
 
 
 
 
 
 -- my-ds.page: Creating A Page
+document-title: fastn midnight-rush Template. Build Your Own Website with Ease
+document-description: Simple, easy-to-use midnight-rush template to build your own documentation website, personal website, or blog. Change colours and typography effortlessly.
+document-image: https://fastn-community.github.io/midnight-rush/-/fastn-community.github.io/midnight-rush/static/midnight-rush-og-image.jpg
 
 -- my-ds.page.right-sidebar:
 
@@ -17,7 +20,7 @@ cta: page/#how-to-create-a-new-page
 
 -- my-ds.page.body:
 
-In this section, we will learn about creating pages in `set-1-ds`.
+In this section, we will learn about creating pages in `midnight-rush`.
 
 The `page` component empowers you to create **one-off standalone pages**. You
 can use other fastn components, or markdown.

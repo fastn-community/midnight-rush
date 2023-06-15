@@ -1,10 +1,13 @@
--- import: fastn-community.github.io/set-1-ds as ds
--- import: fastn-community.github.io/set-1-ds/assets
+-- import: fastn-community.github.io/midnight-rush as ds
+-- import: fastn-community.github.io/midnight-rush/assets
 
 
 
 
 -- my-ds.page: Adding Image
+document-title: fastn midnight-rush Template. Build Your Own Website with Ease
+document-description: Simple, easy-to-use midnight-rush template to build your own documentation website, personal website, or blog. Change colours and typography effortlessly.
+document-image: https://fastn-community.github.io/midnight-rush/-/fastn-community.github.io/midnight-rush/static/midnight-rush-og-image.jpg
 
 -- my-ds.page.right-sidebar:
 
@@ -39,7 +42,7 @@ width: fill-container
 -- ds.rendered.input:
 
 \-- ds.image: This is image caption
-link: https://fastn-community.github.io/set-1-ds/image
+link: https://fastn-community.github.io/midnight-rush/image
 src: $assets.files.static.image-placeholder.jpg
 
 This is addition body content for above image
@@ -47,7 +50,7 @@ This is addition body content for above image
 -- ds.rendered.output:
 
 -- ds.image: This is image caption
-link: https://fastn-community.github.io/set-1-ds/image
+link: https://fastn-community.github.io/midnight-rush/image
 src: $assets.files.static.image-placeholder.jpg
 
 This is addition body content for above image.
