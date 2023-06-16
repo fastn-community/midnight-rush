@@ -8,11 +8,11 @@ kind of site(personal website, blog, etc).
 
 # Preview
 
-![midnight-rush](/static/midnight-rush-example-dark.jpg)
+![midnight-rush](/static/midnight-rush-example-dark.png)
 
 ## Get Rolling
 
-[Click here](https://fastn-community.github.io/midnight-rush/) to learn how to use this template.
+[Click here](https://fastn-community.github.io/midnight-rush/how-to-use/) to learn how to use this template.
 
 # [Dive into the Docs](https://fastn-community.github.io/midnight-rush/)
 
