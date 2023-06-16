@@ -26,6 +26,7 @@ exposing: h0, h1, h2, h3, markdown
 
 # Home: /index.html
 
+- How to use: /how-to-use/
 - Overview: index.html
 - Getting Started: /getting-started/
 - Configuring your site: /domain-setup/
