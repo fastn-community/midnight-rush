@@ -15,7 +15,7 @@ cta: how-to-use/#invocation
 
 -- end: my-ds.page.right-sidebar
 
--- my-ds.body:
+-- my-ds.page.body:
 
 `midnight-rush` package is recommended to be used only for documentation, of your
 fastn project components.
