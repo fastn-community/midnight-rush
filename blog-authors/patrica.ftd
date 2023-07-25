@@ -1,6 +1,4 @@
--- import: fastn-community.github.io/midnight-rush as ds
--- import: fastn-community.github.io/midnight-rush/assets
--- import: fastn-community.github.io/midnight-rush/common 
+
 
 
 
@@ -18,7 +16,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 
 
--- my-ds.page: 
+-- ds.page: 
 sidebar: false
 document-title: fastn midnight-rush Template. Build Your Own Website with Ease
 document-description: Simple, easy-to-use midnight-rush template to build your own documentation website, personal website, or blog. Change colours and typography effortlessly.
@@ -27,4 +25,4 @@ document-image: https://fastn-community.github.io/midnight-rush/-/fastn-communit
 -- ds.author-bio: 
 author: $patrica
 
--- end: my-ds.page
+-- end: ds.page

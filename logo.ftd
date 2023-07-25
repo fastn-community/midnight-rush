@@ -1,15 +1,14 @@
--- import: fastn-community.github.io/midnight-rush as ds
 
 
 
 
 
--- my-ds.page: Adding Site-logo and Site-name
+-- ds.page: Adding Site-logo and Site-name
 document-title: fastn midnight-rush Template. Build Your Own Website with Ease
 document-description: Simple, easy-to-use midnight-rush template to build your own documentation website, personal website, or blog. Change colours and typography effortlessly.
 document-image: https://fastn-community.github.io/midnight-rush/-/fastn-community.github.io/midnight-rush/static/midnight-rush-og-image.jpg
 
--- my-ds.page.right-sidebar:
+-- ds.page.right-sidebar:
 
 -- ds.toc-title: On this page
 
@@ -19,9 +18,9 @@ cta: logo/#site-logo-and-site-name-logic
 -- ds.link-group: Adding logo or site-name
 cta: logo/#adding-logo-or-site-name
 
--- end: my-ds.page.right-sidebar
+-- end: ds.page.right-sidebar
 
--- my-ds.page.body:
+-- ds.page.body:
 
 In this section, we will learn about adding `site-logo` and `site-name` to your
 `fastn` web site.
@@ -121,7 +120,7 @@ download: logo.ftd
 \-- import: fastn-community.github.io/midnight-rush as ds
 \-- import: <your fastn package name>/my-ds
 
-\-- my-ds.page: This is page title
+\-- ds.page: This is page title
 
 This is body area. It contains multiple paragraphs.
 
@@ -140,7 +139,7 @@ This is heading level 2 optional body content.
 
 This is heading level 3 optional body content.
 
-\-- end: my-ds.page
+\-- end: ds.page
 
 -- ds.markdown:
 
@@ -155,4 +154,4 @@ Change `site-name` with your site-name into the `my-ds.ftd` file `string
 site-name: my fastn site` and refresh e.g.`http://127.0.0.1:8000/logo/` page,
 you will see site-name only.
 
--- end: my-ds.page
+-- end: ds.page

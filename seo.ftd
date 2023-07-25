@@ -1,16 +1,80 @@
--- import: fastn-community.github.io/midnight-rush as ds
--- import: fastn.com/expander/ds/meta-data as ds-meta
+-- ds.page: SEO
+document-description: Custom SEO description
+document-image: https://fastn.com/-/fastn.com/images/featured/midnight-storm.png
 
+-- ds.page.right-sidebar:
 
+-- ds.toc-title: On this page
 
+-- ds.link-group: How to customize the document title?
+cta: seo/#how-to-customize-document-title
 
+-- ds.link-group: How to add a page description?
+cta: seo/#how-to-add-page-description
 
--- my-ds.page: SEO
-sidebar: false
-document-title: fastn midnight-rush Template. Build Your Own Website with Ease
-document-description: Simple, easy-to-use midnight-rush template to build your own documentation website, personal website, or blog. Change colours and typography effortlessly.
-document-image: https://fastn-community.github.io/midnight-rush/-/fastn-community.github.io/midnight-rush/static/midnight-rush-og-image.jpg
+-- ds.link-group: How to add a page document-image?
+cta: seo/#how-to-add-page-document-image
 
--- ds-meta.show-md:
+-- end: ds.page.right-sidebar
 
--- end: my-ds.page
+-- ds.page.body:
+
+In this section, we will learn about `midnight-storm` SEO features for your `fastn`
+website.
+
+-- ds.youtube:
+v: 72N7f9on8iw
+
+-- ds.h3: How to customize document title?
+id: how-to-customize-document-title
+
+💡 If you want to add a different title than the `page` title then add
+`document-title` property to `page`. 
+
+The `page` component title will be treated as a document title if
+`document-title` property is not added to the `page` component. And same page
+title will be added to `<meta>` tag `og-title` and `twitter:title` in rendered
+HTML.
+
+If you add the `document-title` property to the `ds.page` component, then the
+same title will be added into `<meta>` `og-title` and `twitter:title`
+
+In the below example, we have added `document-title` which is different from
+that page title.
+
+-- ds.code:
+lang: ftd
+
+\-- ds.page: This is page title
+document-title: Custom SEO title
+
+-- ds.h3: How to add page description?
+id: how-to-add-page-description
+
+To add page description use below example code.
+
+If you add the `document-description` property to the `ds.page` component, then
+the same will be added into `<meta>` `og-description` and
+`twitter:description`
+
+-- ds.code:
+lang: ftd
+
+\-- ds.page: This is page title
+document-description: Custom SEO description
+
+-- ds.h3: How to add page document-image?
+id: how-to-add-pade-document-image
+
+To add page document-image use below example code.
+
+If you add the `document-image` property to the `ds.page` component, then the
+same will be added into `<meta>` `og-image` and `twitter:image`
+
+-- ds.code:
+lang: ftd
+
+\-- ds.page: This is page title
+document-image: https://fastn.com/-/fastn.com/images/featured/midnight-storm.png
+
+-- end: ds.page

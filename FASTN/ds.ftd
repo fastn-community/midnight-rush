@@ -1,5 +1,6 @@
--- import: fastn-community.github.io/midnight-rush as ds
--- import: fastn-community.github.io/midnight-rush/common
+-- import: fastn-community.github.io/midnight-rush 
+export: author-bio,code,compact-text,featured-post,h0,h1,h2,h3,iframe,image,image-first,image-in-between,link,link-group,markdown,not-found-1,not-found-2,output,post,posts,rendered,tip,without-image,youtube, footer,letter, letter-data, letter-bar, letter-category, letter-stack,post-card,toc-title,newsletter
+
 
 -- ftd.image-src fastn-logo:
 light: https://fastn.com/-/fastn.com/images/fastn.svg
@@ -20,7 +21,7 @@ boolean full-width: false
 boolean blog: false
 ftd.ui list hero:
 
--- ds.page: $page.title
+-- midnight-rush.page: $page.title
 site-name: $page.site-name
 body: $page.body
 show-footer: true
@@ -35,9 +36,9 @@ github-icon: true
 blog: $page.blog
 hero: $page.hero
 
--- ds.page.footer:
+-- midnight-rush.page.footer:
 
--- ds.footer:
+-- midnight-rush.footer:
 site-logo: $common.site-logo
 site-url: $common.site-url 
 logo-width: $common.logo-width
@@ -45,7 +46,7 @@ logo-height: $common.logo-height
 footer-links: $common.footer-links
 social-links: $common.social-links
 
--- end: ds.page.footer
+-- end: midnight-rush.page.footer
 
 -- ftd.column:
 spacing.fixed.em: 0.8
@@ -54,6 +55,6 @@ children: $page.wrapper
 
 -- end: ftd.column
 
--- end: ds.page
+-- end: midnight-rush.page
 
 -- end: page

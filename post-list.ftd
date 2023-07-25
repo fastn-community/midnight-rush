@@ -1,10 +1,8 @@
--- import: fastn-community.github.io/midnight-rush as ds
 
 
 
 
-
--- my-ds.page: Post List
+-- ds.page: Post List
 document-description: Simple, easy-to-use midnight-rush template to build your own documentation website, personal website, or blog. Change colours and typography effortlessly.
 document-image: https://fastn-community.github.io/midnight-rush/-/fastn-community.github.io/midnight-rush/static/midnight-rush-og-image.jpg
 
@@ -27,7 +25,7 @@ lang: ftd
 download: post-list.ftd
 
 \-- import: fastn-community.github.io/midnight-rush as ds
-\-- import: fastn-community.github.io/midnight-rush/blog-articles/category-1/sample-post-1
+\-- import: fastn-community.github.io/midnight-rush/blog-articles/category-1/sample-post
 \-- import: fastn-community.github.io/midnight-rush/blog-articles/category-1/sample-post-2 
 \-- import: fastn-community.github.io/midnight-rush/blog-articles/category-2/sample-post-3 
 \-- import: fastn-community.github.io/midnight-rush/blog-articles/category-2/sample-post-4
@@ -40,7 +38,7 @@ download: post-list.ftd
 post-data: $sample-post-2.meta
 
 \-- ds.image-first:
-post-data: $sample-post-1.meta
+post-data: $sample-post.meta
 
 \-- ds.image-in-between:
 post-data: $sample-post-3.meta
@@ -49,7 +47,7 @@ post-data: $sample-post-3.meta
 post-data: $sample-post-4.meta
 
 \-- ds.image-first:
-post-data: $sample-post-1.meta
+post-data: $sample-post.meta
 
 \-- ds.image-in-between:
 post-data: $sample-post-3.meta
@@ -63,8 +61,8 @@ post-data: $sample-post-3.meta
 `-- import: fastn-community.github.io/midnight-rush as ds` : imports midnight-rush and all its
 components into your `featured-post.ftd` page. 
 
-`\-- import: fastn-community.github.io/midnight-rush/blog-articles/category-1/sample-post-1` 
-: imports `sample-post-1` and its all details from `/blog-articles/category-1/` 
+`\-- import: fastn-community.github.io/midnight-rush/blog-articles/category-1/sample-post` 
+: imports `sample-post` and its all details from `/blog-articles/category-1/` 
 folder. You can add more posts imports into `featured-post.ftd` like shown in 
 above code snippet.
 
@@ -90,4 +88,4 @@ metadata then shows other post details. [see our blog page](blog/)
 Category pages are similar to the featured posts page. You can add category related
 details into the body part of the `-- ds.page` page.
 
--- end: my-ds.page
+-- end: ds.page

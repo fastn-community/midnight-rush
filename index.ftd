@@ -1,6 +1,6 @@
--- import: fastn-community.github.io/midnight-rush/assets
+
 -- import: fastn/processors as pr
--- import: fastn-community.github.io/midnight-rush/common
+
 -- import: fastn-community.github.io/midnight-rush/common/fonts as fonts
 -- import: fastn-community.github.io/dark-mode-switcher as dms
 -- import: fastn-community.github.io/midnight-rush/header as h
@@ -833,14 +833,20 @@ body: $image.body
 
 
 
+
+
+
 -- component iframe:
 string src:
+optional ftd.resizing width:
+optional ftd.resizing height:
 
 -- ftd.iframe:
 src: $iframe.src
-height.fixed.px: 400
-width: fill-container
-margin-bottom.px: 34
+height: $iframe.height
+width: $iframe.width
+min-height.fixed.px: 400
+margin-bottom.px: 24
 
 -- end: iframe
 
@@ -853,16 +859,24 @@ margin-bottom.px: 34
 
 
 
+
 -- component youtube:
 caption v:
+optional ftd.resizing width: fill-container
+optional ftd.resizing height:
 
 -- ftd.iframe:
 youtube: $youtube.v
-height.fixed.px: 400
-width: fill-container
-margin-bottom.px: 34
+min-height.fixed.px: 400
+width: $youtube.width
+height: $youtube.height
+margin-bottom.px: 24
 
 -- end: youtube
+
+
+
+
 
 
 
@@ -3611,3 +3625,104 @@ optional string link:
 
 
 -- ftd.color hover-c: coral
+
+
+
+
+-- component not-found-1:
+caption title:
+string type: 404
+optional string cta-text: 
+optional string cta-link:
+optional body body:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+background.solid: $inherited.colors.background.base
+spacing.fixed.px: 32
+height: fill-container
+padding-horizontal.px if { ftd.device == "mobile" }: 24
+
+-- ftd.text: $not-found-1.type
+role: $inherited.types.heading-hero
+color: $inherited.colors.text
+
+-- ftd.text: $not-found-1.title
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+
+-- ftd.text:
+if: { not-found-1.body != NULL }
+role: $inherited.types.copy-large
+color: $inherited.colors.text
+text-align: center
+
+$not-found-1.body
+
+-- ftd.text: $not-found-1.cta-text
+if: { not-found-1.cta-text != NULL }
+role: $inherited.types.button-large
+color: $inherited.colors.text-strong
+background.solid: $inherited.colors.cta-tertiary.base
+padding-horizontal.px: 50
+padding-vertical.px: 16
+link: $not-found-1.cta-link
+border-radius.px: 30
+
+-- end: ftd.column
+
+-- end: not-found-1
+
+
+
+
+
+
+
+
+
+
+-- component not-found-2:
+caption title:
+string type: 404
+optional string cta-text: 
+optional string cta-link:
+optional body body:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+spacing.fixed.px: 32
+height: fill-container
+background.solid: #f7f7f7
+padding-horizontal.px if { ftd.device == "mobile" }: 24
+
+-- ftd.text: $not-found-2.type
+role: $inherited.types.heading-hero
+color: $inherited.colors.custom.one
+
+-- ftd.text: $not-found-2.title
+role: $inherited.types.heading-hero
+color: $inherited.colors.text
+
+-- ftd.text: 
+role: $inherited.types.copy-large
+color: $inherited.colors.text
+text-align: center
+
+$not-found-2.body
+
+-- ftd.text: $not-found-2.cta-text
+role: $inherited.types.button-large
+color: $inherited.colors.text-strong
+background.solid: $inherited.colors.custom.one
+padding-horizontal.px: 50
+padding-vertical.px: 16
+link: $not-found-2.cta-link
+border-radius.px: 30
+
+-- end: ftd.column
+
+-- end: not-found-2
+

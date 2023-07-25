@@ -1,11 +1,9 @@
--- import: fastn-community.github.io/midnight-rush as ds
--- import: fastn-community.github.io/midnight-rush/assets
 
 
 
 
 
--- my-ds.page: Adding a new blog post
+-- ds.page: Adding a new blog post
 document-description: Simple, easy-to-use midnight-rush template to build your own documentation website, personal website, or blog. Change colours and typography effortlessly.
 document-image: https://fastn-community.github.io/midnight-rush/-/fastn-community.github.io/midnight-rush/static/midnight-rush-og-image.jpg
 
@@ -29,7 +27,7 @@ lang: ftd
 \-- common.post-meta meta: A day in a city of dreams
 published-on: July 22, 2014 at 10:02 pm
 post-image: $assets.files.static.image-placeholder.png
-post-url: blog-articles/category-1/sample-post-1/
+post-url: blog-articles/category-1/sample-post/
 author: $author.amitu
 
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
@@ -71,8 +69,8 @@ You can add any image format to it. e.g. `image-placeholder.jpg` or
 `image-placeholder.jpeg` or `image-placeholder.gif` etc.
 
 ✨ The `post-url` property will help you to add your `post.ftd` file. In this
-case `/blog-articles/category-1/sample-post-1/` is the path of our sample post
-`.ftd` file `sample-post-1.ftd` which is stored inside `/blog-articles/` is
+case `/blog-articles/category-1/sample-post/` is the path of our sample post
+`.ftd` file `sample-post.ftd` which is stored inside `/blog-articles/` is
 folder and `category-1` is a category folder. You can rename it with your
 desired name.
 
@@ -86,4 +84,4 @@ author details.
 This is called the body of the post in fastn. These lines will be added as
 featured text inside the `post-list` page.
 
--- end: my-ds.page
+-- end: ds.page

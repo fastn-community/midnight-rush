@@ -1,15 +1,13 @@
--- import: fastn-community.github.io/midnight-rush as ds
 
 
 
 
-
--- my-ds.page: Getting Started
+-- ds.page: Getting Started
 document-title: fastn midnight-rush Template. Build Your Own Website with Ease
 document-description: Simple, easy-to-use midnight-rush template to build your own documentation website, personal website, or blog. Change colours and typography effortlessly.
 document-image: https://fastn-community.github.io/midnight-rush/-/fastn-community.github.io/midnight-rush/static/midnight-rush-og-image.jpg
 
--- my-ds.page.right-sidebar:
+-- ds.page.right-sidebar:
 
 -- ds.toc-title: On this page
 
@@ -24,9 +22,9 @@ cta: getting-started/#how-to-publish-a-package
 -- ds.link-group: Whats next?
 cta: getting-started/#what-next
 
--- end: my-ds.page.right-sidebar
+-- end: ds.page.right-sidebar
 
--- my-ds.page.body:
+-- ds.page.body:
 
 You can create your documentation web-sites using `midnight-rush`. `midnight-rush` also
 helps authors, entrepreneurs, corporate groups and bloggers to create their own
@@ -77,4 +75,4 @@ SEO support.
 ✨ [Click here](https://fastn-community.github.io/midnight-rush/assets/) to know about
 Static Assets.
 
--- end: my-ds.page
+-- end: ds.page

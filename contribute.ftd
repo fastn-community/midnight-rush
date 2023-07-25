@@ -1,13 +1,12 @@
--- import: fastn-community.github.io/midnight-rush as ds
 
 
 
 
--- my-ds.page: Contribute to midnight-rush
+-- ds.page: Contribute to midnight-rush
 document-description: Contribute to midnight-rush development and documentation
 document-image: https://fastn-community.github.io/midnight-rush/-/fastn-community.github.io/midnight-rush/static/midnight-rush-og-image.jpg
 
--- my-ds.page.right-sidebar:
+-- ds.page.right-sidebar:
 
 -- ds.toc-title: On this page
 
@@ -20,9 +19,9 @@ cta: contribute/#get-involved
 -- ds.link-group: Join our Discord Channel
 cta: contribute/#join-our-discord-channel
 
--- end: my-ds.page.right-sidebar
+-- end: ds.page.right-sidebar
 
---  my-ds.page.body:
+--  ds.page.body:
 
 `midnight-rush` is an [open source](https://opensource.guide/) fastn documentation
 site. It's built using [fastn](https://github.com/fastn-stack/fastn).
@@ -60,4 +59,4 @@ id: join-our-discord-channel
 - [💼 | #Share-your-work](https://discord.gg/Um6KX3VYnh)
 - [💡 | #ideas-and-feedback](https://discord.gg/7hwRSsxJUt)
 
--- end: my-ds.page
+-- end: ds.page
