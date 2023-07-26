@@ -1,4 +1,5 @@
-
+-- import: fastn-community.github.io/midnight-rush-typography
+-- import: fastn-community.github.io/midnight-rush-cs 
 -- import: fastn/processors as pr
 
 -- import: fastn-community.github.io/midnight-rush/common/fonts as fonts
@@ -7,6 +8,7 @@
 
 -- import: fastn-community.github.io/typography as tf
 export: h0, h1, h2, h3, markdown
+exposing: h2, h3
 
 -- import: fastn-community.github.io/code-block as cb
 export: code, rendered
@@ -127,8 +129,8 @@ children wrapper:
 optional string login-btn-txt: Login
 optional string login-btn-url: index.html
 boolean login-button: false
-ftd.type-data types: $typo.types
-ftd.color-scheme colors: $cs.main
+ftd.type-data types: $midnight-rush-typography.types
+ftd.color-scheme colors: $midnight-rush-cs.main
 ftd.ui list right-sidebar:
 boolean sidebar: false
 boolean show-footer: $common.show-footer

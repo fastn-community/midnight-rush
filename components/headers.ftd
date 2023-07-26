@@ -1,9 +1,9 @@
 -- import: fastn-community.github.io/midnight-rush/components
 
 -- ds.page: h0, h1, h2, h3
-document-title: fastn misty-gray Template. Build Your Own Website with Ease
-document-description: Simple, easy-to-use misty-gray template to build your own documentation website, personal website, or blog. Change colours and typography effortlessly.
-document-image: https://fastn-community.github.io/misty-gray/-/fastn-community.github.io/misty-gray/static/misty-gray-og-image.jpg
+document-title: fastn midnight-rush Template. Build Your Own Website with Ease
+document-description: Simple, easy-to-use midnight-rush template to build your own documentation website, personal website, or blog. Change colours and typography effortlessly.
+document-image: https://fastn-community.github.io/midnight-rush/-/fastn-community.github.io/midnight-rush/static/midnight-rush-og-image.jpg
 sidebar: true
 
 -- ds.page.right-sidebar:
@@ -29,37 +29,37 @@ lang: ftd
 
 \-- ds.h0: Title of the h0
 
-`ds.h0` is the highest level of heading component of misty-gray.
+`ds.h0` is the highest level of heading component of midnight-rush.
 
 \-- ds.h1: Title of the h1
 
-`ds.h1` is the second highest level of heading component of misty-gray.
+`ds.h1` is the second highest level of heading component of midnight-rush.
 
 \-- ds.h2: Title of the h2
 
-`ds.h2` is the third highest level of heading component of misty-gray.
+`ds.h2` is the third highest level of heading component of midnight-rush.
 
 \-- ds.h3: Title of the h3
 
-`ds.h3` is the lowest level of heading component of misty-gray.
+`ds.h3` is the lowest level of heading component of midnight-rush.
 
 -- ds.rendered.output:
 
 -- ds.h0: Title of the h0
 
-`ds.h0` is the highest level of heading component of misty-gray.
+`ds.h0` is the highest level of heading component of midnight-rush.
 
 -- ds.h1: Title of the h1
 
-`ds.h1` is the second highest level of heading component of misty-gray.
+`ds.h1` is the second highest level of heading component of midnight-rush.
 
 -- ds.h2: Title of the h2
 
-`ds.h2` is the third highest level of heading component of misty-gray.
+`ds.h2` is the third highest level of heading component of midnight-rush.
 
 -- ds.h3: Title of the h3
 
-`ds.h3` is the lowest level of heading component of misty-gray.
+`ds.h3` is the lowest level of heading component of midnight-rush.
 
 -- end: ds.rendered.output
 

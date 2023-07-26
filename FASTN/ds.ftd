@@ -19,6 +19,8 @@ optional ftd.raw-image-src document-image:
 optional string site-name: NULL
 boolean full-width: false
 boolean blog: false
+boolean show-banner: false
+ftd.ui list banner:
 ftd.ui list hero:
 
 -- midnight-rush.page: $page.title
@@ -35,6 +37,8 @@ github-url: https://github.com/fastn-community/midnight-rush/
 github-icon: true
 blog: $page.blog
 hero: $page.hero
+show-banner: $page.show-banner
+banner: $page.banner
 
 -- midnight-rush.page.footer:
 
