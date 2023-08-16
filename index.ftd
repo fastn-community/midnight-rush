@@ -4385,9 +4385,10 @@ color: $inherited.colors.text
 $hero-image-left-desktop.body
 
 -- ftd.text: $hero-image-left-desktop.cta-primary
+if: { hero-image-left-desktop.cta-primary != NULL }
 role: $inherited.types.button-large
 color: $inherited.colors.background.base
-link: $hero-image-left-desktop.cta-primary-link
+link if { hero-image-left-desktop.cta-primary-link != NULL }: $hero-image-left-desktop.cta-primary-link
 text-align: center
 background.solid: $inherited.colors.cta-primary.base
 padding-horizontal.px: 28
@@ -4440,9 +4441,10 @@ color: $inherited.colors.text
 $hero-image-left-mobile.body
 
 -- ftd.text: $hero-image-left-mobile.cta-primary
+if: { hero-image-left-mobile.cta-primary !=  NULL }
 role: $inherited.types.button-large
 color: $inherited.colors.background.base
-link: $hero-image-left-mobile.cta-primary-link
+link if { hero-image-left-mobile.cta-primary-link!=  NULL }: $hero-image-left-mobile.cta-primary-link
 background.solid: $inherited.colors.cta-primary.base
 padding-horizontal.px: 28
 padding-vertical.px: 10
@@ -4552,9 +4554,10 @@ color: $inherited.colors.text
 $hero-image-right-desktop.body
 
 -- ftd.text: $hero-image-right-desktop.cta-primary
+if: { hero-image-right-desktop.cta-primary != NULL }
 role: $inherited.types.button-large
 color: $inherited.colors.background.base
-link: $hero-image-right-desktop.cta-primary-link
+link if { hero-image-right-desktop.cta-primary-link != NULL }: $hero-image-right-desktop.cta-primary-link
 background.solid: $inherited.colors.shadow
 background.solid if { hero-image-right-desktop.mouse-in }: $inherited.colors.cta-primary.hover
 $on-mouse-enter$: $ftd.set-bool($a = $hero-image-right-desktop.mouse-in, v = true)
@@ -4611,9 +4614,10 @@ color: $inherited.colors.text
 $hero-image-right-mobile.body
 
 -- ftd.text: $hero-image-right-mobile.cta-primary
+if: { hero-image-right-mobile.cta-primary != NULL }
 role: $inherited.types.button-large
 color: $inherited.colors.background.base
-link: $hero-image-right-mobile.cta-primary-link
+link if { hero-image-right-mobile.cta-primary-link != NULL }: $hero-image-right-mobile.cta-primary-link
 background.solid: $inherited.colors.shadow
 background.solid if { hero-image-right-mobile.mouse-in }: $inherited.colors.cta-primary.hover
 $on-mouse-enter$: $ftd.set-bool($a = $hero-image-right-mobile.mouse-in, v = true)
