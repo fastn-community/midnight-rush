@@ -1,16 +1,15 @@
--- import: fastn-community.github.io/midnight-rush as ds
 
 
 
 
 
--- my-ds.page: Right Sidebar
+-- ds.page: Right Sidebar
 document-title: fastn midnight-rush Template. Build Your Own Website with Ease
 document-description: Simple, easy-to-use midnight-rush template to build your own documentation website, personal website, or blog. Change colours and typography effortlessly.
 document-image: https://fastn-community.github.io/midnight-rush/-/fastn-community.github.io/midnight-rush/static/midnight-rush-og-image.jpg
 
 
--- my-ds.page.right-sidebar:
+-- ds.page.right-sidebar:
 
 -- ds.toc-title: On this page
 
@@ -38,10 +37,10 @@ today.
 We are trying to create the language for human beings and we do not believe it
 would be possible without your support. We would love to hear from you.
 
--- end: my-ds.page.right-sidebar
+-- end: ds.page.right-sidebar
 
 
--- my-ds.page.body:
+-- ds.page.body:
 
 In this section, we will learn adding right-sidebar in `midnight-rush`.
 
@@ -78,7 +77,7 @@ body: $page.body
 show-footer: true
 sidebar: true
 
-\-- my-ds.page.right-sidebar:
+\-- ds.page.right-sidebar:
 
 \-- ds.h3: Heading in sidebar
 
@@ -91,7 +90,7 @@ lang: ftd
 
 \-- ftd.text: Hello World
 
-\-- end: my-ds.page.right-sidebar
+\-- end: ds.page.right-sidebar
 
 \-- ftd.column:
 spacing.fixed.em: 0.8
@@ -119,7 +118,7 @@ download: sidebar.ftd
 \-- import: fastn-community.github.io/midnight-rush as ds
 \-- import: <your fastn package name>/my-ds
 
-\-- my-ds.page: This is page title
+\-- ds.page: This is page title
 
 This is body area. It contains multiple paragraphs.
 
@@ -138,7 +137,7 @@ This is heading level 2 optional body content.
 
 This is heading level 3 optional body content.
 
-\-- end: my-ds.page
+\-- end: ds.page
 
 -- ds.markdown:
 
@@ -190,4 +189,4 @@ Add your page body content here.
 
 \-- end: ds.page
 
--- end: my-ds.page
+-- end: ds.page

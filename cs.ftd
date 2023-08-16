@@ -1,15 +1,13 @@
--- import: fastn-community.github.io/midnight-rush as ds
 
 
 
 
-
--- my-ds.page: Changing Color Scheme
+-- ds.page: Changing Color Scheme
 document-title: fastn midnight-rush Template. Build Your Own Website with Ease
 document-description: Simple, easy-to-use midnight-rush template to build your own documentation website, personal website, or blog. Change colours and typography effortlessly.
 document-image: https://fastn-community.github.io/midnight-rush/-/fastn-community.github.io/midnight-rush/static/midnight-rush-og-image.jpg
 
--- my-ds.page.right-sidebar:
+-- ds.page.right-sidebar:
 
 -- ds.toc-title: On this page
 
@@ -19,9 +17,9 @@ cta: cs/#how-to-add-color-scheme
 -- ds.link-group: How to create a global my-ds page module for midnight-rush?
 cta: cs/#How-to-create-a-global-my-ds-page-module-for-midnight-rush
 
--- end: my-ds.page.right-sidebar
+-- end: ds.page.right-sidebar
 
--- my-ds.page.body:
+-- ds.page.body:
 
 In this section, we will learn about changing the color scheme of `midnight-rush`.
 
@@ -115,7 +113,7 @@ download: cs.ftd
 \-- import: fastn-community.github.io/midnight-rush as ds
 \-- import: <your fastn package name>/my-ds
 
-\-- my-ds.page: This is page title
+\-- ds.page: This is page title
 
 This is body area. It contains multiple paragraphs.
 
@@ -134,7 +132,7 @@ This is heading level 2 optional body content.
 
 This is heading level 3 optional body content.
 
-\-- end: my-ds.page
+\-- end: ds.page
 
 -- ds.markdown:
 
@@ -146,4 +144,4 @@ your localhost. Access your localhost in the browser
 e.g.`http://127.0.0.1:8000/cs/` you will see page colors with[SET 1 CS]
 (https://fastn-community.github.io/midnight-rush-cs/)
 
--- end: my-ds.page
+-- end: ds.page

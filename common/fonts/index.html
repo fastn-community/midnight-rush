@@ -564,10 +564,14 @@
 }
 },
 "ftd#device": "desktop",
+"ftd#empty": "",
 "ftd#follow-system-dark-mode": true,
 "ftd#font-code": "sans-serif",
 "ftd#font-copy": "sans-serif",
 "ftd#font-display": "sans-serif",
+"ftd#nbsp": "&nbsp;",
+"ftd#non-breaking-space": "&nbsp;",
+"ftd#space": " ",
 "ftd#system-dark-mode": false
 }
 </script>
@@ -587,6 +591,7 @@
 <body style="height: 100%; margin: 0;">
 
 <div data-id="main" style="height: 100%; width: 100%" class="ft_common ft_column"></div><style>
+
 
 
 
@@ -1547,6 +1552,12 @@ return (ftd.copy_to_clipboard(a,args,data,id));
 
 
 function ftd__set_bool___main(a,v,args,data,id){
+a.value = v
+}
+
+
+
+function ftd__set_boolean___main(a,v,args,data,id){
 a.value = v
 }
 
