@@ -30,6 +30,7 @@ boolean $sidebar-open: false
 boolean github-icon: false
 optional string github-url: 
 boolean blog: false
+boolean breadcrumb: true
 
 -- ftd.column:
 width: fill-container
@@ -77,6 +78,7 @@ current-subsection: $header.current-subsection
 logo-width: $header.logo-width 
 logo-height: $header.logo-height 
 blog: $header.blog
+breadcrumb: $header.breadcrumb
 
 -- end: ftd.mobile
 
@@ -98,6 +100,7 @@ logo-width: $header.logo-width
 logo-height: $header.logo-height 
 github-icon: $header.github-icon
 github-url: $header.github-url
+breadcrumb: $header.breadcrumb
 
 -- end: ftd.desktop
 
@@ -130,6 +133,7 @@ integer logo-width: 120
 integer logo-height: 44
 boolean github-icon: 
 optional string github-url: 
+boolean breadcrumb: false
 
 -- ftd.column:
 width: fill-container
@@ -190,6 +194,11 @@ if: { header-desktop.github-icon }
 github-url: $header-desktop.github-url
 
 -- end: ftd.row
+
+-- ftd.row:
+if: { header-desktop.breadcrumb }
+width: fill-container
+align-content: center
 
 -- ftd.row:
 if: { header-desktop.current-section != NULL }
@@ -253,6 +262,9 @@ is-active: $obj.is-active
 url: $obj.url
 
 -- end: ftd.row
+
+-- end: ftd.row
+
 -- end: ftd.row
 
 -- end: ftd.column
@@ -520,6 +532,7 @@ optional pr.toc-item current-page:
 integer logo-width: 120
 integer logo-height: 38
 boolean blog: false
+boolean breadcrumb: true
 
 -- ftd.column: 
 width: fill-container

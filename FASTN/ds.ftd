@@ -1,5 +1,5 @@
 -- import: fastn-community.github.io/midnight-rush 
-export: author-bio,code,compact-text,featured-post,h0,h1,h2,h3,iframe,image,image-first,image-in-between,link,link-group,markdown,not-found-1,not-found-2,output,post,posts,rendered,tip,without-image,youtube, footer,letter, letter-data, letter-bar, letter-category, letter-stack,post-card,toc-title,newsletter
+export: author-bio,code,compact-text,featured-post,h0,h1,h2,h3,iframe,image,image-first,image-in-between,link,link-group,markdown,not-found-1,not-found-2,output,post,posts,rendered,tip,without-image,youtube, footer,letter, letter-data, letter-bar, letter-category, letter-stack,post-card,toc-title,newsletter,hero-with-image, logo-cloud, content, hero-image-left, hero-image-right, banner-card, testimonials-card, features-card, faqs, search-card
 
 
 -- ftd.image-src fastn-logo:
