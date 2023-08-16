@@ -15,7 +15,10 @@ export: code, rendered
 
 
 
+-- integer $current-slide: 1
 
+
+-- boolean $tc-pop-up-status: false
 
 
 
@@ -142,6 +145,8 @@ boolean github-icon: false
 optional string github-url: 
 boolean blog: false
 ftd.ui list hero:
+ftd.ui list popup:
+boolean breadcrumb: true
 
 -- ftd.document:
 title if { page.document-title != NULL }: $page.document-title
@@ -191,6 +196,7 @@ github-url: $page.github-url
 full-width: $page.full-width
 blog: $page.blog
 hero: $page.hero
+breadcrumb: $page.breadcrumb
 
 -- end: ftd.desktop
 
@@ -213,6 +219,7 @@ github-icon: $page.github-icon
 github-url: $page.github-url
 blog: $page.blog
 hero: $page.hero
+breadcrumb: $page.breadcrumb
 
 -- end: ftd.mobile
 
@@ -224,6 +231,19 @@ width: fill-container
 children: $page.footer
 align-self: center
 max-width.fixed.px: $common.max-width
+
+-- end: ftd.column
+
+-- ftd.column:
+if: { tc-pop-up-status }
+width: fill-container
+children: $page.popup
+align-self: center
+anchor: window
+height: fill-container
+top.px: 0
+left.px: 0
+z-index: 9999
 
 -- end: ftd.column
 
@@ -267,6 +287,7 @@ optional string github-url:
 boolean full-width:
 boolean blog: false
 ftd.ui list hero:
+boolean breadcrumb: false
 
 -- ftd.column:
 width: fill-container
@@ -291,6 +312,7 @@ logo-width: $doc-page-desktop.logo-width
 menu-icon: $assets.files.static.hamburger.svg
 github-icon: $doc-page-desktop.github-icon
 github-url: $doc-page-desktop.github-url
+breadcrumb: $doc-page-desktop.breadcrumb
 
 -- ftd.column:
 children: $doc-page-desktop.hero
@@ -996,6 +1018,7 @@ boolean github-icon: false
 optional string github-url: 
 boolean blog: false
 ftd.ui list hero:
+boolean breadcrumb: false
 
 -- ftd.column:
 width: fill-container
@@ -3727,4 +3750,1820 @@ border-radius.px: 30
 -- end: ftd.column
 
 -- end: not-found-2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- component hero-with-image:
+caption title:
+body body:
+ftd.image-src image:
+optional string link:
+optional string input-placeholder:
+optional string cta-primary:
+optional string cta-primary-link:
+optional string cta-secondary:
+optional string cta-secondary-link:
+optional boolean align-right: false
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.desktop:
+
+-- hero-with-image-desktop: $hero-with-image.title
+body: $hero-with-image.body
+link: $hero-with-image.link
+image: $hero-with-image.image
+cta-primary: $hero-with-image.cta-primary
+cta-primary-link: $hero-with-image.cta-primary-link
+cta-secondary: $hero-with-image.cta-secondary
+cta-secondary-link: $hero-with-image.cta-secondary-link
+input-placeholder: $hero-with-image.input-placeholder
+
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- hero-with-image-mobile: $hero-with-image.title
+body: $hero-with-image.body
+link: $hero-with-image.link
+image: $hero-with-image.image
+cta-primary: $hero-with-image.cta-primary
+cta-primary-link: $hero-with-image.cta-primary-link
+cta-secondary: $hero-with-image.cta-secondary
+cta-secondary-link: $hero-with-image.cta-secondary-link
+align-right: $hero-with-image.align-right
+input-placeholder: $hero-with-image.input-placeholder
+
+-- end: ftd.mobile
+
+-- end: ftd.column
+
+-- end: hero-with-image
+
+
+
+
+
+
+
+
+
+
+-- component hero-with-image-desktop:
+caption title:
+body body:
+ftd.image-src image:
+optional string link:
+optional string cta-primary:
+optional string cta-primary-link:
+optional string cta-secondary:
+optional string cta-secondary-link:
+optional boolean $mouse-in: false
+optional boolean $mouse-enter: false
+optional string input-placeholder:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+background.solid: $inherited.colors.background.step-1
+
+-- ftd.row:
+width: fill-container
+spacing: space-between
+max-width.fixed.px: 1040
+height.fixed.px: 650
+
+-- ftd.column:
+spacing.fixed.px: 24
+width.fixed.percent: 40
+align-self: center
+
+-- ftd.text: $hero-with-image-desktop.title
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+
+-- ftd.text:
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+$hero-with-image-desktop.body
+
+-- ftd.row:
+align-self: center
+spacing.fixed.px: 16
+
+-- ftd.text-input:
+if: { hero-with-image-desktop.input-placeholder != NULL }
+placeholder: $hero-with-image-desktop.input-placeholder
+padding-horizontal.px: 28
+padding-vertical.px: 12
+border-width.px: 1
+role: $inherited.types.button-large
+border-color: $inherited.colors.shadow
+border-radius.px: 32
+color: $inherited.colors.text-strong
+background.solid: $inherited.colors.background.step-1
+
+-- ftd.text: $hero-with-image-desktop.cta-primary
+if: { hero-with-image-desktop.cta-primary != NULL }
+role: $inherited.types.button-large
+color: $inherited.colors.background.base
+link: $hero-with-image-desktop.cta-primary-link
+background.solid: $inherited.colors.cta-primary.base
+background.solid if { hero-with-image-desktop.mouse-in }: $inherited.colors.cta-primary.hover
+$on-mouse-enter$: $ftd.set-bool($a = $hero-with-image-desktop.mouse-in, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $hero-with-image-desktop.mouse-in, v = false)
+padding-horizontal.px: 28
+padding-vertical.px: 12
+border-radius.px: 32
+white-space: nowrap
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- ftd.column:
+width.fixed.percent: 50
+height.fixed.percent: 50
+link: $hero-with-image-desktop.link
+align-self: center
+
+-- ftd.image:
+src: $hero-with-image-desktop.image
+width: fill-container
+height: fill-container
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: hero-with-image-desktop
+
+
+
+
+
+
+
+
+
+
+-- component hero-with-image-mobile:
+caption title:
+body body:
+ftd.image-src image:
+optional string link:
+optional string cta-primary:
+optional string cta-primary-link:
+optional string cta-secondary:
+optional string cta-secondary-link:
+optional boolean align-right:
+optional string input-placeholder: 
+optional boolean $mouse-in: false
+optional boolean $mouse-enter: false
+
+-- ftd.column:
+align-content if { !hero-with-image-mobile.align-right }: center
+width: fill-container
+spacing.fixed.px: 45
+spacing.fixed.px if { hero-with-image-mobile.align-right }: 24
+
+-- ftd.column:
+spacing.fixed.px: 24
+width.fixed.percent if { !hero-with-image-mobile.align-right }: 70
+
+-- ftd.text: $hero-with-image-mobile.title
+role: $inherited.types.heading-medium
+color: $inherited.colors.text-strong
+text-align: center
+
+-- ftd.text:
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+text-align: center
+
+$hero-with-image-mobile.body
+
+-- end: ftd.column
+
+-- ftd.row:
+if: { !hero-with-image-mobile.align-right }
+align-self: center
+spacing.fixed.px: 16
+
+-- ftd.text-input:
+if: { hero-with-image-mobile.input-placeholder != NULL }
+placeholder: $hero-with-image-mobile.input-placeholder
+padding-horizontal.px: 28
+padding-vertical.px: 10
+border-width.px: 1
+role: $inherited.types.button-large
+border-color: $inherited.colors.shadow
+border-radius.px: 32
+color: $inherited.colors.text-strong
+background.solid: $inherited.colors.background.step-1
+width.fixed.percent if { ftd.device == "mobile" }: 50
+
+-- ftd.text: $hero-with-image-mobile.cta-primary
+if: { hero-with-image-mobile.cta-primary != NULL }
+role: $inherited.types.button-large
+color: $inherited.colors.background.base
+link: $hero-with-image-mobile.cta-primary-link
+background.solid: $inherited.colors.cta-primary.base
+background.solid if { hero-with-image-mobile.mouse-in }: $inherited.colors.cta-primary.hover
+$on-mouse-enter$: $ftd.set-bool($a = $hero-with-image-mobile.mouse-in, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $hero-with-image-mobile.mouse-in, v = false)
+padding-horizontal.px: 28
+padding-vertical.px: 11
+border-radius.px: 32
+
+-- end: ftd.row
+
+-- ftd.image:
+src: $hero-with-image-mobile.image
+width: fill-container
+height.fixed.px: 348
+link: $hero-with-image-mobile.link
+
+-- end: ftd.column
+
+-- end: hero-with-image-mobile
+
+
+
+
+
+
+
+
+
+
+-- component logo-cloud:
+caption title:
+optional body body:
+common.logos list logo-list:
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.desktop:
+
+-- logo-cloud-desktop: $logo-cloud.title
+body: $logo-cloud.body
+logo-list: $logo-cloud.logo-list
+
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- logo-cloud-mobile: $logo-cloud.title
+body: $logo-cloud.body
+logo-list: $logo-cloud.logo-list
+
+-- end: ftd.mobile
+
+-- end: ftd.column
+
+-- end: logo-cloud
+
+
+
+
+
+
+
+
+
+
+-- component logo-cloud-desktop:
+caption title:
+optional body body:
+common.logos list logo-list:
+
+-- ftd.column:
+width: fill-container
+padding-vertical.px: 100
+spacing.fixed.px: 17
+align-content: center
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+max-width.fixed.px: $common.max-width
+
+-- ftd.text: $logo-cloud-desktop.title
+style: medium
+
+-- ftd.text:
+if: { logo-cloud-desktop.body != NULL }
+
+$logo-cloud-desktop.body
+
+-- ftd.row:
+margin-top.px: 15
+spacing.fixed.px: 72
+width: fill-container
+overflow-y: auto
+
+-- logo-lists:
+$loop$: $logo-cloud-desktop.logo-list as $obj
+logo: $obj.logo
+link: $obj.link
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: logo-cloud-desktop
+
+
+
+
+
+
+
+
+
+
+-- component content:
+caption title:
+body body:
+optional ftd.image-src image:
+ftd.background-image bg-image: $assets.files.static.background.svg
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.desktop:
+
+-- content-desktop: $content.title
+body: $content.body
+bg-image: $content.bg-image
+image: $content.image
+
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- content-mobile: $content.title
+body: $content.body
+bg-image: $content.bg-image
+image: $content.image
+
+-- end: ftd.mobile
+
+-- end: ftd.column
+
+-- end: content
+
+
+
+
+
+
+
+
+
+
+-- component content-desktop:
+caption title:
+body body:
+ftd.background-image bg-image: 
+optional ftd.image-src image:
+
+-- ftd.column:
+align-self if { content-desktop.image != NULL }: center
+padding-bottom.px: 100
+spacing.fixed.px: 16
+max-width.fixed.px: $common.max-width
+width: fill-container
+
+-- ftd.text: $content-desktop.title
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+max-width.fixed.percent if { content-desktop.image == NULL }: 70
+width: fill-container
+text-align if { content-desktop.image != NULL }: center
+
+-- ftd.text:
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+max-width.fixed.percent if { content-desktop.image == NULL }: 84
+width: fill-container
+text-align if { content-desktop.image != NULL }: center
+
+$content-desktop.body
+
+-- ftd.image:
+if: { content-desktop.image != NULL }
+src: $content-desktop.image
+width: fill-container
+
+-- end: ftd.column
+
+-- end: content-desktop
+
+
+
+
+
+
+
+
+
+
+-- component content-mobile:
+caption title:
+body body:
+ftd.background-image bg-image: 
+optional ftd.image-src image:
+
+-- ftd.column:
+padding-bottom.px: 60
+spacing.fixed.px: 16
+width: fill-container
+
+-- ftd.text: $content-mobile.title
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+
+-- ftd.text:
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+$content-mobile.body
+
+-- ftd.image:
+if: { content-mobile.image != NULL }
+src: $content-mobile.image
+width: fill-container
+
+-- end: ftd.column
+
+-- end: content-mobile
+
+
+
+
+
+
+
+
+
+
+-- component logo-cloud-mobile:
+caption title:
+optional body body:
+common.logos list logo-list:
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 52
+padding-vertical.px: 60
+
+-- ftd.column:
+spacing.fixed.px: 17
+
+-- ftd.text: $logo-cloud-mobile.title
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+
+-- ftd.text:
+if: { logo-cloud-mobile.body != NULL }
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+$logo-cloud-mobile.body
+
+-- end: ftd.column
+
+-- ftd.column:
+spacing.fixed.px: 40
+width: fill-container
+
+-- logo-lists:
+$loop$: $logo-cloud-mobile.logo-list as $obj
+logo: $obj.logo
+link: $obj.link
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: logo-cloud-mobile
+
+
+
+
+
+
+
+
+
+
+-- component logo-lists:
+ftd.image-src logo:
+string link:
+
+-- ftd.row:
+width if { ftd.device == "mobile"}: fill-container
+align-content: center
+
+-- ftd.image:
+src: $logo-lists.logo
+width: auto
+link: $logo-lists.link
+
+-- end: ftd.row
+
+-- end: logo-lists
+
+
+
+
+
+
+
+
+
+
+-- component hero-image-left: 
+caption title:
+ftd.image-src image:
+optional string cta-primary:
+optional string cta-primary-link:
+optional string link:
+body body:
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.desktop:
+
+-- hero-image-left-desktop: $hero-image-left.title
+image: $hero-image-left.image
+cta-primary: $hero-image-left.cta-primary
+cta-primary-link: $hero-image-left.cta-primary-link
+body: $hero-image-left.body
+link: $hero-image-left.link
+
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- hero-image-left-mobile: $hero-image-left.title
+image: $hero-image-left.image
+cta-primary: $hero-image-left.cta-primary
+cta-primary-link: $hero-image-left.cta-primary-link
+body: $hero-image-left.body
+link: $hero-image-left.link
+
+-- end: ftd.mobile
+
+-- end: ftd.column
+
+-- end: hero-image-left
+
+
+
+
+
+
+
+
+
+
+-- component hero-image-left-desktop: 
+caption title:
+ftd.image-src image:
+optional string cta-primary:
+optional string cta-primary-link:
+optional boolean $mouse-in: false
+body body: 
+optional string link:
+
+-- ftd.row:
+width: fill-container
+spacing: space-between
+background.solid: $inherited.colors.custom.four
+padding-vertical.px: 50
+border-radius.px: 20
+padding-horizontal.px: 85
+align-content: center
+margin-bottom.px: 50
+
+-- ftd.image:
+src: $hero-image-left-desktop.image
+width: auto
+link: $hero-image-left-desktop.link
+
+-- ftd.column:
+spacing.fixed.px: 20
+width.fixed.percent: 50
+
+-- ftd.text: $hero-image-left-desktop.title
+role: $inherited.types.heading-medium
+color: $inherited.colors.text-strong
+
+-- ftd.text:
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+$hero-image-left-desktop.body
+
+-- ftd.text: $hero-image-left-desktop.cta-primary
+role: $inherited.types.button-large
+color: $inherited.colors.background.base
+link: $hero-image-left-desktop.cta-primary-link
+text-align: center
+background.solid: $inherited.colors.cta-primary.base
+padding-horizontal.px: 28
+padding-vertical.px: 10
+background.solid if { hero-image-left-desktop.mouse-in }: $inherited.colors.cta-primary.hover
+$on-mouse-enter$: $ftd.set-bool($a = $hero-image-left-desktop.mouse-in, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $hero-image-left-desktop.mouse-in, v = false)
+border-radius.px: 32
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: hero-image-left-desktop
+
+
+
+
+
+
+
+
+
+
+-- component hero-image-left-mobile: 
+caption title:
+ftd.image-src image:
+optional string cta-primary:
+optional string cta-primary-link:
+optional boolean $mouse-in: false
+body body:
+optional string link:
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 24
+padding-bottom.px: 80
+
+-- ftd.column:
+spacing.fixed.px: 20
+
+-- ftd.text: $hero-image-left-mobile.title
+role: $inherited.types.heading-medium
+color: $inherited.colors.text-strong
+
+-- ftd.text:
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+$hero-image-left-mobile.body
+
+-- ftd.text: $hero-image-left-mobile.cta-primary
+role: $inherited.types.button-large
+color: $inherited.colors.background.base
+link: $hero-image-left-mobile.cta-primary-link
+background.solid: $inherited.colors.cta-primary.base
+padding-horizontal.px: 28
+padding-vertical.px: 10
+background.solid if { hero-image-left-mobile.mouse-in }: $inherited.colors.cta-primary.hover
+$on-mouse-enter$: $ftd.set-bool($a = $hero-image-left-mobile.mouse-in, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $hero-image-left-mobile.mouse-in, v = false)
+border-radius.px: 32
+
+-- end: ftd.column
+
+-- ftd.image:
+src: $hero-image-left-mobile.image
+width: fill-container
+link: $hero-image-left-mobile.link
+
+-- end: ftd.column
+
+-- end: hero-image-left-mobile
+
+
+
+
+
+
+
+
+
+
+-- component hero-image-right: 
+caption title:
+ftd.image-src image:
+optional string cta-primary:
+optional string cta-primary-link:
+body body:
+optional string link:
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.desktop:
+
+-- hero-image-right-desktop: $hero-image-right.title
+image: $hero-image-right.image
+cta-primary: $hero-image-right.cta-primary
+cta-primary-link: $hero-image-right.cta-primary-link
+body: $hero-image-right.body
+link: $hero-image-right.link
+
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- hero-image-right-mobile: $hero-image-right.title
+image: $hero-image-right.image
+cta-primary: $hero-image-right.cta-primary
+cta-primary-link: $hero-image-right.cta-primary-link
+body: $hero-image-right.body
+link: $hero-image-right.link
+
+-- end: ftd.mobile
+
+-- end: ftd.column
+
+-- end: hero-image-right
+
+
+
+
+
+
+
+
+
+
+-- component hero-image-right-desktop: 
+caption title:
+ftd.image-src image:
+optional string cta-primary:
+optional string cta-primary-link:
+optional boolean $mouse-in: false
+body body:
+optional string link:
+
+-- ftd.row:
+width: fill-container
+spacing: space-between
+background.solid: $inherited.colors.custom.four
+padding-vertical.px: 50
+border-radius.px: 20
+padding-horizontal.px: 85
+align-content: center
+margin-bottom.px: 50
+
+-- ftd.column:
+padding-top.px: 100
+spacing.fixed.px: 20
+width.fixed.percent: 50
+
+-- ftd.text: $hero-image-right-desktop.title
+role: $inherited.types.heading-medium
+color: $inherited.colors.text-strong
+
+-- ftd.text:
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+$hero-image-right-desktop.body
+
+-- ftd.text: $hero-image-right-desktop.cta-primary
+role: $inherited.types.button-large
+color: $inherited.colors.background.base
+link: $hero-image-right-desktop.cta-primary-link
+background.solid: $inherited.colors.shadow
+background.solid if { hero-image-right-desktop.mouse-in }: $inherited.colors.cta-primary.hover
+$on-mouse-enter$: $ftd.set-bool($a = $hero-image-right-desktop.mouse-in, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $hero-image-right-desktop.mouse-in, v = false)
+padding-horizontal.px: 28
+padding-vertical.px: 10
+border-radius.px: 32
+
+-- end: ftd.column
+
+-- ftd.image:
+src: $hero-image-right-desktop.image
+width: auto
+link: $hero-image-right-desktop.link
+
+-- end: ftd.row
+
+-- end: hero-image-right-desktop
+
+
+
+
+
+
+
+
+
+
+-- component hero-image-right-mobile: 
+caption title:
+ftd.image-src image:
+optional string cta-primary:
+optional string cta-primary-link:
+optional boolean $mouse-in: false
+body body:
+optional string link:
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 24
+padding-bottom.px: 80
+
+-- ftd.column:
+spacing.fixed.px: 20
+
+-- ftd.text: $hero-image-right-mobile.title
+role: $inherited.types.heading-medium
+color: $inherited.colors.text-strong
+
+-- ftd.text:
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+$hero-image-right-mobile.body
+
+-- ftd.text: $hero-image-right-mobile.cta-primary
+role: $inherited.types.button-large
+color: $inherited.colors.background.base
+link: $hero-image-right-mobile.cta-primary-link
+background.solid: $inherited.colors.shadow
+background.solid if { hero-image-right-mobile.mouse-in }: $inherited.colors.cta-primary.hover
+$on-mouse-enter$: $ftd.set-bool($a = $hero-image-right-mobile.mouse-in, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $hero-image-right-mobile.mouse-in, v = false)
+padding-horizontal.px: 28
+padding-vertical.px: 10
+border-radius.px: 32
+
+-- end: ftd.column
+
+-- ftd.image:
+src: $hero-image-right-mobile.image
+width: fill-container
+link: $hero-image-right-mobile.link
+
+-- end: ftd.column
+
+-- end: hero-image-right-mobile
+
+
+
+
+
+
+
+
+
+
+-- component banner-card:
+caption title:
+body body:
+common.info-card list info-cards:
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.desktop:
+
+-- banner-card-desktop: $banner-card.title
+body: $banner-card.body
+info-cards: $banner-card.info-cards
+
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- banner-card-mobile: $banner-card.title
+body: $banner-card.body
+info-cards: $banner-card.info-cards
+
+-- end: ftd.mobile
+
+-- end: ftd.column
+
+-- end: banner-card
+
+
+
+
+
+
+
+
+
+
+-- component banner-card-desktop:
+caption title:
+body body:
+common.info-card list info-cards:
+ftd.image-src image: $assets.files.static.landing.arrow.svg
+
+-- ftd.row:
+spacing: space-between
+width: fill-container
+padding-vertical.px: 128
+align-content: center
+background.solid: $inherited.colors.background.step-1
+
+-- ftd.image: 
+src: $banner-card-desktop.image
+left.px: 0
+top.px: 238
+align-self: end
+
+-- ftd.column:
+width.fixed.percent: 36
+align-content: center
+spacing.fixed.px: 16
+
+-- ftd.text: $banner-card-desktop.title
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+
+-- ftd.text:
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+$banner-card-desktop.body
+
+-- end: ftd.column
+
+-- ftd.column:
+width.fixed.percent: 50
+border-top-left-radius.px: 10
+border-top-right-radius.px: 10
+
+-- banner-card-list:
+$loop$: $banner-card-desktop.info-cards as $obj
+title: $obj.title
+body: $obj.body
+is-first: $obj.is-first
+is-last: $obj.is-last
+
+-- ftd.column:
+anchor: parent
+bottom.px: 16
+width.fixed.percent: 70
+height.fixed.percent: 92
+background.solid: $inherited.colors.background.step-2
+z-index: 20
+border-color: $inherited.colors.custom.seven
+right.px: 72
+border-width.px: 2
+border-radius.px: 20
+
+-- end: ftd.column
+
+-- ftd.column:
+anchor: parent
+bottom.px: -128
+width: fill-container
+height.fixed.percent: 98
+border-top-left-radius.px: 150
+background.solid: $inherited.colors.custom.one
+z-index: 10
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: banner-card-desktop
+
+
+
+
+
+
+
+
+
+
+-- component banner-card-mobile:
+caption title:
+body body:
+common.info-card list info-cards:
+
+-- ftd.column:
+padding-bottom.px: 120
+width: fill-container
+spacing.fixed.px: 24
+
+-- ftd.column:
+spacing.fixed.px: 16
+
+-- ftd.text: $banner-card-mobile.title
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+
+-- ftd.text:
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+$banner-card-mobile.body
+
+-- end: ftd.column
+
+-- ftd.column:
+width: fill-container
+margin-bottom.px: 64
+
+-- banner-card-list:
+$loop$: $banner-card-mobile.info-cards as $obj
+title: $obj.title
+body: $obj.body
+is-first: $obj.is-first
+is-last: $obj.is-last 
+
+-- ftd.column:
+anchor: parent
+bottom.px: -128
+width: fill-container
+height.fixed.px: 450
+border-top-left-radius.px: 150
+background.solid: $inherited.colors.custom.one
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: banner-card-mobile
+
+
+
+
+
+
+
+
+
+
+-- component banner-card-list:
+caption title:
+body body:
+boolean is-first:
+boolean is-last:
+
+-- ftd.column:
+z-index: 60
+width.fixed.percent: 75
+margin-left.px: 70
+background.solid: $inherited.colors.background.base
+padding-vertical.px: 40
+padding-horizontal.px: 54
+border-top-left-radius.px if { banner-card-list.is-first }: 20
+border-bottom-left-radius.px if { banner-card-list.is-last }: 20
+border-top-right-radius.px if { banner-card-list.is-first }: 20
+border-bottom-right-radius.px if { banner-card-list.is-last }: 20
+border-width.px if { banner-card-list.is-first || banner-card-list.is-last }: 2
+border-left-width.px if { !banner-card-list.is-first && !banner-card-list.is-last }: 2
+border-right-width.px if { !banner-card-list.is-first && !banner-card-list.is-last }: 2
+border-color: $inherited.colors.custom.seven
+
+-- ftd.text: $banner-card-list.title
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+
+-- ftd.text:
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+$banner-card-list.body
+
+-- end: ftd.column
+
+-- end: banner-card-list
+
+
+
+
+
+
+
+
+
+
+-- component testimonials-card:
+optional caption title:
+common.testimonial list testimonials:
+common.testimonial-nav list nav:
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.desktop: 
+
+-- testimonials-card-desktop: $testimonials-card.title
+testimonials: $testimonials-card.testimonials
+nav: $testimonials-card.nav
+
+-- end: ftd.desktop
+
+-- ftd.mobile: 
+
+-- testimonials-card-mobile: $testimonials-card.title
+testimonials: $testimonials-card.testimonials
+nav: $testimonials-card.nav
+
+-- end: ftd.mobile
+
+-- end: ftd.column
+
+-- end: testimonials-card
+
+
+
+
+
+
+
+
+
+
+-- component testimonials-card-desktop:
+optional caption title:
+common.testimonial list testimonials:
+common.testimonial-nav list nav:
+
+-- ftd.column:
+margin-vertical.px: 100
+width: fill-container
+spacing.fixed.px: 32
+align-content: center
+background.solid: $inherited.colors.custom.two
+border-radius.px: 20
+height.fixed.px: 430
+
+-- ftd.image: $assets.files.static.landing.dbl-qoutes.svg
+anchor: parent
+left.px: 36
+top.px: 70
+
+-- ftd.text: $testimonials-card-desktop.title
+if: { testimonials-card-desktop.title != NULL }
+role: $inherited.types.heading-small
+color: $inherited.colors.text-strong
+
+-- testimonials-card-details:
+$loop$: $testimonials-card-desktop.testimonials as $obj
+title: $obj.title
+user: $obj.user
+designation: $obj.designation
+avatar: $obj.avatar
+body: $obj.body
+index: $obj.index
+
+-- ftd.row:
+spacing.fixed.px: 12
+anchor: parent
+left.px: 36
+bottom.px: 70
+
+-- nav-lists:
+$loop$: $testimonials-card-desktop.nav as $obj
+index: $obj.index
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: testimonials-card-desktop
+
+
+
+
+
+
+
+
+
+
+-- component nav-lists:
+integer index: 1
+boolean $active: false
+
+-- ftd.row:
+width.fixed.px: 13
+height.fixed.px: 13
+border-radius.px: 10
+border-width.px: 1
+$on-click$: $ftd.toggle($a = $nav-lists.active, v = false)
+$on-click$: $ftd.set-integer($a = $current-slide, v = $nav-lists.index)
+background.solid if { nav-lists.active }: $inherited.colors.custom.one
+background.solid: $inherited.colors.custom.six
+border-color: $inherited.colors.custom.seven
+
+-- end: ftd.row
+
+-- end: nav-lists
+
+
+
+
+
+
+
+
+
+
+-- component testimonials-card-mobile:
+optional caption title:
+common.testimonial list testimonials:
+common.testimonial-nav list nav:
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 32
+align-content: center
+min-height.fixed.px: 340
+background.solid: $inherited.colors.custom.two
+border-radius.px: 20
+padding-horizontal.px: 40
+
+-- ftd.text: $testimonials-card-mobile.title
+if: { testimonials-card-mobile.title != NULL }
+role: $inherited.types.heading-small
+color: $inherited.colors.text-strong
+
+-- testimonials-card-details:
+$loop$: $testimonials-card-mobile.testimonials as $obj
+title: $obj.title
+user: $obj.user
+designation: $obj.designation
+avatar: $obj.avatar
+body: $obj.body
+index: $obj.index
+
+-- ftd.row:
+spacing.fixed.px: 12
+
+-- nav-lists:
+$loop$: $testimonials-card-mobile.nav as $obj
+index: $obj.index
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: testimonials-card-mobile
+
+
+
+
+
+
+
+
+
+
+-- component testimonials-card-details:
+optional caption title:
+string user: 
+optional string designation:
+optional ftd.image-src avatar:
+optional body body:
+optional integer index:
+
+-- ftd.column:
+if: { testimonials-card-details.index == current-slide }
+width.fixed.px: 830
+width if { ftd.device == "mobile"}: fill-container
+spacing.fixed.px: 32
+align-content: center
+
+-- ftd.text: $testimonials-card-details.title
+if: { testimonials-card-details.title != NULL  }
+role: $inherited.types.heading-tiny
+color: $inherited.colors.text-strong
+
+-- ftd.text:
+if: { testimonials-card-details.body != NULL }
+role: $inherited.types.copy-large
+color: $inherited.colors.text-strong
+text-align: center
+
+$testimonials-card-details.body
+
+-- ftd.row:
+spacing.fixed.px: 18
+align-content: center
+
+-- ftd.image:
+if: { testimonials-card-details.avatar != NULL }
+src: $testimonials-card-details.avatar
+width: auto
+
+-- ftd.row:
+if: { ftd.device != "mobile" }
+spacing.fixed.px: 4
+
+-- ftd.row:
+width.fixed.px: 20
+height.fixed.px: 1
+background.solid: $inherited.colors.text
+margin-top.px: 12
+
+-- end: ftd.row
+
+-- ftd.text: $testimonials-card-details.user
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+-- ftd.text:,
+if: { testimonials-card-details.designation != NULL }
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+-- ftd.text: $testimonials-card-details.designation
+if: { testimonials-card-details.designation != NULL }
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+-- end: ftd.row
+
+-- ftd.column:
+if: { ftd.device == "mobile" }
+spacing.fixed.px: 4
+
+-- ftd.text: $testimonials-card-details.user
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+-- ftd.text: $testimonials-card-details.designation
+if: { testimonials-card-details.designation != NULL }
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: testimonials-card-details
+
+
+
+
+
+
+
+
+
+
+-- component features-card:
+caption title:
+body body:
+optional string tag:
+common.feature list features:
+
+-- ftd.column:
+width: fill-container
+padding-vertical.px: 55
+align-content: center
+
+-- ftd.column:
+align-content: center
+width: fill-container
+spacing.fixed.px: 16
+
+-- ftd.text: $features-card.tag
+if: { features-card.tag!= NULL }
+role: $inherited.types.label-large
+color: $inherited.colors.text
+
+-- ftd.text: $features-card.title
+role: $inherited.types.heading-medium
+color: $inherited.colors.text-strong
+text-align: center
+
+-- ftd.text:
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+text-align: center
+
+$features-card.body
+
+-- end: ftd.column
+
+-- ftd.row:
+margin-top.px: 96
+width: fill-container
+wrap: true
+spacing.fixed.px: 60
+align-content: center
+
+-- features-card-details:
+$loop$: $features-card.features as $obj
+title: $obj.title
+icon: $obj.icon
+body: $obj.body
+link: $obj.link
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: features-card
+
+
+
+
+
+
+
+
+
+
+-- component features-card-details:
+caption title: 
+ftd.image-src icon:
+body body:
+optional string link:
+
+-- ftd.column:
+min-height.fixed.px: 276
+width.fixed.percent: 45
+width if { ftd.device == "mobile"}: fill-container
+border-width.px: 1
+border-color: $inherited.colors.custom.one
+background.solid: $inherited.colors.background.step-2
+padding-top.px: 35
+padding-horizontal.px: 40
+border-radius.px: 10
+
+-- ftd.image:
+src: $features-card-details.icon
+width: auto
+margin-bottom.px: 24
+
+-- ftd.text: $features-card-details.title
+link: $features-card-details.link
+role: $inherited.types.copy-regular
+color: $inherited.colors.text-strong
+margin-bottom.px: 8
+style: bold
+
+-- ftd.text:
+role: $inherited.types.copy-small
+color: $inherited.colors.text
+
+$features-card-details.body
+
+-- end: ftd.column
+
+-- end: features-card-details
+
+
+
+
+
+
+
+
+
+
+-- component faqs:
+caption title:
+optional body body:
+common.faq list faqs-list:
+
+-- ftd.column:
+padding-vertical.px if {ftd.device != "mobile"}: 108
+width: fill-container
+align-content: center
+
+-- ftd.text: $faqs.title
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+margin-bottom.px: 32
+margin-bottom.px if { faqs.body == NULL }: 87
+
+-- ftd.text:
+if: { faqs.body != NULL }
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+margin-bottom.px: 87
+
+$faqs.body
+
+-- ftd.column:
+width: fill-container
+
+-- faqs-list-detail:
+$loop$: $faqs.faqs-list as $obj
+title: $obj.title
+body: $obj.body
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: faqs
+
+
+
+
+
+
+
+
+
+
+-- component faqs-list-detail:
+caption title: 
+optional body body:
+optional ftd.image-src icon:
+optional boolean $toggle: false
+
+-- ftd.column:
+width: fill-container
+padding-vertical.px: 24
+border-bottom-width.px: 1
+border-color: $inherited.colors.text-strong
+
+-- ftd.row:
+width: fill-container
+width if { ftd.device == "mobile"}: fill-container
+align-self: center
+spacing: space-between
+spacing.fixed.px if { ftd.device == "mobile"}: 25
+$on-click$: $ftd.toggle($a = $faqs-list-detail.toggle)
+
+-- ftd.text: $faqs-list-detail.title
+role: $inherited.types.heading-tiny
+color: $inherited.colors.text-strong
+width: fill-container
+
+-- ftd.image:
+src: $assets.files.static.landing.toggle-down.svg
+src if { faqs-list-detail.toggle }: $assets.files.static.landing.toggle-up.svg
+height.fixed.px: 35
+width.fixed.px: 35
+
+-- end: ftd.row
+
+-- ftd.text:
+if: { $faqs-list-detail.body != NULL && faqs-list-detail.toggle }
+role: $inherited.types.copy-regular
+color: $inherited.colors.text-strong
+margin-top.px: 18
+
+$faqs-list-detail.body
+
+-- end: ftd.column
+
+-- end: faqs-list-detail
+
+
+
+
+
+
+
+
+
+
+-- component search-card:
+caption title:
+string cta-primary: Sign me up
+string cta-primary-link: index.html
+string input-placeholder: Enter your work email...
+optional body body:
+optional string help-info:
+optional string label:
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.desktop:
+
+-- search-card-desktop: $search-card.title
+cta-txt: $search-card.cta-primary
+cta-primary-link: $search-card.cta-primary-link 
+input-placeholder: $search-card.input-placeholder 
+body: $search-card.body 
+help-info: $search-card.help-info 
+
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- search-card-mobile: $search-card.title
+cta-txt: $search-card.cta-primary
+cta-primary-link: $search-card.cta-primary-link 
+input-placeholder: $search-card.input-placeholder 
+body: $search-card.body 
+help-info: $search-card.help-info 
+
+-- end: ftd.mobile
+
+-- end: ftd.column
+
+-- end: search-card
+
+
+
+
+
+
+
+
+
+
+-- component search-card-desktop:
+caption title:
+string cta-txt: 
+string cta-primary-link: 
+string input-placeholder: 
+optional body body:
+optional string help-info:
+ftd.image-src info-icon: $assets.files.static.check-circle.svg 
+
+-- ftd.row:
+width: fill-container
+margin-vertical.px: 50
+padding-top.px: 69
+padding-bottom.px: 65
+padding-horizontal.px: 75
+background.solid: $inherited.colors.custom.four
+border-radius.px: 20
+align-content: center
+spacing: space-between
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.text: $search-card-desktop.title
+role: $inherited.types.heading-small
+color: $inherited.colors.text-strong
+padding-right.px: 16
+margin-bottom.px: 18
+
+-- ftd.text:
+if: { search-card-desktop.body != NULL }
+role: $inherited.types.copy-regular
+color: $inherited.colors.text-strong
+
+$search-card-desktop.body
+
+-- end: ftd.column
+
+-- ftd.column:
+
+-- ftd.row:
+spacing.fixed.px: 20
+margin-bottom.px: 20
+
+-- ftd.text-input:
+placeholder: $search-card-desktop.input-placeholder
+padding-vertical.px: 15
+padding-horizontal.px: 15
+border-radius.px: 30
+width.fixed.px: 310
+
+-- ftd.text: $search-card-desktop.cta-txt
+role: $inherited.types.link
+min-width.fixed.px: 87
+text-align: center
+color: $inherited.colors.text-strong
+background.solid: $inherited.colors.cta-primary.base
+padding-vertical.px: 13
+padding-horizontal.px: 28
+link if { search-card-desktop.cta-primary-link != NULL }: $search-card-desktop.cta-primary-link
+border-radius.px: 50
+white-space: nowrap
+
+-- end: ftd.row
+
+-- ftd.row: 
+if: { search-card-desktop.help-info != NULL }
+spacing.fixed.px: 10
+align-content: center
+
+-- ftd.image:
+src: $search-card-desktop.info-icon
+
+-- ftd.text: $search-card-desktop.help-info
+role: $inherited.types.label-small
+color: $inherited.colors.text-strong
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: search-card-desktop
+
+
+
+
+
+
+
+
+
+
+-- component search-card-mobile:
+caption title:
+string cta-txt: 
+string cta-primary-link: 
+string input-placeholder: 
+optional body body:
+optional string help-info:
+ftd.image-src info-icon: $assets.files.static.check-circle.svg
+
+-- ftd.column:
+padding-vertical.px: 24
+padding-horizontal.px: 24
+margin-top.px: 50
+background.solid: $inherited.colors.custom.four
+border-radius.px: 20
+align-content: center
+spacing.fixed.px: 32
+width: fill-container
+
+-- ftd.text: $search-card-mobile.title
+role: $inherited.types.heading-small
+color: $inherited.colors.text-strong
+padding-right.px: 16
+width: fill-container
+text-align: center
+
+-- ftd.text:
+if: { search-card-mobile.body != NULL }
+role: $inherited.types.copy-regular
+color: $inherited.colors.text-strong
+
+$search-card-mobile.body
+
+-- ftd.text-input:
+placeholder: $search-card-mobile.input-placeholder
+padding-vertical.px: 15
+padding-horizontal.px: 15
+border-radius.px: 30
+
+-- ftd.text: $search-card-mobile.cta-txt
+role: $inherited.types.link
+min-width.fixed.px: 87
+text-align: center
+color: $inherited.colors.text-strong
+background.solid: $inherited.colors.cta-primary.base
+padding-vertical.px: 12
+padding-horizontal.px: 28
+link if { search-card-mobile.cta-primary-link != NULL }: $search-card-mobile.cta-primary-link
+border-radius.px: 50
+white-space: nowrap
+
+-- ftd.row: 
+if: { search-card-mobile.help-info != NULL }
+spacing.fixed.px: 10
+align-content: center
+
+-- ftd.image:
+src: $search-card-mobile.info-icon
+
+-- ftd.text: $search-card-mobile.help-info
+role: $inherited.types.label-small
+color: $inherited.colors.text-strong
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: search-card-mobile
+
+
+
 

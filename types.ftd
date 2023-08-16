@@ -1,16 +1,6 @@
-
-
-
-
-
 -- ds.page: Changing Typography
-document-title: fastn midnight-rush Template. Build Your Own Website with Ease
-document-description: Simple, easy-to-use midnight-rush template to build your own documentation website, personal website, or blog. Change colours and typography effortlessly.
-document-image: https://fastn-community.github.io/midnight-rush/-/fastn-community.github.io/midnight-rush/static/midnight-rush-og-image.jpg
 
 -- ds.page.right-sidebar:
-
--- ds.toc-title: On this page
 
 -- ds.link-group: fastn Typography collection:
 cta: types/#fastn-typography-collection
@@ -18,16 +8,16 @@ cta: types/#fastn-typography-collection
 -- ds.link-group: How to add typography?
 cta: types/#how-to-add-a-typography
 
--- ds.link-group: How to create a global my-ds page module for midnight-rush?
-cta: types/#how-to-create-a-global-my-ds-page-module-for-midnight-rush
+-- ds.link-group: How to create a global ds page module for Midnight-rush?
+cta: types/#how-to-create-a-global-ds-page-module-for-Midnight-rush-ds
 
 -- end: ds.page.right-sidebar
 
 -- ds.page.body:
 
-In this section, we will learn about changing the typography of `midnight-rush`.
+In this section, we will learn about changing the typography of `Midnight-rush`.
 
-`midnight-rush` uses `fastn` default typography. If you wish to update it. 
+`Midnight-rush` uses `fastn` default typography. If you wish to update it. 
 
 -- ds.h3: fastn Typography collection:
 id: fastn-typography-collection
@@ -41,7 +31,7 @@ id: how-to-add-a-typography
 To add typography to your fastn web sites. Edit your `FASTN.ftd` file and add
 typography dependency into it.
 
-In the below example we are using https://fastn-community.github.io/midnight-rush-typography/
+In the below example we are using https://fastn-community.github.io/Midnight-rush-typography/
 typography.
 
 Add typography dependency into your `FASTN.ftd` file as shown in below example:
@@ -49,27 +39,27 @@ Add typography dependency into your `FASTN.ftd` file as shown in below example:
 -- ds.code:
 lang: ftd
 
-\-- fastn.dependency: fastn-community.github.io/midnight-rush
-\-- fastn.dependency: fastn-community.github.io/midnight-rush-typography
+\-- fastn.dependency: fastn-community.github.io/Midnight-rush
+\-- fastn.dependency: fastn-community.github.io/Midnight-rush-typography
 
--- ds.h3: How to create a global `my-ds` page module for `midnight-rush`?
-id: how-to-create-a-global-my-ds-page-module-for-midnight-rush
+-- ds.h3: How to create a global `ds` page module for `Midnight-rush`?
+id: how-to-create-a-global-ds-page-module-for-Midnight-rush-ds
 
-You can create a `my-ds.ftd` module inside your `fastn` package and create your
-custom `my-ds` page component.
+You can create a `ds.ftd` module inside your `fastn` package and create your
+custom `ds` page component.
 
 Let's learn how to create a module:
 
-Create a new file let’s say `my-ds.ftd`. 
+Create a new file let’s say `ds.ftd`. 
 
-Here’s what your `my-ds.ftd` module would look like:
+Here’s what your `ds.ftd` module would look like:
 
--- cb.code: my-ds.ftd module
+-- cb.code: ds.ftd module
 lang: ftd
-download: my-ds.ftd
+download: ds.ftd
 
-\-- import: fastn-community.github.io/midnight-rush as ds
-\-- import: fastn-community.github.io/midnight-rush-typography
+\-- import: fastn-community.github.io/Midnight-rush as ds
+\-- import: fastn-community.github.io/Midnight-rush-typography
 
 \-- component page:
 children wrapper:
@@ -81,7 +71,7 @@ boolean sidebar: false
 site-logo: $fastn-assets.files.images.fastn.svg
 body: $page.body
 sidebar: $page.sidebar
-types: $midnight-rush-typography.types
+types: $Midnight-rush-typography.types
 
 \-- end: ds.page.banner
 
@@ -106,17 +96,17 @@ children: $page.wrapper
 
 -- ds.markdown:
 
-Click on the download icon of the above code-block. `my-ds.ftd` file will be
+Click on the download icon of the above code-block. `ds.ftd` file will be
 downloaded. Import this file inside your new `.ftd` file.
 
-Then use the `my-ds` component to create a new page using it.
+Then use the `ds` component to create a new page using it.
 
 -- ds.code:
 lang: ftd
 download: typography.ftd
 
-\-- import: fastn-community.github.io/midnight-rush as ds
-\-- import: <your fastn package name>/my-ds
+\-- import: fastn-community.github.io/Midnight-rush as ds
+\-- import: <your fastn package name>/ds
 
 \-- ds.page: This is page title
 
@@ -147,8 +137,8 @@ be downloaded.
 Add this file inside your `fastn` project and deploy or run `fastn serve` on
 your localhost. Access your localhost in the browser
 e.g.`http://127.0.0.1:8000/typography/` you will see page text with
-[midnight-rush-typography](https://fastn-community.github.io/midnight-rush-typography/) font
-sizes in [Opensans](https://fastn-community.github.io/opensans-font/) font and 
-[Poppins](https://fastn-community.github.io/poppins-font/) font.
+[Midnight-rush-typography](https://fastn-community.github.io/Midnight-rush-typography/) font
+sizes in [Lato](https://fastn-community.github.io/lato-font/) and 
+[Source-Code-Pro](https://fastn-community.github.io/source-code-pro-font/) font.
 
 -- end: ds.page
