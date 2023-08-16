@@ -1,13 +1,11 @@
--- import: fastn-community.github.io/midnight-rush as ds
--- import: fastn-community.github.io/midnight-rush/common
--- import: fastn-community.github.io/midnight-rush/blog-articles/sample-post as meta-data
+-- import: fastn-community.github.io/midnight-rush/blog-articles/sample-post
 
 ; Change below details for your new blog post
 
 
 
 
--- my-ds.page: Blog
+-- ds.page: Blog
 sidebar: false
 blog: true
 full-width: true
@@ -15,16 +13,16 @@ document-title: fastn midnight-rush Template. Build Your Own Website with Ease
 document-description: Simple, easy-to-use midnight-rush template to build your own documentation website, personal website, or blog. Change colours and typography effortlessly.
 document-image: https://fastn-community.github.io/midnight-rush/-/fastn-community.github.io/midnight-rush/static/midnight-rush-og-image.jpg
 
--- my-ds.page.hero:
+-- ds.page.hero:
 
 -- ds.featured-post:
-post-data: $meta-data.meta
+post-data: $sample-post.meta
 cta-primary: Read more
 cta-primary-url: blog-articles/sample-post/
 
--- end: my-ds.page.hero
+-- end: ds.page.hero
 
--- my-ds.page.body:
+-- ds.page.body:
 
 In this section, we will learn about creating a blog article page in `midnight-rush`.
 
@@ -39,49 +37,49 @@ understand how to use them.
 -- ds.h2: Latest Blogs
 
 -- ds.post-card:
-post-data: $meta-data.meta-1
+post-data: $sample-post.meta-1
 
 -- ds.post-card:
-post-data: $meta-data.meta-1
+post-data: $sample-post.meta-1
 
 -- ds.post-card:
-post-data: $meta-data.meta-1
+post-data: $sample-post.meta-1
 
 -- ds.post-card:
-post-data: $meta-data.meta-1
+post-data: $sample-post.meta-1
 
 -- ds.post-card:
-post-data: $meta-data.meta-1
+post-data: $sample-post.meta-1
 
 -- ds.post-card:
-post-data: $meta-data.meta-1
+post-data: $sample-post.meta-1
 
 -- ds.post-card:
-post-data: $meta-data.meta-1
+post-data: $sample-post.meta-1
 
 -- ds.post-card:
-post-data: $meta-data.meta-1
+post-data: $sample-post.meta-1
 
 -- ds.post-card:
-post-data: $meta-data.meta-1
+post-data: $sample-post.meta-1
 
 -- ds.post-card:
-post-data: $meta-data.meta-1
+post-data: $sample-post.meta-1
 
 -- ds.post-card:
-post-data: $meta-data.meta-1
+post-data: $sample-post.meta-1
 
 -- ds.post-card:
-post-data: $meta-data.meta-1
+post-data: $sample-post.meta-1
 
 -- ds.post-card:
-post-data: $meta-data.meta-1
+post-data: $sample-post.meta-1
 
 -- ds.post-card:
-post-data: $meta-data.meta-1
+post-data: $sample-post.meta-1
 
 -- ds.post-card:
-post-data: $meta-data.meta-1
+post-data: $sample-post.meta-1
 
 -- end: ds.posts
 
@@ -89,4 +87,4 @@ post-data: $meta-data.meta-1
 
 Sign up in 2 minutes
 
--- end: my-ds.page
+-- end: ds.page

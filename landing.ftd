@@ -1,6 +1,3 @@
--- import: fastn-community.github.io/midnight-rush as ds
--- import: fastn-community.github.io/midnight-rush/assets
--- import: fastn-community.github.io/midnight-rush/common
 
 -- integer $current-slide: 1
 
@@ -8,7 +5,7 @@
 
 
 
--- my-ds.page:
+-- ds.page:
 full-width: true
 sidebar: false
 document-title: fastn midnight-rush Template. Build Your Own Website with Ease
@@ -83,7 +80,7 @@ faqs-list: $list-of-faqs
 -- search-card: Freakishly simple. Downright useful. Ready to make the jump?
 help-info: Sign up in 2 minutes
 
--- end: my-ds.page
+-- end: ds.page
 
 
 

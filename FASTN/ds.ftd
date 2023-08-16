@@ -1,0 +1,64 @@
+-- import: fastn-community.github.io/midnight-rush 
+export: author-bio,code,compact-text,featured-post,h0,h1,h2,h3,iframe,image,image-first,image-in-between,link,link-group,markdown,not-found-1,not-found-2,output,post,posts,rendered,tip,without-image,youtube, footer,letter, letter-data, letter-bar, letter-category, letter-stack,post-card,toc-title,newsletter
+
+
+-- ftd.image-src fastn-logo:
+light: https://fastn.com/-/fastn.com/images/fastn.svg
+dark: https://fastn.com/-/fastn.com/images/fastn-dark.svg
+
+
+-- component page:
+children wrapper:
+optional caption title:
+optional body body:
+boolean sidebar: true
+ftd.ui list right-sidebar:
+optional string document-title:
+optional string document-description:
+optional ftd.raw-image-src document-image:
+optional string site-name: NULL
+boolean full-width: false
+boolean blog: false
+boolean show-banner: false
+ftd.ui list banner:
+ftd.ui list hero:
+
+-- midnight-rush.page: $page.title
+site-name: $page.site-name
+body: $page.body
+show-footer: true
+right-sidebar: $page.right-sidebar
+sidebar: $page.sidebar
+full-width: $page.full-width
+document-title: $page.document-title
+document-description: $page.document-description
+document-image: $page.document-image
+github-url: https://github.com/fastn-community/midnight-rush/
+github-icon: true
+blog: $page.blog
+hero: $page.hero
+show-banner: $page.show-banner
+banner: $page.banner
+
+-- midnight-rush.page.footer:
+
+-- midnight-rush.footer:
+site-logo: $common.site-logo
+site-url: $common.site-url 
+logo-width: $common.logo-width
+logo-height: $common.logo-height
+footer-links: $common.footer-links
+social-links: $common.social-links
+
+-- end: midnight-rush.page.footer
+
+-- ftd.column:
+spacing.fixed.em: 0.8
+width: fill-container
+children: $page.wrapper
+
+-- end: ftd.column
+
+-- end: midnight-rush.page
+
+-- end: page

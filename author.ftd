@@ -1,11 +1,8 @@
--- import: fastn-community.github.io/midnight-rush as ds
--- import: fastn-community.github.io/midnight-rush/common
 
 
 
 
-
--- my-ds.page: Adding Author Details
+-- ds.page: Adding Author Details
 document-description: Simple, easy-to-use midnight-rush template to build your own documentation website, personal website, or blog. Change colours and typography effortlessly.
 document-image: https://fastn-community.github.io/midnight-rush/-/fastn-community.github.io/midnight-rush/static/midnight-rush-og-image.jpg
 
@@ -49,4 +46,4 @@ name as a title. You can change `Amit Upadhyay` with your name.
 
 ✨ You can add the author bio as a body at the last of the above code snippet.
 
--- end: my-ds.page
+-- end: ds.page
