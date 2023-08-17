@@ -118,13 +118,12 @@ color: $inherited.colors.text-strong
 
 -- ftd.text: $team-desktop.tag
 if: {team-desktop.tag != NULL }
-color: $inherited.colors.custom.one
-role: $inherited.types.copy-large
+color: $inherited.colors.custom.ten
+role: $inherited.types.copy-regular
 margin-bottom.px: 16
 
--- ftd.text: team-desktop.title
+-- ftd.text: $team-desktop.title
 if: { $team-desktop.title != NULL }
-width.fixed.percent: 50
 role: $inherited.types.heading-medium
 text-align: center
 style: regular
@@ -134,6 +133,8 @@ margin-bottom.px: 32
 if: { $team-desktop.body != NULL }
 role: $inherited.types.copy-regular
 margin-bottom.px: 32
+width.fixed.percent: 70
+text-align: center
 
 $team-desktop.body
 
@@ -142,6 +143,7 @@ width: fill-container
 children: $team-desktop.members
 spacing.fixed.px: 32
 wrap: true
+align-content: center
 
 -- end: ftd.row
 
@@ -254,8 +256,8 @@ spacing.fixed.px: 8
 
 -- ftd.text: $member.title
 role: $inherited.types.heading-small
-color: $inherited.colors.text-strong
-color if { member.hover }: $inherited.colors.custom.one
+color: $inherited.colors.text
+color if { member.hover }: $inherited.colors.text-strong
 border-radius.px: 20
 style: medium
 
