@@ -2040,13 +2040,10 @@ $on-mouse-leave$: $ftd.set-bool($a = $post-card-ui.hover, v = false)
 -- ftd.column:
 anchor: parent
 width: fill-container
-height.fixed.percent if { ftd.device != "mobile" }: 87
-height.fixed.percent: 82
+height: fill-container
 z-index: 100
-top.px: 34
-top.px if { ftd.device == "mobile" }: 48
+top.px: 0
 left.px: 0
-left.px if { ftd.device == "mobile" }: 0
 border-radius.px: 17
 background.solid: $inherited.colors.custom.ten
 background.solid if { post-card-ui.hover }: $inherited.colors.custom.nine
@@ -2061,6 +2058,7 @@ left.px: 0
 z-index: 10
 width: fill-container
 height: fill-container
+border-radius.px: 17
 
 -- ftd.column:
 width.fixed.percent: 85
@@ -5629,7 +5627,7 @@ if: { tc-pop-up-status }
 anchor: window
 width: fill-container
 height.fixed.percent: 100
-background.solid: $inherited.colors.background.overlay
+background.solid: #000000ba
 z-index: 99999
 
 -- ftd.column:
@@ -5907,27 +5905,70 @@ $tc-item-item.content
 caption title:
 string cta-text-1: Terms and Conditions
 
+-- ftd.column:
+width: fill-container
+
+-- ftd.desktop:
+
 -- ftd.row:
 width: fill-container
 spacing: space-between
 align-content: center
-padding-vertical.px: 18
+padding-vertical.px: 24
+padding-horizontal.px: 24
+border-top-width.px: 1
+border-color: $inherited.colors.border-strong
+
+-- ftd.text: $footer-badge.title
+role: $inherited.types.copy-small
+color: $inherited.colors.text
 
 -- ftd.text: $footer-badge.cta-text-1
-role: $inherited.types.copy-regular
+role: $inherited.types.copy-small
 color: $inherited.colors.text
 $on-click$: $ftd.set-bool($a = $tc-pop-up-status, v = true)
 
--- ftd.text: $footer-badge.title
-role: $inherited.types.copy-regular
-color: $inherited.colors.text-strong
-
 -- ftd.image:
-src: $assets.files.static.fastn-badge.svg
+src: $assets.files.static.fastn-badge-white.svg
 link: https://fastn.com/
 open-in-new-tab: true
+width.fixed.px: 140
 
 -- end: ftd.row
+
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+padding-vertical.px: 24
+padding-horizontal.px: 24
+border-top-width.px: 1
+border-color: $inherited.colors.border-strong
+spacing.fixed.px: 24
+
+-- ftd.text: $footer-badge.title
+role: $inherited.types.copy-small
+color: $inherited.colors.text
+
+-- ftd.text: $footer-badge.cta-text-1
+role: $inherited.types.copy-small
+color: $inherited.colors.text
+$on-click$: $ftd.set-bool($a = $tc-pop-up-status, v = true)
+
+-- ftd.image:
+src: $assets.files.static.fastn-badge-white.svg
+link: https://fastn.com/
+open-in-new-tab: true
+width.fixed.px: 140
+
+-- end: ftd.column
+
+-- end: ftd.mobile
+
+-- end: ftd.column
 
 -- end: footer-badge
 
