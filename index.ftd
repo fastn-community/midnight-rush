@@ -3904,7 +3904,6 @@ align-self: center
 -- ftd.image:
 src: $hero-with-image-desktop.image
 width: fill-container
-height: fill-container
 
 -- end: ftd.column
 
