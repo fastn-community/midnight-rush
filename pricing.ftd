@@ -230,12 +230,13 @@ width: fill-container
 
 -- ftd.text: $pricing-card.tag
 if: { pricing-card.tag != NULL }
-background.solid: $inherited.colors.background.step-1
+background.solid: $inherited.colors.custom.ten
 border-radius.px: 20
 padding-vertical.px: 4
 padding-horizontal.px: 10
 white-space: nowrap
 role: $inherited.types.fine-print
+color: $inherited.colors.text-strong
 
 -- end: ftd.row
 
@@ -288,11 +289,12 @@ link: $pricing-card.cta-link
 padding-vertical.px: 10
 padding-horizontal.px: 16
 border-radius.px: 25
-background.solid: $inherited.colors.border
-color: $inherited.colors.text-strong
-background.solid if { pricing-card.active }: $inherited.colors.custom.one
+background.solid: $inherited.colors.cta-secondary.base
+color: $inherited.colors.cta-secondary.text
+color if { pricing-card.active }: $inherited.colors.cta-primary.text
+background.solid if { pricing-card.active }: $inherited.colors.cta-primary.base
 align-self: center
-role: $inherited.types.copy-small
+role: $inherited.types.button-medium
 margin-top.px: 48
 
 -- end: ftd.column
