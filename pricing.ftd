@@ -214,12 +214,12 @@ width if { ftd.device == "mobile" }: fill-container
 background.solid: $inherited.colors.background.base
 border-width.px: 2
 border-color: $inherited.colors.border
-border-color if { pricing-card.active }: $inherited.colors.custom.one
+border-color if { pricing-card.active }: $inherited.colors.custom.ten
 border-radius.px: 24
 padding.px: 32
 
 -- ftd.row:
-color: $inherited.colors.custom.one
+color: $inherited.colors.custom.ten
 role: $inherited.types.copy-small
 width: fill-container
 margin-bottom.px: 16
