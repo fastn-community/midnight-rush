@@ -56,6 +56,11 @@ in eros elementum tristique.
 
 
 
+
+
+
+
+
 -- component pricing-card:
 caption title:
 boolean active:
@@ -144,7 +149,6 @@ $pricing-card.body
 active: $obj.active
 $loop$: $pricing-card.feature-list as $obj
 
-
 -- ftd.text: $pricing-card.cta-text
 link: $pricing-card.cta-link
 padding-vertical.px: 10
@@ -160,6 +164,13 @@ margin-top.px: 48
 -- end: ftd.column
 
 -- end: pricing-card
+
+
+
+
+
+
+
 
 
 -- component feature-loop:
