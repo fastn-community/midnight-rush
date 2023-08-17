@@ -4016,9 +4016,11 @@ link: $hero-with-image-mobile.link
 caption title:
 optional body body:
 common.logos list logo-list:
+string id: logo-cloud
 
 -- ftd.column:
 width: fill-container
+id: $logo-cloud.id
 
 -- ftd.desktop:
 
@@ -4102,9 +4104,11 @@ caption title:
 body body:
 optional ftd.image-src image:
 ftd.background-image bg-image: $assets.files.static.background.svg
+string id: content
 
 -- ftd.column:
 width: fill-container
+id: $content.id
 
 -- ftd.desktop:
 
@@ -5149,11 +5153,13 @@ caption title:
 body body:
 optional string tag:
 common.feature list features:
+string id: features-card
 
 -- ftd.column:
 width: fill-container
 padding-vertical.px: 55
 align-content: center
+id: $features-card.id
 
 -- ftd.column:
 align-content: center
@@ -5630,27 +5636,27 @@ z-index: 99999
 if: {ftd.device == "desktop"}
 width: fill-container
 height: fill-container
+align-content: center
 
 -- ftd.column:  
 width.fixed.percent: 70
 border-width.px: 1
-border-top-width.px: 2
-border-radius.px: 20
-border-color: $inherited.colors.accent.primary
+border-radius.px: 8
+border-color: $inherited.colors.border
 background.solid: $inherited.colors.background.base
-align-self: center
-height: fill-container
+height.fixed.percent: 80
+overflow-y: hidden
+padding-bottom.px: 96
 
 -- ftd.row:
-align-content: right
 align-self: end
 
 -- ftd.image:
 margin-right.px: 16
 margin-top.px: 16
-src: $assets.files.images.cross.png
-height.fixed.px: 14
-width: auto
+src: $assets.files.static.cross.svg
+width.fixed.px: 24
+height.fixed.px: 24
 $on-click$: $ftd.set-bool($a = $tc-pop-up-status, v = false)
 
 -- end: ftd.row
@@ -5659,10 +5665,7 @@ $on-click$: $ftd.set-bool($a = $tc-pop-up-status, v = false)
 width: fill-container
 height: fill-container
 align-content: left
-padding-top.px: 96
 padding-horizontal.px: 24
-css: [ $assets.files.assets.scroll.css ]
-classes: body
 
 -- ftd.text: $tc-popup.title
 role: $inherited.types.heading-tiny
@@ -5680,18 +5683,28 @@ style: bold
 color: $inherited.colors.text
 margin-bottom.px: 8
 
+-- ftd.column:
+width: fill-container
+css: [ $assets.files.static.scroll.css ]
+classes: body
+padding-vertical.px: 48
+padding-horizontal.px: 48
+
 -- ftd.text: 
-role: $inherited.types.copy-regular
+role: $inherited.types.copy-small
 width: fill-container
 color: $inherited.colors.text
+text-align: justify
 
 $tc-popup.body
 
 -- ftd.column:
 width: fill-container
-height: fill-container
 children: $tc-popup.c
 spacing.fixed.px: 16
+margin-bottom.px: 48
+
+-- end: ftd.column
 
 -- end: ftd.column
            
@@ -5701,19 +5714,23 @@ spacing.fixed.px: 16
 
 -- end: ftd.column
 
+-- ftd.mobile:
+
 -- ftd.column:
-if: {ftd.device == "mobile"}
 width: fill-container
+align-content: center
+background.solid: $inherited.colors.background.base
 height: fill-container
 
 -- ftd.column:  
-height: fill-container
-width.fixed.percent: 70
+width.fixed.percent: 90
 border-width.px: 1
-border-top-width.px: 2
-border-radius.px: 20
-border-color: $inherited.colors.accent.primary
+border-radius.px: 8
+border-color: $inherited.colors.border
 align-self: center
+height.fixed.percent: 90
+overflow-y: hidden
+padding-bottom.px: 96
 
 -- ftd.row:
 align-content: right
@@ -5722,21 +5739,16 @@ align-self: end
 -- ftd.image:
 margin-right.px: 8
 margin-top.px: 8
-src: $assets.files.images.cross.png
-height.fixed.px: 14
-width: auto
+src: $assets.files.static.cross.svg 
+height.fixed.px: 24
 $on-click$: $ftd.set-bool($a = $tc-pop-up-status, v = false)
 
 -- end: ftd.row
 
 -- ftd.column:
 width: fill-container
-;;height: fill-container
-align-content: left
-padding-top.px: 96
-padding-horizontal.px: 24
-css: [ $assets.files.assets.scroll.css ]
-classes: body
+height: fill-container
+align-content: center
 
 -- ftd.text: $tc-popup.title
 role: $inherited.types.heading-tiny
@@ -5754,10 +5766,20 @@ style: bold
 color: $inherited.colors.text
 margin-bottom.px: 8
 
--- ftd.text: $tc-popup.body
-role: $inherited.types.copy-regular
+-- ftd.column:
+width: fill-container
+css: [ $assets.files.static.scroll.css ]
+classes: body
+padding-vertical.px: 48
+padding-horizontal.px: 48
+
+-- ftd.text: 
+role: $inherited.types.copy-small
 width: fill-container
 color: $inherited.colors.text
+text-align: justify
+
+$tc-popup.body
 
 -- ftd.column:
 width: fill-container
@@ -5769,10 +5791,14 @@ spacing.fixed.px: 16
 -- end: ftd.column
 
 -- end: ftd.column
+
+-- end: ftd.column
            
 -- end: ftd.column
 
 -- end: ftd.column
+
+-- end: ftd.mobile
 
 -- end: ftd.column
 
@@ -5800,19 +5826,21 @@ width: fill-container
 spacing.fixed.px: 4
 
 -- ftd.text: $tc-item.number
-role: $inherited.types.copy-regular
+role: $inherited.types.copy-small
 color: $inherited.colors.text
+style: bold
 
 -- ftd.text: $tc-item.heading
-role: $inherited.types.copy-regular
+role: $inherited.types.copy-small
 color: $inherited.colors.text
 
 -- end: ftd.row
 
 -- ftd.text: 
-role: $inherited.types.copy-regular
+role: $inherited.types.copy-small
 color: $inherited.colors.text
 margin-left.px: 8
+text-align: justify
 
 $tc-item.content
 
@@ -5844,19 +5872,21 @@ width: fill-container
 spacing.fixed.px: 4
 
 -- ftd.text: $tc-item-item.number
-role: $inherited.types.copy-regular
+role: $inherited.types.copy-small
 color: $inherited.colors.text
+style: bold
 
 -- ftd.text: $tc-item-item.heading
-role: $inherited.types.copy-regular
+role: $inherited.types.copy-small
 color: $inherited.colors.text
 
 -- end: ftd.row
 
 -- ftd.text: 
-role: $inherited.types.copy-regular
+role: $inherited.types.copy-small
 color: $inherited.colors.text
 margin-left.px: 8
+text-align: justify
 
 $tc-item-item.content
 
@@ -5868,8 +5898,13 @@ $tc-item-item.content
 
 
 
+
+
+
+
+
 -- component footer-badge:
-string copyright:
+caption title:
 string cta-text-1: Terms and Conditions
 
 -- ftd.row:
@@ -5883,7 +5918,7 @@ role: $inherited.types.copy-regular
 color: $inherited.colors.text
 $on-click$: $ftd.set-bool($a = $tc-pop-up-status, v = true)
 
--- ftd.text: $footer-badge.copyright
+-- ftd.text: $footer-badge.title
 role: $inherited.types.copy-regular
 color: $inherited.colors.text-strong
 
@@ -5895,3 +5930,447 @@ open-in-new-tab: true
 -- end: ftd.row
 
 -- end: footer-badge
+
+
+
+
+
+
+
+
+
+
+-- component contact-form:
+caption title:
+optional string company:
+optional string address:
+ftd.image-src email:
+optional string phone:
+optional string cta-button:
+optional string cta-link:
+boolean $is-active: false
+optional ftd.image-src facebook:
+optional ftd.image-src twitter:
+optional ftd.image-src instagram:
+optional ftd.image-src linkedin:
+optional string facebook-link:
+optional string twitter-link:
+optional string instagram-link:
+optional string linkedin-link:
+
+-- ftd.column:
+
+-- ftd.desktop:
+
+-- contact-form-desktop: $contact-form.title
+address: $contact-form.address
+email: $contact-form.email
+phone: $contact-form.phone
+cta-button: $contact-form.cta-button
+cta-link: $contact-form.cta-link
+facebook: $contact-form.facebook
+twitter: $contact-form.twitter
+instagram: $contact-form.instagram
+linkedin: $contact-form.linkedin
+company: $contact-form.company
+facebook-link:  $contact-form.facebook-link
+twitter-link: $contact-form.twitter-link
+instagram-link: $contact-form.instagram-link
+linkedin-link: $contact-form.linkedin-link
+
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- contact-form-mobile: $contact-form.title
+address: $contact-form.address
+email: $contact-form.email
+phone: $contact-form.phone
+cta-button: $contact-form.cta-button
+cta-link: $contact-form.cta-link
+facebook: $contact-form.facebook
+twitter: $contact-form.twitter
+instagram: $contact-form.instagram
+linkedin: $contact-form.linkedin
+company: $contact-form.company
+facebook-link:  $contact-form.facebook-link
+twitter-link: $contact-form.twitter-link
+instagram-link: $contact-form.instagram-link
+linkedin-link: $contact-form.linkedin-link
+
+-- end: ftd.mobile
+
+-- end: ftd.column
+
+-- end: contact-form
+
+
+
+
+
+
+
+
+
+
+-- component contact-form-desktop:
+caption title:
+optional string company:
+optional string address:
+ftd.image-src email:
+optional string phone:
+optional string cta-button:
+optional string cta-link:
+boolean $is-active: false
+optional ftd.image-src facebook:
+optional ftd.image-src twitter:
+optional ftd.image-src instagram:
+optional ftd.image-src linkedin:
+optional string facebook-link:
+optional string twitter-link:
+optional string instagram-link:
+optional string linkedin-link:
+
+-- ftd.row:
+width: fill-container
+border-radius.px: 8
+
+-- ftd.column:
+width.fixed.px: 400
+height.fixed.px: 420
+padding-horizontal.px: 18
+padding-vertical.px: 18
+background.solid: $inherited.colors.background.step-2
+shadow: $inherited.colors.shadow
+spacing: space-between
+border-radius.px: 8
+
+-- ftd.column:
+spacing.fixed.px: 32
+
+-- ftd.text: Contact Info
+role: $inherited.types.heading-small
+color: $inherited.colors.text-strong
+style: bold
+
+-- ftd.row:
+margin-top.px: 24
+spacing.fixed.px: 8
+
+-- ftd.image:
+src: $assets.files.static.location.svg
+width.fixed.px: 26
+height.fixed.px: 26
+
+-- ftd.column:
+
+-- ftd.text: 
+role: $inherited.types.copy-regular
+color: $inherited.colors.text-strong
+style: bold
+
+$contact-form-desktop.company
+
+-- ftd.text: 
+role: $inherited.types.copy-small
+color: $inherited.colors.text-strong
+
+$contact-form-desktop.address
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- ftd.row:
+spacing.fixed.px: 12
+align-content: center
+
+-- ftd.image:
+src: $assets.files.static.email.svg
+width: auto
+height.fixed.px: 16
+
+-- ftd.image:
+src: $contact-form-desktop.email
+width: auto
+link: mailto: hello@fifthtry.com
+height.fixed.px: 14
+
+-- end: ftd.row
+
+-- ftd.row:
+spacing.fixed.px: 10
+align-content: center
+
+-- ftd.image:
+src: $assets.files.static.phone.svg
+width.fixed.px: 18 
+
+-- ftd.text: $contact-form-desktop.phone
+role: $inherited.types.copy-small
+color: $inherited.colors.text-strong
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- ftd.row:
+spacing.fixed.px: 16
+align-content: center
+
+-- ftd.image:
+if: { contact-form-desktop.facebook != NULL }
+src: $contact-form-desktop.facebook
+width.fixed.px: 24
+height.fixed.px: 24
+link: $contact-form-desktop.facebook-link
+
+-- ftd.image:
+if: { contact-form-desktop.twitter != NULL }
+src: $contact-form-desktop.twitter
+width.fixed.px: 24
+height.fixed.px: 24
+link: $contact-form-desktop.twitter-link
+
+-- ftd.image:
+if: { contact-form-desktop.instagram != NULL }
+src: $contact-form-desktop.instagram
+width.fixed.px: 24
+height.fixed.px: 24
+link: $contact-form-desktop.instagram-link
+
+-- ftd.image:
+if: { contact-form-desktop.linkedin != NULL }
+src: $contact-form-desktop.linkedin
+width.fixed.px: 24
+height.fixed.px: 24
+link: $contact-form-desktop.linkedin-link
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: contact-form-desktop
+
+
+
+
+
+
+
+
+
+
+-- component contact-form-mobile:
+caption title:
+optional string company:
+optional string address:
+ftd.image-src email:
+optional string phone:
+optional string cta-button:
+optional string cta-link:
+boolean $is-active: false
+optional ftd.image-src facebook:
+optional ftd.image-src twitter:
+optional ftd.image-src instagram:
+optional ftd.image-src linkedin:
+optional string facebook-link:
+optional string twitter-link:
+optional string instagram-link:
+optional string linkedin-link:
+
+-- ftd.column:
+margin-top.px: 24
+width: fill-container
+
+-- ftd.column:
+width: fill-container
+padding-horizontal.px: 18
+padding-top.px: 18
+padding-bottom.px: 32
+background.solid: $inherited.colors.background.step-2
+z-index: 10
+;;shadow: $shadow
+spacing: space-between
+align-self: center
+border-radius.px: 8
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 16
+
+-- ftd.text: Contact Info
+role: $inherited.types.heading-small
+color: $inherited.colors.text-strong
+style: bold
+
+-- ftd.row:
+margin-top.px: 24
+spacing.fixed.px: 8
+
+-- ftd.image:
+src: $assets.files.static.location.svg
+width.fixed.px: 26
+height.fixed.px: 26
+
+-- ftd.column:
+
+-- ftd.text: 
+role: $inherited.types.copy-regular
+color: $inherited.colors.text-strong
+style: bold
+
+$contact-form-mobile.company
+
+-- ftd.text: 
+role: $inherited.types.fine-print
+color: $inherited.colors.text-strong
+
+$contact-form-mobile.address
+
+-- end: ftd.column 
+
+-- end: ftd.row
+
+-- ftd.row:
+spacing.fixed.px: 8
+align-content: center
+
+-- ftd.image:
+src: $assets.files.static.email.svg
+width: auto
+
+-- ftd.image:
+src: $contact-form-mobile.email
+width: auto
+link: mailto:hello@fifthtry.com
+
+-- end: ftd.row
+
+-- ftd.row:
+spacing.fixed.px: 10
+align-content: center
+
+-- ftd.image:
+src: $assets.files.static.phone.svg
+width.fixed.px: 18 
+
+-- ftd.text: $contact-form-mobile.phone
+role: $inherited.types.fine-print
+color: $inherited.colors.text-strong
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- ftd.row:
+spacing.fixed.px: 16
+align-content: center
+margin-top.px: 32
+
+-- ftd.image:
+if: { contact-form-mobile.facebook != NULL }
+src: $contact-form-mobile.facebook
+width.fixed.px: 24
+height.fixed.px: 24
+link: $contact-form-mobile.facebook-link
+
+-- ftd.image:
+if: { contact-form-mobile.twitter != NULL }
+src: $contact-form-mobile.twitter
+width.fixed.px: 24
+height.fixed.px: 24
+link: $contact-form-mobile.twitter-link
+
+-- ftd.image:
+if: { contact-form-mobile.instagram != NULL }
+src: $contact-form-mobile.instagram
+width.fixed.px: 24
+height.fixed.px: 24
+link: $contact-form-mobile.instagram-link
+
+-- ftd.image:
+if: { contact-form-mobile.linkedin != NULL }
+src: $contact-form-mobile.linkedin
+width.fixed.px: 24
+height.fixed.px: 24
+link: $contact-form-mobile.linkedin-link
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: contact-form-mobile
+
+
+
+
+
+
+
+
+
+
+-- component row-container:
+children wrapper:
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.desktop:
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 30
+padding-vertical.px: 82
+padding-horizontal.px: 0
+children: $row-container.wrapper
+
+-- end: ftd.row
+
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 32
+padding-horizontal.px: 24
+align-content: center
+wrap: true
+children: $row-container.wrapper
+
+-- end: ftd.row
+
+-- end: ftd.mobile
+
+-- end: ftd.column
+
+-- end: row-container
+
+
+
+
+
+
+
+
+
+
+-- component iframe:
+string src:
+optional ftd.resizing width:
+optional ftd.resizing height:
+
+-- ftd.iframe:
+src: $iframe.src
+height: $iframe.height
+width: $iframe.width
+margin-bottom.px: 24
+border-radius.px: 8
+
+-- end: iframe
