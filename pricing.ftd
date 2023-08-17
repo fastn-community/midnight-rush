@@ -109,7 +109,7 @@ ftd.ui list pricing-cards:
 width: fill-container
 color: $inherited.colors.text-strong
 align-content: center
-spacing.fixed.px: 16
+spacing.fixed.px: 32
 
 -- ftd.text: $pricing-desktop.title
 if: { pricing-desktop.title!= NULL }
