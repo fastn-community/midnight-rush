@@ -4357,7 +4357,7 @@ optional string link:
 
 -- ftd.row:
 width: fill-container
-spacing: space-between
+spacing.fixed.px: 48
 background.solid: $inherited.colors.custom.four
 padding-vertical.px: 50
 border-radius.px: 20
@@ -4530,7 +4530,7 @@ optional string link:
 
 -- ftd.row:
 width: fill-container
-spacing: space-between
+spacing.fixed.px: 48
 background.solid: $inherited.colors.custom.four
 padding-vertical.px: 50
 border-radius.px: 20
@@ -4539,7 +4539,7 @@ align-content: center
 margin-bottom.px: 50
 
 -- ftd.column:
-padding-top.px: 100
+align-self: center
 spacing.fixed.px: 20
 width.fixed.percent: 50
 
