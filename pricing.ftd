@@ -230,13 +230,13 @@ width: fill-container
 
 -- ftd.text: $pricing-card.tag
 if: { pricing-card.tag != NULL }
-background.solid: $inherited.colors.custom.ten
+background.solid: $inherited.colors.accent.primary
 border-radius.px: 20
 padding-vertical.px: 4
 padding-horizontal.px: 10
 white-space: nowrap
 role: $inherited.types.fine-print
-color: $inherited.colors.text-strong
+color: $inherited.colors.cta-primary.text
 
 -- end: ftd.row
 
