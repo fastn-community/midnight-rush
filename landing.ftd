@@ -15,7 +15,7 @@ link: landing/
 cta-primary: Sign me up
 cta-primary-link: index.html
 input-placeholder: Enter your work email
-image: $assets.files.static.landing.hero.jpg
+image: $assets.files.static.landing.hero.png
 
 We are an award-winning strategic design company that provides consultancy
 services and help you create outstanding digital products.
