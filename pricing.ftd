@@ -3,7 +3,7 @@
 sidebar: false
 full-width: true
 
--- pricing:
+-- pricing: Incredibly Easy To Use, But Surprisingly Powerful
 
 -- pricing.pricing-cards:
 
@@ -14,7 +14,7 @@ currency: \$
 subscription: monthly
 feature-list: $free-feature-list
 cta-text: Get Started
-cta-link: blah/
+cta-link: /pricing/
 body-title: For startups
 
 Lorem ipsum dolor sit amet, consectet adipiscing elit. Suspendisse varius enim 
@@ -27,7 +27,7 @@ currency: \$
 subscription: monthly
 feature-list: $startup-feature-list
 cta-text: Get Started
-cta-link: blah/
+cta-link: /pricing/
 body-title: For startups
 tag: best-plan
 
@@ -41,13 +41,15 @@ currency: \$
 subscription: monthly
 feature-list: $enterprise-feature-list
 cta-text: Get Started
-cta-link: blah/
+cta-link: /pricing/
 body-title: For startups
 
 Lorem ipsum dolor sit amet, consectet adipiscing elit. Suspendisse varius enim 
 in eros elementum tristique.
 
 -- end: pricing.pricing-cards
+
+-- end: pricing
 
 -- end: ds.page
 
@@ -199,7 +201,7 @@ background.solid: $inherited.colors.background.base
 border-width.px: 2
 border-color: $inherited.colors.border
 border-color if { pricing-card.active }: $inherited.colors.custom.one
-border-radius.rem: 1.5
+border-radius.px: 24
 padding.px: 32
 
 -- ftd.row:
