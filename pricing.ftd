@@ -5,13 +5,9 @@ full-width: true
 
 -- pricing: Incredibly Easy To Use, But Surprisingly Powerful
 
--- pricing.body:
-
 Lorem ipsum dolor sit amet, consectet adipiscing elit. Suspendisse varius enim 
 in eros elementum tristique. consectet adipiscing elit. Suspendisse varius enim 
 in eros elementum tristique.
-
--- pricing.pricing-cards:
 
 -- pricing-card: Free Plan
 active: false 
@@ -53,8 +49,6 @@ body-title: For startups
 Lorem ipsum dolor sit amet, consectet adipiscing elit. Suspendisse varius enim 
 in eros elementum tristique.
 
--- end: pricing.pricing-cards
-
 -- end: pricing
 
 -- end: ds.page
@@ -71,7 +65,7 @@ in eros elementum tristique.
 -- component pricing:
 optional caption title:
 optional body body:
-ftd.ui list pricing-cards:
+children pricing-cards:
 
 -- ftd.column:
 
@@ -109,7 +103,7 @@ $pricing.body
 -- component pricing-desktop:
 optional caption title:
 optional body body:
-ftd.ui list pricing-cards:
+children pricing-cards:
 
 -- ftd.column:
 width: fill-container
@@ -154,7 +148,7 @@ margin-vertical.px: 48
 -- component pricing-mobile:
 optional caption title:
 optional body body:
-ftd.ui list pricing-cards:
+children pricing-cards:
 
 -- ftd.column:
 width: fill-container
