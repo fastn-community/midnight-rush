@@ -33,6 +33,7 @@ site-name: NULL
 github-url: https://github.com/fastn-community/midnight-rush/
 github-icon: true
 sidebar: true
+site-logo: $common.site-logo
 
 -- page.right-sidebar:
 
@@ -117,7 +118,7 @@ optional string document-title:
 optional string document-description:
 optional ftd.raw-image-src document-image: 
 optional body body:
-optional ftd.image-src site-logo: $common.site-logo
+optional ftd.image-src site-logo:
 integer logo-width: $common.logo-width
 integer logo-height: $common.logo-height
 string site-url: $common.site-url
