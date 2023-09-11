@@ -117,7 +117,7 @@ optional string document-title:
 optional string document-description:
 optional ftd.raw-image-src document-image: 
 optional body body:
-ftd.image-src site-logo: $common.site-logo
+optional ftd.image-src site-logo: $common.site-logo
 integer logo-width: $common.logo-width
 integer logo-height: $common.logo-height
 string site-url: $common.site-url
@@ -267,7 +267,7 @@ optional caption title:
 optional body body:
 pr.toc-item list toc:
 optional string site-name:
-ftd.image-src site-logo:
+optional ftd.image-src site-logo:
 string site-url:
 pr.toc-item list sections:
 pr.toc-item list sub-sections:
@@ -1003,7 +1003,7 @@ border-color: $inherited.colors.border
 optional caption title:
 optional body body:
 optional string site-name:
-ftd.image-src site-logo:
+optional ftd.image-src site-logo:
 string site-url:
 pr.toc-item list toc: 
 pr.toc-item list sections:
