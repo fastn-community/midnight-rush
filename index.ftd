@@ -166,7 +166,7 @@ background.solid: $inherited.colors.background.base
 -- ftd.column:
 if: { page.show-banner}
 width: fill-container
-max-width.fixed.px: $common.max-width
+max-width.fixed.px if { !page.full-width }: $common.max-width
 children: $page.banner
 align-self: center
 
@@ -293,7 +293,7 @@ boolean breadcrumb: false
 
 -- ftd.column:
 width: fill-container
-max-width.fixed.px: $common.max-width
+max-width.fixed.px if { !doc-page-desktop.full-width }: $common.max-width
 align-self: center
 
 -- h.header:
